@@ -1,0 +1,319 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Documentation for Longan Labs\n\n\nHere you can find all the Documentation for Longan Labs. \n\n\nThe Documentation system is drive by \nMkDocs\n and \nMaterial\n.\n\n\nContributions\n\n\nThis Documentation is managed by Longan Labs, and we warmly welcome contribution to this documentation project.\n\n\n\n\nImprove grammar or fix wrong typing. \n\n\nAdditional content to help provide a better understanding for the users\n\n\nA better image for a better performance\n\n\nTranslations to other languages\n\n\nOthers edits that is necessary.\n\n\n\n\nMkDocs\n\n\nProject documentation with Markdown.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nView the \nMkDocs documentation\n.\n\n\nProject \nrelease notes\n.\n\n\nVisit the \nMkDocs wiki\n for community\n  resources, including third party themes and a list of MkDocs users.\n\n\nIRC channel: \n#mkdocs\n on freenode.\n\n\nDiscussions and support: \nhttps://groups.google.com/forum/#!forum/mkdocs\n\n\n\n\nLICENSE\n\n\nCopyright \n 2016-2017 Longan Labs (\nhttps://longan-labs.cc\n)\n\n\nDocuments and Images\n\n\n\nThis work (product documents and associated images) are licensed under a \nCreative Commons Attribution-ShareAlike 4.0 International License\n. \n \n\n\nThird-party content\n\n\nThe resources provided with the product documents also contains datasheets, software examples and other content copyrighted by 3\nrd\n party authors and companies. All such items are copyright of respective owners. The use of such items are governed by their respective licenses. \n\n\nAll trademarks are the property of their respective owners.\n\n\nTo Contact\n\n\nWrite to us at \n with subject line \"Longan Docs\". Thanks", 
+            "title": "About"
+        }, 
+        {
+            "location": "/#documentation-for-longan-labs", 
+            "text": "Here you can find all the Documentation for Longan Labs.   The Documentation system is drive by  MkDocs  and  Material .", 
+            "title": "Documentation for Longan Labs"
+        }, 
+        {
+            "location": "/#contributions", 
+            "text": "This Documentation is managed by Longan Labs, and we warmly welcome contribution to this documentation project.   Improve grammar or fix wrong typing.   Additional content to help provide a better understanding for the users  A better image for a better performance  Translations to other languages  Others edits that is necessary.", 
+            "title": "Contributions"
+        }, 
+        {
+            "location": "/#mkdocs", 
+            "text": "Project documentation with Markdown.        View the  MkDocs documentation .  Project  release notes .  Visit the  MkDocs wiki  for community\n  resources, including third party themes and a list of MkDocs users.  IRC channel:  #mkdocs  on freenode.  Discussions and support:  https://groups.google.com/forum/#!forum/mkdocs", 
+            "title": "MkDocs"
+        }, 
+        {
+            "location": "/#license", 
+            "text": "Copyright   2016-2017 Longan Labs ( https://longan-labs.cc )", 
+            "title": "LICENSE"
+        }, 
+        {
+            "location": "/#documents-and-images", 
+            "text": "This work (product documents and associated images) are licensed under a  Creative Commons Attribution-ShareAlike 4.0 International License .", 
+            "title": "Documents and Images"
+        }, 
+        {
+            "location": "/#third-party-content", 
+            "text": "The resources provided with the product documents also contains datasheets, software examples and other content copyrighted by 3 rd  party authors and companies. All such items are copyright of respective owners. The use of such items are governed by their respective licenses.   All trademarks are the property of their respective owners.", 
+            "title": "Third-party content"
+        }, 
+        {
+            "location": "/#to-contact", 
+            "text": "Write to us at   with subject line \"Longan Docs\". Thanks", 
+            "title": "To Contact"
+        }, 
+        {
+            "location": "/IRduino/", 
+            "text": "An open source, programmable, Arduino-compatible USB infrared receiver that gives new life to old remote controls.\n\n\nIntroduction\n\n\n\n\nHere we will take an example to show you how to use IRduino. I\u2019ve got a TV remote by hand, and I want to control my PC via this remote. I notice there\u2019s UP, DOWN, LEFT, RIGHT as well as an OK button on the remote, it\u2019s very coincidentally that there\u2019re such arrow key on the key board, so this example is to tell your PC press those key via IRduino and the TV remote, and the ok button will control the SPACE key.\n\n\n\n\nSpecifications\n\n\n\n\n\n\nMicrocontroller: Atmega32u4\n\n\nOperating Voltage: 5V\n\n\nFlash Memory: 32KB of which 4KB used by bootloader\n\n\nSRAM: 2.5KB\n\n\nEEPROM: 1KB\n\n\nClock Speed: 16MHz\n\n\nRemote Distance: \n5m\n\n\nRemote Support: 95% of IR Remote on the market\n\n\n\n\nDownload the Code\n\n\n\n\n\n\nAbout Arduino\n\n\nArduino\n is an open-source electronics platform based on easy-to-use hardware and software. It's intended for anyone making interactive projects.\n\n\n\n\nYou can download \nthe code at Github\n, it\u2019s an Arduino Library. After download the code, extract it to the libraries folder of your Adruino. If there\u2019s \u201c-master\u201d in the folder name, just remove it, otherwise it may cause some compile error.\n\n\n\n\nRead Key Value of a Remote\n\n\n\n\nIRduino can support almost all the IR remote on the market, include RV remote, Air conditioning remote and even your DVD remote.\nOpen Get_IR_Code example on the examples folder of IRduino library. \n\n\n\n\nTool -\n booards\n to select Arduino Leonardo, then the right COM. \nFinally, upload the code to your IRduino. \n\n\nOpen Serial Monitor, press a remote key, then you can get something on the monitor:\n\n\n\n\nWe can find that Serial Monitor had printed a Char type data, which is from 0x00 to 0xff. I had press two button, so there\u2019s 2 key value on the above image, which is 0x0A and 0x40. Then in this way we can the values of the four button:\n\n\n\n\n\n\n\n\nKEY\n\n\nNUM\n\n\n\n\n\n\n\n\n\n\nUP\n\n\n0xEE\n\n\n\n\n\n\nDOWN\n\n\n0xAE\n\n\n\n\n\n\nLEFT\n\n\n0xCE\n\n\n\n\n\n\nRIGHT\n\n\n0x8E\n\n\n\n\n\n\nOK\n\n\n0x5E:\n\n\n\n\n\n\n\n\nRemember this value, which is important in the next step.\n\n\nWrite The Code\n\n\n\n\nDon\u2019t worry about the code, it\u2019s easy just like you use an Arduino.\nActually I had finish this example, now we learn about it. Open Task_Mode_Arrow example. \nNow here we goto the code. We notice the remote key value is used here:\n\n\n// IR CODE DEFINE\n\n\n#define IR_CODE_UP          0xEE\n\n\n#define IR_CODE_DOWN        0xAE\n\n\n#define IR_CODE_LEFT        0xCE\n\n\n#define IR_CODE_RIGHT       0x8E\n\n\n#define IR_CODE_SPACE       0x5E\n\n\n\n\n\nThen the setup:\n\n\n// add task item\n\n\nIRduino\n.\naddItem\n(\nIR_CODE_UP\n,\n \ntask_up\n);\n\n\nIRduino\n.\naddItem\n(\nIR_CODE_DOWN\n,\n \ntask_down\n);\n\n\nIRduino\n.\naddItem\n(\nIR_CODE_LEFT\n,\n \ntask_left\n);\n\n\nIRduino\n.\naddItem\n(\nIR_CODE_RIGHT\n,\n \ntask_right\n);\n\n\n\n\n\nHere we add 5 tasks via the IRduino.addItem function. This function need two parameter, remote key value and a function pointer. Don\u2019t know funciton pointer? Just forget it, actually it\u2019s just the function name. \nAs we had add four task, so we need 4 function, as following:\n\n\n// add task\n\n\n\nvoid\n \ntask_up\n()\n\n\n{\n\n    \niRduino\n.\nkeyPressRelease\n(\nKEY_UP_ARROW\n);\n\n\n}\n\n\n\nvoid\n \ntask_down\n()\n\n\n{\n\n    \niRduino\n.\nkeyPressRelease\n(\nKEY_DOWN_ARROW\n);\n\n\n}\n\n\n\nvoid\n \ntask_left\n()\n\n\n{\n\n    \niRduino\n.\nkeyPressRelease\n(\nKEY_LEFT_ARROW\n);\n\n\n}\n\n\n\nvoid\n \ntask_right\n()\n\n\n{\n\n    \niRduino\n.\nkeyPressRelease\n(\nKEY_RIGHT_ARROW\n);\n\n\n}\n\n\n\nvoid\n \ntask_space\n()\n\n\n{\n\n    \niRduino\n.\nkeyPressRelease\n(\nKEY_SPACE\n);\n\n\n}\n\n\n\n\n\nI guess you have had ideas about these four function. Yes, they just press and release some key on your PC.\n\n\nThen let\u2019s have a summary, to add a task, we need 3 steps:\n\n\n\n\nWrite down the remote key value\n\n\nWrite a task function, which will have some certain use, like press some key on PC\n\n\nUse addItem funciton to add the task, then your press the key on remote, IRduino will run the task function once.\n\n\n\n\nResources\n\n\n\n\n\n\nArduino Library at Github\n\n\nEagle File", 
+            "title": "IRduino"
+        }, 
+        {
+            "location": "/IRduino/#introduction", 
+            "text": "Here we will take an example to show you how to use IRduino. I\u2019ve got a TV remote by hand, and I want to control my PC via this remote. I notice there\u2019s UP, DOWN, LEFT, RIGHT as well as an OK button on the remote, it\u2019s very coincidentally that there\u2019re such arrow key on the key board, so this example is to tell your PC press those key via IRduino and the TV remote, and the ok button will control the SPACE key.", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/IRduino/#specifications", 
+            "text": "Microcontroller: Atmega32u4  Operating Voltage: 5V  Flash Memory: 32KB of which 4KB used by bootloader  SRAM: 2.5KB  EEPROM: 1KB  Clock Speed: 16MHz  Remote Distance:  5m  Remote Support: 95% of IR Remote on the market", 
+            "title": "Specifications"
+        }, 
+        {
+            "location": "/IRduino/#download-the-code", 
+            "text": "About Arduino  Arduino  is an open-source electronics platform based on easy-to-use hardware and software. It's intended for anyone making interactive projects.   You can download  the code at Github , it\u2019s an Arduino Library. After download the code, extract it to the libraries folder of your Adruino. If there\u2019s \u201c-master\u201d in the folder name, just remove it, otherwise it may cause some compile error.", 
+            "title": "Download the Code"
+        }, 
+        {
+            "location": "/IRduino/#read-key-value-of-a-remote", 
+            "text": "IRduino can support almost all the IR remote on the market, include RV remote, Air conditioning remote and even your DVD remote.\nOpen Get_IR_Code example on the examples folder of IRduino library.    Tool -  booards  to select Arduino Leonardo, then the right COM. \nFinally, upload the code to your IRduino.   Open Serial Monitor, press a remote key, then you can get something on the monitor:   We can find that Serial Monitor had printed a Char type data, which is from 0x00 to 0xff. I had press two button, so there\u2019s 2 key value on the above image, which is 0x0A and 0x40. Then in this way we can the values of the four button:     KEY  NUM      UP  0xEE    DOWN  0xAE    LEFT  0xCE    RIGHT  0x8E    OK  0x5E:     Remember this value, which is important in the next step.", 
+            "title": "Read Key Value of a Remote"
+        }, 
+        {
+            "location": "/IRduino/#write-the-code", 
+            "text": "Don\u2019t worry about the code, it\u2019s easy just like you use an Arduino.\nActually I had finish this example, now we learn about it. Open Task_Mode_Arrow example. \nNow here we goto the code. We notice the remote key value is used here:  // IR CODE DEFINE  #define IR_CODE_UP          0xEE  #define IR_CODE_DOWN        0xAE  #define IR_CODE_LEFT        0xCE  #define IR_CODE_RIGHT       0x8E  #define IR_CODE_SPACE       0x5E   Then the setup:  // add task item  IRduino . addItem ( IR_CODE_UP ,   task_up );  IRduino . addItem ( IR_CODE_DOWN ,   task_down );  IRduino . addItem ( IR_CODE_LEFT ,   task_left );  IRduino . addItem ( IR_CODE_RIGHT ,   task_right );   Here we add 5 tasks via the IRduino.addItem function. This function need two parameter, remote key value and a function pointer. Don\u2019t know funciton pointer? Just forget it, actually it\u2019s just the function name. \nAs we had add four task, so we need 4 function, as following:  // add task  void   task_up ()  { \n     iRduino . keyPressRelease ( KEY_UP_ARROW );  }  void   task_down ()  { \n     iRduino . keyPressRelease ( KEY_DOWN_ARROW );  }  void   task_left ()  { \n     iRduino . keyPressRelease ( KEY_LEFT_ARROW );  }  void   task_right ()  { \n     iRduino . keyPressRelease ( KEY_RIGHT_ARROW );  }  void   task_space ()  { \n     iRduino . keyPressRelease ( KEY_SPACE );  }   I guess you have had ideas about these four function. Yes, they just press and release some key on your PC.  Then let\u2019s have a summary, to add a task, we need 3 steps:   Write down the remote key value  Write a task function, which will have some certain use, like press some key on PC  Use addItem funciton to add the task, then your press the key on remote, IRduino will run the task function once.", 
+            "title": "Write The Code"
+        }, 
+        {
+            "location": "/IRduino/#resources", 
+            "text": "Arduino Library at Github  Eagle File", 
+            "title": "Resources"
+        }, 
+        {
+            "location": "/can_bus/", 
+            "text": "Introduction\n\n\n\n\n\n\nThe Serial CAN BUS provide your Arduino or others MCU with the capability to communication to CAN Bus, such as hacking your vehicle. \nCAN Bus is a common industrial bus because of its long travel distance, medium communication speed and high reliability. \n\n\nThis Serial CAN Bus module is based on \nMCP2551\n and \nMCP2515\n, which can provide speed up to \n1Mb/s\n. \n\n\nPartlist\n\n\n\n\n\n\nFeatures\n\n\n\n\n\n\nUart to CAN Bus communication\n\n\nWork with Arduino/BeagleBone board/Pi or any MCU that integrated with Uart.\n\n\nAT command\n\n\nUp to 115200 Uart baud rate (default 9600)\n\n\nUp to 1Mb/s CAN Bus baud rate\n\n\nTX and RX led indicator\n\n\n4pin Grove connector\n\n\n3.3 / 5V working voltage\n\n\nEasy-to-use Arduino library\n\n\nSmall size: 20x40 mm\n\n\n\n\nHardware Overview\n\n\n\n\n\n\n\n\n4 pin 2.0mm Grove Connector\n\n\nPower and status led indicator\n\n\nSend and Recv led indicator\n\n\n3.5mm terminal to connect to CAN Bus (CAN_H \n CAN_L)\n\n\n120\u03a9 registor, default connected, if you don't need you cut this pad with a box cutter. \n\n\n\n\nWork at 3.3V\n\n\n\n\nThe module is working at 5V most of time. If you want it to work at 3.3V IO, please try:\n\n\nV1.1 Verstion\n\n\nThere's a jumper on the back side, please connect the pads together with a soldering iron. \nAnd VCC must connect to 5V. \n\n\n\n\nV1.0 Version\n\n\nPlease try as below, and please note that VCC till need to connect to 5V. \n\n\n\n\nAT Command\n\n\n\n\nYou can achieve the complete function of this Serial CAN Bus module with only a few AT command.\n\n\n\n\n\n\n\n\nCMD\n\n\nDescription\n\n\n\n\n\n\n\n\n\n\n+++\n\n\nSwitch from Normal mode to Config mode\n\n\n\n\n\n\nAT+S=[value]\n\n\nSet serial baud rate\n\n\n\n\n\n\nAT+C=[value]\n\n\nSet CAN Bus baud rate\n\n\n\n\n\n\nAT+M=[N][EXT][value]\n\n\nSet mask\n\n\n\n\n\n\nAT+F=[N][EXT][value]\n\n\nSet filter\n\n\n\n\n\n\nAT+Q\n\n\nSwitch to Normal Mode\n\n\n\n\n\n\n\n\n\n\nNote\n\n\nAll of the cmd should end with '\\n'\n\n\n\n\nSet Serial Baud Rate\n\n\n\n\nYou can set the serial baud rate of the module with this command. There're 5 rates available, up to 115200 b/s.\n\n\nAT+S=[value]\n\n\n\n\n\n\n\n\n\n\nvalue\n\n\n0\n\n\n1\n\n\n2\n\n\n3\n\n\n4\n\n\n\n\n\n\n\n\n\n\nbaud rate(b/s)\n\n\n9600\n\n\n19200\n\n\n38400\n\n\n57600\n\n\n115200\n\n\n\n\n\n\n\n\n\n\nNote\n\n\nDefault is 9600\n\n\n\n\nEg:\n Set serial baud rate to 57600\n\nAT+S=3\n\n\n\nRespose\n\n\nOK\n or \nERROR\n\n\nSet CAN Bus Baudrate\n\n\n\n\nYou can use this command to set the rate of CAN Bus, there's 18 rates available. \nNormally, if you want to hack your vehicle, 500k is the right one. \n\n\nAT+C=[value]\n\n\n\n\n\n\n\n\n\n\nvalue\n\n\n01\n\n\n02\n\n\n03\n\n\n04\n\n\n05\n\n\n06\n\n\n07\n\n\n08\n\n\n09\n\n\n10\n\n\n11\n\n\n12\n\n\n13\n\n\n14\n\n\n15\n\n\n16\n\n\n17\n\n\n18\n\n\n\n\n\n\n\n\n\n\nrate(kb/s)\n\n\n5\n\n\n10\n\n\n20\n\n\n25\n\n\n31.2\n\n\n33\n\n\n40\n\n\n50\n\n\n80\n\n\n83.3\n\n\n95\n\n\n100\n\n\n125\n\n\n200\n\n\n250\n\n\n500\n\n\n666\n\n\n1000\n\n\n\n\n\n\n\n\n!!! tip Note\n    Default is 500K\n\n\nEg:\n Set CAN BUS baud rate to 50K\n\nAT+C=08\n\n\n\nRespose\n\n\nOK or ERROR\n\n\nSet Mask\n\n\n\n\nThere're 2 Mask for the module, Mask0 and Mask1.\n\n\nAT+M=[N][EXT][value]\n\n\n\n\nN:\n\n\n\n\n0: Mask0\n\n\n1: Mask1\n\n\n\n\nEXT:\n\n\n\n\n0: Standard Frame\n\n\n1: Extended Frame\n\n\n\n\nvalue:\n\n\nNeeed 8 bit of character, hexadecimal.\n\n\nEg:\n Set Mask1 to 0x3DF, standard frame:\n\nAT+M=[1][0][000003DF]\n\n\n\nRespose\n\n\nOK or ERROR\n\n\nSet Filt\n\n\n\n\nThere're 6 Mask for the module, Filt0 ~ Filt5\n\n\nAT+F=[N][EXT][value]\n\n\n\n\nN:\n\n\n\n\n\n\n\n\nN\n\n\n0\n\n\n1\n\n\n2\n\n\n3\n\n\n4\n\n\n5\n\n\n\n\n\n\n\n\n\n\nFilt\n\n\nFilt0\n\n\nFilt1\n\n\nFilt2\n\n\nFilt3\n\n\nFilt4\n\n\nFilt5\n\n\n\n\n\n\n\n\nEXT:\n\n\n\n\n0: Standard Frame\n\n\n1: Extended Frame\n\n\n\n\nvalue:\n\n\nNeeed 8 bit of character, hexadecimal.\n\n\nEg:\n Set Filt3 to 0x2C, standard frame:\n\nAT+M=[1][0][0000002C]\n\n\n\nRespose\n\n\nOK or ERROR\n\n\nNormal Mode\n\n\n\n\nWhen the module working on Normal mode, you can send and recevie data from CAN Bus. \n\n\nSend\n\n\nYou should send 14 byte of data per frame. Define as below,\n\n\n\n\n\n\n\n\nbit\n\n\n0\n\n\n1\n\n\n2\n\n\n3\n\n\n4\n\n\n5\n\n\n6\n\n\n7\n\n\n8\n\n\n9\n\n\n10\n\n\n11\n\n\n12\n\n\n13\n\n\n\n\n\n\n\n\n\n\ndefine\n\n\nID3\n\n\nID2\n\n\nID1\n\n\nID0\n\n\nEXT\n\n\nRTR\n\n\nDTA0\n\n\nDTA1\n\n\nDTA2\n\n\nDTA3\n\n\nDTA4\n\n\nDTA5\n\n\nDTA6\n\n\nDTA7\n\n\n\n\n\n\n\n\n\n\nID0~ID3: CAN ID\n\n\nEXT: 0 for standard frame, 1 for extended frame\n\n\nRTR: 0 for standard frame, 1 for remote frame\n\n\nDTA0~DTA7: 8 byte of data\n\n\n\n\nEg.\n\n\nSend {1, 2, 3, 4, 5, 6, 7, 8} to ID:0x3DC, Standard frame:\n\n{\n0\n,\n \n0\n,\n \n3\n,\n \n0xDC\n,\n \n0\n,\n \n0\n,\n \n1\n,\n \n2\n,\n \n3\n,\n \n4\n,\n \n5\n,\n \n6\n,\n \n7\n,\n \n8\n}\n\n\n\n\nRecv\n\n\nYou will get 12 byte of data per frame. Define as below,\n\n\n\n\n\n\n\n\nbit\n\n\n0\n\n\n1\n\n\n2\n\n\n3\n\n\n4\n\n\n5\n\n\n6\n\n\n7\n\n\n8\n\n\n9\n\n\n10\n\n\n11\n\n\n\n\n\n\n\n\n\n\ndefine\n\n\nID3\n\n\nID2\n\n\nID1\n\n\nID0\n\n\nDTA0\n\n\nDTA1\n\n\nDTA2\n\n\nDTA3\n\n\nDTA4\n\n\nDTA5\n\n\nDTA6\n\n\nDTA7\n\n\n\n\n\n\n\n\n\n\nID0~ID3: CAN ID\n\n\nDTA0~DTA7: 8 byte of data\n\n\n\n\nArduino Library\n\n\n\n\nWe provide an library for Aruino Software Serial. \n\n\nPlease download it at \nGithub\n\n\nThere're many examples for the library, which is consist of,\n\n\n\n\nsend\n - How to send a frame to CAN Bus\n\n\nrecv\n - How to recv a frame from CAN Bus\n\n\ndebug\n - debug mode, you can send a cmd to the module\n\n\nset_can_baudrate\n - set can bus baudrate\n\n\nset_mask_filt\n - set mask and filt of the module\n\n\n\n\nReference\n\n\n\n\n\n\nArduino Library\n\n\nHow to get ONE\n\n\nSchematics in Eagle File", 
+            "title": "Serial CAN Bus"
+        }, 
+        {
+            "location": "/can_bus/#introduction", 
+            "text": "The Serial CAN BUS provide your Arduino or others MCU with the capability to communication to CAN Bus, such as hacking your vehicle. \nCAN Bus is a common industrial bus because of its long travel distance, medium communication speed and high reliability.   This Serial CAN Bus module is based on  MCP2551  and  MCP2515 , which can provide speed up to  1Mb/s .", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/can_bus/#partlist", 
+            "text": "", 
+            "title": "Partlist"
+        }, 
+        {
+            "location": "/can_bus/#features", 
+            "text": "Uart to CAN Bus communication  Work with Arduino/BeagleBone board/Pi or any MCU that integrated with Uart.  AT command  Up to 115200 Uart baud rate (default 9600)  Up to 1Mb/s CAN Bus baud rate  TX and RX led indicator  4pin Grove connector  3.3 / 5V working voltage  Easy-to-use Arduino library  Small size: 20x40 mm", 
+            "title": "Features"
+        }, 
+        {
+            "location": "/can_bus/#hardware-overview", 
+            "text": "4 pin 2.0mm Grove Connector  Power and status led indicator  Send and Recv led indicator  3.5mm terminal to connect to CAN Bus (CAN_H   CAN_L)  120\u03a9 registor, default connected, if you don't need you cut this pad with a box cutter.", 
+            "title": "Hardware Overview"
+        }, 
+        {
+            "location": "/can_bus/#work-at-33v", 
+            "text": "The module is working at 5V most of time. If you want it to work at 3.3V IO, please try:", 
+            "title": "Work at 3.3V"
+        }, 
+        {
+            "location": "/can_bus/#v11-verstion", 
+            "text": "There's a jumper on the back side, please connect the pads together with a soldering iron. \nAnd VCC must connect to 5V.", 
+            "title": "V1.1 Verstion"
+        }, 
+        {
+            "location": "/can_bus/#v10-version", 
+            "text": "Please try as below, and please note that VCC till need to connect to 5V.", 
+            "title": "V1.0 Version"
+        }, 
+        {
+            "location": "/can_bus/#at-command", 
+            "text": "You can achieve the complete function of this Serial CAN Bus module with only a few AT command.     CMD  Description      +++  Switch from Normal mode to Config mode    AT+S=[value]  Set serial baud rate    AT+C=[value]  Set CAN Bus baud rate    AT+M=[N][EXT][value]  Set mask    AT+F=[N][EXT][value]  Set filter    AT+Q  Switch to Normal Mode      Note  All of the cmd should end with '\\n'", 
+            "title": "AT Command"
+        }, 
+        {
+            "location": "/can_bus/#set-serial-baud-rate", 
+            "text": "You can set the serial baud rate of the module with this command. There're 5 rates available, up to 115200 b/s.  AT+S=[value]     value  0  1  2  3  4      baud rate(b/s)  9600  19200  38400  57600  115200      Note  Default is 9600   Eg:  Set serial baud rate to 57600 AT+S=3  Respose  OK  or  ERROR", 
+            "title": "Set Serial Baud Rate"
+        }, 
+        {
+            "location": "/can_bus/#set-can-bus-baudrate", 
+            "text": "You can use this command to set the rate of CAN Bus, there's 18 rates available. \nNormally, if you want to hack your vehicle, 500k is the right one.   AT+C=[value]     value  01  02  03  04  05  06  07  08  09  10  11  12  13  14  15  16  17  18      rate(kb/s)  5  10  20  25  31.2  33  40  50  80  83.3  95  100  125  200  250  500  666  1000     !!! tip Note\n    Default is 500K  Eg:  Set CAN BUS baud rate to 50K AT+C=08  Respose  OK or ERROR", 
+            "title": "Set CAN Bus Baudrate"
+        }, 
+        {
+            "location": "/can_bus/#set-mask", 
+            "text": "There're 2 Mask for the module, Mask0 and Mask1.  AT+M=[N][EXT][value]  N:   0: Mask0  1: Mask1   EXT:   0: Standard Frame  1: Extended Frame   value:  Neeed 8 bit of character, hexadecimal.  Eg:  Set Mask1 to 0x3DF, standard frame: AT+M=[1][0][000003DF]  Respose  OK or ERROR", 
+            "title": "Set Mask"
+        }, 
+        {
+            "location": "/can_bus/#set-filt", 
+            "text": "There're 6 Mask for the module, Filt0 ~ Filt5  AT+F=[N][EXT][value]  N:     N  0  1  2  3  4  5      Filt  Filt0  Filt1  Filt2  Filt3  Filt4  Filt5     EXT:   0: Standard Frame  1: Extended Frame   value:  Neeed 8 bit of character, hexadecimal.  Eg:  Set Filt3 to 0x2C, standard frame: AT+M=[1][0][0000002C]  Respose  OK or ERROR", 
+            "title": "Set Filt"
+        }, 
+        {
+            "location": "/can_bus/#normal-mode", 
+            "text": "When the module working on Normal mode, you can send and recevie data from CAN Bus.", 
+            "title": "Normal Mode"
+        }, 
+        {
+            "location": "/can_bus/#send", 
+            "text": "You should send 14 byte of data per frame. Define as below,     bit  0  1  2  3  4  5  6  7  8  9  10  11  12  13      define  ID3  ID2  ID1  ID0  EXT  RTR  DTA0  DTA1  DTA2  DTA3  DTA4  DTA5  DTA6  DTA7      ID0~ID3: CAN ID  EXT: 0 for standard frame, 1 for extended frame  RTR: 0 for standard frame, 1 for remote frame  DTA0~DTA7: 8 byte of data   Eg.  Send {1, 2, 3, 4, 5, 6, 7, 8} to ID:0x3DC, Standard frame: { 0 ,   0 ,   3 ,   0xDC ,   0 ,   0 ,   1 ,   2 ,   3 ,   4 ,   5 ,   6 ,   7 ,   8 }", 
+            "title": "Send"
+        }, 
+        {
+            "location": "/can_bus/#recv", 
+            "text": "You will get 12 byte of data per frame. Define as below,     bit  0  1  2  3  4  5  6  7  8  9  10  11      define  ID3  ID2  ID1  ID0  DTA0  DTA1  DTA2  DTA3  DTA4  DTA5  DTA6  DTA7      ID0~ID3: CAN ID  DTA0~DTA7: 8 byte of data", 
+            "title": "Recv"
+        }, 
+        {
+            "location": "/can_bus/#arduino-library", 
+            "text": "We provide an library for Aruino Software Serial.   Please download it at  Github  There're many examples for the library, which is consist of,   send  - How to send a frame to CAN Bus  recv  - How to recv a frame from CAN Bus  debug  - debug mode, you can send a cmd to the module  set_can_baudrate  - set can bus baudrate  set_mask_filt  - set mask and filt of the module", 
+            "title": "Arduino Library"
+        }, 
+        {
+            "location": "/can_bus/#reference", 
+            "text": "Arduino Library  How to get ONE  Schematics in Eagle File", 
+            "title": "Reference"
+        }, 
+        {
+            "location": "/heelight_core/", 
+            "text": "Introduction\n\n\n\n\n\nHeelight Core is a smart sound sensor that can recognize up to 500+ digital voice commands. It was originally used on the Heelight \u2013 a smart colorful bulb that can be controlled by digital sound waves. Now we introduce this sensor into the small and neat modules, allow you to control things via sound in your projects.\n\n\nFeatures\n\n\n\n\n\n\nSmall Size: 20x17mm\n\n\n500+ sound commands\n\n\nAndroid/iOS App\n\n\nBread board or intrtged into PCBA\n\n\n10m control distance\n\n\nUART output, default 9600 baudrate\n\n\n\n\nSize\n\n\n\n\n\n\nAPP\n\n\n\n\n\n\nAndroid\n\n\niOS\n\n\n\n\nGetting Started with Arduino\n\n\n\n\nFirst of all, you need to connect relay core to your Arduino, as bellow:\n\n\n\n\n\n\n\n\nHeelight Core\n\n\nArduino\n\n\n\n\n\n\n\n\n\n\nGND\n\n\nGND\n\n\n\n\n\n\nVCC\n\n\n3.3V\n\n\n\n\n\n\nTX\n\n\n2\n\n\n\n\n\n\nRX\n\n\n3\n\n\n\n\n\n\n\n\n\n\nWarning\n\n\nDON'T connect VCC to 5V, otherwise you may damage the module\n\n\n\n\nThis is the basic example that can show the ability of the sensor, \nwhich is output different hex values in the serial monitor when it receives (or hear) different digital sounds. \n\n\n// heelight test code\n\n\n#include\n \nSoftwareSerial.h\n\n\n\nSoftwareSerial\n \nheelight\n(\n2\n,\n \n3\n);\n  \n// RX, TX\n\n\n\nvoid\n \nsetup\n()\n\n\n{\n\n    \nSerial\n.\nbegin\n(\n9600\n);\n\n    \nheelight\n.\nbegin\n(\n9600\n);\n       \n// default baudrate is 9600\n\n\n}\n\n\n\nvoid\n \nloop\n()\n\n\n{\n\n    \nwhile\n(\nheelight\n.\navailable\n())\n\n    \n{\n\n        \nSerial\n.\nprint\n(\nheelight\n.\nread\n(),\n \nHEX\n);\n\n        \nSerial\n.\nprint\n(\n\\t\n);\n\n        \nSerial\n.\nprint\n(\nheelight\n.\nread\n(),\n \nHEX\n);\n\n        \nSerial\n.\nprint\n(\n\\t\n);\n\n        \nSerial\n.\nprint\n(\nheelight\n.\nread\n(),\n \nHEX\n);\n\n        \nSerial\n.\nprint\n(\n\\t\n);\n\n        \nSerial\n.\nprint\n(\nheelight\n.\nread\n(),\n \nHEX\n);\n\n        \nSerial\n.\nprintln\n();\n \n    \n}\n\n\n}\n\n\n\n\n\nOpen the serial monitor, set baud rate to be 9600, \nthen play the sound. We have prepared 511 different digital sounds for you. Every time one sound is played, \nthe heelight sensor will output a hex value correspond to the sound, \nand the last 2 characters of the hex value is the same as the sounds value.\n\n\n\n\nReference\n\n\n\n\n\n\nEagle Library of Heelight Core\n\n\n500 sound commands\n\n\nHeelight Relay", 
+            "title": "Heelight Core"
+        }, 
+        {
+            "location": "/heelight_core/#introduction", 
+            "text": "Heelight Core is a smart sound sensor that can recognize up to 500+ digital voice commands. It was originally used on the Heelight \u2013 a smart colorful bulb that can be controlled by digital sound waves. Now we introduce this sensor into the small and neat modules, allow you to control things via sound in your projects.", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/heelight_core/#features", 
+            "text": "Small Size: 20x17mm  500+ sound commands  Android/iOS App  Bread board or intrtged into PCBA  10m control distance  UART output, default 9600 baudrate", 
+            "title": "Features"
+        }, 
+        {
+            "location": "/heelight_core/#size", 
+            "text": "", 
+            "title": "Size"
+        }, 
+        {
+            "location": "/heelight_core/#app", 
+            "text": "Android  iOS", 
+            "title": "APP"
+        }, 
+        {
+            "location": "/heelight_core/#getting-started-with-arduino", 
+            "text": "First of all, you need to connect relay core to your Arduino, as bellow:     Heelight Core  Arduino      GND  GND    VCC  3.3V    TX  2    RX  3      Warning  DON'T connect VCC to 5V, otherwise you may damage the module   This is the basic example that can show the ability of the sensor, \nwhich is output different hex values in the serial monitor when it receives (or hear) different digital sounds.   // heelight test code  #include   SoftwareSerial.h  SoftwareSerial   heelight ( 2 ,   3 );    // RX, TX  void   setup ()  { \n     Serial . begin ( 9600 ); \n     heelight . begin ( 9600 );         // default baudrate is 9600  }  void   loop ()  { \n     while ( heelight . available ()) \n     { \n         Serial . print ( heelight . read (),   HEX ); \n         Serial . print ( \\t ); \n         Serial . print ( heelight . read (),   HEX ); \n         Serial . print ( \\t ); \n         Serial . print ( heelight . read (),   HEX ); \n         Serial . print ( \\t ); \n         Serial . print ( heelight . read (),   HEX ); \n         Serial . println ();  \n     }  }   Open the serial monitor, set baud rate to be 9600, \nthen play the sound. We have prepared 511 different digital sounds for you. Every time one sound is played, \nthe heelight sensor will output a hex value correspond to the sound, \nand the last 2 characters of the hex value is the same as the sounds value.", 
+            "title": "Getting Started with Arduino"
+        }, 
+        {
+            "location": "/heelight_core/#reference", 
+            "text": "Eagle Library of Heelight Core  500 sound commands  Heelight Relay", 
+            "title": "Reference"
+        }, 
+        {
+            "location": "/relay/", 
+            "text": "Introduction\n\n\n\n\n\n\nHeelight relay provides many ways to contrl a relay. You can control your lamp or other appliances via the sound command. \n\n\nPart List\n\n\n\n\n\n\n\n\n\n\nPart\n\n\nQty\n\n\n\n\n\n\n\n\n\n\nHeelight Relay Module\n\n\n1\n\n\n\n\n\n\nScrew\n\n\n1\n\n\n\n\n\n\nUSB-Barrel Jack cable\n\n\n1\n\n\n\n\n\n\n\n\n\n\nFeatures\n\n\n\n\n\n\n220V/5A\n\n\nApp to control\n\n\n2 User Button\n\n\n5V Barrel Jack input\n\n\n5mm Terminal Relay output\n\n\n\n\nGetting Started\n\n\n\n\nStep1.\n First of all, you need to install an APP\n\n\n\n\nAndroid\n\n\niOS\n\n\n\n\nStep2.\n Connect the board to a 5V power, such as USB port of your PC.\n\n\nStep3.\n There're 2 buttons on the board, one for ON and the other for OFF, try click on them to control the relay\n\n\nStep4.\n Open then APP and will find an ON and OFF button on the bottom. Click on them to make a voice to control the relay.\n\n\n\n\nTip\n\n\nIf nothing happen, try to increase/lower the volume of your phone. \n\n\n\n\nStep5.\n If you want to change a voice to control, long press ON of OFF button untill the led blink, then release the button, and make a sound via your phone. The LED will stop blink if successed. \n\n\n500+ sound commands\n\n\n\n\nWe provides more that \n500 sound commands\n, those are .wav files.\n\n\n\n\nIf you don't want an app, you can just play those sound with a music player\n\n\nYou can add those sounds to your own app to control the relay\n\n\n\n\n\n\nRefference\n\n\n\n\n\n\nHeelight Core", 
+            "title": "Heelight Relay"
+        }, 
+        {
+            "location": "/relay/#introduction", 
+            "text": "Heelight relay provides many ways to contrl a relay. You can control your lamp or other appliances via the sound command.", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/relay/#part-list", 
+            "text": "Part  Qty      Heelight Relay Module  1    Screw  1    USB-Barrel Jack cable  1", 
+            "title": "Part List"
+        }, 
+        {
+            "location": "/relay/#features", 
+            "text": "220V/5A  App to control  2 User Button  5V Barrel Jack input  5mm Terminal Relay output", 
+            "title": "Features"
+        }, 
+        {
+            "location": "/relay/#getting-started", 
+            "text": "Step1.  First of all, you need to install an APP   Android  iOS   Step2.  Connect the board to a 5V power, such as USB port of your PC.  Step3.  There're 2 buttons on the board, one for ON and the other for OFF, try click on them to control the relay  Step4.  Open then APP and will find an ON and OFF button on the bottom. Click on them to make a voice to control the relay.   Tip  If nothing happen, try to increase/lower the volume of your phone.    Step5.  If you want to change a voice to control, long press ON of OFF button untill the led blink, then release the button, and make a sound via your phone. The LED will stop blink if successed.", 
+            "title": "Getting Started"
+        }, 
+        {
+            "location": "/relay/#500-sound-commands", 
+            "text": "We provides more that  500 sound commands , those are .wav files.   If you don't want an app, you can just play those sound with a music player  You can add those sounds to your own app to control the relay", 
+            "title": "500+ sound commands"
+        }, 
+        {
+            "location": "/relay/#refference", 
+            "text": "Heelight Core", 
+            "title": "Refference"
+        }, 
+        {
+            "location": "/obd_kit/", 
+            "text": "Introduction\n\n\n\n\n\n\nThis kit allows you to interface with your vehicle's OBD-II interface. The kit includes a Serial CAN Bus module as well as a OBD-II Connector, with this kit you can get data from your vehicle easily. We provide an tutorial which is based on Arduino.\n\n\nOBD-II (short for On-Board Diagnostics, Second Generation) is a set of standards for implementing a computer based system to control emissions from vehicles. It was first introduced in the United States in 1994, and became a requirement on all 1996 and newer US vehicles. Other countries, including Canada, parts of the European Union, Japan, Australia, and Brazil adopted similar legislation. A large portion of the modern vehicle fleet supports OBD-II or one of its regional flavors.\n\n\nFeatures\n\n\n\n\n\n\nUp to 1Mb/s CAN Bus rate\n\n\nDIY kit\n\n\nMulti-platform avaiable (Arduino, Raspberry, Beaglebone Board, etc.)\n\n\nSerial Communication\n\n\nTutorial for Arduino\n\n\n\n\nPartlist\n\n\n\n\nSerial CAN Bus Module\n\n\nOBD-II Connector\n\n\nScrew Driver\n\n\nCable for CAN Bus\n\n\nGrove Cable\n\n\n\n\n\n\nNote\n\n\nThe kit don't include a controller board.\n\n\n\n\nHardware Overview of Serial CAN Bus Module\n\n\n\n\n\n\n\n\n4 pin 2.0mm Grove Connector\n\n\nPower and status led indicator\n\n\nSend and Recv led indicator\n\n\n3.5mm terminal to connect to CAN Bus (CAN_H \n CAN_L)\n\n\n120\u03a9 registor, default connected, if you don't need you cut this pad with a box cutter. \n\n\n\n\nHardware Connection\n\n\nThe kit includes an OBD-II connector, below is pins define of the connector. \n\n\n\n\nThe kit includes a cable as well, you need a soldering iron to connect the cable to the connector. \nAs shown below.\n\n\n \n\n\nGetting Started with Arduino\n\n\nHere we will make a demo to read some value from a vehicle with an Arduino.\n\n\nDownload Arduino library of the board from \nGithub\n\n\nOpen the example \"obd_demo\".\n\n\n\n\nFor this example, we use D2 as RX of software serial, D3 as TX.\nSo you should connect D2 to TX of Serial can bus module, and D3 to RX. \n\n\nAfter upload the sketch to Arduino, you can try connect OBD-II connector to your vehicle. \n\n\nOpen you serial monitor, try to input an OBD-PIDs, see if you can get some values from your vehicle. \n\n\nClick to get more about \nOBD-PIDs\n. \n\n\nReference\n\n\n\n\n\n\nWiki for Serial CAN Bus module\n\n\nArduino Library\n\n\nSchematics of Serial CAN Bus Module in Eagle File", 
+            "title": "OBD-II CAN-BUS Development Kit"
+        }, 
+        {
+            "location": "/obd_kit/#introduction", 
+            "text": "This kit allows you to interface with your vehicle's OBD-II interface. The kit includes a Serial CAN Bus module as well as a OBD-II Connector, with this kit you can get data from your vehicle easily. We provide an tutorial which is based on Arduino.  OBD-II (short for On-Board Diagnostics, Second Generation) is a set of standards for implementing a computer based system to control emissions from vehicles. It was first introduced in the United States in 1994, and became a requirement on all 1996 and newer US vehicles. Other countries, including Canada, parts of the European Union, Japan, Australia, and Brazil adopted similar legislation. A large portion of the modern vehicle fleet supports OBD-II or one of its regional flavors.", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/obd_kit/#features", 
+            "text": "Up to 1Mb/s CAN Bus rate  DIY kit  Multi-platform avaiable (Arduino, Raspberry, Beaglebone Board, etc.)  Serial Communication  Tutorial for Arduino", 
+            "title": "Features"
+        }, 
+        {
+            "location": "/obd_kit/#partlist", 
+            "text": "Serial CAN Bus Module  OBD-II Connector  Screw Driver  Cable for CAN Bus  Grove Cable    Note  The kit don't include a controller board.", 
+            "title": "Partlist"
+        }, 
+        {
+            "location": "/obd_kit/#hardware-overview-of-serial-can-bus-module", 
+            "text": "4 pin 2.0mm Grove Connector  Power and status led indicator  Send and Recv led indicator  3.5mm terminal to connect to CAN Bus (CAN_H   CAN_L)  120\u03a9 registor, default connected, if you don't need you cut this pad with a box cutter.", 
+            "title": "Hardware Overview of Serial CAN Bus Module"
+        }, 
+        {
+            "location": "/obd_kit/#hardware-connection", 
+            "text": "The kit includes an OBD-II connector, below is pins define of the connector.    The kit includes a cable as well, you need a soldering iron to connect the cable to the connector. \nAs shown below.", 
+            "title": "Hardware Connection"
+        }, 
+        {
+            "location": "/obd_kit/#getting-started-with-arduino", 
+            "text": "Here we will make a demo to read some value from a vehicle with an Arduino.  Download Arduino library of the board from  Github  Open the example \"obd_demo\".   For this example, we use D2 as RX of software serial, D3 as TX.\nSo you should connect D2 to TX of Serial can bus module, and D3 to RX.   After upload the sketch to Arduino, you can try connect OBD-II connector to your vehicle.   Open you serial monitor, try to input an OBD-PIDs, see if you can get some values from your vehicle.   Click to get more about  OBD-PIDs .", 
+            "title": "Getting Started with Arduino"
+        }, 
+        {
+            "location": "/obd_kit/#reference", 
+            "text": "Wiki for Serial CAN Bus module  Arduino Library  Schematics of Serial CAN Bus Module in Eagle File", 
+            "title": "Reference"
+        }, 
+        {
+            "location": "/Keyboard/", 
+            "text": "A badge with interactive lightning and music\n\n\nIntroduction\n\n\nFor KeyBoard, we just want to make PCB a fine look and more interesting. It is an interactive badge with touching, lightning, and melody. You can wear it on your neck or fix it to your bag. Press the lightning icon to switch between two modes. One is a mini piano while another is circular melody and chasing light. Enjoy a wonderful night at music live with KeyBoard!\n\n\n\n\nPart List\n\n\n\n\nKeyBoard \u00d7 1\n\n\nCoin battery \u00d7 1\n\n\nBrooch \u00d7 1\n\n\nNeck sling \u00d7 1\n\n\nMicro-USB cable \u00d7 1\n\n\n\n\nSpecification\n\n\n\n\nMicrocontroller: ATMega328P\n\n\nOperating Voltage: 3.3V\n\n\nFlash Memory: 32KB of which 0.5KB used by bootloader\n\n\nSRAM: 2KB\n\n\nEEPROM: 1KB\n\n\nClock Speed: 16MHz\n\n\nWorking Current: 30mA (when buzzer on)\n\n\nStatic Current: 8mA (when buzzer and led off)\n\n\nSleep Current: \n1mA\n\n\nCharge Time: 30 min\n\n\nStandby Time: 8 hours\n\n\nKeys: 10\n\n\nLEDs: 8\n\n\n\n\nGetting Started\n\n\n\n\nInsert the coin battery\n\n\nTurn the switch on\n\n\nPress the keys of keyboard\n\n\nPress the lightning key to switch the mode\n\n\nFix the neck sling to wear it on your neck\n\n\nFix the brooch to pin it to your bag\n\n\nPlug the micro-USB cable to recharge\n\n\n\n\nIf you want to program the board, please download our \nArduino library\n, and please note the the board was in Arduino Leonardo bootloader. \n\n\nPlease contact \n if you need more help.\n\n\nResources\n\n\n\n\nSchematics in Eagle File\n\n\nArduino Library at Github", 
+            "title": "Keyboard"
+        }, 
+        {
+            "location": "/Keyboard/#introduction", 
+            "text": "For KeyBoard, we just want to make PCB a fine look and more interesting. It is an interactive badge with touching, lightning, and melody. You can wear it on your neck or fix it to your bag. Press the lightning icon to switch between two modes. One is a mini piano while another is circular melody and chasing light. Enjoy a wonderful night at music live with KeyBoard!", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/Keyboard/#part-list", 
+            "text": "KeyBoard \u00d7 1  Coin battery \u00d7 1  Brooch \u00d7 1  Neck sling \u00d7 1  Micro-USB cable \u00d7 1", 
+            "title": "Part List"
+        }, 
+        {
+            "location": "/Keyboard/#specification", 
+            "text": "Microcontroller: ATMega328P  Operating Voltage: 3.3V  Flash Memory: 32KB of which 0.5KB used by bootloader  SRAM: 2KB  EEPROM: 1KB  Clock Speed: 16MHz  Working Current: 30mA (when buzzer on)  Static Current: 8mA (when buzzer and led off)  Sleep Current:  1mA  Charge Time: 30 min  Standby Time: 8 hours  Keys: 10  LEDs: 8", 
+            "title": "Specification"
+        }, 
+        {
+            "location": "/Keyboard/#getting-started", 
+            "text": "Insert the coin battery  Turn the switch on  Press the keys of keyboard  Press the lightning key to switch the mode  Fix the neck sling to wear it on your neck  Fix the brooch to pin it to your bag  Plug the micro-USB cable to recharge   If you want to program the board, please download our  Arduino library , and please note the the board was in Arduino Leonardo bootloader.   Please contact   if you need more help.", 
+            "title": "Getting Started"
+        }, 
+        {
+            "location": "/Keyboard/#resources", 
+            "text": "Schematics in Eagle File  Arduino Library at Github", 
+            "title": "Resources"
+        }, 
+        {
+            "location": "/license/", 
+            "text": "License\n\n\nMIT License\n\n\nCopyright \n 2014 - 2017 Longan Labs\n\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to\ndeal in the Software without restriction, including without limitation the\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or\nsell copies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS\nIN THE SOFTWARE.", 
+            "title": "License"
+        }, 
+        {
+            "location": "/license/#license", 
+            "text": "MIT License  Copyright   2014 - 2017 Longan Labs  Permission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to\ndeal in the Software without restriction, including without limitation the\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or\nsell copies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:  The above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.  THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS\nIN THE SOFTWARE.", 
+            "title": "License"
+        }
+    ]
+}
