@@ -13,7 +13,7 @@
         <meta name="description" content="Docs of Longan Labs">
       
       
-        <link rel="canonical" href="https://longan-labs.cc/heelight_core/">
+        <link rel="canonical" href="https://longan-labs.cc/1030003/">
       
       
         <meta name="author" content="Loovee">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Heelight Core - Longan Docs</title>
+        <title>OBD-II CAN Bus GPS Development Kit - Longan Docs</title>
       
     
     
@@ -131,7 +131,7 @@
                 Longan Docs
               </span>
               <span class="md-header-nav__topic">
-                Heelight Core
+                OBD-II CAN Bus GPS Development Kit
               </span>
             
           
@@ -294,11 +294,133 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../1030003/" title="OBD-II CAN Bus GPS Development Kit" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        OBD-II CAN Bus GPS Development Kit
+      </label>
+    
+    <a href="./" title="OBD-II CAN Bus GPS Development Kit" class="md-nav__link md-nav__link--active">
       OBD-II CAN Bus GPS Development Kit
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features" title="Features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specifications" title="Specifications" class="md-nav__link">
+    Specifications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-overview" title="Hardware Overview" class="md-nav__link">
+    Hardware Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-list" title="Part List" class="md-nav__link">
+    Part List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pin-out" title="Pin out" class="md-nav__link">
+    Pin out
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assembly-and-hardware-connection" title="Assembly and Hardware Connection" class="md-nav__link">
+    Assembly and Hardware Connection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gps-usage" title="GPS Usage" class="md-nav__link">
+    GPS Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-bus-usage" title="CAN BUS Usage" class="md-nav__link">
+    CAN BUS Usage
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arduino-code" title="Arduino Code" class="md-nav__link">
+    Arduino Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" title="Reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -330,80 +452,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Heelight Core
-      </label>
-    
-    <a href="./" title="Heelight Core" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../heelight_core/" title="Heelight Core" class="md-nav__link">
       Heelight Core
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" title="Introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#features" title="Features" class="md-nav__link">
-    Features
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#size" title="Size" class="md-nav__link">
-    Size
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#app" title="APP" class="md-nav__link">
-    APP
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started-with-arduino" title="Getting Started with Arduino" class="md-nav__link">
-    Getting Started with Arduino
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" title="Reference" class="md-nav__link">
-    Reference
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -478,33 +531,86 @@
     Introduction
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#features" title="Features" class="md-nav__link">
     Features
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#specifications" title="Specifications" class="md-nav__link">
+    Specifications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#size" title="Size" class="md-nav__link">
-    Size
+  <a href="#hardware-overview" title="Hardware Overview" class="md-nav__link">
+    Hardware Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-list" title="Part List" class="md-nav__link">
+    Part List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pin-out" title="Pin out" class="md-nav__link">
+    Pin out
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assembly-and-hardware-connection" title="Assembly and Hardware Connection" class="md-nav__link">
+    Assembly and Hardware Connection
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#app" title="APP" class="md-nav__link">
-    APP
+  <a href="#gps-usage" title="GPS Usage" class="md-nav__link">
+    GPS Usage
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-started-with-arduino" title="Getting Started with Arduino" class="md-nav__link">
-    Getting Started with Arduino
+  <a href="#can-bus-usage" title="CAN BUS Usage" class="md-nav__link">
+    CAN BUS Usage
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arduino-code" title="Arduino Code" class="md-nav__link">
+    Arduino Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -532,104 +638,201 @@
               
                 
                 
-                  <h1>Heelight Core</h1>
+                  <h1>OBD-II CAN Bus GPS Development Kit</h1>
                 
                 <h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<hr />
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/HeelightCore/Core-2.jpg" />
-Heelight Core is a smart sound sensor that can recognize up to 500+ digital voice commands. It was originally used on the Heelight – a smart colorful bulb that can be controlled by digital sound waves. Now we introduce this sensor into the small and neat modules, allow you to control things via sound in your projects.</p>
-<h2 id="features"><strong><em>Features</em></strong><a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
-<hr />
+<p><a href=""><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/1030003-4.jpg" /></a></p>
+<p>The OBD Ⅱ Slaver allows you to hack your vehicle with the integrated OBD port and output all the data via serial interface. It supports the CAN bus protocol, integrates micro SD card slot. On top of that, with the help of a build-in Atmega32U4, it's compatible with arduino. Which means you can code it like a ardunio, then just plug it into your car's OBD port, you will get the output data via the Type C USB port or you can store all the data into your micro-SD card (TF card), easy-peasy.</p>
+<p>This Serial CAN Bus module is based on <strong>MCP2551</strong> and <strong>MCP2515</strong>, which can provide can baud rate from <strong>5kb/s</strong> to <strong>1Mb/s</strong>. </p>
+<p>One more thing, we integrate the GPS module, you can even track your car with this fantastic little module. It is obviously that you will love it, happy hacking！</p>
+<h3 id="features"><strong>Features</strong><a class="headerlink" href="#features" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Small Size: 20x17mm</li>
-<li>500+ sound commands</li>
-<li>Android/iOS App</li>
-<li>Bread board or intrtged into PCBA</li>
-<li>10m control distance</li>
-<li>UART output, default 9600 baudrate</li>
+<li>ODB Ⅱ port</li>
+<li>Uart to CAN Bus communication</li>
+<li>Build-in Atmega32U4</li>
+<li>Integraded GPS module</li>
+<li>Integraded Micro-SD(TF) card</li>
+<li>AT command support</li>
+<li>Up to 115200 Uart baud rate (default 9600)</li>
+<li>Up to 1Mb/s CAN Bus baud rate</li>
+<li>TX and RX led indicator</li>
+<li>Easy-to-use Arduino library</li>
 </ul>
-<h2 id="size"><strong><em>Size</em></strong><a class="headerlink" href="#size" title="Permanent link">&para;</a></h2>
-<hr />
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/core/size2.png" /></p>
-<h2 id="app"><strong><em>APP</em></strong><a class="headerlink" href="#app" title="Permanent link">&para;</a></h2>
-<hr />
-<ul>
-<li><a href="https://play.google.com/store/apps/details?id=com.heelight.wc.heelightlite">Android</a></li>
-<li><a href="https://itunes.apple.com/cn/app/heelight-pro-cai-deng-sheng/id1095593464?mt=8">iOS</a></li>
-</ul>
-<h2 id="getting-started-with-arduino"><strong><em>Getting Started with Arduino</em></strong><a class="headerlink" href="#getting-started-with-arduino" title="Permanent link">&para;</a></h2>
-<hr />
-<p>First of all, you need to connect relay core to your Arduino, as bellow:</p>
+<h3 id="specifications"><strong>Specifications</strong><a class="headerlink" href="#specifications" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th>Heelight Core</th>
-<th>Arduino</th>
+<th>Parameter</th>
+<th>Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>GND</td>
-<td>GND</td>
+<td>MCU</td>
+<td>Atmega32U4<br>(with Arduino Leonardo bootloader)</td>
 </tr>
 <tr>
-<td>VCC</td>
-<td>3.3V</td>
+<td>Clock Speed</td>
+<td>16MHz</td>
 </tr>
 <tr>
-<td>TX</td>
-<td>2</td>
+<td>Flash Memory</td>
+<td>32KB</td>
 </tr>
 <tr>
-<td>RX</td>
-<td>3</td>
+<td>SRAM</td>
+<td>2.5KB</td>
+</tr>
+<tr>
+<td>EERROM</td>
+<td>1KB</td>
+</tr>
+<tr>
+<td>Operate Voltage</td>
+<td>5V</td>
+</tr>
+<tr>
+<td>Input Interface</td>
+<td>OBD-II</td>
+</tr>
+<tr>
+<td>Output Interface</td>
+<td>USB Type C</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>DON'T connect VCC to 5V, otherwise you may damage the module</p>
+<hr />
+<h2 id="hardware-overview"><strong><em>Hardware Overview</em></strong><a class="headerlink" href="#hardware-overview" title="Permanent link">&para;</a></h2>
+<h3 id="part-list">Part List<a class="headerlink" href="#part-list" title="Permanent link">&para;</a></h3>
+<ul>
+<li>OBD Ⅱ Slaver(Base board)  x 1</li>
+<li>GPS Board x 1</li>
+<li>Plastic Case x 1</li>
+<li>Screw Driver x 1</li>
+</ul>
+<p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/1030003-6.jpg" /></p>
+<h3 id="pin-out">Pin out<a class="headerlink" href="#pin-out" title="Permanent link">&para;</a></h3>
+<p><strong><em>Base Board</em></strong></p>
+<p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/allpin.png" /></p>
+<p><strong>1.OBD-II Connector:</strong> </p>
+<p>On-board diagnostics (OBD) is an automotive term referring to a vehicle's self-diagnostic and reporting capability. OBD-II is an improvement over OBD-I in both capability and standardization. The OBD-II standard specifies the type of diagnostic connector and its pinout.</p>
+<p><strong>2.Reset Button:</strong></p>
+<p>Reset the on-board Atmega chip</p>
+<p><strong>3.78L05:</strong></p>
+<p>Provide a stable 5V to the whole system.</p>
+<p><strong>4.Atmega32U4:</strong></p>
+<p>The master of the entire module, mainly used to store data on the TF card or transfer data to the computer through the type C cable. In addition, since it's arduino compatible, you can use it to implement some simple controls, such as triggering a buzzer alarm when the speed exceeds a certain value.</p>
+<p><strong>5.MCP2515:</strong></p>
+<p>Microchip Technology’s MCP2515 is a stand-alone Controller Area Network (CAN) controller that implements the CAN specification, version 2.0B. It is capable of transmitting and receiving both standard and
+extended data and remote frames. The MCP2515 has two acceptance masks and six acceptance filters that are used to filter out unwanted messages, thereby reducing the host MCUs overhead. The MCP2515
+interfaces with microcontrollers (MCUs) via an industry standard Serial Peripheral Interface (SPI).</p>
+<p><strong>6.MCP2551</strong></p>
+<p>High-Speed CAN Transceiver：The MCP2551 is a high-speed CAN, fault-tolerant device that serves as the interface between a CAN protocol controller and the physical bus. Typically, each node in a CAN system must have a device to convert the digital signals generated by a CAN controller to signals suitable for transmission over the bus cabling (differential output). It also provides a buffer between the CAN controller and the high-voltage spikes that can be generated on the CAN bus by outside sources (EMI, ESD, electrical transients, etc.).</p>
+<p><strong>7.2x8Pin Female Header for GPS module</strong></p>
+<p>See the GPS section for specific pin definitions.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention<p>It should be noted that when assembling the GPS module, please align the white triangle on the development board and the module, otherwise the GPS module may be damaged.</p>
+</p>
 </div>
-<p>This is the basic example that can show the ability of the sensor, 
-which is output different hex values in the serial monitor when it receives (or hear) different digital sounds. </p>
-<div class="codehilite"><pre><span></span><span class="c1">// heelight test code</span>
-<span class="cp">#include</span> <span class="cpf">&lt;SoftwareSerial.h&gt;</span><span class="cp"></span>
+<p><strong>8.CAN RX/TX Indicator</strong></p>
+<p><strong>9.Power LED</strong></p>
+<p><strong>A.Type C USB connector for programming</strong></p>
+<p><strong>B.User LED, connect to D13</strong></p>
+<p><strong>C.TF Card slot</strong></p>
+<p><strong>D.120Ω resister</strong></p>
+<p>ISO 11898 requires a cable with a nominal impedance of 120 Ω; therefore, you should use 120 Ω resistors for termination. If you place multiple devices along the cable, only the devices on the ends of the cable need termination resistors. Figure 1 shows an example of how to terminate a high-speed network.</p>
+<p style="text-align:center"><img src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/HS_CAN_Termination.gif" /></p>
 
-<span class="nf">SoftwareSerial</span> <span class="nf">heelight</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>  <span class="c1">// RX, TX</span>
+<p>So if you use this slaver on the end of the CAN bus, you need to solder a 120Ω resister between the two pad, if not just leave them alone. For more detail about the CAN bus protocol, please refer to the
+<a href="http://www.ni.com/white-paper/9759/en/">NI CAN Physical Layer and Termination Guide</a></p>
+<p><strong>E.ICSP pads for burning bootloader</strong></p>
+<p><strong><em>GPS Board</em></strong></p>
+<p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/GPS.jpg" /></p>
+<p><strong>1.GPS Antenna</strong></p>
+<p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/Antenna.png" /></p>
+<p><strong>2.2x8Pin header</strong></p>
+<p><strong>3.NEO-6 GPS module</strong></p>
+<p>Refer to the <a href="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/NEO-6_DataSheet_(GPS.G6-HW-09005).pdf">GPS datasheet</a>.</p>
+<p><strong>4. External Antenna Port</strong></p>
+<p>NEO-6 modules are designed for use with passive and active13 antennas.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Specification</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Antenna Type</td>
+<td></td>
+<td>Passive and active antenna</td>
+</tr>
+<tr>
+<td></td>
+<td>Minimum gain</td>
+<td>15 dB (to compensate signal loss in RF cable)</td>
+</tr>
+<tr>
+<td></td>
+<td>Maximum gain</td>
+<td>50 dB</td>
+</tr>
+<tr>
+<td></td>
+<td>Maximum noise figure</td>
+<td>1.5 dB</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="assembly-and-hardware-connection"><strong><em>Assembly and Hardware Connection</em></strong><a class="headerlink" href="#assembly-and-hardware-connection" title="Permanent link">&para;</a></h2>
+<p><strong>Assembly</strong></p>
+<p>It is assembled when you get the development board. If you disassemble it, you can reassemble it by following the steps.</p>
+<p><em>Step 1.</em><br />
+Please check each part.</p>
+<p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/1030003-4.jpg" /></p>
+<p><em>Step 2.</em><br />
+Mount the base board to the bottom housing.</p>
+<p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/1030003-3.jpg" /></p>
+<p><em>Step 3.</em><br />
+Insert the GPS board on the baseboard.</p>
+<p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/1030003-2.jpg" /></p>
+<div class="admonition attention">
+<p class="admonition-title">Attention<p>When inserting the GPS board, be careful to align the white triangles of the GPS and Base boards. </p>
+</p>
+</div>
+<p><em>Step 4.</em><br />
+Close the top cover and fix it with screws.</p>
+<p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/1030003-1.jpg" /></p>
+<h2 id="gps-usage">GPS Usage<a class="headerlink" href="#gps-usage" title="Permanent link">&para;</a></h2>
+<p>The GPS Module use serial port to output the GPS data, you just need to connect this module to your PC via the USB type C cable, using any serial tool such as putty, you will be able to get the GPS data.</p>
+<p>As shown below:</p>
+<p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/GPS_DATA.jpg" /></p>
+<p>In order to parse the received GPS data, you need to refer to the <a href="http://aprs.gids.nl/nmea/">http://aprs.gids.nl/nmea/</a>.</p>
+<p>For more detail about the NEO-6 module, please refer to <a href="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/NEO-6_DataSheet_(GPS.G6-HW-09005).pdf">NEO-6 Datasheet</a></p>
+<h2 id="can-bus-usage">CAN BUS Usage<a class="headerlink" href="#can-bus-usage" title="Permanent link">&para;</a></h2>
+<h3 id="arduino-code"><strong><em>Arduino Code</em></strong><a class="headerlink" href="#arduino-code" title="Permanent link">&para;</a></h3>
+<hr />
+<p>We provide an arduino library for OBD Ⅱ Slaver. </p>
+<p style="text-align:center"><a href="https://github.com/Longan-Labs/CAN_BUS_Shield" target="_blank"><img src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/library%2BA.jpg" /></a></p>
 
-<span class="kr">void</span> <span class="nb">setup</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
-    <span class="n">heelight</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>       <span class="c1">// default baudrate is 9600</span>
-<span class="p">}</span>
-
-<span class="kr">void</span> <span class="nb">loop</span><span class="p">()</span>
-<span class="p">{</span>
-    <span class="k">while</span><span class="p">(</span><span class="n">heelight</span><span class="p">.</span><span class="nf">available</span><span class="p">())</span>
-    <span class="p">{</span>
-        <span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">heelight</span><span class="p">.</span><span class="nf">read</span><span class="p">(),</span> <span class="n">HEX</span><span class="p">);</span>
-        <span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="sc">&#39;\t&#39;</span><span class="p">);</span>
-        <span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">heelight</span><span class="p">.</span><span class="nf">read</span><span class="p">(),</span> <span class="n">HEX</span><span class="p">);</span>
-        <span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="sc">&#39;\t&#39;</span><span class="p">);</span>
-        <span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">heelight</span><span class="p">.</span><span class="nf">read</span><span class="p">(),</span> <span class="n">HEX</span><span class="p">);</span>
-        <span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="sc">&#39;\t&#39;</span><span class="p">);</span>
-        <span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">heelight</span><span class="p">.</span><span class="nf">read</span><span class="p">(),</span> <span class="n">HEX</span><span class="p">);</span>
-        <span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">();</span> 
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
-<p>Open the serial monitor, set baud rate to be 9600, 
-then play the sound. We have prepared 511 different digital sounds for you. Every time one sound is played, 
-the heelight sensor will output a hex value correspond to the sound, 
-and the last 2 characters of the hex value is the same as the sounds value.</p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/core/core_monitor.png" /></p>
+<p>There're many examples for the library, which is consist of,</p>
+<ul>
+<li><strong><em>send</em></strong> - How to send a frame to CAN Bus</li>
+<li><strong><em>recv</em></strong> - How to recv a frame from CAN Bus</li>
+<li><strong><em>debug</em></strong> - debug mode, you can send a cmd to the module</li>
+<li><strong><em>set_can_baudrate</em></strong> - set can bus baudrate</li>
+<li><strong><em>set_mask_filt</em></strong> - set mask and filt of the module</li>
+</ul>
 <h2 id="reference"><strong><em>Reference</em></strong><a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
-<li><a href="">Eagle Library of Heelight Core</a></li>
-<li><a href="https://github.com/Longan-Labs/docs_mkdocs/raw/master/docs/images/relay/audio.zip">500 sound commands</a></li>
-<li><a href="http://docs.longan-labs.cc/relay/">Heelight Relay</a></li>
+<li><a href="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/base_board.zip">Base board eagle file</a></li>
+<li><a href="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/gps_board.zip">GPS borad eagle file</a></li>
+<li><a href="https://github.com/Longan-Labs/CAN_BUS_Shield">Arduino Library</a></li>
+<li><a href="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/NEO-6_DataSheet_(GPS.G6-HW-09005).pdf">NEO-6 Datasheet</a></li>
 </ul>
                 
                   
@@ -651,7 +854,7 @@ and the last 2 characters of the hex value is the same as the sounds value.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../can_bus/" title="Serial CAN Bus" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href=".." title="About" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -660,19 +863,19 @@ and the last 2 characters of the hex value is the same as the sounds value.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Serial CAN Bus
+                About
               </span>
             </div>
           </a>
         
         
-          <a href="../relay/" title="Heelight Relay" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../IRduino/" title="IRduino" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Heelight Relay
+                IRduino
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
