@@ -13,7 +13,7 @@
         <meta name="description" content="Docs of Longan Labs">
       
       
-        <link rel="canonical" href="https://longan-labs.cc/1030003/">
+        <link rel="canonical" href="https://longan-labs.cc/1030001/">
       
       
         <meta name="author" content="Loovee">
@@ -42,7 +42,7 @@
     
     
       
-        <title>OBD-II CAN Bus GPS Development Kit - Longan Docs</title>
+        <title>Serial CAN Bus Module - Longan Docs</title>
       
     
     
@@ -131,7 +131,7 @@
                 Longan Docs
               </span>
               <span class="md-header-nav__topic">
-                OBD-II CAN Bus GPS Development Kit
+                Serial CAN Bus Module
               </span>
             
           
@@ -252,7 +252,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" title="CAN Bus" class="md-tabs__link md-tabs__link--active">
+        <a href="../1030003/" title="CAN Bus" class="md-tabs__link md-tabs__link--active">
           CAN Bus
         </a>
       
@@ -462,6 +462,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../1030003/" title="OBD-II CAN Bus GPS Development Kit" class="md-nav__link">
+      OBD-II CAN Bus GPS Development Kit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -471,11 +483,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        OBD-II CAN Bus GPS Development Kit
+        Serial CAN Bus Module
       </label>
     
-    <a href="./" title="OBD-II CAN Bus GPS Development Kit" class="md-nav__link md-nav__link--active">
-      OBD-II CAN Bus GPS Development Kit
+    <a href="./" title="Serial CAN Bus Module" class="md-nav__link md-nav__link--active">
+      Serial CAN Bus Module
     </a>
     
       
@@ -491,25 +503,19 @@
     Introduction
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partlist" title="Partlist" class="md-nav__link">
+    Partlist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#features" title="Features" class="md-nav__link">
     Features
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#specifications" title="Specifications" class="md-nav__link">
-    Specifications
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -518,19 +524,26 @@
     Hardware Overview
   </a>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#work-at-33v" title="Work at 3.3V" class="md-nav__link">
+    Work at 3.3V
+  </a>
+  
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#part-list" title="Part List" class="md-nav__link">
-    Part List
+  <a href="#v11-verstion" title="V1.1 Verstion" class="md-nav__link">
+    V1.1 Verstion
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pin-out" title="Pin out" class="md-nav__link">
-    Pin out
+  <a href="#v10-version" title="V1.0 Version" class="md-nav__link">
+    V1.0 Version
   </a>
   
 </li>
@@ -541,36 +554,77 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#assembly-and-hardware-connection" title="Assembly and Hardware Connection" class="md-nav__link">
-    Assembly and Hardware Connection
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gps-usage" title="GPS Usage" class="md-nav__link">
-    GPS Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#can-bus-usage" title="CAN BUS Usage" class="md-nav__link">
-    CAN BUS Usage
+  <a href="#at-command" title="AT Command" class="md-nav__link">
+    AT Command
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#arduino-code" title="Arduino Code" class="md-nav__link">
-    Arduino Code
+  <a href="#set-serial-baud-rate" title="Set Serial Baud Rate" class="md-nav__link">
+    Set Serial Baud Rate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-can-bus-baudrate" title="Set CAN Bus Baudrate" class="md-nav__link">
+    Set CAN Bus Baudrate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-mask" title="Set Mask" class="md-nav__link">
+    Set Mask
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-filt" title="Set Filt" class="md-nav__link">
+    Set Filt
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normal-mode" title="Normal Mode" class="md-nav__link">
+    Normal Mode
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#send" title="Send" class="md-nav__link">
+    Send
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recv" title="Recv" class="md-nav__link">
+    Recv
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arduino-library" title="Arduino Library" class="md-nav__link">
+    Arduino Library
+  </a>
   
 </li>
       
@@ -589,18 +643,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1030001/" title="Serial CAN Bus Module" class="md-nav__link">
-      Serial CAN Bus Module
-    </a>
   </li>
 
         
@@ -644,25 +686,19 @@
     Introduction
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partlist" title="Partlist" class="md-nav__link">
+    Partlist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#features" title="Features" class="md-nav__link">
     Features
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#specifications" title="Specifications" class="md-nav__link">
-    Specifications
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -671,19 +707,26 @@
     Hardware Overview
   </a>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#work-at-33v" title="Work at 3.3V" class="md-nav__link">
+    Work at 3.3V
+  </a>
+  
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#part-list" title="Part List" class="md-nav__link">
-    Part List
+  <a href="#v11-verstion" title="V1.1 Verstion" class="md-nav__link">
+    V1.1 Verstion
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pin-out" title="Pin out" class="md-nav__link">
-    Pin out
+  <a href="#v10-version" title="V1.0 Version" class="md-nav__link">
+    V1.0 Version
   </a>
   
 </li>
@@ -694,36 +737,77 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#assembly-and-hardware-connection" title="Assembly and Hardware Connection" class="md-nav__link">
-    Assembly and Hardware Connection
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gps-usage" title="GPS Usage" class="md-nav__link">
-    GPS Usage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#can-bus-usage" title="CAN BUS Usage" class="md-nav__link">
-    CAN BUS Usage
+  <a href="#at-command" title="AT Command" class="md-nav__link">
+    AT Command
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#arduino-code" title="Arduino Code" class="md-nav__link">
-    Arduino Code
+  <a href="#set-serial-baud-rate" title="Set Serial Baud Rate" class="md-nav__link">
+    Set Serial Baud Rate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-can-bus-baudrate" title="Set CAN Bus Baudrate" class="md-nav__link">
+    Set CAN Bus Baudrate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-mask" title="Set Mask" class="md-nav__link">
+    Set Mask
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-filt" title="Set Filt" class="md-nav__link">
+    Set Filt
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normal-mode" title="Normal Mode" class="md-nav__link">
+    Normal Mode
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#send" title="Send" class="md-nav__link">
+    Send
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recv" title="Recv" class="md-nav__link">
+    Recv
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arduino-library" title="Arduino Library" class="md-nav__link">
+    Arduino Library
+  </a>
   
 </li>
       
@@ -751,186 +835,360 @@
               
                 
                 
-                  <h1>OBD-II CAN Bus GPS Development Kit</h1>
+                  <h1>Serial CAN Bus Module</h1>
                 
                 <h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p><a href=""><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/1030003-4.jpg" /></a></p>
-<p>The OBD Ⅱ Slaver allows you to hack your vehicle with the integrated OBD port and output all the data via serial interface. It supports the CAN bus protocol, integrates micro SD card slot. On top of that, with the help of a build-in Atmega32U4, it's compatible with arduino. Which means you can code it like a ardunio, then just plug it into your car's OBD port, you will get the output data via the Type C USB port or you can store all the data into your micro-SD card (TF card), easy-peasy.</p>
-<p>This Serial CAN Bus module is based on <strong>MCP2551</strong> and <strong>MCP2515</strong>, which can provide can baud rate from <strong>5kb/s</strong> to <strong>1Mb/s</strong>. </p>
-<p>One more thing, we integrate the GPS module, you can even track your car with this fantastic little module. It is obviously that you will love it, happy hacking！</p>
-<h3 id="features"><strong>Features</strong><a class="headerlink" href="#features" title="Permanent link">&para;</a></h3>
+<hr />
+<p><a href="https://www.seeedstudio.com/Serial-CAN-BUS-Module-based-on-MCP2551-and-MCP2515-p-2924.html"><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/CAN-4.jpg" /></a></p>
+<p>The Serial CAN BUS provide your Arduino or others MCU with the capability to communication to CAN Bus, such as hacking your vehicle. 
+CAN Bus is a common industrial bus because of its long travel distance, medium communication speed and high reliability. </p>
+<p>This Serial CAN Bus module is based on <strong>MCP2551</strong> and <strong>MCP2515</strong>, which can provide speed up to <strong>1Mb/s</strong>. </p>
+<h2 id="partlist"><strong><em>Partlist</em></strong><a class="headerlink" href="#partlist" title="Permanent link">&para;</a></h2>
+<hr />
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbus/partlist.jpg" /></p>
+<h2 id="features"><strong><em>Features</em></strong><a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<hr />
 <ul>
-<li>ODB Ⅱ port</li>
 <li>Uart to CAN Bus communication</li>
-<li>Build-in Atmega32U4</li>
-<li>Integraded GPS module</li>
-<li>Integraded Micro-SD(TF) card</li>
-<li>AT command support</li>
+<li>Work with Arduino/BeagleBone board/Pi or any MCU that integrated with Uart.</li>
+<li>AT command</li>
 <li>Up to 115200 Uart baud rate (default 9600)</li>
 <li>Up to 1Mb/s CAN Bus baud rate</li>
 <li>TX and RX led indicator</li>
+<li>4pin Grove connector</li>
+<li>3.3 / 5V working voltage</li>
 <li>Easy-to-use Arduino library</li>
+<li>Small size: 20x40 mm</li>
 </ul>
-<h3 id="specifications"><strong>Specifications</strong><a class="headerlink" href="#specifications" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>MCU</td>
-<td>Atmega32U4<br>(with Arduino Leonardo bootloader)</td>
-</tr>
-<tr>
-<td>Clock Speed</td>
-<td>16MHz</td>
-</tr>
-<tr>
-<td>Flash Memory</td>
-<td>32KB</td>
-</tr>
-<tr>
-<td>SRAM</td>
-<td>2.5KB</td>
-</tr>
-<tr>
-<td>EERROM</td>
-<td>1KB</td>
-</tr>
-<tr>
-<td>Operate Voltage</td>
-<td>5V</td>
-</tr>
-<tr>
-<td>Input Interface</td>
-<td>OBD-II</td>
-</tr>
-<tr>
-<td>Output Interface</td>
-<td>USB Type C</td>
-</tr>
-</tbody>
-</table>
-<hr />
 <h2 id="hardware-overview"><strong><em>Hardware Overview</em></strong><a class="headerlink" href="#hardware-overview" title="Permanent link">&para;</a></h2>
-<h3 id="part-list">Part List<a class="headerlink" href="#part-list" title="Permanent link">&para;</a></h3>
-<ul>
-<li>OBD Ⅱ Slaver(Base board)  x 1</li>
-<li>GPS Board x 1</li>
-<li>Plastic Case x 1</li>
-<li>Screw Driver x 1</li>
-</ul>
-<p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/1030003-6.jpg" /></p>
-<h3 id="pin-out">Pin out<a class="headerlink" href="#pin-out" title="Permanent link">&para;</a></h3>
-<p><strong><em>Base Board</em></strong></p>
-<p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/allpin.png" /></p>
-<p><strong>1.OBD-II Connector:</strong> </p>
-<p>On-board diagnostics (OBD) is an automotive term referring to a vehicle's self-diagnostic and reporting capability. OBD-II is an improvement over OBD-I in both capability and standardization. The OBD-II standard specifies the type of diagnostic connector and its pinout.</p>
-<p><strong>2.Reset Button:</strong></p>
-<p>Reset the on-board Atmega chip</p>
-<p><strong>3.78L05:</strong></p>
-<p>Provide a stable 5V to the whole system.</p>
-<p><strong>4.Atmega32U4:</strong></p>
-<p>The master of the entire module, mainly used to store data on the TF card or transfer data to the computer through the type C cable. In addition, since it's arduino compatible, you can use it to implement some simple controls, such as triggering a buzzer alarm when the speed exceeds a certain value.</p>
-<p><strong>5.MCP2515:</strong></p>
-<p>Microchip Technology’s MCP2515 is a stand-alone Controller Area Network (CAN) controller that implements the CAN specification, version 2.0B. It is capable of transmitting and receiving both standard and
-extended data and remote frames. The MCP2515 has two acceptance masks and six acceptance filters that are used to filter out unwanted messages, thereby reducing the host MCUs overhead. The MCP2515
-interfaces with microcontrollers (MCUs) via an industry standard Serial Peripheral Interface (SPI).</p>
-<p><strong>6.MCP2551</strong></p>
-<p>High-Speed CAN Transceiver：The MCP2551 is a high-speed CAN, fault-tolerant device that serves as the interface between a CAN protocol controller and the physical bus. Typically, each node in a CAN system must have a device to convert the digital signals generated by a CAN controller to signals suitable for transmission over the bus cabling (differential output). It also provides a buffer between the CAN controller and the high-voltage spikes that can be generated on the CAN bus by outside sources (EMI, ESD, electrical transients, etc.).</p>
-<p><strong>7.2x8Pin Female Header for GPS module</strong></p>
-<p>See the GPS section for specific pin definitions.</p>
-<div class="admonition attention">
-<p class="admonition-title">Attention<p>It should be noted that when assembling the GPS module, please align the white triangle on the development board and the module, otherwise the GPS module may be damaged.</p>
-</p>
-</div>
-<p><strong>8.CAN RX/TX Indicator</strong></p>
-<p><strong>9.Power LED</strong></p>
-<p><strong>A.Type C USB connector for programming</strong></p>
-<p><strong>B.User LED, connect to D13</strong></p>
-<p><strong>C.TF Card slot</strong></p>
-<p><strong>D.120Ω resister</strong></p>
-<p>ISO 11898 requires a cable with a nominal impedance of 120 Ω; therefore, you should use 120 Ω resistors for termination. If you place multiple devices along the cable, only the devices on the ends of the cable need termination resistors. Figure 1 shows an example of how to terminate a high-speed network.</p>
-<p style="text-align:center"><img src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/HS_CAN_Termination.gif" /></p>
-
-<p>So if you use this slaver on the end of the CAN bus, you need to solder a 120Ω resister between the two pad, if not just leave them alone. For more detail about the CAN bus protocol, please refer to the
-<a href="http://www.ni.com/white-paper/9759/en/">NI CAN Physical Layer and Termination Guide</a></p>
-<p><strong>E.ICSP pads for burning bootloader</strong></p>
-<p><strong><em>GPS Board</em></strong></p>
-<p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/GPS.jpg" /></p>
-<p><strong>1.GPS Antenna</strong></p>
-<p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/Antenna.png" /></p>
-<p><strong>2.2x8Pin header</strong></p>
-<p><strong>3.NEO-6 GPS module</strong></p>
-<p>Refer to the <a href="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/NEO-6_DataSheet_(GPS.G6-HW-09005).pdf">GPS datasheet</a>.</p>
-<p><strong>4. External Antenna Port</strong></p>
-<p>NEO-6 modules are designed for use with passive and active13 antennas.</p>
+<hr />
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbus/hw.png" /></p>
+<ol>
+<li>4 pin 2.0mm Grove Connector</li>
+<li>Power and status led indicator</li>
+<li>Send and Recv led indicator</li>
+<li>3.5mm terminal to connect to CAN Bus (CAN_H &amp; CAN_L)</li>
+<li>120Ω registor, default connected, if you don't need you cut this pad with a box cutter. </li>
+</ol>
+<h2 id="work-at-33v"><strong><em>Work at 3.3V</em></strong><a class="headerlink" href="#work-at-33v" title="Permanent link">&para;</a></h2>
+<hr />
+<p>The module is working at 5V most of time. If you want it to work at 3.3V IO, please try:</p>
+<h3 id="v11-verstion">V1.1 Verstion<a class="headerlink" href="#v11-verstion" title="Permanent link">&para;</a></h3>
+<p>There's a jumper on the back side, please connect the pads together with a soldering iron. 
+And VCC must connect to 5V. </p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbus/V1.1_3V.jpg" /></p>
+<h3 id="v10-version">V1.0 Version<a class="headerlink" href="#v10-version" title="Permanent link">&para;</a></h3>
+<p>Please try as below, and please note that VCC till need to connect to 5V. </p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbus/V1.0_3V.png" /></p>
+<h2 id="at-command"><strong><em>AT Command</em></strong><a class="headerlink" href="#at-command" title="Permanent link">&para;</a></h2>
+<hr />
+<p>You can achieve the complete function of this Serial CAN Bus module with only a few AT command.</p>
 <table>
 <thead>
 <tr>
-<th>Parameter</th>
-<th>Specification</th>
-<th></th>
+<th>CMD</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Antenna Type</td>
-<td></td>
-<td>Passive and active antenna</td>
+<td>+++</td>
+<td>Switch from Normal mode to Config mode</td>
 </tr>
 <tr>
-<td></td>
-<td>Minimum gain</td>
-<td>15 dB (to compensate signal loss in RF cable)</td>
+<td>AT+S=[value]</td>
+<td>Set serial baud rate</td>
 </tr>
 <tr>
-<td></td>
-<td>Maximum gain</td>
-<td>50 dB</td>
+<td>AT+C=[value]</td>
+<td>Set CAN Bus baud rate</td>
 </tr>
 <tr>
-<td></td>
-<td>Maximum noise figure</td>
-<td>1.5 dB</td>
+<td>AT+M=[N][EXT][value]</td>
+<td>Set mask</td>
+</tr>
+<tr>
+<td>AT+F=[N][EXT][value]</td>
+<td>Set filter</td>
+</tr>
+<tr>
+<td>AT+Q</td>
+<td>Switch to Normal Mode</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="assembly-and-hardware-connection"><strong><em>Assembly and Hardware Connection</em></strong><a class="headerlink" href="#assembly-and-hardware-connection" title="Permanent link">&para;</a></h2>
-<p><strong>Assembly</strong></p>
-<p>It is assembled when you get the development board. If you disassemble it, you can reassemble it by following the steps.</p>
-<p><em>Step 1.</em><br />
-Please check each part.</p>
-<p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/1030003-4.jpg" /></p>
-<p><em>Step 2.</em><br />
-Mount the base board to the bottom housing.</p>
-<p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/1030003-3.jpg" /></p>
-<p><em>Step 3.</em><br />
-Insert the GPS board on the baseboard.</p>
-<p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/1030003-2.jpg" /></p>
-<div class="admonition attention">
-<p class="admonition-title">Attention<p>When inserting the GPS board, be careful to align the white triangles of the GPS and Base boards. </p>
-</p>
+<div class="admonition tip">
+<p class="admonition-title">Note</p>
+<p>All of the cmd should end with '\n' except +++</p>
 </div>
-<p><em>Step 4.</em><br />
-Close the top cover and fix it with screws.</p>
-<p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/1030003-1.jpg" /></p>
-<h2 id="gps-usage">GPS Usage<a class="headerlink" href="#gps-usage" title="Permanent link">&para;</a></h2>
-<p>The GPS Module use serial port to output the GPS data, you just need to connect this module to your PC via the USB type C cable, using any serial tool such as putty, you will be able to get the GPS data.</p>
-<p>As shown below:</p>
-<p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/GPS_DATA.jpg" /></p>
-<p>In order to parse the received GPS data, you need to refer to the <a href="http://aprs.gids.nl/nmea/">http://aprs.gids.nl/nmea/</a>.</p>
-<p>For more detail about the NEO-6 module, please refer to <a href="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/NEO-6_DataSheet_(GPS.G6-HW-09005).pdf">NEO-6 Datasheet</a></p>
-<h2 id="can-bus-usage">CAN BUS Usage<a class="headerlink" href="#can-bus-usage" title="Permanent link">&para;</a></h2>
-<h3 id="arduino-code"><strong><em>Arduino Code</em></strong><a class="headerlink" href="#arduino-code" title="Permanent link">&para;</a></h3>
+<h3 id="set-serial-baud-rate">Set Serial Baud Rate<a class="headerlink" href="#set-serial-baud-rate" title="Permanent link">&para;</a></h3>
 <hr />
-<p>We provide an arduino library for OBD Ⅱ Slaver. </p>
-<p style="text-align:center"><a href="https://github.com/Longan-Labs/CAN_BUS_Shield" target="_blank"><img src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/library%2BA.jpg" /></a></p>
+<p>You can set the serial baud rate of the module with this command. There're 5 rates available, up to 115200 b/s.</p>
+<div class="codehilite"><pre><span></span>AT+S=[value]
+</pre></div>
 
+<table>
+<thead>
+<tr>
+<th>value</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>baud rate(b/s)</td>
+<td><strong>9600</strong></td>
+<td>19200</td>
+<td>38400</td>
+<td>57600</td>
+<td>115200</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Note</p>
+<p>Default is 9600</p>
+</div>
+<p><strong>Eg:</strong> Set serial baud rate to 57600
+<div class="codehilite"><pre><span></span>AT+S=3
+</pre></div></p>
+<p><strong>Respose</strong></p>
+<p><em>OK</em> or <em>ERROR</em></p>
+<h3 id="set-can-bus-baudrate">Set CAN Bus Baudrate<a class="headerlink" href="#set-can-bus-baudrate" title="Permanent link">&para;</a></h3>
+<hr />
+<p>You can use this command to set the rate of CAN Bus, there's 18 rates available. 
+Normally, if you want to hack your vehicle, 500k is the right one. </p>
+<div class="codehilite"><pre><span></span>AT+C=[value]
+</pre></div>
+
+<table>
+<thead>
+<tr>
+<th>value</th>
+<th>01</th>
+<th>02</th>
+<th>03</th>
+<th>04</th>
+<th>05</th>
+<th>06</th>
+<th>07</th>
+<th>08</th>
+<th>09</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+<th>14</th>
+<th>15</th>
+<th>16</th>
+<th>17</th>
+<th>18</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rate(kb/s)</td>
+<td>5</td>
+<td>10</td>
+<td>20</td>
+<td>25</td>
+<td>31.2</td>
+<td>33</td>
+<td>40</td>
+<td>50</td>
+<td>80</td>
+<td>83.3</td>
+<td>95</td>
+<td>100</td>
+<td>125</td>
+<td>200</td>
+<td>250</td>
+<td><strong>500</strong></td>
+<td>666</td>
+<td>1000</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip note">
+<p class="admonition-title">Tip</p>
+<p>Default is 500K</p>
+</div>
+<p><strong>Eg:</strong> Set CAN BUS baud rate to 50K
+<div class="codehilite"><pre><span></span>AT+C=08
+</pre></div></p>
+<p><strong>Respose</strong></p>
+<p>OK or ERROR</p>
+<h3 id="set-mask">Set Mask<a class="headerlink" href="#set-mask" title="Permanent link">&para;</a></h3>
+<hr />
+<p>There're 2 Mask for the module, Mask0 and Mask1.</p>
+<div class="codehilite"><pre><span></span>AT+M=[N][EXT][value]
+</pre></div>
+
+<p><strong>N:</strong></p>
+<ul>
+<li>0: Mask0</li>
+<li>1: Mask1</li>
+</ul>
+<p><strong>EXT:</strong></p>
+<ul>
+<li>0: Standard Frame</li>
+<li>1: Extended Frame</li>
+</ul>
+<p><strong>value:</strong></p>
+<p>Neeed 8 bit of character, hexadecimal.</p>
+<p><strong>Eg:</strong> Set Mask1 to 0x3DF, standard frame:
+<div class="codehilite"><pre><span></span>AT+M=[1][0][000003DF]
+</pre></div></p>
+<p><strong>Respose</strong></p>
+<p>OK or ERROR</p>
+<h3 id="set-filt">Set Filt<a class="headerlink" href="#set-filt" title="Permanent link">&para;</a></h3>
+<hr />
+<p>There're 6 Mask for the module, Filt0 ~ Filt5</p>
+<div class="codehilite"><pre><span></span>AT+F=[N][EXT][value]
+</pre></div>
+
+<p><strong>N:</strong></p>
+<table>
+<thead>
+<tr>
+<th>N</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Filt</td>
+<td>Filt0</td>
+<td>Filt1</td>
+<td>Filt2</td>
+<td>Filt3</td>
+<td>Filt4</td>
+<td>Filt5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>EXT:</strong></p>
+<ul>
+<li>0: Standard Frame</li>
+<li>1: Extended Frame</li>
+</ul>
+<p><strong>value:</strong></p>
+<p>Neeed 8 bit of character, hexadecimal.</p>
+<p><strong>Eg:</strong> Set Filt3 to 0x2C, standard frame:
+<div class="codehilite"><pre><span></span>AT+F=[1][0][0000002C]
+</pre></div></p>
+<p><strong>Respose</strong></p>
+<p>OK or ERROR</p>
+<h2 id="normal-mode"><strong><em>Normal Mode</em></strong><a class="headerlink" href="#normal-mode" title="Permanent link">&para;</a></h2>
+<hr />
+<p>When the module working on Normal mode, you can send and recevie data from CAN Bus. </p>
+<h3 id="send">Send<a class="headerlink" href="#send" title="Permanent link">&para;</a></h3>
+<p>You should send 14 byte of data per frame. Define as below,</p>
+<table>
+<thead>
+<tr>
+<th>bit</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th>13</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>define</td>
+<td>ID3</td>
+<td>ID2</td>
+<td>ID1</td>
+<td>ID0</td>
+<td>EXT</td>
+<td>RTR</td>
+<td>DTA0</td>
+<td>DTA1</td>
+<td>DTA2</td>
+<td>DTA3</td>
+<td>DTA4</td>
+<td>DTA5</td>
+<td>DTA6</td>
+<td>DTA7</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>ID0~ID3: CAN ID</li>
+<li>EXT: 0 for standard frame, 1 for extended frame</li>
+<li>RTR: 0 for standard frame, 1 for remote frame</li>
+<li>DTA0~DTA7: 8 byte of data</li>
+</ul>
+<p><strong>Eg.</strong></p>
+<p>Send {1, 2, 3, 4, 5, 6, 7, 8} to ID:0x3DC, Standard frame:
+<div class="codehilite"><pre><span></span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mh">0xDC</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+</pre></div></p>
+<h3 id="recv">Recv<a class="headerlink" href="#recv" title="Permanent link">&para;</a></h3>
+<p>You will get 12 byte of data per frame. Define as below,</p>
+<table>
+<thead>
+<tr>
+<th>bit</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>define</td>
+<td>ID3</td>
+<td>ID2</td>
+<td>ID1</td>
+<td>ID0</td>
+<td>DTA0</td>
+<td>DTA1</td>
+<td>DTA2</td>
+<td>DTA3</td>
+<td>DTA4</td>
+<td>DTA5</td>
+<td>DTA6</td>
+<td>DTA7</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>ID0~ID3: CAN ID</li>
+<li>DTA0~DTA7: 8 byte of data</li>
+</ul>
+<h2 id="arduino-library"><strong><em>Arduino Library</em></strong><a class="headerlink" href="#arduino-library" title="Permanent link">&para;</a></h2>
+<hr />
+<p>We provide an library for Aruino Software Serial. </p>
+<p>Please download it at <a href="https://github.com/Longan-Labs/Serial_CAN_Arduino">Github</a></p>
 <p>There're many examples for the library, which is consist of,</p>
 <ul>
 <li><strong><em>send</em></strong> - How to send a frame to CAN Bus</li>
@@ -942,10 +1200,9 @@ Close the top cover and fix it with screws.</p>
 <h2 id="reference"><strong><em>Reference</em></strong><a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
-<li><a href="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/base_board.zip">Base board eagle file</a></li>
-<li><a href="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/gps_board.zip">GPS borad eagle file</a></li>
-<li><a href="https://github.com/Longan-Labs/CAN_BUS_Shield">Arduino Library</a></li>
-<li><a href="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/NEO-6_DataSheet_(GPS.G6-HW-09005).pdf">NEO-6 Datasheet</a></li>
+<li><a href="https://github.com/Longan-Labs/Serial_CAN_Arduino">Arduino Library</a></li>
+<li><a href="https://www.seeedstudio.com/Serial-CAN-BUS-Module-based-on-MCP2551-and-MCP2515-p-2924.html">How to get ONE</a></li>
+<li><a href="https://github.com/Longan-Labs/Eagle_File_Serial_CAN_Bus/archive/master.zip">Schematics in Eagle File</a></li>
 </ul>
                 
                   
@@ -967,7 +1224,7 @@ Close the top cover and fix it with screws.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../1016007/" title="AAA Battery Card" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../1030003/" title="OBD-II CAN Bus GPS Development Kit" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -976,19 +1233,19 @@ Close the top cover and fix it with screws.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                AAA Battery Card
+                OBD-II CAN Bus GPS Development Kit
               </span>
             </div>
           </a>
         
         
-          <a href="../1030001/" title="Serial CAN Bus Module" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../1030002/" title="OBD-II CAN-BUS Development Kit" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Serial CAN Bus Module
+                OBD-II CAN-BUS Development Kit
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
