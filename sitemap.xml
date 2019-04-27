@@ -2,47 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://longan-labs.cc/</loc>
-     <lastmod>2019-01-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://longan-labs.cc/1030003/</loc>
-     <lastmod>2019-01-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://longan-labs.cc/IRduino/</loc>
-     <lastmod>2019-01-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://longan-labs.cc/can_bus/</loc>
-     <lastmod>2019-01-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://longan-labs.cc/heelight_core/</loc>
-     <lastmod>2019-01-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://longan-labs.cc/relay/</loc>
-     <lastmod>2019-01-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://longan-labs.cc/obd_kit/</loc>
-     <lastmod>2019-01-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://longan-labs.cc/Keyboard/</loc>
-     <lastmod>2019-01-03</lastmod>
+     <lastmod>2019-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://longan-labs.cc/license/</loc>
-     <lastmod>2019-01-03</lastmod>
+     <lastmod>2019-04-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://longan-labs.cc/IRduino/</loc>
+     <lastmod>2019-04-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://longan-labs.cc/heelight_core/</loc>
+     <lastmod>2019-04-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://longan-labs.cc/relay/</loc>
+     <lastmod>2019-04-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://longan-labs.cc/Keyboard/</loc>
+     <lastmod>2019-04-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://longan-labs.cc/1016007/</loc>
+     <lastmod>2019-04-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://longan-labs.cc/1030003/</loc>
+     <lastmod>2019-04-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://longan-labs.cc/can_bus/</loc>
+     <lastmod>2019-04-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://longan-labs.cc/obd_kit/</loc>
+     <lastmod>2019-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
