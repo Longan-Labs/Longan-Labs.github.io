@@ -1,0 +1,1054 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Docs of Longan Labs">
+      
+      
+        <link rel="canonical" href="https://longan-labs.cc/1013007/">
+      
+      
+        <meta name="author" content="Loovee">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+    
+    
+      
+        <title>Carduino 32U4 - Longan Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.11e41852.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ffa000">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.20ef595d.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="amber" data-md-color-accent="amber">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#introduction" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://longan-labs.cc" title="Longan Docs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Longan Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Carduino 32U4
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/Longan-Labs/docs_mkdocs" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Longan-Labs/docs_mkdocs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." title="About" class="md-tabs__link">
+        About
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../1040001/" title="Electronic" class="md-tabs__link">
+          Electronic
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../1016007/" title="Cards" class="md-tabs__link md-tabs__link--active">
+          Cards
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../1030003/" title="CAN Bus" class="md-tabs__link">
+          CAN Bus
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://longan-labs.cc" title="Longan Docs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Longan Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/Longan-Labs/docs_mkdocs" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Longan-Labs/docs_mkdocs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Electronic
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Electronic
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1040001/" title="IRduino" class="md-nav__link">
+      IRduino
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1040002/" title="Heelight Core" class="md-nav__link">
+      Heelight Core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1040003/" title="Heelight Relay" class="md-nav__link">
+      Heelight Relay
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1040004/" title="Keyboard" class="md-nav__link">
+      Keyboard
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Cards
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Cards
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1016007/" title="AAA Battery Card" class="md-nav__link">
+      AAA Battery Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Carduino 32U4
+      </label>
+    
+    <a href="./" title="Carduino 32U4" class="md-nav__link md-nav__link--active">
+      Carduino 32U4
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifications" title="Specifications" class="md-nav__link">
+    Specifications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pins" title="Pins" class="md-nav__link">
+    Pins
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#power-connections" title="Power connections" class="md-nav__link">
+    Power connections
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpio-pins" title="GPIO pins" class="md-nav__link">
+    GPIO pins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i2c-pins" title="I2C pins" class="md-nav__link">
+    I2C pins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-spi-pins" title="Hardware SPI pins" class="md-nav__link">
+    Hardware SPI pins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-uart-serial" title="Hardware UART / Serial" class="md-nav__link">
+    Hardware UART / Serial
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arduino-ide-setup" title="Arduino IDE Setup" class="md-nav__link">
+    Arduino IDE Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use" title="How to Use" class="md-nav__link">
+    How to Use
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-with-extension-board" title="Using with Extension Board" class="md-nav__link">
+    Using with Extension Board
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blink" title="Blink" class="md-nav__link">
+    Blink
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" title="Resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      CAN Bus
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        CAN Bus
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030003/" title="OBD-II CAN Bus GPS Development Kit" class="md-nav__link">
+      OBD-II CAN Bus GPS Development Kit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030001/" title="Serial CAN Bus Module" class="md-nav__link">
+      Serial CAN Bus Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030002/" title="OBD-II CAN-BUS Development Kit" class="md-nav__link">
+      OBD-II CAN-BUS Development Kit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifications" title="Specifications" class="md-nav__link">
+    Specifications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pins" title="Pins" class="md-nav__link">
+    Pins
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#power-connections" title="Power connections" class="md-nav__link">
+    Power connections
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpio-pins" title="GPIO pins" class="md-nav__link">
+    GPIO pins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i2c-pins" title="I2C pins" class="md-nav__link">
+    I2C pins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-spi-pins" title="Hardware SPI pins" class="md-nav__link">
+    Hardware SPI pins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-uart-serial" title="Hardware UART / Serial" class="md-nav__link">
+    Hardware UART / Serial
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arduino-ide-setup" title="Arduino IDE Setup" class="md-nav__link">
+    Arduino IDE Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use" title="How to Use" class="md-nav__link">
+    How to Use
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-with-extension-board" title="Using with Extension Board" class="md-nav__link">
+    Using with Extension Board
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blink" title="Blink" class="md-nav__link">
+    Blink
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" title="Resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Carduino 32U4</h1>
+                
+                <h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1013007/carduino-front.png" /></p>
+<p>Carduino is the new development board belongs to the Longan Cards Family. As its name implies it is small as &frac12; of a credit card, thin, and light weight. Carduino is pluggable, which means you can plug it to one of the following boards.</p>
+<ul>
+<li>Extension board</li>
+<li>Sensor display board</li>
+<li>Game board</li>
+<li>Car board</li>
+<li>Pi Hap</li>
+</ul>
+<p>There is a wide array of cards support with the Carduino. All cards are pluggable and share the same board to communicate with the Carduino. Carduino allow you to quickly build prototypes and develop applications.</p>
+<p>At the Carduino’s heart is an ATmega32u4  microprocessor and powered with the Arduino Leonardo bootloader allows you to program it using the Arduino IDE. We have written some exciting Arduino libraries that lets you to quickly develop applications.</p>
+<p>Here is a list of things that can be found on the front of the Carduino board.</p>
+<ul>
+<li>ATmega32u4 microprocessor</li>
+<li>Type-C USB connector – You will need USB to Type-C cable (<a href="https://www.longan-labs.cc/2140001.html">https://www.longan-labs.cc/2140001.html</a>)</li>
+<li>Programmable LED – Connects with digital pin 13 </li>
+<li>Reset button – Re-starts the Arduino sketch</li>
+<li>Three-way selectable switch – Slide this switch to the D&#8542; position to use with the Longan game board.</li>
+<li>Gold fingers (Edge connector)</li>
+</ul>
+<h2 id="specifications"><strong><em>Specifications</em></strong><a class="headerlink" href="#specifications" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Measures 41mm x 33mm</li>
+<li>ATmega32u4 @16Mhz clock speed with 3.3V or 5V logic/power (datasheet: <a href="http://www.atmel.com/devices/atmega32u4.aspx">http://www.atmel.com/devices/atmega32u4.aspx</a>)</li>
+<li>32KB of flash memory which 4KB used by bootloader </li>
+<li>Programmable LED</li>
+<li>Preloaded with the Arduino Leonardo bootloader    </li>
+<li>Edge connector (Golden fingers) exposes 30 pins (power, digital, analog, PWM, I2C, SPI, UART)</li>
+<li>Built-in USB communication</li>
+<li>Type-C USB connector</li>
+<li>Reset button</li>
+<li>Three-way selectable switch to use with game board</li>
+<li>currently supports game board, car board, sensor display board, extension board, and Pi Hap</li>
+<li>Two mounting holes</li>
+</ul>
+<p>Carduino comes with fully assembled and tested, with a USB interface that lets you quickly use it with the Arduino IDE.</p>
+<h2 id="pins"><strong><em>Pins</em></strong><a class="headerlink" href="#pins" title="Permanent link">&para;</a></h2>
+<p>The edge connector (gold fingers) has total of 30 contacts (each side has 15 contacts).</p>
+<p>On the front side of the Carduino, a white arrow is printed near the edge connector indicates the pin #1. You can find some pin numbers printed on the edge connector itself (1, 15, and 29). You can count the pin numbers starting with 1 and count by twos from right to left would be 1, 3, 7, 9, 11, 15, 17, 19, 21, 23, 27, and 29. Notice that all the counts are odd numbers. </p>
+<p>On the back side of the Carduino, you also can find some pin numbers printed on the edge connector itself (2, 16, and 30). You can count the pin numbers starting with 2 and count by twos from left to right would be 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28 and 30. Notice that all the counts are even numbers. </p>
+<p>Table below presents the pin numbers and their functions. The pin functions of Carduino is  exactly same with the pin functions of Arduino Leonardo.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1013007/pin-mapping.png" /></p>
+<h3 id="power-connections"><strong><em>Power connections</em></strong><a class="headerlink" href="#power-connections" title="Permanent link">&para;</a></h3>
+<p>There are two main ways to power the Carduino.</p>
+<ul>
+<li>Through the micro-C USB port with 5V</li>
+<li>Through one of the boards with AAA battery card with 5V</li>
+</ul>
+<p>Following pins allow you to power the Carduino with batteries (AAA battery card) through one of the Longan boards.</p>
+<ul>
+<li>VCC – 5V regulated supply voltage (Front: pin #1, #29 / Back: pin #2, #30)</li>
+<li>GND – This is the common ground for all power and logic (Front: pin #3, #27 / Back: pin #4, #28)</li>
+</ul>
+<p>You can also hack the power pins to power the Carduino with a regulated 3.3V or 5V power source.</p>
+<h3 id="gpio-pins"><strong><em>GPIO pins</em></strong><a class="headerlink" href="#gpio-pins" title="Permanent link">&para;</a></h3>
+<p>This is the general purpose I/O pin set for the Carduino. GPIO consists of digital, analog,  I2C, SPI, and UART pins. Most pins can do PWM output. Also, all pins can be used as interrupt pins.</p>
+<ul>
+<li>Digital (Front: pin #9, #11, #21 / Back: pin #10, #12, #22)</li>
+<li>Analog (Front: pin #13, #19 / Back: pin #14, #20)</li>
+</ul>
+<h3 id="i2c-pins"><strong><em>I2C pins</em></strong><a class="headerlink" href="#i2c-pins" title="Permanent link">&para;</a></h3>
+<p>You can use I2C pins allow Carduino to communicate with all the Longan cards (all cards are I2C enabled and comes with a factory default unique I2C address).</p>
+<ul>
+<li>SDA –  The I2C data pin (Front: pin #5, #25 / Back: pin #6, #26)</li>
+<li>SCL – The I2C clock pin (Front: pin #7, #23 / Back: pin #8, #24)</li>
+</ul>
+<h3 id="hardware-spi-pins"><strong><em>Hardware SPI pins</em></strong><a class="headerlink" href="#hardware-spi-pins" title="Permanent link">&para;</a></h3>
+<p>These are the hardware SPI pins that can be used to communicate with high speed.</p>
+<ul>
+<li>SCK – Serial Clock (Front: pin #17)</li>
+<li>MISO - Master In Slave Out, takes data from the Carduino to the SPI device (Front: pin #15)</li>
+<li>MOSI – Master Out Slave In, takes data to the Carduino from the SPI device (Back: pin #16)</li>
+</ul>
+<h3 id="hardware-uart-serial"><strong><em>Hardware UART / Serial</em></strong><a class="headerlink" href="#hardware-uart-serial" title="Permanent link">&para;</a></h3>
+<p>These pins can be used to connect devices support with UART using two wires.</p>
+<ul>
+<li>TX – Transmits data (Front: pin #21)</li>
+<li>RX – Receives data (Back: pin #22)</li>
+</ul>
+<h2 id="arduino-ide-setup"><strong><em>Arduino IDE Setup</em></strong><a class="headerlink" href="#arduino-ide-setup" title="Permanent link">&para;</a></h2>
+<p>First download the Arduino IDE from <a href="https://www.arduino.cc/en/Main/Software">https://www.arduino.cc/en/Main/Software</a>. Arduino IDE can be installed and run on Windows, Linux, and Mac OS X operating systems. Download the installer or zip file (Windows only) and install (if you have the zip file, extract it to your Windows computer’s hard drive) it on your operating system.</p>
+<p>Once finished, start the Arduino IDE.</p>
+<p>Copy and paste the link below into the Additional Boards Manager URLs option in the Arduino IDE preferences (<strong>File &gt; Preferences</strong>).</p>
+<p><a href="https://raw.githubusercontent.com/Longan-Labs/Longan-Board/master/package_longan_boards_index.json">https://raw.githubusercontent.com/Longan-Labs/Longan-Board/master/package_longan_boards_index.json</a></p>
+<p>The Longan AVR boards supplied package includes supports for Longan Card, Carduino 328, Carduino 32U4. </p>
+<p>Once done, click OK button to save the new preference settings.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1013007/arduino-ide-setup-5.png" /></p>
+<p>Now open the Boards Manager by navigating to the <strong>Tools -&gt; Board</strong> menu.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1013007/arduino-ide-setup-6.png" /></p>
+<p>Select All from the Type drop-down menu. Then type longan in the top search bar. While typing, you will see the Longan AVR package.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1013007/arduino-ide-setup-7.png" /></p>
+<p>Click on the Longan AVR by Longan Labs and then click on Install button.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1013007/arduino-ide-setup-8.png" /></p>
+<p>Once installed, close the Boards Manager window.</p>
+<h2 id="how-to-use"><strong><em>How to Use</em></strong><a class="headerlink" href="#how-to-use" title="Permanent link">&para;</a></h2>
+<p>Carduino can be plugged in to one of the edge connector slots available in the following boards.</p>
+<ul>
+<li>Game board</li>
+<li>Car board</li>
+<li>Sensor display board</li>
+<li>Extension board</li>
+<li>Pi Hap</li>
+</ul>
+<p>All Longan cards are polarized, and every pin is unique in terms of both location and function. On the front side of the Carduino, a white arrow is printed near the edge connector indicates the pin #1.</p>
+<h3 id="using-with-extension-board"><strong><em>Using with Extension Board</em></strong><a class="headerlink" href="#using-with-extension-board" title="Permanent link">&para;</a></h3>
+<p>We will be using Longan Extension board demonstrate how you can insert the Carduino in to an edge connector slot.</p>
+<ul>
+<li>
+<p>Take the Carduino and Extension board. Then plug the Carduino into the edge connector slot of the Extension board as shown in the picture below.</p>
+</li>
+<li>
+<p>Next, take the AAA battery card and insert two 1.5V or 1.2V, AAA sized batteries.</p>
+</li>
+<li>
+<p>Then insert it in to another edge connector slot on the Extension board. Make sure to slide the power switch of the battery card to the ON position.</p>
+</li>
+<li>
+<p>Now your Carduino can use the battery power to function correctly.</p>
+</li>
+</ul>
+<h3 id="blink"><strong><em>Blink</em></strong><a class="headerlink" href="#blink" title="Permanent link">&para;</a></h3>
+<p>We will start off with something very simple with an LED, turning on and off, repeatedly, producing a pleasant blinking effect. The Carduino has a built-in LED on digital pin 13 (Arduino Leonardo equivalent) emits bright blue light when turned on. You can find it on the front of the Carduino (labelled as D13)  very close to the Type-C USB connector.</p>
+<p>Now you can upload your first Blink sketch to the Carduino. The Arduino IDE provides a great example for blinking a LED. There is no need to type anything, just click <strong>File &gt; Example &gt; 01.Basics &gt; Blink</strong> under <strong>Built-in Examples</strong> in the Arduino IDE.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1013007/arduino-ide-setup-1.png" /></p>
+<p>Connect the Type-C USB cable to the USB connector of the Carduino and connect the other end to your computer.</p>
+<p>Next, tell the Arduino IDE to use the Carduino. To do this, click <strong>Tools &gt; Board &gt; Carduino 32U4</strong> under Longen AVR Boards.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1013007/arduino-ide-setup-2.png" /></p>
+<p>Then select the proper port in <strong>Tools &gt; Port &gt; (the Serial/COM port of your Carduino)</strong>.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1013007/arduino-ide-setup-3.png" /></p>
+<p>Next, upload the program by clicking <strong>Sketch &gt; Upload</strong>.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1013007/arduino-ide-setup-4.png" /></p>
+<p>It will take some time to compile and upload the sketch in to the Carduino.</p>
+<p>If you have trouble loading the Blink sketch from the examples, you can copy and paste the code below into the Arduino editor.</p>
+<div class="codehilite"><pre><span></span>/*
+  Blink
+
+  Turns an LED on for one second, then off for one second, repeatedly.
+
+  Most Arduinos have an on-board LED you can control. On the UNO, MEGA and ZERO
+  it is attached to digital pin 13, on MKR1000 on pin 6. LED_BUILTIN is set to
+  the correct LED pin independent of which board is used.
+  If you want to know what pin the on-board LED is connected to on your Arduino
+  model, check the Technical Specs of your board at:
+  https://www.arduino.cc/en/Main/Products
+
+  modified 8 May 2014
+  by Scott Fitzgerald
+  modified 2 Sep 2016
+  by Arturo Guadalupi
+  modified 8 Sep 2016
+  by Colby Newman
+
+  This example code is in the public domain.
+
+  http://www.arduino.cc/en/Tutorial/Blink
+*/
+
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+// the loop function runs repeatedly forever
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);                       // wait for a second
+  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);                       // wait for a second
+}
+</pre></div>
+
+<p>After uploading the sketch to the Carduino, you should see the LED on the Carduino blinking.</p>
+<p>When you press the reset button during running your sketch, the Carduino will take some time to re-start the program and blinks the LED very slowly with a fading effect.</p>
+<p>Now, you can firmly remove the Type-C USB cable from the Carduino to allow to use the battery power with the Longan AAA battery card. When you remove the USB power, the Carduino will automatically switch to the battery power and continually executes the program without resetting the microcontroller.</p>
+<p>If you want to turn off the Carduino, simply slide the switch to the off position on the AAA battery card.</p>
+<h2 id="resources"><strong><em>Resources</em></strong><a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Eagle Files: <a href="https://github.com/Longan-Labs/EagleFile_Cards/tree/master/1013007_Carduino_32U4">https://github.com/Longan-Labs/EagleFile_Cards/tree/master/1013007_Carduino_32U4</a></li>
+<li>Longan AVR boards supplied package: <a href="https://raw.githubusercontent.com/Longan-Labs/Longan-Board/master/package_longan_boards_index.json">https://raw.githubusercontent.com/Longan-Labs/Longan-Board/master/package_longan_boards_index.json</a></li>
+<li>Arduino IDE: <a href="https://www.arduino.cc/en/Main/Software">https://www.arduino.cc/en/Main/Software</a></li>
+<li>Sample Arduino Code: <a href="https://github.com/Longan-Labs/LonganCard">https://github.com/Longan-Labs/LonganCard</a></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../1016007/" title="AAA Battery Card" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                AAA Battery Card
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../1030003/" title="OBD-II CAN Bus GPS Development Kit" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                OBD-II CAN Bus GPS Development Kit
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 Longan Labs
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.905597d0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>
