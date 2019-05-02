@@ -1,0 +1,1182 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Docs of Longan Labs">
+      
+      
+        <link rel="canonical" href="https://longan-labs.cc/1017008/">
+      
+      
+        <meta name="author" content="Loovee">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+    
+    
+      
+        <title>Game Board - Longan Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.11e41852.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ffa000">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.20ef595d.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="amber" data-md-color-accent="amber">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#introduction" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://longan-labs.cc" title="Longan Docs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Longan Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Game Board
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/Longan-Labs/docs_mkdocs" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Longan-Labs/docs_mkdocs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." title="About" class="md-tabs__link">
+        About
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../1040001/" title="Electronic" class="md-tabs__link">
+          Electronic
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../1016007/" title="Cards" class="md-tabs__link md-tabs__link--active">
+          Cards
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../1030003/" title="CAN Bus" class="md-tabs__link">
+          CAN Bus
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://longan-labs.cc" title="Longan Docs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Longan Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/Longan-Labs/docs_mkdocs" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Longan-Labs/docs_mkdocs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Electronic
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Electronic
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1040001/" title="IRduino" class="md-nav__link">
+      IRduino
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1040002/" title="Heelight Core" class="md-nav__link">
+      Heelight Core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1040003/" title="Heelight Relay" class="md-nav__link">
+      Heelight Relay
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1040004/" title="Keyboard" class="md-nav__link">
+      Keyboard
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Cards
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Cards
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1016007/" title="AAA Battery Card" class="md-nav__link">
+      AAA Battery Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1013007/" title="Carduino 32U4" class="md-nav__link">
+      Carduino 32U4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Game Board
+      </label>
+    
+    <a href="./" title="Game Board" class="md-nav__link md-nav__link--active">
+      Game Board
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kit-contents" title="Kit Contents" class="md-nav__link">
+    Kit Contents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-accessories" title="Required Accessories" class="md-nav__link">
+    Required Accessories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assembly-tools" title="Assembly Tools" class="md-nav__link">
+    Assembly Tools
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#game-board" title="Game Board" class="md-nav__link">
+    Game Board
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assembly" title="Assembly" class="md-nav__link">
+    Assembly
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-arduboy-uploader" title="Installing the Arduboy Uploader" class="md-nav__link">
+    Installing the Arduboy Uploader
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installer" title="Installer" class="md-nav__link">
+    Installer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zip-package" title="Zip package" class="md-nav__link">
+    Zip package
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uplaoding-a-game-to-the-carduino" title="Uplaoding a Game to the Carduino" class="md-nav__link">
+    Uplaoding a Game to the Carduino
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directly-from-the-website" title="Directly from the Website" class="md-nav__link">
+    Directly from the Website
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-hex-file-of-the-game" title="Using hex File of the Game" class="md-nav__link">
+    Using hex File of the Game
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-ready-for-gaming" title="Get Ready for Gaming" class="md-nav__link">
+    Get Ready for Gaming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-messages" title="Useful Messages" class="md-nav__link">
+    Useful Messages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" title="Resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      CAN Bus
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        CAN Bus
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030003/" title="OBD-II CAN Bus GPS Development Kit" class="md-nav__link">
+      OBD-II CAN Bus GPS Development Kit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030001/" title="Serial CAN Bus Module" class="md-nav__link">
+      Serial CAN Bus Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030002/" title="OBD-II CAN-BUS Development Kit" class="md-nav__link">
+      OBD-II CAN-BUS Development Kit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kit-contents" title="Kit Contents" class="md-nav__link">
+    Kit Contents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-accessories" title="Required Accessories" class="md-nav__link">
+    Required Accessories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assembly-tools" title="Assembly Tools" class="md-nav__link">
+    Assembly Tools
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#game-board" title="Game Board" class="md-nav__link">
+    Game Board
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assembly" title="Assembly" class="md-nav__link">
+    Assembly
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-the-arduboy-uploader" title="Installing the Arduboy Uploader" class="md-nav__link">
+    Installing the Arduboy Uploader
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installer" title="Installer" class="md-nav__link">
+    Installer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zip-package" title="Zip package" class="md-nav__link">
+    Zip package
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uplaoding-a-game-to-the-carduino" title="Uplaoding a Game to the Carduino" class="md-nav__link">
+    Uplaoding a Game to the Carduino
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directly-from-the-website" title="Directly from the Website" class="md-nav__link">
+    Directly from the Website
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-hex-file-of-the-game" title="Using hex File of the Game" class="md-nav__link">
+    Using hex File of the Game
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-ready-for-gaming" title="Get Ready for Gaming" class="md-nav__link">
+    Get Ready for Gaming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-messages" title="Useful Messages" class="md-nav__link">
+    Useful Messages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" title="Resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Game Board</h1>
+                
+                <h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/game-board.png" /></p>
+<p>The Open Game Station Player kit contains all the parts you need to build an Arduboy game controller.</p>
+<h3 id="kit-contents"><strong><em>Kit Contents</em></strong><a class="headerlink" href="#kit-contents" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Game board</li>
+<li>Carduino 32U4</li>
+<li>Buzzer card</li>
+<li>AAA battery card</li>
+<li>OLED display card</li>
+<li>Acrylic spacer plate</li>
+<li>Screws and standoffs</li>
+</ul>
+<h3 id="required-accessories"><strong><em>Required Accessories</em></strong><a class="headerlink" href="#required-accessories" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Two AAA batteries (alkaline or rechargable)</li>
+</ul>
+<h3 id="assembly-tools"><strong><em>Assembly Tools</em></strong><a class="headerlink" href="#assembly-tools" title="Permanent link">&para;</a></h3>
+<ul>
+<li>3mm Allen Wrench (hex key)</li>
+</ul>
+<h2 id="game-board"><strong><em>Game Board</em></strong><a class="headerlink" href="#game-board" title="Permanent link">&para;</a></h2>
+<p>The game board provides the base for the game board controller and features all the control buttons that can be found on the original Arduboy game controller. Following figure shows the things you can see on the front of the game board.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/game-board-parts.png" /></p>
+<ul>
+<li>Edge connector slots: Allow to plug cards such as Carduino, buzzer card, OLED display card, AAA battery card.</li>
+<li>Joystick buttons</li>
+<li>Control buttons</li>
+</ul>
+<p>The cards provided with the game board kit features following:</p>
+<ul>
+<li>Carduino 32U4: This is the microcontroller of the game board and powered with the Arduino Leonardo bootloader. You can upload any Arduboy game into the Carduino.  </li>
+<li>Buzzer card: Provides sounds for game events</li>
+<li>AAA battery card: Provides portable power to your game controller</li>
+<li>OLED display card: This is the gaming screen.</li>
+</ul>
+<h3 id="assembly"><strong><em>Assembly</em></strong><a class="headerlink" href="#assembly" title="Permanent link">&para;</a></h3>
+<p>This section will guide you to through assembling the Open Game Station Player Kit into a complete Arduboy game controller.</p>
+<ul>
+<li>
+<p>Take the  acrylic spacer plate. If you want, peel the protective paper masking off both sides of the acrylic spacer plate. Alternatively, you can leave the masking on for additional thickness.</p>
+</li>
+<li>
+<p>Attach the four brass standoffs onto the acrylic spacer plate. The standoffs should be screwed into the holes from the bottom of the plate. </p>
+</li>
+<li>
+<p>Place the game board on top of the brass standoffs. The standoffs should be screwd into the holes from the top of the game board. </p>
+</li>
+<li>
+<p>Take the AAA battery card, insert two AAA batteries, and plug it in to a vertically mounted edge connector slot as shown in the following figure. The white arrow head printed on the card should be pointing toward the white arrow head printed near the edge connector. Make sure you have the battery card switched to the OFF position. </p>
+</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/20190502_075315.jpg" /></p>
+<ul>
+<li>Take the Buzzer card and plug it into a vertically mounted edge connector slot.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/20190502_075355.jpg" /></p>
+<ul>
+<li>Take the Carduino 32U4 card and plug it into a vertically mounted edge connector slot. Slide the switch on the Carduino to the D7 / 8 (game board) position.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/20190502_075426.jpg" /></p>
+<ul>
+<li>
+<p>Take the OLED display card. Remove the protective film by gently pull up on the tab.</p>
+</li>
+<li>
+<p>Plug the OLED display card into the horizontally mounted edge connector slot on the game board.</p>
+</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/20190502_075503.jpg" /></p>
+<p>Following figure shows the completed assembly of the Arduboy Game Controller.</p>
+<h2 id="installing-the-arduboy-uploader"><strong><em>Installing the Arduboy Uploader</em></strong><a class="headerlink" href="#installing-the-arduboy-uploader" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong><em>NOTE:</em></strong>  This installation guide is applicable to the Windows operating system.</p>
+</blockquote>
+<p>Arduboy Uploader simplifies uploading new game to your Carduino 32U4.</p>
+<ul>
+<li>First, install the Arduino software on your computer to get the requied USB drivers. You can download the Arduino software from <a href="https://www.arduino.cc/en/Main/Software#download">https://www.arduino.cc/en/Main/Software#download</a>.</li>
+<li>Then download the Arduboy Uploader from <a href="https://github.com/eried/ArduboyUploader/releases/tag/1.3.1">https://github.com/eried/ArduboyUploader/releases/tag/1.3.1</a>. At the time of this writing, the Arduboy Uploader version is 1.3.1. You can choose between the Installer (.exe) and the Zip packages.</li>
+</ul>
+<h3 id="installer"><strong><em>Installer</em></strong><a class="headerlink" href="#installer" title="Permanent link">&para;</a></h3>
+<p>We suggest you use the installer that installs directly everything you need to use the Arduboy Uploader.</p>
+<ul>
+<li>Click on the ArduboyUploader_setup.exe. </li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-installer-1.png" /></p>
+<ul>
+<li>
+<p>After downloading the setup, run the installer from your computer.</p>
+</li>
+<li>
+<p>Click I accept the agreement and then click Next.</p>
+</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-installer-2.png" /></p>
+<ul>
+<li>Choose all the additional tasks and then click Next.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-installer-3.png" /></p>
+<ul>
+<li>Click Install.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-installer-4.png" /></p>
+<ul>
+<li>Click Yes to associate the .hex files with Arduboy Uploader.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-installer-5.png" /></p>
+<ul>
+<li>Click Yes to associate the .arduboy files with the Arduboy Uploader.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-installer-6.png" /></p>
+<ul>
+<li>Click Yes to associate the arduboy protocol with the Arduboy Uploader.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-installer-7.png" /></p>
+<ul>
+<li>All done. Click Finsh to close the wizard.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-installer-8.png" /></p>
+<ul>
+<li>Don’t run the Arduboy Uploader yet.</li>
+</ul>
+<h3 id="zip-package"><strong><em>Zip package</em></strong><a class="headerlink" href="#zip-package" title="Permanent link">&para;</a></h3>
+<p>The Zip file is useful if you want to create a portable installation.</p>
+<ul>
+<li>Click on the abupload_nosetup.zip.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-installer-9.png" /></p>
+<ul>
+<li>
+<p>After downloading, extract the zip file into your hard drive.</p>
+</li>
+<li>
+<p>Next, run the Register associations as Adminstrator.</p>
+</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-installer-10.png" /></p>
+<ul>
+<li>You will get the following output on command window.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-installer-11.png" /></p>
+<ul>
+<li>Click Yes to associate the .hex files with Arduboy Uploader.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-installer-5.png" /></p>
+<ul>
+<li>Click Yes to associate the .arduboy files with the Arduboy Uploader.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-installer-6.png" /></p>
+<ul>
+<li>Click Yes to associate the arduboy protocol with the Arduboy Uploader.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-installer-7.png" /></p>
+<ul>
+<li>All done. Now you can close the command window.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-installer-12.png" /></p>
+<ul>
+<li>Don’t run the Arduboy Uploader yet.</li>
+</ul>
+<h2 id="uplaoding-a-game-to-the-carduino"><strong><em>Uplaoding a Game to the Carduino</em></strong><a class="headerlink" href="#uplaoding-a-game-to-the-carduino" title="Permanent link">&para;</a></h2>
+<p>You will be uploading the game, Blackjack from the Erwin's Arduboy Collection. You can use one of the following options to upload the game.</p>
+<ul>
+<li>Directly from the website with a single click.</li>
+<li>Using hex file of the game.</li>
+</ul>
+<h3 id="directly-from-the-website"><strong><em>Directly from the Website</em></strong><a class="headerlink" href="#directly-from-the-website" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Connect the Carduino 32U4 to your computer using a Type-C USB cable.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/usb-connect.png" /></p>
+<ul>
+<li>Go to the <a href="https://arduboy.ried.cl/">https://arduboy.ried.cl/</a> . Scroll down the page until you find the game, Blackjack.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/blackjack-1.png" /></p>
+<ul>
+<li>Click Upload to my Arduboy.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/blackjack-2.png" /></p>
+<ul>
+<li>During the transferring of the game to your Carduino, the Arduboy Uploder shows the following animation on your computer.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-msg-1.png" /></p>
+<ul>
+<li>Once uploaded, you can see the following animation on your computer.</li>
+</ul>
+<h3 id="using-hex-file-of-the-game"><strong><em>Using hex File of the Game</em></strong><a class="headerlink" href="#using-hex-file-of-the-game" title="Permanent link">&para;</a></h3>
+<p>You can upload a game to the Carduino using the hex file of the game with Arduboy Uploader.</p>
+<ul>
+<li>Download the hex file of the game. Right-click on the Download hex button and from the short-cut menu, click Save link as… Then save the file on your computer’s hard drive.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/blackjack-3.png" /></p>
+<ul>
+<li>Run the Arduboy uploader from the desktop (for installer) or run the abupload (for zip package).</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-1.png" /></p>
+<ul>
+<li>Choose the downloaded hex file of your game and click Open.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-2.png" /></p>
+<ul>
+<li>During the transferring of the game to your Carduino, the Arduboy Uploder shows the following animation on your computer.</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-msg-2.png" /></p>
+<ul>
+<li>Once uploaded, you can see the following animation on your computer.</li>
+</ul>
+<h2 id="get-ready-for-gaming"><strong><em>Get Ready for Gaming</em></strong><a class="headerlink" href="#get-ready-for-gaming" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>First, remove the Type-C USB cable from the Carduino. </p>
+</li>
+<li>
+<p>Then slide the power switch of the AAA battery card to the ON position.</p>
+</li>
+<li>
+<p>Woohoo! Press Play to start the game.</p>
+</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/game-screen-1.png" /></p>
+<h2 id="useful-messages"><strong><em>Useful Messages</em></strong><a class="headerlink" href="#useful-messages" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Searching for an Arduboy game controller</p>
+</li>
+<li>
+<p>Uploading a game to Arduboy</p>
+</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-msg-1.png" /></p>
+<ul>
+<li>No Arduboy found error</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-msg-3.png" /></p>
+<ul>
+<li>
+<p>Input file is invalid</p>
+</li>
+<li>
+<p>Error transferring the file</p>
+</li>
+</ul>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1017008/abu-msg-4.png" /></p>
+<h2 id="resources"><strong><em>Resources</em></strong><a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Eagle Files: <a href="https://github.com/Longan-Labs/EagleFile_Cards/tree/master/1016008_Game_Board">https://github.com/Longan-Labs/EagleFile_Cards/tree/master/1016008_Game_Board</a></li>
+<li>The official Arduboy web site: <a href="https://arduboy.com/">https://arduboy.com/</a></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../1013007/" title="Carduino 32U4" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Carduino 32U4
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../1030003/" title="OBD-II CAN Bus GPS Development Kit" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                OBD-II CAN Bus GPS Development Kit
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 Longan Labs
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.905597d0.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+    
+      
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","None","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+      
+    
+  </body>
+</html>
