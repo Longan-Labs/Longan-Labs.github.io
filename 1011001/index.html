@@ -562,8 +562,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#use-with-extension-board" title="Use with Extension Board" class="md-nav__link">
-    Use with Extension Board
+  <a href="#getting-ready" title="Getting Ready" class="md-nav__link">
+    Getting Ready
   </a>
   
 </li>
@@ -588,6 +588,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1012002/" title="Buzzer Card" class="md-nav__link">
+      Buzzer Card
+    </a>
   </li>
 
         
@@ -738,8 +750,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#use-with-extension-board" title="Use with Extension Board" class="md-nav__link">
-    Use with Extension Board
+  <a href="#getting-ready" title="Getting Ready" class="md-nav__link">
+    Getting Ready
   </a>
   
 </li>
@@ -826,7 +838,7 @@ The front of the temperature card has following components.</p>
 <li>Pi Hap</li>
 </ul>
 <p>When you plugging, the white arrow head printed on the card should be pointing toward the white arrow head printed near the edge connector slot of the board. Once plugged, it can communicate with the Carduino through the I2C bus line of the board. It will also connect to the common power bus of the board.</p>
-<h3 id="use-with-extension-board"><strong><em>Use with Extension Board</em></strong><a class="headerlink" href="#use-with-extension-board" title="Permanent link">&para;</a></h3>
+<h3 id="getting-ready"><strong><em>Getting Ready</em></strong><a class="headerlink" href="#getting-ready" title="Permanent link">&para;</a></h3>
 <p>You can use the extension board to connect any Longan card with the Carduino.</p>
 <ul>
 <li>
@@ -845,14 +857,6 @@ The front of the temperature card has following components.</p>
 <h3 id="reading-temperature"><strong><em>Reading Temperature</em></strong><a class="headerlink" href="#reading-temperature" title="Permanent link">&para;</a></h3>
 <p>The sample code can be loaded to your Arduino IDE by clicking on <strong>File &gt; Examples &gt; LonganCards &gt; ReadSensor</strong>.</p>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011001/arduino-ide-1.png" /></p>
-<p>Connect the Type-C USB cable to the USB connector of the Carduino and connect the other end to your computer.</p>
-<p>Next, tell the Arduino IDE to use the Carduino. To do this, click <strong>Tools &gt; Board &gt; Carduino 32U4</strong> under Longen AVR Boards.</p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011001/arduino-ide-2.png" /></p>
-<p>Then select the proper port in <strong>Tools &gt; Port &gt; (the Serial/COM port of your Carduino)</strong>.</p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011001/arduino-ide-3.png" /></p>
-<p>Next, upload the program by clicking <strong>Sketch &gt; Upload</strong>.</p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011001/arduino-ide-4.png" /></p>
-<p>It will take some time to compile and upload the sketch in to the Carduino.</p>
 <p>If you have trouble loading the ReadSensor sketch from the examples, you can copy and paste the code below into the Arduino editor.</p>
 <div class="codehilite"><pre><span></span>#include &lt;Wire.h&gt;
 #include &quot;CardsDfs.h&quot;
@@ -929,6 +933,23 @@ float getValue(int s)
 
 // END FILE
 </pre></div>
+
+<p>Connect the Type-C USB cable to the USB connector of the Carduino and connect the other end to your computer.</p>
+<p>Next, tell the Arduino IDE to use the Carduino. To do this, click <strong>Tools &gt; Board &gt; Carduino 32U4</strong> under Longen AVR Boards.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011001/arduino-ide-2.png" /></p>
+<p>Then select the proper port in <strong>Tools &gt; Port &gt; (the Serial/COM port of your Carduino)</strong>.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011001/arduino-ide-3.png" /></p>
+<p>Next, upload the program by clicking <strong>Sketch &gt; Upload</strong>.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011001/arduino-ide-4.png" /></p>
+<p>It will take some time to compile and upload the sketch into the Carduino.</p>
+<p>Once uploaded, open the Serial Monitor by clicking <strong>Tools &gt; Serial Monitor</strong>.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011001/arduino-ide-5.png" /></p>
+<p>In the Serial Monitor, select 115200 baud from the drop-down list. Then type any number or character (E.g. 1) and click <strong>Send</strong> button.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011001/arduino-ide-6.png" /></p>
+<p>First, it will output the device information of your temperature card such as I2C address, device id, number of sensors, name length, name, SKU, and version. Then it will continually output the temperature.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011001/arduino-ide-7.png" /></p>
+<p>The blue LED on the ATmega 168P module will blink quickly and continually during the temperature reading from Carduino using I2C communication protocol.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011001/led-blink.png" /></p>
                 
                   
                 
@@ -964,13 +985,13 @@ float getValue(int s)
           </a>
         
         
-          <a href="../1030003/" title="OBD-II CAN Bus GPS Development Kit" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../1012002/" title="Buzzer Card" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                OBD-II CAN Bus GPS Development Kit
+                Buzzer Card
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
