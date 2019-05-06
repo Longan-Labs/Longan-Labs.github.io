@@ -13,7 +13,7 @@
         <meta name="description" content="Docs of Longan Labs">
       
       
-        <link rel="canonical" href="https://longan-labs.cc/1030001/">
+        <link rel="canonical" href="https://longan-labs.cc/1011010/">
       
       
         <meta name="author" content="Loovee">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Serial CAN Bus Module - Longan Docs</title>
+        <title>Light Sensor Card - Longan Docs</title>
       
     
     
@@ -131,7 +131,7 @@
                 Longan Docs
               </span>
               <span class="md-header-nav__topic">
-                Serial CAN Bus Module
+                Light Sensor Card
               </span>
             
           
@@ -239,7 +239,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../cards-system-summary/" title="Cards" class="md-tabs__link">
+        <a href="../cards-system-summary/" title="Cards" class="md-tabs__link md-tabs__link--active">
           Cards
         </a>
       
@@ -252,7 +252,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../1030003/" title="CAN Bus" class="md-tabs__link md-tabs__link--active">
+        <a href="../1030003/" title="CAN Bus" class="md-tabs__link">
           CAN Bus
         </a>
       
@@ -405,10 +405,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Cards
@@ -496,11 +498,106 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../1011010/" title="Light Sensor Card" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Light Sensor Card
+      </label>
+    
+    <a href="./" title="Light Sensor Card" class="md-nav__link md-nav__link--active">
       Light Sensor Card
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifications" title="Specifications" class="md-nav__link">
+    Specifications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i2c-address" title="I2C Address" class="md-nav__link">
+    I2C Address
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pins" title="Pins" class="md-nav__link">
+    Pins
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i2c-bus-and-uart-test-point" title="I2C Bus and UART Test Point" class="md-nav__link">
+    I2C Bus and UART Test Point
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use" title="How to Use" class="md-nav__link">
+    How to Use
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-with-extension-board" title="Use with Extension Board" class="md-nav__link">
+    Use with Extension Board
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-illuminance" title="Reading Illuminance" class="md-nav__link">
+    Reading Illuminance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -513,12 +610,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       CAN Bus
@@ -546,175 +641,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Serial CAN Bus Module
-      </label>
-    
-    <a href="./" title="Serial CAN Bus Module" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../1030001/" title="Serial CAN Bus Module" class="md-nav__link">
       Serial CAN Bus Module
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" title="Introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#partlist" title="Partlist" class="md-nav__link">
-    Partlist
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#features" title="Features" class="md-nav__link">
-    Features
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hardware-overview" title="Hardware Overview" class="md-nav__link">
-    Hardware Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#work-at-33v" title="Work at 3.3V" class="md-nav__link">
-    Work at 3.3V
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#v11-verstion" title="V1.1 Verstion" class="md-nav__link">
-    V1.1 Verstion
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#v10-version" title="V1.0 Version" class="md-nav__link">
-    V1.0 Version
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#at-command" title="AT Command" class="md-nav__link">
-    AT Command
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#set-serial-baud-rate" title="Set Serial Baud Rate" class="md-nav__link">
-    Set Serial Baud Rate
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-can-bus-baudrate" title="Set CAN Bus Baudrate" class="md-nav__link">
-    Set CAN Bus Baudrate
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-mask" title="Set Mask" class="md-nav__link">
-    Set Mask
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-filt" title="Set Filt" class="md-nav__link">
-    Set Filt
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#normal-mode" title="Normal Mode" class="md-nav__link">
-    Normal Mode
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#send" title="Send" class="md-nav__link">
-    Send
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#recv" title="Recv" class="md-nav__link">
-    Recv
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#arduino-library" title="Arduino Library" class="md-nav__link">
-    Arduino Library
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" title="Reference" class="md-nav__link">
-    Reference
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -761,44 +692,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#partlist" title="Partlist" class="md-nav__link">
-    Partlist
+  <a href="#specifications" title="Specifications" class="md-nav__link">
+    Specifications
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#features" title="Features" class="md-nav__link">
-    Features
+  <a href="#i2c-address" title="I2C Address" class="md-nav__link">
+    I2C Address
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hardware-overview" title="Hardware Overview" class="md-nav__link">
-    Hardware Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#work-at-33v" title="Work at 3.3V" class="md-nav__link">
-    Work at 3.3V
+  <a href="#pins" title="Pins" class="md-nav__link">
+    Pins
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#v11-verstion" title="V1.1 Verstion" class="md-nav__link">
-    V1.1 Verstion
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#v10-version" title="V1.0 Version" class="md-nav__link">
-    V1.0 Version
+  <a href="#i2c-bus-and-uart-test-point" title="I2C Bus and UART Test Point" class="md-nav__link">
+    I2C Bus and UART Test Point
   </a>
   
 </li>
@@ -809,84 +726,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#at-command" title="AT Command" class="md-nav__link">
-    AT Command
+  <a href="#how-to-use" title="How to Use" class="md-nav__link">
+    How to Use
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#set-serial-baud-rate" title="Set Serial Baud Rate" class="md-nav__link">
-    Set Serial Baud Rate
+  <a href="#use-with-extension-board" title="Use with Extension Board" class="md-nav__link">
+    Use with Extension Board
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#set-can-bus-baudrate" title="Set CAN Bus Baudrate" class="md-nav__link">
-    Set CAN Bus Baudrate
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-mask" title="Set Mask" class="md-nav__link">
-    Set Mask
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-filt" title="Set Filt" class="md-nav__link">
-    Set Filt
+  <a href="#reading-illuminance" title="Reading Illuminance" class="md-nav__link">
+    Reading Illuminance
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#normal-mode" title="Normal Mode" class="md-nav__link">
-    Normal Mode
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#send" title="Send" class="md-nav__link">
-    Send
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#recv" title="Recv" class="md-nav__link">
-    Recv
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#arduino-library" title="Arduino Library" class="md-nav__link">
-    Arduino Library
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" title="Reference" class="md-nav__link">
-    Reference
-  </a>
   
 </li>
       
@@ -907,375 +769,161 @@
               
                 
                 
-                  <h1>Serial CAN Bus Module</h1>
+                  <h1>Light Sensor Card</h1>
                 
                 <h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<hr />
-<p><a href="https://www.seeedstudio.com/Serial-CAN-BUS-Module-based-on-MCP2551-and-MCP2515-p-2924.html"><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/CAN-4.jpg" /></a></p>
-<p>The Serial CAN BUS provide your Arduino or others MCU with the capability to communication to CAN Bus, such as hacking your vehicle. 
-CAN Bus is a common industrial bus because of its long travel distance, medium communication speed and high reliability. </p>
-<p>This Serial CAN Bus module is based on <strong>MCP2551</strong> and <strong>MCP2515</strong>, which can provide speed up to <strong>1Mb/s</strong>. </p>
-<h2 id="partlist"><strong><em>Partlist</em></strong><a class="headerlink" href="#partlist" title="Permanent link">&para;</a></h2>
-<hr />
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbus/partlist.jpg" /></p>
-<h2 id="features"><strong><em>Features</em></strong><a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
-<hr />
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/1011010-1.jpg" /></p>
+<p>The Light sensor card features TEMT6000 ambient light sensor. It is sensitive to the visible spectrum. With Longan Light sensor card, you can bring the ability to detect light level to any project. </p>
+<p>The Light sensor on the Light sensor card will detect the brightness of its surroundings. The TEMT6000 measures illuminance in lux (lx) which is one of the properties of brightness.</p>
+<p>The Light sensor card supports two wire I2C bus interface.</p>
+<p>The front of the Light sensor card has following components.</p>
 <ul>
-<li>Uart to CAN Bus communication</li>
-<li>Work with Arduino/BeagleBone board/Pi or any MCU that integrated with Uart.</li>
-<li>AT command</li>
-<li>Up to 115200 Uart baud rate (default 9600)</li>
-<li>Up to 1Mb/s CAN Bus baud rate</li>
-<li>TX and RX led indicator</li>
-<li>4pin Grove connector</li>
-<li>3.3 / 5V working voltage</li>
-<li>Easy-to-use Arduino library</li>
-<li>Small size: 20x40 mm</li>
+<li>TEMT6000 silicon NPN epitaxial planar phototransistor</li>
+<li>30 Gold fingers (30 pin edge connector)</li>
+<li>I2C extension connectors</li>
+<li>I2C and UART test point</li>
+<li>ATmega 168P module card</li>
 </ul>
-<h2 id="hardware-overview"><strong><em>Hardware Overview</em></strong><a class="headerlink" href="#hardware-overview" title="Permanent link">&para;</a></h2>
-<hr />
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbus/hw.png" /></p>
-<ol>
-<li>4 pin 2.0mm Grove Connector</li>
-<li>Power and status led indicator</li>
-<li>Send and Recv led indicator</li>
-<li>3.5mm terminal to connect to CAN Bus (CAN_H &amp; CAN_L)</li>
-<li>120Ω registor, default connected, if you don't need you cut this pad with a box cutter. </li>
-</ol>
-<h2 id="work-at-33v"><strong><em>Work at 3.3V</em></strong><a class="headerlink" href="#work-at-33v" title="Permanent link">&para;</a></h2>
-<hr />
-<p>The module is working at 5V most of time. If you want it to work at 3.3V IO, please try:</p>
-<h3 id="v11-verstion">V1.1 Verstion<a class="headerlink" href="#v11-verstion" title="Permanent link">&para;</a></h3>
-<p>There's a jumper on the back side, please connect the pads together with a soldering iron. 
-And VCC must connect to 5V. </p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbus/V1.1_3V.jpg" /></p>
-<h3 id="v10-version">V1.0 Version<a class="headerlink" href="#v10-version" title="Permanent link">&para;</a></h3>
-<p>Please try as below, and please note that VCC till need to connect to 5V. </p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbus/V1.0_3V.png" /></p>
-<h2 id="at-command"><strong><em>AT Command</em></strong><a class="headerlink" href="#at-command" title="Permanent link">&para;</a></h2>
-<hr />
-<p>You can achieve the complete function of this Serial CAN Bus module with only a few AT command.</p>
-<table>
-<thead>
-<tr>
-<th>CMD</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>+++</td>
-<td>Switch from Normal mode to Config mode</td>
-</tr>
-<tr>
-<td>AT+S=[value]</td>
-<td>Set serial baud rate</td>
-</tr>
-<tr>
-<td>AT+C=[value]</td>
-<td>Set CAN Bus baud rate</td>
-</tr>
-<tr>
-<td>AT+M=[N][EXT][value]</td>
-<td>Set mask</td>
-</tr>
-<tr>
-<td>AT+F=[N][EXT][value]</td>
-<td>Set filter</td>
-</tr>
-<tr>
-<td>AT+Q</td>
-<td>Switch to Normal Mode</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition tip">
-<p class="admonition-title">Note</p>
-<p>All of the cmd should end with '\n' except +++</p>
-</div>
-<h3 id="set-serial-baud-rate">Set Serial Baud Rate<a class="headerlink" href="#set-serial-baud-rate" title="Permanent link">&para;</a></h3>
-<hr />
-<p>You can set the serial baud rate of the module with this command. There're 5 rates available, up to 115200 b/s.</p>
-<div class="codehilite"><pre><span></span>AT+S=[value]
+<h2 id="specifications"><strong><em>Specifications</em></strong><a class="headerlink" href="#specifications" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Voltage: 5V</li>
+<li>Adapted to human eye responsivity</li>
+<li>Wide angle of half sensitivity ϕ = ± 60°</li>
+<li>Supports two wire I2C bus interface   </li>
+</ul>
+<h2 id="i2c-address"><strong><em>I2C Address</em></strong><a class="headerlink" href="#i2c-address" title="Permanent link">&para;</a></h2>
+<p>The Light sensor card at the factory default I2C address of 0x0A. The factory default I2C address is printed on the back of the card.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/i2c-address.png" /></p>
+<h2 id="pins"><strong><em>Pins</em></strong><a class="headerlink" href="#pins" title="Permanent link">&para;</a></h2>
+<p>The edge connector (gold fingers) has total of 30 contacts (each side has 15 contacts).</p>
+<p>On the front side of the Light sensor card, a white arrow is printed near the edge connector indicates the pin #1. You can find some pin numbers printed on the edge connector itself (1, 15, and 29). You can count the pin numbers starting with 1 and count by twos from right to left would be 1, 3, 7, 9, 11, 15, 17, 19, 21, 23, 27, and 29. Notice that all the counts are odd numbers.</p>
+<p>On the back side of the Light sensor card, you also can find some pin numbers printed on the edge connector itself (2, 16, and 30). You can count the pin numbers starting with 2 and count by twos from left to right would be 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28 and 30. Notice that all the counts are even numbers.</p>
+<p>Among the 30 pins, following pins can be used for I2C communication.</p>
+<ul>
+<li><strong>SDA:</strong> Digital I/O, I2C bus serial bidirectional data line (Front: pin #5, #25 / Back: pin #6, #26)</li>
+<li><strong>SCL:</strong> Digital Input, I2C bus serial clock input (Front: pin #7, #23 / Back: pin #8, #24)</li>
+</ul>
+<p>Also, following pins connect with the common power bus of the board.</p>
+<ul>
+<li><strong>VCC:</strong> Power supply (Front: pin #1, #29 / Back: pin #2, #30)</li>
+<li><strong>GND:</strong> To be connected to the system ground (Front: pin #3, #27 / Back: pin #4, #28)</li>
+</ul>
+<h3 id="i2c-bus-and-uart-test-point"><strong><em>I2C Bus and UART Test Point</em></strong><a class="headerlink" href="#i2c-bus-and-uart-test-point" title="Permanent link">&para;</a></h3>
+<p>You can solder a break away header (straight, 0.1” pin spacing) to the I2C bus test point. The I2C bus requires two wires to communicate with the device, a serial data line (SDA) and a serial clock line (SCL). There is an additional RX, TX, VCC, and GND that is not part of the I2C interface.</p>
+<h2 id="how-to-use"><strong><em>How to Use</em></strong><a class="headerlink" href="#how-to-use" title="Permanent link">&para;</a></h2>
+<p>The Light sensor card can be plugged into an edge connector slot of one of the following Longan boards.</p>
+<ul>
+<li>Game board</li>
+<li>Car board</li>
+<li>Sensor board</li>
+<li>Extension board</li>
+<li>PI Hap</li>
+</ul>
+<p>When plugging, the white arrow head printed on the card should be pointing toward the white arrow head printed near the edge connector slot of the board.
+Once plugged, it can communicate with the Carduino through the I2C bus line of the board. It will also connect to the common power bus of the board.</p>
+<h3 id="use-with-extension-board"><strong><em>Use with Extension Board</em></strong><a class="headerlink" href="#use-with-extension-board" title="Permanent link">&para;</a></h3>
+<p>You can use the extension board to connect any Longan card with the Carduino.</p>
+<ul>
+<li>First take the Extension board.</li>
+<li>Next, plug the Light sensor card in to one of the edge connector slot.</li>
+<li>Then plug the Carduino in to another edge connector slot.</li>
+<li>Finally, connect the extension board with your computer using a Type-C USB cable (you can use either USB connector on the Carduino or the Extension board).</li>
+</ul>
+<h3 id="reading-illuminance"><strong><em>Reading Illuminance</em></strong><a class="headerlink" href="#reading-illuminance" title="Permanent link">&para;</a></h3>
+<p>The sample code can be loaded to your Arduino IDE by clicking on <strong>File &gt; Examples &gt; LonganCards &gt; ReadSensor</strong>.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/arduino-ide-setup-1.png" /></p>
+<p>If you have trouble loading the Blink sketch from the examples, you can copy and paste the code below into the Arduino editor.</p>
+<div class="codehilite"><pre><span></span>#include &lt;Wire.h&gt;
+#include &quot;CardsDfs.h&quot;
+#include &quot;LonganCards.h&quot;
+
+CARD_INFO card;
+
+int addr = 0;
+int cntSensor = 0;
+
+float sensorValue[10];
+
+float str2num(unsigned char *str)
+{
+    float num = 0;
+    memcpy((unsigned char *)(&amp;num), str, 4);
+    return num;
+}
+
+void setup() {
+    // put your setup code here, to run once:
+    Serial.begin(115200);
+    Wire.begin();
+
+    while(!Serial.available());
+
+    addr = card.scan();
+    if(0 == addr)
+    {
+        Serial.println(&quot;NO DEVICE!&quot;);
+        while(1);
+    }
+
+    card.getInfo();
+    card.disp();
+
+    cntSensor = card.senCnt;
+}
+
+void loop()
+{
+    for(int i=0; i&lt;cntSensor; i++)
+    {
+        sensorValue[i] = getValue(i);
+        Serial.print(sensorValue[i], 2);
+        Serial.print(&#39;\t&#39;);
+    }
+
+    Serial.println();
+    delay(100);
+}
+
+float getValue(int s)
+{
+    unsigned char dta[10];
+    unsigned long len = 0;
+
+    Wire.beginTransmission(addr);
+    Wire.write(REG_VALUE_START+s);      // ADDR_DATA_START = 0x30
+    Wire.endTransmission();
+
+    delay(1);
+    Wire.requestFrom(addr, 6);
+
+    delay(1);
+
+    while(Wire.available())
+    {
+        dta[len++] = Wire.read();
+    }
+
+    return str2num(&amp;dta[1]);
+}
+
+// END FILE
 </pre></div>
 
-<table>
-<thead>
-<tr>
-<th>value</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>baud rate(b/s)</td>
-<td><strong>9600</strong></td>
-<td>19200</td>
-<td>38400</td>
-<td>57600</td>
-<td>115200</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition tip">
-<p class="admonition-title">Note</p>
-<p>Default is 9600</p>
-</div>
-<p><strong>Eg:</strong> Set serial baud rate to 57600
-<div class="codehilite"><pre><span></span>AT+S=3
-</pre></div></p>
-<p><strong>Respose</strong></p>
-<p><em>OK</em> or <em>ERROR</em></p>
-<h3 id="set-can-bus-baudrate">Set CAN Bus Baudrate<a class="headerlink" href="#set-can-bus-baudrate" title="Permanent link">&para;</a></h3>
-<hr />
-<p>You can use this command to set the rate of CAN Bus, there's 18 rates available. 
-Normally, if you want to hack your vehicle, 500k is the right one. </p>
-<div class="codehilite"><pre><span></span>AT+C=[value]
-</pre></div>
-
-<table>
-<thead>
-<tr>
-<th>value</th>
-<th>01</th>
-<th>02</th>
-<th>03</th>
-<th>04</th>
-<th>05</th>
-<th>06</th>
-<th>07</th>
-<th>08</th>
-<th>09</th>
-<th>10</th>
-<th>11</th>
-<th>12</th>
-<th>13</th>
-<th>14</th>
-<th>15</th>
-<th>16</th>
-<th>17</th>
-<th>18</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>rate(kb/s)</td>
-<td>5</td>
-<td>10</td>
-<td>20</td>
-<td>25</td>
-<td>31.2</td>
-<td>33</td>
-<td>40</td>
-<td>50</td>
-<td>80</td>
-<td>83.3</td>
-<td>95</td>
-<td>100</td>
-<td>125</td>
-<td>200</td>
-<td>250</td>
-<td><strong>500</strong></td>
-<td>666</td>
-<td>1000</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition tip note">
-<p class="admonition-title">Tip</p>
-<p>Default is 500K</p>
-</div>
-<p><strong>Eg:</strong> Set CAN BUS baud rate to 50K
-<div class="codehilite"><pre><span></span>AT+C=08
-</pre></div></p>
-<p><strong>Respose</strong></p>
-<p>OK or ERROR</p>
-<h3 id="set-mask">Set Mask<a class="headerlink" href="#set-mask" title="Permanent link">&para;</a></h3>
-<hr />
-<p>There're 2 Mask for the module, Mask0 and Mask1.</p>
-<div class="codehilite"><pre><span></span>AT+M=[N][EXT][value]
-</pre></div>
-
-<p><strong>N:</strong></p>
-<ul>
-<li>0: Mask0</li>
-<li>1: Mask1</li>
-</ul>
-<p><strong>EXT:</strong></p>
-<ul>
-<li>0: Standard Frame</li>
-<li>1: Extended Frame</li>
-</ul>
-<p><strong>value:</strong></p>
-<p>Neeed 8 bit of character, hexadecimal.</p>
-<p><strong>Eg:</strong> Set Mask1 to 0x3DF, standard frame:
-<div class="codehilite"><pre><span></span>AT+M=[1][0][000003DF]
-</pre></div></p>
-<p><strong>Respose</strong></p>
-<p>OK or ERROR</p>
-<h3 id="set-filt">Set Filt<a class="headerlink" href="#set-filt" title="Permanent link">&para;</a></h3>
-<hr />
-<p>There're 6 Mask for the module, Filt0 ~ Filt5</p>
-<div class="codehilite"><pre><span></span>AT+F=[N][EXT][value]
-</pre></div>
-
-<p><strong>N:</strong></p>
-<table>
-<thead>
-<tr>
-<th>N</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Filt</td>
-<td>Filt0</td>
-<td>Filt1</td>
-<td>Filt2</td>
-<td>Filt3</td>
-<td>Filt4</td>
-<td>Filt5</td>
-</tr>
-</tbody>
-</table>
-<p><strong>EXT:</strong></p>
-<ul>
-<li>0: Standard Frame</li>
-<li>1: Extended Frame</li>
-</ul>
-<p><strong>value:</strong></p>
-<p>Neeed 8 bit of character, hexadecimal.</p>
-<p><strong>Eg:</strong> Set Filt3 to 0x2C, standard frame:
-<div class="codehilite"><pre><span></span>AT+F=[1][0][0000002C]
-</pre></div></p>
-<p><strong>Respose</strong></p>
-<p>OK or ERROR</p>
-<h2 id="normal-mode"><strong><em>Normal Mode</em></strong><a class="headerlink" href="#normal-mode" title="Permanent link">&para;</a></h2>
-<hr />
-<p>When the module working on Normal mode, you can send and recevie data from CAN Bus. </p>
-<h3 id="send">Send<a class="headerlink" href="#send" title="Permanent link">&para;</a></h3>
-<p>You should send 14 byte of data per frame. Define as below,</p>
-<table>
-<thead>
-<tr>
-<th>bit</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-<th>9</th>
-<th>10</th>
-<th>11</th>
-<th>12</th>
-<th>13</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>define</td>
-<td>ID3</td>
-<td>ID2</td>
-<td>ID1</td>
-<td>ID0</td>
-<td>EXT</td>
-<td>RTR</td>
-<td>DTA0</td>
-<td>DTA1</td>
-<td>DTA2</td>
-<td>DTA3</td>
-<td>DTA4</td>
-<td>DTA5</td>
-<td>DTA6</td>
-<td>DTA7</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>ID0~ID3: CAN ID</li>
-<li>EXT: 0 for standard frame, 1 for extended frame</li>
-<li>RTR: 0 for standard frame, 1 for remote frame</li>
-<li>DTA0~DTA7: 8 byte of data</li>
-</ul>
-<p><strong>Eg.</strong></p>
-<p>Send {1, 2, 3, 4, 5, 6, 7, 8} to ID:0x3DC, Standard frame:
-<div class="codehilite"><pre><span></span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mh">0xDC</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
-</pre></div></p>
-<h3 id="recv">Recv<a class="headerlink" href="#recv" title="Permanent link">&para;</a></h3>
-<p>You will get 12 byte of data per frame. Define as below,</p>
-<table>
-<thead>
-<tr>
-<th>bit</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-<th>9</th>
-<th>10</th>
-<th>11</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>define</td>
-<td>ID3</td>
-<td>ID2</td>
-<td>ID1</td>
-<td>ID0</td>
-<td>DTA0</td>
-<td>DTA1</td>
-<td>DTA2</td>
-<td>DTA3</td>
-<td>DTA4</td>
-<td>DTA5</td>
-<td>DTA6</td>
-<td>DTA7</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>ID0~ID3: CAN ID</li>
-<li>DTA0~DTA7: 8 byte of data</li>
-</ul>
-<h2 id="arduino-library"><strong><em>Arduino Library</em></strong><a class="headerlink" href="#arduino-library" title="Permanent link">&para;</a></h2>
-<hr />
-<p>We provide an library for Aruino Software Serial. </p>
-<p>Please download it at <a href="https://github.com/Longan-Labs/Serial_CAN_Arduino">Github</a></p>
-<p>There're many examples for the library, which is consist of,</p>
-<ul>
-<li><strong><em>send</em></strong> - How to send a frame to CAN Bus</li>
-<li><strong><em>recv</em></strong> - How to recv a frame from CAN Bus</li>
-<li><strong><em>debug</em></strong> - debug mode, you can send a cmd to the module</li>
-<li><strong><em>set_can_baudrate</em></strong> - set can bus baudrate</li>
-<li><strong><em>set_mask_filt</em></strong> - set mask and filt of the module</li>
-</ul>
-<h2 id="reference"><strong><em>Reference</em></strong><a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
-<hr />
-<ul>
-<li><a href="https://github.com/Longan-Labs/Serial_CAN_Arduino">Arduino Library</a></li>
-<li><a href="https://www.seeedstudio.com/Serial-CAN-BUS-Module-based-on-MCP2551-and-MCP2515-p-2924.html">How to get ONE</a></li>
-<li><a href="https://github.com/Longan-Labs/Eagle_File_Serial_CAN_Bus/archive/master.zip">Schematics in Eagle File</a></li>
-</ul>
+<p>Connect the Type-C USB cable to the USB connector of the Carduino and connect the other end to your computer.</p>
+<p>Next, tell the Arduino IDE to use the Carduino. To do this, click <strong>Tools &gt; Board &gt; Carduino 32U4</strong> under <strong>Longen AVR Boards</strong>.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/arduino-ide-setup-2.png" /></p>
+<p>Then select the proper port in <strong>Tools &gt; Port &gt; (the Serial/COM port of your Carduino)</strong>.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/arduino-ide-setup-3.png" /></p>
+<p>Next, upload the program by clicking <strong>Sketch &gt; Upload</strong>.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/arduino-ide-setup-4.png" /></p>
+<p>It will take some time to compile and upload the sketch in to the Carduino.</p>
+<p>Once uploaded, open the Serial Monitor by clicking <strong>Tools &gt; Serial Monitor</strong>.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/arduino-ide-setup-5.png" /></p>
+<p>In the Serial Monitor, type any number or character and click <strong>Send</strong> button.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/serial-monitor-1.png" /></p>
+<p>First, it will output the device information of your Light sensor card such as I2C address, device id, number of sensors, name length, name, SKU, and version. Then it will continually output the illuminance in lux (lx).</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/serial-monitor-2.png" /></p>
+<p>The blue LED on the ATmega 168P module will blink quickly and continually during the illuminance reading through I2C.</p>
                 
                   
                 
@@ -1296,7 +944,7 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../1030003/" title="OBD-II CAN Bus GPS Development Kit" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../1012002/" title="Buzzer Card" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1305,19 +953,19 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                OBD-II CAN Bus GPS Development Kit
+                Buzzer Card
               </span>
             </div>
           </a>
         
         
-          <a href="../1030002/" title="OBD-II CAN-BUS Development Kit" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../1030003/" title="OBD-II CAN Bus GPS Development Kit" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                OBD-II CAN-BUS Development Kit
+                OBD-II CAN Bus GPS Development Kit
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
