@@ -888,7 +888,7 @@
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011007/1011007-2.jpg" /></p>
 <p>The Rotary Angle card has an ATmaga168PA microprocessor running the card firmware (<a href="https://github.com/Longan-Labs/Card_Firmware/tree/master/SKU1011007_Rotary_Angle_Card">https://github.com/Longan-Labs/Card_Firmware/tree/master/SKU1011007_Rotary_Angle_Card</a>). The card firmware reads data from the Potentiometer and write to the I2C bus using Software I2C.</p>
 <p>The Rotary Angle card card works as an I2C slave device. You can use Wire library (<a href="https://www.arduino.cc/en/reference/wire">https://www.arduino.cc/en/reference/wire</a>) to read data from the card. The data can be retrieved from the ‘Sensor value' register at 0x30. The sensor value returns 4 bytes. Following figure presents the Sensor value format.</p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011007/sendor-val.jpg" /></p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011007/sensor-value.png" /></p>
 <h2 id="pins"><strong><em>Pins</em></strong><a class="headerlink" href="#pins" title="Permanent link">&para;</a></h2>
 <p>The edge connector (gold fingers) has total of 30 contacts (each side has 15 contacts).</p>
 <p>On the front side of the Rotary Angle card, a white arrow is printed near the edge connector indicates the pin #1. You can find some pin numbers printed on the edge connector itself (1, 15, and 29). You can count the pin numbers starting with 1 and count by twos from right to left would be 1, 3, 7, 9, 11, 15, 17, 19, 21, 23, 27, and 29. Notice that all the counts are odd numbers.</p>
