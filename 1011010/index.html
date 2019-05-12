@@ -548,19 +548,6 @@
     Pins
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i2c-bus-and-uart-test-point" title="I2C Bus and UART Test Point" class="md-nav__link">
-    I2C Bus and UART Test Point
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -582,6 +569,53 @@
   <a href="#reading-illuminance" title="Reading Illuminance" class="md-nav__link">
     Reading Illuminance
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#labs" title="Labs" class="md-nav__link">
+    Labs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lab-01" title="Lab 01" class="md-nav__link">
+    Lab 01
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assembly" title="Assembly" class="md-nav__link">
+    Assembly
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applications" title="Applications" class="md-nav__link">
+    Applications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code" title="Code" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -770,19 +804,6 @@
     Pins
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#i2c-bus-and-uart-test-point" title="I2C Bus and UART Test Point" class="md-nav__link">
-    I2C Bus and UART Test Point
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -812,6 +833,53 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#labs" title="Labs" class="md-nav__link">
+    Labs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lab-01" title="Lab 01" class="md-nav__link">
+    Lab 01
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#assembly" title="Assembly" class="md-nav__link">
+    Assembly
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applications" title="Applications" class="md-nav__link">
+    Applications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code" title="Code" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -833,16 +901,18 @@
                 
                 <h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/1011010-1.jpg" /></p>
-<p>The Light sensor card features TEMT6000 ambient light sensor. It is sensitive to the visible spectrum. With Longan Light sensor card, you can bring the ability to detect light level to any project. </p>
-<p>The Light sensor on the Light sensor card will detect the brightness of its surroundings. The TEMT6000 measures illuminance in lux (lx) which is one of the properties of brightness.</p>
-<p>The Light sensor card supports two wire I2C bus interface.</p>
-<p>The front of the Light sensor card has following components.</p>
+<p>The Longan <strong>Light Sensor Card</strong> features TEMT6000 ambient light sensor. It is sensitive to the visible spectrum. With Longan Light Sensor Card, you can bring the ability to detect light level to any project. </p>
+<p>The light sensor on the Light Sensor Card will detect the intensity of light of its surroundings. It outputs values ranging from 0 - 1023 where 0 indicates dark and 1023 indicates bright light. If you want to get the visible light intensity in lux (lx), check out our other version here.</p>
+<blockquote>
+<p><strong>NOTE:</strong> The Light sensor card supports two wire I2C bus interface.</p>
+</blockquote>
+<p>The front of the Light Sensor Card has following components.</p>
 <ul>
-<li>TEMT6000 silicon NPN epitaxial planar phototransistor</li>
-<li>30 Gold fingers (30 pin edge connector)</li>
-<li>I2C extension connectors</li>
-<li>I2C and UART test point</li>
-<li>ATmega 168P module card</li>
+<li>TEMT6000 silicon NPN epitaxial planar phototransistor (<a href="http://pdf1.alldatasheet.com/datasheet-pdf/view/117488/VISHAY/TEMT6000.html">http://pdf1.alldatasheet.com/datasheet-pdf/view/117488/VISHAY/TEMT6000.html</a>)</li>
+<li>30 gold fingers (30 pin edge connector) - allows you to plug the card into any edge connector slot of a Longan board.</li>
+<li>ATmega 168PA microprocessor - runs card firmware.</li>
+<li>LED indicator – flashes when Carduino read/write data from/to the card through I2C.</li>
+<li>Two 4 pin SH1.0 connectors - allows you to connect MCUs or cards which support I2C communication protocol with dupont cables.</li>
 </ul>
 <h2 id="specifications"><strong><em>Specifications</em></strong><a class="headerlink" href="#specifications" title="Permanent link">&para;</a></h2>
 <ul>
@@ -852,7 +922,7 @@
 <li>Supports two wire I2C bus interface   </li>
 </ul>
 <h2 id="i2c-address"><strong><em>I2C Address</em></strong><a class="headerlink" href="#i2c-address" title="Permanent link">&para;</a></h2>
-<p>The Light sensor card at the factory default I2C address of 0x0A. The factory default I2C address is printed on the back of the card.</p>
+<p>The default I2C address is printed on the back side of the card which is 0x08. However, you can change it to a different address with the card firmware (Read our wiki for how to change the default I2C address of a card.).</p>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/i2c-address.png" /></p>
 <h2 id="pins"><strong><em>Pins</em></strong><a class="headerlink" href="#pins" title="Permanent link">&para;</a></h2>
 <p>The edge connector (gold fingers) has total of 30 contacts (each side has 15 contacts).</p>
@@ -868,8 +938,11 @@
 <li><strong>VCC:</strong> Power supply (Front: pin #1, #29 / Back: pin #2, #30)</li>
 <li><strong>GND:</strong> To be connected to the system ground (Front: pin #3, #27 / Back: pin #4, #28)</li>
 </ul>
-<h3 id="i2c-bus-and-uart-test-point"><strong><em>I2C Bus and UART Test Point</em></strong><a class="headerlink" href="#i2c-bus-and-uart-test-point" title="Permanent link">&para;</a></h3>
-<p>You can solder a break away header (straight, 0.1” pin spacing) to the I2C bus test point. The I2C bus requires two wires to communicate with the device, a serial data line (SDA) and a serial clock line (SCL). There is an additional RX, TX, VCC, and GND that is not part of the I2C interface.</p>
+<!--
+### ***I2C Bus and UART Test Point***
+You can solder a break away header (straight, 0.1” pin spacing) to the I2C bus test point. The I2C bus requires two wires to communicate with the device, a serial data line (SDA) and a serial clock line (SCL). There is an additional RX, TX, VCC, and GND that is not part of the I2C interface.
+-->
+
 <h2 id="how-to-use"><strong><em>How to Use</em></strong><a class="headerlink" href="#how-to-use" title="Permanent link">&para;</a></h2>
 <p>The Light sensor card can be plugged into an edge connector slot of one of the following Longan boards.</p>
 <ul>
@@ -879,7 +952,7 @@
 <li>Extension board</li>
 <li>PI Hap</li>
 </ul>
-<p>When plugging, the white arrow head printed on the card should be pointing toward the white arrow head printed near the edge connector slot of the board.
+<p>When you plug, the white arrow head printed on the card should be pointing toward the white arrow head printed near the edge connector slot of the board.
 Once plugged, it can communicate with the Carduino through the I2C bus line of the board. It will also connect to the common power bus of the board.</p>
 <h3 id="use-with-extension-board"><strong><em>Use with Extension Board</em></strong><a class="headerlink" href="#use-with-extension-board" title="Permanent link">&para;</a></h3>
 <p>You can use the extension board to connect any Longan card with the Carduino.</p>
@@ -981,9 +1054,31 @@ float getValue(int s)
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/arduino-ide-setup-5.png" /></p>
 <p>In the Serial Monitor, type any number or character and click <strong>Send</strong> button.</p>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/serial-monitor-1.png" /></p>
-<p>First, it will output the device information of your Light sensor card such as I2C address, device id, number of sensors, name length, name, SKU, and version. Then it will continually output the illuminance in lux (lx).</p>
+<p>First, it will print the device information of your Light sensor card such as I2C address, device id, number of sensors, name length, name, SKU, and version to Serial Monitor. Then the real-time light sensor levels will print to Serial Monitor repeatedly. The values will fall between 0 - 1023.</p>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/serial-monitor-2.png" /></p>
 <p>The blue LED on the ATmega 168P module will blink quickly and continually during the illuminance reading through I2C.</p>
+<h2 id="labs"><strong><em>Labs</em></strong><a class="headerlink" href="#labs" title="Permanent link">&para;</a></h2>
+<h3 id="lab-01"><strong><em>Lab 01</em></strong><a class="headerlink" href="#lab-01" title="Permanent link">&para;</a></h3>
+<p>To perform this lab you will need:</p>
+<ul>
+<li>Light Sensor Card</li>
+<li>Carduino 32U4</li>
+<li>OLED Display Card</li>
+<li>Extension Board</li>
+<li>USB to Type-C Cable (<a href="https://www.longan-labs.cc/2140001.html">https://www.longan-labs.cc/2140001.html</a>)</li>
+</ul>
+<h4 id="assembly"><strong><em>Assembly</em></strong><a class="headerlink" href="#assembly" title="Permanent link">&para;</a></h4>
+<p>Plug your cards into the slots of the Extension Board. The Extension Board will work no matter which cards are attached where. Then connect the Cardiono to the computer using USB to Type-C cable.</p>
+<blockquote>
+<p><strong>NOTE:</strong> The Light Sensor Card outputs values ranging from 0 - 1023 where 0 indicates dark and 1023 indicates bright light.</p>
+</blockquote>
+<h4 id="applications"><strong><em>Applications</em></strong><a class="headerlink" href="#applications" title="Permanent link">&para;</a></h4>
+<p>Can you think of an application where a light sensor would be useful?</p>
+<p>Light sensors can be used for automatic lighting applications, such as your mobile phone that automatically adjust the brightness of the screen according to the amount of light that reaches it's light sensor and your car automatically turn on lights at dark depending on the amount of light that reaches to it's rain-light sensor.</p>
+<h4 id="code"><strong><em>Code</em></strong><a class="headerlink" href="#code" title="Permanent link">&para;</a></h4>
+<p>Copy and paste the code from below into your Arduino IDE. Verify and upload the program onto your Carduino 32U4.</p>
+<p>You will see the real-time light sensor levels (0 - 1023) will print to screen repeatedly.</p>
+<p>Now gently cover the light sensor on the Light Sensor Card with your finger. This will reduce the amount of light that reaches the sensor to nearly zero.</p>
                 
                   
                 
