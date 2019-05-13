@@ -566,8 +566,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#reading-illuminance" title="Reading Illuminance" class="md-nav__link">
-    Reading Illuminance
+  <a href="#reading-visible-light-intensity" title="Reading Visible Light Intensity" class="md-nav__link">
+    Reading Visible Light Intensity
   </a>
   
 </li>
@@ -822,8 +822,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#reading-illuminance" title="Reading Illuminance" class="md-nav__link">
-    Reading Illuminance
+  <a href="#reading-visible-light-intensity" title="Reading Visible Light Intensity" class="md-nav__link">
+    Reading Visible Light Intensity
   </a>
   
 </li>
@@ -957,15 +957,27 @@ Once plugged, it can communicate with the Carduino through the I2C bus line of t
 <h3 id="use-with-extension-board"><strong><em>Use with Extension Board</em></strong><a class="headerlink" href="#use-with-extension-board" title="Permanent link">&para;</a></h3>
 <p>You can use the extension board to connect any Longan card with the Carduino.</p>
 <ul>
-<li>First take the Extension board.</li>
-<li>Next, plug the Light sensor card in to one of the edge connector slot.</li>
-<li>Then plug the Carduino in to another edge connector slot.</li>
-<li>Finally, connect the extension board with your computer using a Type-C USB cable (you can use either USB connector on the Carduino or the Extension board).</li>
+<li>
+<p>Take the Extension board.
+<img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/DOC-Light-Sensor-Card-1.jpg" /></p>
+</li>
+<li>
+<p>Plug the Light sensor card into one of the edge connector slot.
+<img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/DOC-Light-Sensor-Card-2.jpg" /></p>
+</li>
+<li>
+<p>Plug the Carduino into another edge connector slot.
+<img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/DOC-Light-Sensor-Card-3.jpg" /></p>
+</li>
+<li>
+<p>Connect the extension board with your computer using a Type-C USB cable (you can use either USB connector on the Carduino or the Extension board).
+<img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/DOC-Light-Sensor-Card-6.jpg" /></p>
+</li>
 </ul>
-<h3 id="reading-illuminance"><strong><em>Reading Illuminance</em></strong><a class="headerlink" href="#reading-illuminance" title="Permanent link">&para;</a></h3>
+<h3 id="reading-visible-light-intensity"><strong><em>Reading Visible Light Intensity</em></strong><a class="headerlink" href="#reading-visible-light-intensity" title="Permanent link">&para;</a></h3>
 <p>The sample code can be loaded to your Arduino IDE by clicking on <strong>File &gt; Examples &gt; LonganCards &gt; ReadSensor</strong>.</p>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/arduino-ide-setup-1.png" /></p>
-<p>If you have trouble loading the Blink sketch from the examples, you can copy and paste the code below into the Arduino editor.</p>
+<p>If you have trouble loading the sketch from the examples, you can copy and paste the code below into the Arduino editor.</p>
 <div class="codehilite"><pre><span></span>#include &lt;Wire.h&gt;
 #include &quot;CardsDfs.h&quot;
 #include &quot;LonganCards.h&quot;
@@ -1042,7 +1054,6 @@ float getValue(int s)
 // END FILE
 </pre></div>
 
-<p>Connect the Type-C USB cable to the USB connector of the Carduino and connect the other end to your computer.</p>
 <p>Next, tell the Arduino IDE to use the Carduino. To do this, click <strong>Tools &gt; Board &gt; Carduino 32U4</strong> under <strong>Longen AVR Boards</strong>.</p>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/arduino-ide-setup-2.png" /></p>
 <p>Then select the proper port in <strong>Tools &gt; Port &gt; (the Serial/COM port of your Carduino)</strong>.</p>
@@ -1069,16 +1080,21 @@ float getValue(int s)
 </ul>
 <h4 id="assembly"><strong><em>Assembly</em></strong><a class="headerlink" href="#assembly" title="Permanent link">&para;</a></h4>
 <p>Plug your cards into the slots of the Extension Board. The Extension Board will work no matter which cards are attached where. Then connect the Cardiono to the computer using USB to Type-C cable.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/DOC-Light-Sensor-Card-5.jpg" /></p>
 <blockquote>
 <p><strong>NOTE:</strong> The Light Sensor Card outputs values ranging from 0 - 1023 where 0 indicates dark and 1023 indicates bright light.</p>
 </blockquote>
 <h4 id="applications"><strong><em>Applications</em></strong><a class="headerlink" href="#applications" title="Permanent link">&para;</a></h4>
 <p>Can you think of an application where a light sensor would be useful?</p>
-<p>Light sensors can be used for automatic lighting applications, such as your mobile phone that automatically adjust the brightness of the screen according to the amount of light that reaches it's light sensor and your car automatically turn on lights at dark depending on the amount of light that reaches to it's rain-light sensor.</p>
+<p>Light sensors can be used for automatic lighting applications, such as your mobile phone that automatically adjust the brightness of the screen according to the amount of light that reaches it's light sensor and your car automatically turn on lights at dark depending on the amount of light that reaches to it's rain-light sensor.
+Images coming soon.</p>
 <h4 id="code"><strong><em>Code</em></strong><a class="headerlink" href="#code" title="Permanent link">&para;</a></h4>
 <p>Copy and paste the code from below into your Arduino IDE. Verify and upload the program onto your Carduino 32U4.</p>
 <p>You will see the real-time light sensor levels (0 - 1023) will print to screen repeatedly.</p>
-<p>Now gently cover the light sensor on the Light Sensor Card with your finger. This will reduce the amount of light that reaches the sensor to nearly zero.</p>
+<p>Place the light sensor unit under a lamp.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/DOC-Light-Sensor-Card-7.jpg" /></p>
+<p>Now gently cover the Light Sensor Card with your hand. This will reduce the amount of light that reaches the sensor to nearly zero.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1011010/DOC-Light-Sensor-Card-8.jpg" /></p>
                 
                   
                 
