@@ -13,7 +13,7 @@
         <meta name="description" content="Docs of Longan Labs">
       
       
-        <link rel="canonical" href="https://longan-labs.cc/1030002/">
+        <link rel="canonical" href="https://longan-labs.cc/1012003/">
       
       
         <meta name="author" content="Loovee">
@@ -42,7 +42,7 @@
     
     
       
-        <title>OBD-II CAN-BUS Development Kit - Longan Docs</title>
+        <title>Motor Driver Card - Longan Docs</title>
       
     
     
@@ -131,7 +131,7 @@
                 Longan Docs
               </span>
               <span class="md-header-nav__topic">
-                OBD-II CAN-BUS Development Kit
+                Motor Driver Card
               </span>
             
           
@@ -239,7 +239,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../cards-system-summary/" title="Cards" class="md-tabs__link">
+        <a href="../cards-system-summary/" title="Cards" class="md-tabs__link md-tabs__link--active">
           Cards
         </a>
       
@@ -252,7 +252,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../1030003/" title="CAN Bus" class="md-tabs__link md-tabs__link--active">
+        <a href="../1030003/" title="CAN Bus" class="md-tabs__link">
           CAN Bus
         </a>
       
@@ -405,10 +405,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Cards
@@ -664,11 +666,100 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../1012003/" title="Motor Driver Card" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Motor Driver Card
+      </label>
+    
+    <a href="./" title="Motor Driver Card" class="md-nav__link md-nav__link--active">
       Motor Driver Card
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifications" title="Specifications" class="md-nav__link">
+    Specifications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-connect-motors" title="How to Connect Motors" class="md-nav__link">
+    How to Connect Motors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i2c-address" title="I2C Address" class="md-nav__link">
+    I2C Address
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pins" title="Pins" class="md-nav__link">
+    Pins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use" title="How to Use" class="md-nav__link">
+    How to Use
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1" title="Example 1" class="md-nav__link">
+    Example 1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -681,12 +772,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       CAN Bus
@@ -726,87 +815,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        OBD-II CAN-BUS Development Kit
-      </label>
-    
-    <a href="./" title="OBD-II CAN-BUS Development Kit" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../1030002/" title="OBD-II CAN-BUS Development Kit" class="md-nav__link">
       OBD-II CAN-BUS Development Kit
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" title="Introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#features" title="Features" class="md-nav__link">
-    Features
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#partlist" title="Partlist" class="md-nav__link">
-    Partlist
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hardware-overview-of-serial-can-bus-module" title="Hardware Overview of Serial CAN Bus Module" class="md-nav__link">
-    Hardware Overview of Serial CAN Bus Module
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hardware-connection" title="Hardware Connection" class="md-nav__link">
-    Hardware Connection
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started-with-arduino" title="Getting Started with Arduino" class="md-nav__link">
-    Getting Started with Arduino
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" title="Reference" class="md-nav__link">
-    Reference
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -841,43 +854,56 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#features" title="Features" class="md-nav__link">
-    Features
+  <a href="#specifications" title="Specifications" class="md-nav__link">
+    Specifications
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#partlist" title="Partlist" class="md-nav__link">
-    Partlist
+  <a href="#how-to-connect-motors" title="How to Connect Motors" class="md-nav__link">
+    How to Connect Motors
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hardware-overview-of-serial-can-bus-module" title="Hardware Overview of Serial CAN Bus Module" class="md-nav__link">
-    Hardware Overview of Serial CAN Bus Module
+  <a href="#i2c-address" title="I2C Address" class="md-nav__link">
+    I2C Address
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hardware-connection" title="Hardware Connection" class="md-nav__link">
-    Hardware Connection
+  <a href="#pins" title="Pins" class="md-nav__link">
+    Pins
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-started-with-arduino" title="Getting Started with Arduino" class="md-nav__link">
-    Getting Started with Arduino
+  <a href="#how-to-use" title="How to Use" class="md-nav__link">
+    How to Use
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1" title="Example 1" class="md-nav__link">
+    Example 1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#reference" title="Reference" class="md-nav__link">
-    Reference
+  <a href="#references" title="References" class="md-nav__link">
+    References
   </a>
   
 </li>
@@ -899,66 +925,64 @@
               
                 
                 
-                  <h1>OBD-II CAN-BUS Development Kit</h1>
+                  <h1>Motor Driver Card</h1>
                 
                 <h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<hr />
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/obdkit/part_list.jpg" /></p>
-<p>This kit allows you to interface with your vehicle's OBD-II interface. The kit includes a Serial CAN Bus module as well as a OBD-II Connector, with this kit you can get data from your vehicle easily. We provide an tutorial which is based on Arduino.</p>
-<p>OBD-II (short for On-Board Diagnostics, Second Generation) is a set of standards for implementing a computer based system to control emissions from vehicles. It was first introduced in the United States in 1994, and became a requirement on all 1996 and newer US vehicles. Other countries, including Canada, parts of the European Union, Japan, Australia, and Brazil adopted similar legislation. A large portion of the modern vehicle fleet supports OBD-II or one of its regional flavors.</p>
-<h2 id="features"><strong><em>Features</em></strong><a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
-<hr />
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1012003/1012003-1.jpg" /></p>
+<p>The Motor Driver Card features LV8548MC, which is a 2-channel motor driver IC. It can drive two DC motors or one DC motor using the parallel connection, or it can drive a stepper motor in full-step and half-step.</p>
+<h2 id="specifications"><strong><em>Specifications</em></strong><a class="headerlink" href="#specifications" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Up to 1Mb/s CAN Bus rate</li>
-<li>DIY kit</li>
-<li>Multi-platform avaiable (Arduino, Raspberry, Beaglebone Board, etc.)</li>
-<li>Serial Communication</li>
-<li>Tutorial for Arduino</li>
+<li>Features LV8548 motor driver</li>
+<li>Supports two wire I2C bus interface</li>
+<li>One 4 pin SH1.0 connectors -allows you to connect MCUs or cards which support I2C communication protocol with dupont cables.</li>
+<li>30 gold fingers</li>
+<li>ATmega 168PA microprocessor - runs card firmware.</li>
+<li>LED indicator – flashes when Carduino read/write data from/to the card through I2C.</li>
+<li>4-pin terminal block connector</li>
+<li>Voltage: 5V</li>
+<li>Built-in brake function</li>
+<li>Motor speed and direction control</li>
 </ul>
-<h2 id="partlist"><strong><em>Partlist</em></strong><a class="headerlink" href="#partlist" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Serial CAN Bus Module</li>
-<li>OBD-II Connector</li>
-<li>Screw Driver</li>
-<li>Cable for CAN Bus</li>
-<li>Grove Cable</li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The kit don't include a controller board.</p>
-</div>
-<h2 id="hardware-overview-of-serial-can-bus-module"><strong><em>Hardware Overview of Serial CAN Bus Module</em></strong><a class="headerlink" href="#hardware-overview-of-serial-can-bus-module" title="Permanent link">&para;</a></h2>
-<hr />
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbus/hw.png" /></p>
-<ol>
-<li>4 pin 2.0mm Grove Connector</li>
-<li>Power and status led indicator</li>
-<li>Send and Recv led indicator</li>
-<li>3.5mm terminal to connect to CAN Bus (CAN_H &amp; CAN_L)</li>
-<li>120Ω registor, default connected, if you don't need you cut this pad with a box cutter. </li>
-</ol>
-<h2 id="hardware-connection"><strong><em>Hardware Connection</em></strong><a class="headerlink" href="#hardware-connection" title="Permanent link">&para;</a></h2>
-<p>The kit includes an OBD-II connector, below is pins define of the connector. </p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/obdkit/obdii%20port.jpg" /></p>
-<p>The kit includes a cable as well, you need a soldering iron to connect the cable to the connector. 
-As shown below.</p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/obdkit/connect.png" /> </p>
-<h2 id="getting-started-with-arduino"><strong><em>Getting Started with Arduino</em></strong><a class="headerlink" href="#getting-started-with-arduino" title="Permanent link">&para;</a></h2>
-<p>Here we will make a demo to read some value from a vehicle with an Arduino.</p>
-<p>Download Arduino library of the board from <a href="https://github.com/Longan-Labs/Serial_CAN_Arduino">Github</a></p>
-<p>Open the example "obd_demo".</p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/obdkit/arduinocode.png" /></p>
-<p>For this example, we use D2 as RX of software serial, D3 as TX.
-So you should connect D2 to TX of Serial can bus module, and D3 to RX. </p>
-<p>After upload the sketch to Arduino, you can try connect OBD-II connector to your vehicle. </p>
-<p>Open you serial monitor, try to input an OBD-PIDs, see if you can get some values from your vehicle. </p>
-<p>Click to get more about <a href="https://en.wikipedia.org/wiki/OBD-II_PIDs">OBD-PIDs</a>. </p>
-<h2 id="reference"><strong><em>Reference</em></strong><a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
-<hr />
+<h2 id="how-to-connect-motors"><strong><em>How to Connect Motors</em></strong><a class="headerlink" href="#how-to-connect-motors" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="http://docs.longan-labs.cc/can_bus/">Wiki for Serial CAN Bus module</a></li>
-<li><a href="https://github.com/Longan-Labs/Serial_CAN_Arduino">Arduino Library</a></li>
-<li><a href="https://github.com/Longan-Labs/Eagle_File_Serial_CAN_Bus/archive/master.zip">Schematics of Serial CAN Bus Module in Eagle File</a></li>
+<li>Take two DC motors.</li>
+<li>Connect one motor to the terminal block has pin 1 and 2.</li>
+<li>Connect other motor to the terminal block ha spin 3 and 4.</li>
+</ul>
+<h2 id="i2c-address"><strong><em>I2C Address</em></strong><a class="headerlink" href="#i2c-address" title="Permanent link">&para;</a></h2>
+<p>The default I2C address is printed on the back side of the card which is 0x43. However, you can change it to a different address with the card firmware (Read our wiki for how to change the default I2C address of a card.).</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1012003/1012003-2.jpg" /></p>
+<h2 id="pins"><strong><em>Pins</em></strong><a class="headerlink" href="#pins" title="Permanent link">&para;</a></h2>
+<p>The edge connector (gold fingers) has total of 30 contacts (each side has 15 contacts).</p>
+<p>On the front side of the Motor Driver Card, a white arrow is printed near the edge connector indicates the pin #1. You can find some pin numbers printed on the edge connector itself (1, 15, and 29). You can count the pin numbers starting with 1 and count by twos from right to left would be 1, 3, 7, 9, 11, 15, 17, 19, 21, 23, 27, and 29. Notice that all the counts are odd numbers.</p>
+<p>On the back side of the Motor Driver Card, you also can find some pin numbers printed on the edge connector itself (2, 16, and 30). You can count the pin numbers starting with 2 and count by twos from left to right would be 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28 and 30. Notice that all the counts are even numbers.</p>
+<p>Among the 30 pins, following pins can be used for I2C communication.</p>
+<ul>
+<li><strong>SDA:</strong> Digital I/O, I2C bus serial bidirectional data line (Front: pin #5, #25 / Back: pin #6, #26)</li>
+<li><strong>SCL:</strong> Digital Input, I2C bus serial clock input (Front: pin #7, #23 / Back: pin #8, #24)</li>
+</ul>
+<p>Also, following pins connect with the common power bus of the board.</p>
+<ul>
+<li><strong>VCC:</strong> Power supply (Front: pin #1, #29 / Back: pin #2, #30)</li>
+<li><strong>GND:</strong> To be connected to the system ground (Front: pin #3, #27 / Back: pin #4, #28)</li>
+</ul>
+<h2 id="how-to-use"><strong><em>How to Use</em></strong><a class="headerlink" href="#how-to-use" title="Permanent link">&para;</a></h2>
+<p>The Motor Driver Card can be plugged into an edge connector slot of one of the following Longan boards.</p>
+<ul>
+<li>Game board</li>
+<li>Car board</li>
+<li>Sensor board</li>
+<li>Extension board</li>
+<li>PI Hap</li>
+</ul>
+<p>However, it is best suited for the Longan Car Board.</p>
+<p>When you plug, the white arrow head printed on the card should be pointing toward the white arrow head printed near the edge connector slot of the board. Once plugged, it can communicate with the Carduino through the I2C bus line of the board. It will also connect to the common power bus of the board.</p>
+<h3 id="example-1"><strong><em>Example 1</em></strong><a class="headerlink" href="#example-1" title="Permanent link">&para;</a></h3>
+<p>Coming soon.</p>
+<h2 id="references"><strong><em>References</em></strong><a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Eagle Files: <a href="https://github.com/Longan-Labs/EagleFile_Cards/tree/master/1012003_Motor_Driver_Card">https://github.com/Longan-Labs/EagleFile_Cards/tree/master/1012003_Motor_Driver_Card</a></li>
+<li>Datasheet: <a href="https://www.onsemi.com/pub/Collateral/LV8548MC-D.PDF">https://www.onsemi.com/pub/Collateral/LV8548MC-D.PDF</a></li>
 </ul>
                 
                   
@@ -980,7 +1004,7 @@ So you should connect D2 to TX of Serial can bus module, and D3 to RX. </p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../1030001/" title="Serial CAN Bus Module" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../1011021/" title="9-Dof Sensor Card" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -989,11 +1013,25 @@ So you should connect D2 to TX of Serial can bus module, and D3 to RX. </p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Serial CAN Bus Module
+                9-Dof Sensor Card
               </span>
             </div>
           </a>
         
+        
+          <a href="../1030003/" title="OBD-II CAN Bus GPS Development Kit" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                OBD-II CAN Bus GPS Development Kit
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
         
       </nav>
     </div>
