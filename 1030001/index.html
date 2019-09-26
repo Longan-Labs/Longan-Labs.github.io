@@ -799,8 +799,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#v11-verstion" title="V1.1 Verstion" class="md-nav__link">
-    V1.1 Verstion
+  <a href="#v11-verstion-and-after" title="V1.1 Verstion (and after)" class="md-nav__link">
+    V1.1 Verstion (and after)
   </a>
   
 </li>
@@ -888,6 +888,13 @@
         <li class="md-nav__item">
   <a href="#arduino-library" title="Arduino Library" class="md-nav__link">
     Arduino Library
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-standalone" title="Working Standalone" class="md-nav__link">
+    Working Standalone
   </a>
   
 </li>
@@ -982,8 +989,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#v11-verstion" title="V1.1 Verstion" class="md-nav__link">
-    V1.1 Verstion
+  <a href="#v11-verstion-and-after" title="V1.1 Verstion (and after)" class="md-nav__link">
+    V1.1 Verstion (and after)
   </a>
   
 </li>
@@ -1076,6 +1083,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#working-standalone" title="Working Standalone" class="md-nav__link">
+    Working Standalone
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" title="Reference" class="md-nav__link">
     Reference
   </a>
@@ -1132,12 +1146,12 @@ CAN Bus is a common industrial bus because of its long travel distance, medium c
 <li>Power and status led indicator</li>
 <li>Send and Recv led indicator</li>
 <li>3.5mm terminal to connect to CAN Bus (CAN_H &amp; CAN_L)</li>
-<li>120Ω registor, default connected, if you don't need you cut this pad with a box cutter. </li>
+<li>120Ω registor. </li>
 </ol>
 <h2 id="work-at-33v"><strong><em>Work at 3.3V</em></strong><a class="headerlink" href="#work-at-33v" title="Permanent link">&para;</a></h2>
 <hr />
 <p>The module is working at 5V most of time. If you want it to work at 3.3V IO, please try:</p>
-<h3 id="v11-verstion">V1.1 Verstion<a class="headerlink" href="#v11-verstion" title="Permanent link">&para;</a></h3>
+<h3 id="v11-verstion-and-after">V1.1 Verstion (and after)<a class="headerlink" href="#v11-verstion-and-after" title="Permanent link">&para;</a></h3>
 <p>There's a jumper on the back side, please connect the pads together with a soldering iron. 
 And VCC must connect to 5V. </p>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbus/V1.1_3V.jpg" /></p>
@@ -1461,10 +1475,31 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 <li><strong><em>set_can_baudrate</em></strong> - set can bus baudrate</li>
 <li><strong><em>set_mask_filt</em></strong> - set mask and filt of the module</li>
 </ul>
+<h2 id="working-standalone"><strong><em>Working Standalone</em></strong><a class="headerlink" href="#working-standalone" title="Permanent link">&para;</a></h2>
+<p>You can program the board with Arduino IDE in the version after V1.2.</p>
+<p>First, you need a USB to Serial board, something like the <a href="https://www.longan-labs.cc/1016006.html">Programmer Card</a></p>
+<p>Here we will take Programmer Card as an example:</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbus/serial_can_program.png" /></p>
+<p>Then, we need to setup your Arduino IDE. </p>
+<p>Start the Arduino IDE.</p>
+<p>Copy and paste the link below into the <strong>Additional Boards</strong> Manager URLs option in the <strong>Arduino IDE preferences</strong> (<strong>File &gt; Preferences</strong>).</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1013001/preferences.png" /></p>
+<p><a href="https://raw.githubusercontent.com/Longan-Labs/Longan-Board/master/package_longan_boards_index.json">https://raw.githubusercontent.com/Longan-Labs/Longan-Board/master/package_longan_boards_index.json</a></p>
+<p>The Longan AVR boards supplied package includes supports for Longan Card, Carduino 328, Carduino 32U4.</p>
+<p>Once done, click <strong>OK</strong> button to save the new preference settings.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1013001/arduino-ide-setup-5.png" /></p>
+<p>Now open the Boards Manager by navigating to the <strong>Tools -&gt; Board</strong> menu.</p>
+<p>Select <strong>All</strong> from the Type drop-down menu. Then type <strong>longan</strong> in the top search bar. While typing, you will see the <strong>Longan AVR package</strong>.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1013001/arduino-ide-setup-7.png" /></p>
+<p>Click on the <strong>Longan AVR by Longan Labs</strong> and then click on <strong>Install</strong> button.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1013001/arduino-ide-setup-8.png" /></p>
+<p>Once installed, close the <strong>Boards Manager</strong> window.</p>
+<p>Then you can find <strong><em>Serial CAN Bus Module</em></strong> in the board list.</p>
 <h2 id="reference"><strong><em>Reference</em></strong><a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li><a href="https://github.com/Longan-Labs/Serial_CAN_Arduino">Arduino Library</a></li>
+<li><a href="https://github.com/Longan-Labs/Serial_CAN_Bus">Firmware</a></li>
 <li><a href="https://www.seeedstudio.com/Serial-CAN-BUS-Module-based-on-MCP2551-and-MCP2515-p-2924.html">How to get ONE</a></li>
 <li><a href="https://github.com/Longan-Labs/Eagle_File_Serial_CAN_Bus/archive/master.zip">Schematics in Eagle File</a></li>
 </ul>
