@@ -994,25 +994,25 @@ Finally, upload the code to your IRduino. </p>
 <p>Don’t worry about the code, it’s easy just like you use an Arduino.
 Actually I had finish this example, now we learn about it. Open Task_Mode_Arrow example. 
 Now here we goto the code. We notice the remote key value is used here:</p>
-<div class="codehilite"><pre><span></span><span class="c1">// IR CODE DEFINE</span>
+<div class="codehilite"><pre><span></span><code><span class="c1">// IR CODE DEFINE</span>
 <span class="cp">#define IR_CODE_UP          0xEE</span>
 <span class="cp">#define IR_CODE_DOWN        0xAE</span>
 <span class="cp">#define IR_CODE_LEFT        0xCE</span>
 <span class="cp">#define IR_CODE_RIGHT       0x8E</span>
 <span class="cp">#define IR_CODE_SPACE       0x5E</span>
-</pre></div>
+</code></pre></div>
 
 <p>Then the setup:</p>
-<div class="codehilite"><pre><span></span><span class="c1">// add task item</span>
+<div class="codehilite"><pre><span></span><code><span class="c1">// add task item</span>
 <span class="n">IRduino</span><span class="p">.</span><span class="n">addItem</span><span class="p">(</span><span class="n">IR_CODE_UP</span><span class="p">,</span> <span class="n">task_up</span><span class="p">);</span>
 <span class="n">IRduino</span><span class="p">.</span><span class="n">addItem</span><span class="p">(</span><span class="n">IR_CODE_DOWN</span><span class="p">,</span> <span class="n">task_down</span><span class="p">);</span>
 <span class="n">IRduino</span><span class="p">.</span><span class="n">addItem</span><span class="p">(</span><span class="n">IR_CODE_LEFT</span><span class="p">,</span> <span class="n">task_left</span><span class="p">);</span>
 <span class="n">IRduino</span><span class="p">.</span><span class="n">addItem</span><span class="p">(</span><span class="n">IR_CODE_RIGHT</span><span class="p">,</span> <span class="n">task_right</span><span class="p">);</span>
-</pre></div>
+</code></pre></div>
 
 <p>Here we add 5 tasks via the IRduino.addItem function. This function need two parameter, remote key value and a function pointer. Don’t know funciton pointer? Just forget it, actually it’s just the function name. 
 As we had add four task, so we need 4 function, as following:</p>
-<div class="codehilite"><pre><span></span><span class="c1">// add task</span>
+<div class="codehilite"><pre><span></span><code><span class="c1">// add task</span>
 
 <span class="kt">void</span> <span class="nf">task_up</span><span class="p">()</span>
 <span class="p">{</span>
@@ -1038,7 +1038,7 @@ As we had add four task, so we need 4 function, as following:</p>
 <span class="p">{</span>
     <span class="n">iRduino</span><span class="p">.</span><span class="n">keyPressRelease</span><span class="p">(</span><span class="n">KEY_SPACE</span><span class="p">);</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 <p>I guess you have had ideas about these four function. Yes, they just press and release some key on your PC.</p>
 <p>Then let’s have a summary, to add a task, we need 3 steps:</p>

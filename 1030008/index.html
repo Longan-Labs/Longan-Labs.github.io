@@ -1130,6 +1130,10 @@
 <p><strong>CAN Bus</strong> is a common industrial bus because of its long travel distance, medium communication speed and high reliability. It is commonly found on modern machine tools, such as an automotive diagnostic bus.</p>
 <p>This CANBed adopts <strong>MCP2515</strong> CAN Bus controller with SPI interface and <strong>MCP2551</strong> CAN transceiver to achieve the CAN-BUS capability. With an <strong>OBD-II</strong> converter cable added on and the OBD-II library imported, you are ready to build an onboard diagnostic device.</p>
 <p>What's more, the is an Atmega32U4 with <strong>Arduino Leonardo</strong> bootloader on the board, you can use Arduino IDE to program the board easily. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These is NO reset button for this version</p>
+</div>
 <h3 id="features"><strong>Features</strong><a class="headerlink" href="#features" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Implements CAN V2.0B at up to 1 Mb/s</li>
@@ -1267,7 +1271,6 @@
 <a href="http://www.ni.com/white-paper/9759/en/">NI CAN Physical Layer and Termination Guide</a></p>
 <p><strong>8.Grove connector for UART</strong></p>
 <p><strong>9.Grove connector for I2C</strong></p>
-<p><strong>A.Reset button</strong></p>
 <h2 id="can-bus-usage"><strong><em>CAN BUS Usage</em></strong><a class="headerlink" href="#can-bus-usage" title="Permanent link">&para;</a></h2>
 <h3 id="arduino-code"><strong><em>Arduino Code</em></strong><a class="headerlink" href="#arduino-code" title="Permanent link">&para;</a></h3>
 <hr />
@@ -1284,7 +1287,7 @@
 <h3 id="1-set-the-baud-rate">1. Set the Baud rate<a class="headerlink" href="#1-set-the-baud-rate" title="Permanent link">&para;</a></h3>
 <p>This function is used to initialize the baud rate of the CAN Bus system.</p>
 <p>The available baud rates are listed as follows:</p>
-<div class="codehilite"><pre><span></span>#define CAN_5KBPS    1
+<div class="codehilite"><pre><span></span><code>#define CAN_5KBPS    1
 #define CAN_10KBPS   2
 #define CAN_20KBPS   3
 #define CAN_25KBPS   4
@@ -1302,20 +1305,20 @@
 #define CAN_500KBPS  16
 #define CAN_666kbps  17
 #define CAN_1000KBPS 18
-</pre></div>
+</code></pre></div>
 
 
 <h3 id="2-set-receive-mask-and-filter">2. Set Receive Mask and Filter<a class="headerlink" href="#2-set-receive-mask-and-filter" title="Permanent link">&para;</a></h3>
 <p>There are <strong>2</strong> receive mask registers and <strong>5</strong> filter registers on the controller chip that guarantee you getting data from the target device. They are useful especially in a large network  consisting of numerous nodes.</p>
 <p>We provide two functions for you to utilize these mask and filter registers. They are:</p>
 <p><strong>Mask:</strong></p>
-<div class="codehilite"><pre><span></span>init_Mask(unsigned char num, unsigned char ext, unsigned char ulData);
-</pre></div>
+<div class="codehilite"><pre><span></span><code>init_Mask(unsigned char num, unsigned char ext, unsigned char ulData);
+</code></pre></div>
 
 
 <p><strong>Filter:</strong></p>
-<div class="codehilite"><pre><span></span>init_Filt(unsigned char num, unsigned char ext, unsigned char ulData);
-</pre></div>
+<div class="codehilite"><pre><span></span><code>init_Filt(unsigned char num, unsigned char ext, unsigned char ulData);
+</code></pre></div>
 
 
 <ul>
@@ -1326,20 +1329,20 @@
 <h3 id="3-check-receive">3. Check Receive<a class="headerlink" href="#3-check-receive" title="Permanent link">&para;</a></h3>
 <p>The MCP2515 can operate in either a polled mode, where the software checks for a received frame, or using additional pins to signal that a frame has been received or transmit completed.</p>
 <p>Use the following function to poll for received frames.</p>
-<div class="codehilite"><pre><span></span>INT8U MCP_CAN::checkReceive(void);
-</pre></div>
+<div class="codehilite"><pre><span></span><code>INT8U MCP_CAN::checkReceive(void);
+</code></pre></div>
 
 
 <p>The function will return 1 if a frame arrives, and 0 if nothing arrives.</p>
 <h3 id="4-get-can-id">4. Get CAN ID<a class="headerlink" href="#4-get-can-id" title="Permanent link">&para;</a></h3>
 <p>When some data arrive, you can use the following function to get the CAN ID of the "send" node.</p>
-<div class="codehilite"><pre><span></span>INT32U MCP_CAN::getCanId(void)
-</pre></div>
+<div class="codehilite"><pre><span></span><code>INT32U MCP_CAN::getCanId(void)
+</code></pre></div>
 
 
 <h3 id="5-send-data">5. Send Data<a class="headerlink" href="#5-send-data" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span>CAN.sendMsgBuf(INT8U id, INT8U ext, INT8U len, data_buf);
-</pre></div>
+<div class="codehilite"><pre><span></span><code>CAN.sendMsgBuf(INT8U id, INT8U ext, INT8U len, data_buf);
+</code></pre></div>
 
 
 <p>It is a function to send data onto the bus. In which:</p>
@@ -1350,15 +1353,15 @@
 <li><strong>data_buf</strong> is the content of this message.</li>
 </ul>
 <p>For example, In the 'send' example, we have:</p>
-<div class="codehilite"><pre><span></span>unsigned char stmp[8] = {0, 1, 2, 3, 4, 5, 6, 7};
+<div class="codehilite"><pre><span></span><code>unsigned char stmp[8] = {0, 1, 2, 3, 4, 5, 6, 7};
 CAN.sendMsgBuf(0x00, 0, 8, stmp); //send out the message &#39;stmp&#39; to the bus and tell other devices this is a standard frame from 0x00.
-</pre></div>
+</code></pre></div>
 
 
 <h3 id="6-receive-data">6. Receive Data<a class="headerlink" href="#6-receive-data" title="Permanent link">&para;</a></h3>
 <p>The following function is used to receive data on the 'receive' node:</p>
-<div class="codehilite"><pre><span></span>CAN.readMsgBuf(unsigned char len, unsigned char buf);
-</pre></div>
+<div class="codehilite"><pre><span></span><code>CAN.readMsgBuf(unsigned char len, unsigned char buf);
+</code></pre></div>
 
 
 <p>In conditions that masks and filters have been set. This function can only get frames that meet the requirements of masks and filters.</p>
@@ -1368,7 +1371,7 @@ CAN.sendMsgBuf(0x00, 0, 8, stmp); //send out the message &#39;stmp&#39; to the b
 </ul>
 <h2 id="generate-a-new-baudrate">Generate a New BaudRate<a class="headerlink" href="#generate-a-new-baudrate" title="Permanent link">&para;</a></h2>
 <p>We had provided many frequently-used baud rates, as below:</p>
-<div class="codehilite"><pre><span></span>#define CAN_5KBPS    1
+<div class="codehilite"><pre><span></span><code>#define CAN_5KBPS    1
 #define CAN_10KBPS   2
 #define CAN_20KBPS   3
 #define CAN_25KBPS   4
@@ -1386,7 +1389,7 @@ CAN.sendMsgBuf(0x00, 0, 8, stmp); //send out the message &#39;stmp&#39; to the b
 #define CAN_500KBPS  16
 #define CAN_666KBPS  17
 #define CAN_1000KBPS 18
-</pre></div>
+</code></pre></div>
 
 
 <h2 id="reference"><strong><em>Reference</em></strong><a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>

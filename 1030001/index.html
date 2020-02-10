@@ -1214,8 +1214,8 @@ And VCC must connect to 5V. </p>
 <h3 id="set-serial-baud-rate">Set Serial Baud Rate<a class="headerlink" href="#set-serial-baud-rate" title="Permanent link">&para;</a></h3>
 <hr />
 <p>You can set the serial baud rate of the module with this command. There're 5 rates available, up to 115200 b/s.</p>
-<div class="codehilite"><pre><span></span>AT+S=[value]
-</pre></div>
+<div class="codehilite"><pre><span></span><code>AT+S=[value]
+</code></pre></div>
 
 <table>
 <thead>
@@ -1244,16 +1244,16 @@ And VCC must connect to 5V. </p>
 <p>Default is 9600</p>
 </div>
 <p><strong>Eg:</strong> Set serial baud rate to 57600
-<div class="codehilite"><pre><span></span>AT+S=3
-</pre></div></p>
+<div class="codehilite"><pre><span></span><code>AT+S=3
+</code></pre></div></p>
 <p><strong>Respose</strong></p>
 <p><em>OK</em> or <em>ERROR</em></p>
 <h3 id="set-can-bus-baudrate">Set CAN Bus Baudrate<a class="headerlink" href="#set-can-bus-baudrate" title="Permanent link">&para;</a></h3>
 <hr />
 <p>You can use this command to set the rate of CAN Bus, there's 18 rates available. 
 Normally, if you want to hack your vehicle, 500k is the right one. </p>
-<div class="codehilite"><pre><span></span>AT+C=[value]
-</pre></div>
+<div class="codehilite"><pre><span></span><code>AT+C=[value]
+</code></pre></div>
 
 <table>
 <thead>
@@ -1308,15 +1308,15 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 <p>Default is 500K</p>
 </div>
 <p><strong>Eg:</strong> Set CAN BUS baud rate to 50K
-<div class="codehilite"><pre><span></span>AT+C=08
-</pre></div></p>
+<div class="codehilite"><pre><span></span><code>AT+C=08
+</code></pre></div></p>
 <p><strong>Respose</strong></p>
 <p>OK or ERROR</p>
 <h3 id="set-mask">Set Mask<a class="headerlink" href="#set-mask" title="Permanent link">&para;</a></h3>
 <hr />
 <p>There're 2 Mask for the module, Mask0 and Mask1.</p>
-<div class="codehilite"><pre><span></span>AT+M=[N][EXT][value]
-</pre></div>
+<div class="codehilite"><pre><span></span><code>AT+M=[N][EXT][value]
+</code></pre></div>
 
 <p><strong>N:</strong></p>
 <ul>
@@ -1331,15 +1331,15 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 <p><strong>value:</strong></p>
 <p>Neeed 8 bit of character, hexadecimal.</p>
 <p><strong>Eg:</strong> Set Mask1 to 0x3DF, standard frame:
-<div class="codehilite"><pre><span></span>AT+M=[1][0][000003DF]
-</pre></div></p>
+<div class="codehilite"><pre><span></span><code>AT+M=[1][0][000003DF]
+</code></pre></div></p>
 <p><strong>Respose</strong></p>
 <p>OK or ERROR</p>
 <h3 id="set-filt">Set Filt<a class="headerlink" href="#set-filt" title="Permanent link">&para;</a></h3>
 <hr />
 <p>There're 6 Mask for the module, Filt0 ~ Filt5</p>
-<div class="codehilite"><pre><span></span>AT+F=[N][EXT][value]
-</pre></div>
+<div class="codehilite"><pre><span></span><code>AT+F=[N][EXT][value]
+</code></pre></div>
 
 <p><strong>N:</strong></p>
 <table>
@@ -1374,8 +1374,8 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 <p><strong>value:</strong></p>
 <p>Neeed 8 bit of character, hexadecimal.</p>
 <p><strong>Eg:</strong> Set Filt3 to 0x2C, standard frame:
-<div class="codehilite"><pre><span></span>AT+F=[1][0][0000002C]
-</pre></div></p>
+<div class="codehilite"><pre><span></span><code>AT+F=[1][0][0000002C]
+</code></pre></div></p>
 <p><strong>Respose</strong></p>
 <p>OK or ERROR</p>
 <h2 id="normal-mode"><strong><em>Normal Mode</em></strong><a class="headerlink" href="#normal-mode" title="Permanent link">&para;</a></h2>
@@ -1431,8 +1431,8 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 </ul>
 <p><strong>Eg.</strong></p>
 <p>Send {1, 2, 3, 4, 5, 6, 7, 8} to ID:0x3DC, Standard frame:
-<div class="codehilite"><pre><span></span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mh">0xDC</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
-</pre></div></p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mh">0xDC</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
+</code></pre></div></p>
 <h3 id="recv">Recv<a class="headerlink" href="#recv" title="Permanent link">&para;</a></h3>
 <p>You will get 12 byte of data per frame. Define as below,</p>
 <table>

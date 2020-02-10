@@ -1101,7 +1101,7 @@ GND: To be connected to the system ground (Front: pin #3, #27 / Back: pin #4, #2
 </ul>
 <h3 id="playing-sounds"><strong><em>Playing Sounds</em></strong><a class="headerlink" href="#playing-sounds" title="Permanent link">&para;</a></h3>
 <p>Copy and paste the sketch below into the Arduino editor.</p>
-<div class="codehilite"><pre><span></span>const int buzzer = 5; //buzzer is connected to Carduino pin 11 (Leonardo digital pin 5)
+<div class="codehilite"><pre><span></span><code>const int buzzer = 5; //buzzer is connected to Carduino pin 11 (Leonardo digital pin 5)
 
 void setup(){
   pinMode(buzzer, OUTPUT); // define pin 5 as an output
@@ -1113,7 +1113,7 @@ void loop(){
   noTone(buzzer);     // Stop tone
   delay(1000);        // for 1sec
 }
-</pre></div>
+</code></pre></div>
 
 <p>Save the file to your computer's hard drive as buzzer_1.</p>
 <p>Connect the Type-C USB cable to the USB connector of the Carduino and connect the other end to your computer.</p>

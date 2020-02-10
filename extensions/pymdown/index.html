@@ -965,18 +965,18 @@ great features to the standard Markdown library. For this reason, the
 with the Material theme.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>The PyMdown Extensions package can be installed with the following command:</p>
-<div class="codehilite"><pre><span></span>pip install pymdown-extensions
-</pre></div>
+<div class="codehilite"><pre><span></span><code>pip install pymdown-extensions
+</code></pre></div>
 
 <p>The following list of extensions that are part of the PyMdown Extensions
 package are recommended to be used together with the Material theme:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">markdown_extensions</span><span class="p p-Indicator">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">markdown_extensions</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.arithmatex</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.betterem(smart_enable=all)</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.caret</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.critic</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.emoji</span><span class="p p-Indicator">:</span>
-      <span class="l l-Scalar l-Scalar-Plain">emoji_generator</span><span class="p p-Indicator">:</span> <span class="kt">!!python/name:pymdownx.emoji.to_svg</span>
+  <span class="p p-Indicator">-</span> <span class="nt">pymdownx.emoji</span><span class="p">:</span>
+      <span class="nt">emoji_generator</span><span class="p">:</span> <span class="kt">!!python/name:pymdownx.emoji.to_svg</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.inlinehilite</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.magiclink</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.mark</span>
@@ -984,7 +984,7 @@ package are recommended to be used together with the Material theme:</p>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.superfences</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.tasklist(custom_checkbox=true)</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pymdownx.tilde</span>
-</pre></div>
+</code></pre></div>
 
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <h3 id="github-flavored-markdown">GitHub Flavored Markdown<a class="headerlink" href="#github-flavored-markdown" title="Permanent link">&para;</a></h3>
@@ -999,9 +999,9 @@ uses some incompatible extensions included in the standard Markdown library.</p>
 within Markdown by providing a more sophisticated parser for better detecting
 start and end tokens. Read the documentation for <a href="https://facelessuser.github.io/pymdown-extensions/usage_notes/">usage notes</a>.</p>
 <h4 id="emoji">Emoji<a class="headerlink" href="#emoji" title="Permanent link">&para;</a></h4>
-<p><a href="https://facelessuser.github.io/pymdown-extensions/extensions/emoji/">Emoji</a> adds the ability to insert a <img alt="💩" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f4a9.svg" title=":shit:" />-load of emojis that we use in
+<p><a href="https://facelessuser.github.io/pymdown-extensions/extensions/emoji/">Emoji</a> adds the ability to insert a <img alt="💩" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f4a9.svg" title=":shit:" />-load of emojis that we use in
 our daily lives. See the <a href="http://emojione.com/demo/">EmojiOne demo</a> for a list of all available
-emojis. Happy scrolling <img alt="🎉" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f389.svg" title=":tada:" /></p>
+emojis. Happy scrolling <img alt="🎉" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f389.svg" title=":tada:" /></p>
 <div class="admonition warning">
 <p class="admonition-title">Legal disclaimer</p>
 <p>Material has no affiliation with <a href="http://emojione.com">EmojiOne</a> which is released under
@@ -1022,7 +1022,7 @@ keeping track of tasks and showing what has been done and has yet to be done.
 Checkbox lists are like regular lists, but prefixed with <code>[ ]</code> for empty or
 <code>[x]</code> for filled checkboxes.</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>* [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
+<div class="codehilite"><pre><span></span><code>* [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
 * [x] Nulla lobortis egestas semper
 * [x] Curabitur elit nibh, euismod et ullamcorper at, iaculis feugiat est
 * [ ] Vestibulum convallis sit amet nisi a tincidunt
@@ -1032,7 +1032,7 @@ Checkbox lists are like regular lists, but prefixed with <code>[ ]</code> for em
     * [ ] Praesent sed risus massa
 * [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
 * [ ] Nulla vel eros venenatis, imperdiet enim id, faucibus nisi
-</pre></div>
+</code></pre></div>
 
 <p>Result:</p>
 <ul class="task-list">
@@ -1088,14 +1088,14 @@ reference on how to write equations in TeX syntax.</p>
 <p>Besides activating the extension in the <code>mkdocs.yml</code>, the MathJax JavaScript
 runtime needs to be included. This must be done with
 <a href="../../customization/#additional-javascript">additional JavaScript</a>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra_javascript</span><span class="p p-Indicator">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">extra_javascript</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="s">&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML&#39;</span>
-</pre></div>
+</code></pre></div>
 
 <p>If you want to override the default MathJax configuration, you can do this by
 adding another JavaScript file <strong>before</strong> the MathJax runtime in
 <code>extra_javascript</code> which contains your MathJax configuration, e.g.:</p>
-<div class="codehilite"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">MathJax</span> <span class="o">=</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="nb">window</span><span class="p">.</span><span class="nx">MathJax</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">tex2jax</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">inlineMath</span><span class="o">:</span> <span class="p">[</span> <span class="p">[</span><span class="s2">&quot;\\(&quot;</span><span class="p">,</span><span class="s2">&quot;\\)&quot;</span><span class="p">]</span> <span class="p">],</span>
     <span class="nx">displayMath</span><span class="o">:</span> <span class="p">[</span> <span class="p">[</span><span class="s2">&quot;\\[&quot;</span><span class="p">,</span><span class="s2">&quot;\\]&quot;</span><span class="p">]</span> <span class="p">]</span>
@@ -1115,21 +1115,21 @@ adding another JavaScript file <strong>before</strong> the MathJax runtime in
   <span class="nx">showProcessingMessages</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="nx">messageStyle</span><span class="o">:</span> <span class="s2">&quot;none&quot;</span>
 <span class="p">};</span>
-</pre></div>
+</code></pre></div>
 
 <p>In your <code>mkdocs.yml</code>, include it with:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra_javascript</span><span class="p p-Indicator">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">extra_javascript</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="s">&#39;javascripts/extra.js&#39;</span>
   <span class="p p-Indicator">-</span> <span class="s">&#39;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML&#39;</span>
-</pre></div>
+</code></pre></div>
 
 <h4 id="blocks">Blocks<a class="headerlink" href="#blocks" title="Permanent link">&para;</a></h4>
 <p>Blocks are enclosed in <code class="codehilite"><span class="sb">$$</span><span class="nb">...</span><span class="s">$$</span></code> which are placed on separate lines.</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span><span class="sb">$$</span><span class="nb"></span>
+<div class="codehilite"><pre><span></span><code><span class="sb">$$</span><span class="nb"></span>
 <span class="nv">\frac</span><span class="nb">{n</span><span class="o">!</span><span class="nb">}{k</span><span class="o">!(</span><span class="nb">n</span><span class="o">-</span><span class="nb">k</span><span class="o">)!</span><span class="nb">} </span><span class="o">=</span><span class="nb"> </span><span class="nv">\binom</span><span class="nb">{n}{k}</span>
 <span class="s">$$</span>
-</pre></div>
+</code></pre></div>
 
 <p>Result:</p>
 <div>
@@ -1143,8 +1143,8 @@ adding another JavaScript file <strong>before</strong> the MathJax runtime in
 <h4 id="inline">Inline<a class="headerlink" href="#inline" title="Permanent link">&para;</a></h4>
 <p>Inline equations need to be enclosed in <code class="codehilite"><span class="s">$</span><span class="nb">...</span><span class="s">$</span></code>:</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>Lorem ipsum dolor sit amet: <span class="s">$</span><span class="nb">p</span><span class="o">(</span><span class="nb">x|y</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{p</span><span class="o">(</span><span class="nb">y|x</span><span class="o">)</span><span class="nb">p</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb">}{p</span><span class="o">(</span><span class="nb">y</span><span class="o">)</span><span class="nb">}</span><span class="s">$</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code>Lorem ipsum dolor sit amet: <span class="s">$</span><span class="nb">p</span><span class="o">(</span><span class="nb">x|y</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{p</span><span class="o">(</span><span class="nb">y|x</span><span class="o">)</span><span class="nb">p</span><span class="o">(</span><span class="nb">x</span><span class="o">)</span><span class="nb">}{p</span><span class="o">(</span><span class="nb">y</span><span class="o">)</span><span class="nb">}</span><span class="s">$</span>
+</code></pre></div>
 
 <p>Result:</p>
 <p>Lorem ipsum dolor sit amet: <span><span class="MathJax_Preview">p(x|y) = \frac{p(y|x)p(x)}{p(y)}</span><script type="math/tex">p(x|y) = \frac{p(y|x)p(x)}{p(y)}</script></span></p>

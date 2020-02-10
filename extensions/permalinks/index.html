@@ -829,17 +829,17 @@ each headline, which makes it possible to directly link to a subpart of the
 document.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>To enable permalinks, add the following to your <code>mkdocs.yml</code>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">markdown_extensions</span><span class="p p-Indicator">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">markdown_extensions</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">toc(permalink=true)</span>
-</pre></div>
+</code></pre></div>
 
 <p>This will add a link containing the paragraph symbol <code>¶</code> at the end of each
 headline (exactly like on the page you're currently viewing), which the
 Material theme will make appear on hover. In order to change the text of the
 permalink, a string can be passed, e.g.:</p>
-<div class="codehilite"><pre><span></span>markdown_extensions:
+<div class="codehilite"><pre><span></span><code>markdown_extensions:
   - toc(permalink=Link)
-</pre></div>
+</code></pre></div>
 
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>When enabled, permalinks are inserted automatically.</p>

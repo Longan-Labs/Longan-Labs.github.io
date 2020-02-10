@@ -931,9 +931,9 @@ makes it possible to add block-styled side content to your documentation, for
 example summaries, notes, hints or warnings.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>Add the following lines to your <code>mkdocs.yml</code>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">markdown_extensions</span><span class="p p-Indicator">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">markdown_extensions</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">admonition</span>
-</pre></div>
+</code></pre></div>
 
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>Admonition blocks follow a simple syntax: every block is started with <code>!!!</code>,
@@ -941,11 +941,11 @@ followed by a single keyword which is used as the <a href="#types">type qualifie
 block. The content of the block then follows on the next line, indented by
 four spaces.</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>!!! note
+<div class="codehilite"><pre><span></span><code>!!! note
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
-</pre></div>
+</code></pre></div>
 
 <p>Result:</p>
 <div class="admonition note">
@@ -958,11 +958,11 @@ massa, nec semper lorem quam in massa.</p>
 <p>By default, the block title will equal the type qualifier in titlecase. However,
 it can easily be changed by adding a quoted string after the type qualifier.</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>!!! note &quot;Phasellus posuere in sem ut cursus&quot;
+<div class="codehilite"><pre><span></span><code>!!! note &quot;Phasellus posuere in sem ut cursus&quot;
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
-</pre></div>
+</code></pre></div>
 
 <p>Result:</p>
 <div class="admonition note">
@@ -975,11 +975,11 @@ massa, nec semper lorem quam in massa.</p>
 <p>Similar to setting a <a href="#changing-the-title">custom title</a>, the icon and title can be omitted by
 providing an empty string after the type qualifier:</p>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>!!! note &quot;&quot;
+<div class="codehilite"><pre><span></span><code>!!! note &quot;&quot;
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
-</pre></div>
+</code></pre></div>
 
 <p>Result:</p>
 <div class="admonition note">
@@ -1000,7 +1000,7 @@ blocks.</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
 nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
 massa, nec semper lorem quam in massa.</p>
-<div class="codehilite"><pre><span></span><span class="k">SELECT</span>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span>
   <span class="n">Employees</span><span class="p">.</span><span class="n">EmployeeID</span><span class="p">,</span>
   <span class="n">Employees</span><span class="p">.</span><span class="n">Name</span><span class="p">,</span>
   <span class="n">Employees</span><span class="p">.</span><span class="n">Salary</span><span class="p">,</span>
@@ -1013,7 +1013,7 @@ massa, nec semper lorem quam in massa.</p>
   <span class="n">Employees</span><span class="p">.</span><span class="n">ManagerID</span> <span class="o">=</span> <span class="n">Manager</span><span class="p">.</span><span class="n">EmployeeID</span>
 <span class="k">WHERE</span>
   <span class="n">Employees</span><span class="p">.</span><span class="n">EmployeeID</span> <span class="o">=</span> <span class="s1">&#39;087652&#39;</span><span class="p">;</span>
-</pre></div>
+</code></pre></div>
 
 <p>Nunc eu odio eleifend, blandit leo a, volutpat sapien. Phasellus posuere in
 sem ut cursus. Nullam sit amet tincidunt ipsum, sit amet elementum turpis.
@@ -1026,11 +1026,11 @@ Material theme, whereas the default type, and thus fallback for unknown type
 qualifiers, is <a href="#note">note</a>.</p>
 <h3 id="note">Note<a class="headerlink" href="#note" title="Permanent link">&para;</a></h3>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>!!! note
+<div class="codehilite"><pre><span></span><code>!!! note
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
-</pre></div>
+</code></pre></div>
 
 <p>Result:</p>
 <div class="admonition note">
@@ -1046,11 +1046,11 @@ massa, nec semper lorem quam in massa.</p>
 </ul>
 <h3 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h3>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>!!! summary
+<div class="codehilite"><pre><span></span><code>!!! summary
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
-</pre></div>
+</code></pre></div>
 
 <p>Result:</p>
 <div class="admonition summary">
@@ -1066,11 +1066,11 @@ massa, nec semper lorem quam in massa.</p>
 </ul>
 <h3 id="tip">Tip<a class="headerlink" href="#tip" title="Permanent link">&para;</a></h3>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>!!! tip
+<div class="codehilite"><pre><span></span><code>!!! tip
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
-</pre></div>
+</code></pre></div>
 
 <p>Result:</p>
 <div class="admonition tip">
@@ -1087,11 +1087,11 @@ massa, nec semper lorem quam in massa.</p>
 </ul>
 <h3 id="success">Success<a class="headerlink" href="#success" title="Permanent link">&para;</a></h3>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>!!! success
+<div class="codehilite"><pre><span></span><code>!!! success
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
-</pre></div>
+</code></pre></div>
 
 <p>Result:</p>
 <div class="admonition success">
@@ -1108,11 +1108,11 @@ massa, nec semper lorem quam in massa.</p>
 </ul>
 <h3 id="warning">Warning<a class="headerlink" href="#warning" title="Permanent link">&para;</a></h3>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>!!! warning
+<div class="codehilite"><pre><span></span><code>!!! warning
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
-</pre></div>
+</code></pre></div>
 
 <p>Result:</p>
 <div class="admonition warning">
@@ -1129,11 +1129,11 @@ massa, nec semper lorem quam in massa.</p>
 </ul>
 <h3 id="failure">Failure<a class="headerlink" href="#failure" title="Permanent link">&para;</a></h3>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>!!! failure
+<div class="codehilite"><pre><span></span><code>!!! failure
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
-</pre></div>
+</code></pre></div>
 
 <p>Result:</p>
 <div class="admonition failure">
@@ -1150,11 +1150,11 @@ massa, nec semper lorem quam in massa.</p>
 </ul>
 <h3 id="danger">Danger<a class="headerlink" href="#danger" title="Permanent link">&para;</a></h3>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>!!! danger
+<div class="codehilite"><pre><span></span><code>!!! danger
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
-</pre></div>
+</code></pre></div>
 
 <p>Result:</p>
 <div class="admonition danger">
@@ -1170,11 +1170,11 @@ massa, nec semper lorem quam in massa.</p>
 </ul>
 <h3 id="bug">Bug<a class="headerlink" href="#bug" title="Permanent link">&para;</a></h3>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>!!! bug
+<div class="codehilite"><pre><span></span><code>!!! bug
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
-</pre></div>
+</code></pre></div>
 
 <p>Result:</p>
 <div class="admonition bug">
@@ -1189,11 +1189,11 @@ massa, nec semper lorem quam in massa.</p>
 </ul>
 <h3 id="quote">Quote<a class="headerlink" href="#quote" title="Permanent link">&para;</a></h3>
 <p>Example:</p>
-<div class="codehilite"><pre><span></span>!!! quote
+<div class="codehilite"><pre><span></span><code>!!! quote
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
     massa, nec semper lorem quam in massa.
-</pre></div>
+</code></pre></div>
 
 <p>Result:</p>
 <div class="admonition quote">

@@ -981,7 +981,7 @@ Heelight Core is a smart sound sensor that can recognize up to 500+ digital voic
 </div>
 <p>This is the basic example that can show the ability of the sensor, 
 which is output different hex values in the serial monitor when it receives (or hear) different digital sounds. </p>
-<div class="codehilite"><pre><span></span><span class="c1">// heelight test code</span>
+<div class="codehilite"><pre><span></span><code><span class="c1">// heelight test code</span>
 <span class="cp">#include</span> <span class="cpf">&lt;SoftwareSerial.h&gt;</span><span class="cp"></span>
 
 <span class="nf">SoftwareSerial</span> <span class="nf">heelight</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>  <span class="c1">// RX, TX</span>
@@ -1006,7 +1006,7 @@ which is output different hex values in the serial monitor when it receives (or 
         <span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">();</span> 
     <span class="p">}</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 <p>Open the serial monitor, set baud rate to be 9600, 
 then play the sound. We have prepared 511 different digital sounds for you. Every time one sound is played, 

@@ -924,14 +924,14 @@ JavaScript files to the <code>docs</code> directory.</p>
 <p>If you want to tweak some colors or change the spacing of certain elements,
 you can do this in a separate stylesheet. The easiest way is by creating a
 new stylesheet file in your <code>docs</code> directory:</p>
-<div class="codehilite"><pre><span></span>mkdir docs/stylesheets
+<div class="codehilite"><pre><span></span><code>mkdir docs/stylesheets
 touch docs/stylesheets/extra.css
-</pre></div>
+</code></pre></div>
 
 <p>Then, add the following line to your <code>mkdocs.yml</code>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra_css</span><span class="p p-Indicator">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">extra_css</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="s">&#39;stylesheets/extra.css&#39;</span>
-</pre></div>
+</code></pre></div>
 
 <p>Spin up the development server with <code>mkdocs serve</code> and start typing your
 changes in your additional stylesheet file – you can see them instantly after
@@ -940,14 +940,14 @@ saving, as the MkDocs development server implements live reloading.</p>
 <p>The same is true for additional JavaScript. If you want to integrate another
 syntax highlighter or add some custom logic to your theme, create a new
 JavaScript file in your <code>docs</code> directory:</p>
-<div class="codehilite"><pre><span></span>mkdir docs/javascripts
+<div class="codehilite"><pre><span></span><code>mkdir docs/javascripts
 touch docs/javascripts/extra.js
-</pre></div>
+</code></pre></div>
 
 <p>Then, add the following line to your <code>mkdocs.yml</code>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">extra_javascript</span><span class="p p-Indicator">:</span>
+<div class="codehilite"><pre><span></span><code><span class="nt">extra_javascript</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="s">&#39;javascripts/extra.js&#39;</span>
-</pre></div>
+</code></pre></div>
 
 <p>Further assistance can be found in the <a href="http://www.mkdocs.org/user-guide/styling-your-docs/#customizing-a-theme">MkDocs documentation</a>.</p>
 <h2 id="extending-the-theme">Extending the theme<a class="headerlink" href="#extending-the-theme" title="Permanent link">&para;</a></h2>
@@ -958,9 +958,9 @@ main theme.</p>
 <h3 id="setup-and-theme-structure">Setup and theme structure<a class="headerlink" href="#setup-and-theme-structure" title="Permanent link">&para;</a></h3>
 <p>Reference the Material theme as usual in your <code>mkdocs.yml</code>, and create a
 new folder for overrides, e.g. <code>theme</code>, which you reference using <code>theme_dir</code>:</p>
-<div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span><span class="p p-Indicator">:</span> <span class="s">&#39;material&#39;</span>
-<span class="l l-Scalar l-Scalar-Plain">theme_dir</span><span class="p p-Indicator">:</span> <span class="s">&#39;theme&#39;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nt">theme</span><span class="p">:</span> <span class="s">&#39;material&#39;</span>
+<span class="nt">theme_dir</span><span class="p">:</span> <span class="s">&#39;theme&#39;</span>
+</code></pre></div>
 
 <div class="admonition warning">
 <p class="admonition-title">Theme extension prerequisites</p>
@@ -973,7 +973,7 @@ original theme, as any file in the theme directory will replace the file with
 the same name which is part of the original theme. Besides, further assets
 may also be put in the theme directory.</p>
 <p>The directory layout of the Material theme is as follows:</p>
-<div class="codehilite"><pre><span></span>.
+<div class="codehilite"><pre><span></span><code>.
 ├─ assets/
 │  ├─ images/                          <span class="c1"># Images and icons</span>
 │  ├─ javascripts/                     <span class="c1"># JavaScript</span>
@@ -995,7 +995,7 @@ may also be put in the theme directory.</p>
 ├─ <span class="m">404</span>.html                            <span class="c1"># 404 error page</span>
 ├─ base.html                           <span class="c1"># Base template</span>
 └─ main.html                           <span class="c1"># Default page</span>
-</pre></div>
+</code></pre></div>
 
 <h3 id="overriding-partials">Overriding partials<a class="headerlink" href="#overriding-partials" title="Permanent link">&para;</a></h3>
 <p>In order to override the footer, we can replace the <code>footer.html</code> partial with
@@ -1007,12 +1007,12 @@ This can be done with any file.</p>
 which are defined inside the Material theme and wrap specific features. To
 override a template block, create a <code>main.html</code> inside the theme directory and
 define the block, e.g.:</p>
-<div class="codehilite"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;base.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
+<div class="codehilite"><pre><span></span><code><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;base.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
 
 <span class="cp">{%</span> <span class="k">block</span> <span class="nv">htmltitle</span> <span class="cp">%}</span><span class="x"></span>
 <span class="x">  &lt;title&gt;Lorem ipsum dolor sit amet&lt;/title&gt;</span>
 <span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
-</pre></div>
+</code></pre></div>
 
 <p>The Material theme provides the following template blocks:</p>
 <table>
@@ -1107,20 +1107,20 @@ theme and recompile it. This is fairly easy.</p>
 <p>In order to start development on the Material theme, a <a href="https://nodejs.org">Node.js</a> version of
 at least 5 is required, as well as the package manager <a href="https://yarnpkg.com/">yarn</a> which is a
 better version of <code>npm</code>. First, clone the repository:</p>
-<div class="codehilite"><pre><span></span>git clone https://github.com/squidfunk/mkdocs-material
-</pre></div>
+<div class="codehilite"><pre><span></span><code>git clone https://github.com/squidfunk/mkdocs-material
+</code></pre></div>
 
 <p>Next, all dependencies need to be installed, which is done with:</p>
-<div class="codehilite"><pre><span></span><span class="nb">cd</span> mkdocs-material
+<div class="codehilite"><pre><span></span><code><span class="nb">cd</span> mkdocs-material
 pip install -r requirements.txt
 yarn install
-</pre></div>
+</code></pre></div>
 
 <h3 id="development-mode">Development mode<a class="headerlink" href="#development-mode" title="Permanent link">&para;</a></h3>
 <p>The Material theme uses a sophisticated asset pipeline using <a href="http://gulpjs.com">Gulp</a> and
 Webpack which can be started with the following command:</p>
-<div class="codehilite"><pre><span></span>yarn start
-</pre></div>
+<div class="codehilite"><pre><span></span><code>yarn start
+</code></pre></div>
 
 <p>This will also start the MkDocs development server which will monitor changes
 on assets, templates and documentation. Point your browser to
@@ -1128,9 +1128,9 @@ on assets, templates and documentation. Point your browser to
 <p>For example, changing the color palette is as simple as changing the
 <code>$md-color-primary</code> and <code>$md-color-accent</code> variables in
 <code>src/assets/stylesheets/_config.scss</code>:</p>
-<div class="codehilite"><pre><span></span><span class="o">$</span><span class="nt">md-color-primary</span><span class="o">:</span> <span class="o">$</span><span class="nt">clr-red-400</span><span class="o">;</span>
+<div class="codehilite"><pre><span></span><code><span class="o">$</span><span class="nt">md-color-primary</span><span class="o">:</span> <span class="o">$</span><span class="nt">clr-red-400</span><span class="o">;</span>
 <span class="o">$</span><span class="nt">md-color-accent</span><span class="o">:</span>  <span class="o">$</span><span class="nt">clr-teal-a700</span><span class="o">;</span>
-</pre></div>
+</code></pre></div>
 
 <div class="admonition warning">
 <p class="admonition-title">Automatically generated files</p>
@@ -1140,8 +1140,8 @@ overriden when the theme is built.</p>
 </div>
 <h3 id="build-process">Build process<a class="headerlink" href="#build-process" title="Permanent link">&para;</a></h3>
 <p>When you've finished making your changes, you can build the theme by invoking:</p>
-<div class="codehilite"><pre><span></span>yarn run build
-</pre></div>
+<div class="codehilite"><pre><span></span><code>yarn run build
+</code></pre></div>
 
 <p>This triggers the production-level compilation and minification of all
 stylesheets and JavaScript sources. When the command exits, the final theme is
