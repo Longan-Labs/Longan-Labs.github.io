@@ -1,0 +1,1249 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Docs of Longan Labs">
+      
+      
+        <link rel="canonical" href="https://longan-labs.cc/1040005/">
+      
+      
+        <meta name="author" content="Loovee">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>GPS/BDS Module - Longan Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#ffa000">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "None", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="amber" data-md-color-accent="amber">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#introduction" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://longan-labs.cc" title="Longan Docs" aria-label="Longan Docs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Longan Docs
+            </span>
+            <span class="md-header-nav__topic">
+              
+                GPS/BDS Module
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/Longan-Labs/docs_mkdocs" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Longan-Labs/docs_mkdocs
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        About
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../1040001/" class="md-tabs__link md-tabs__link--active">
+          Electronic
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../cards-system-summary/" class="md-tabs__link">
+          Cards
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../1030003/" class="md-tabs__link">
+          CAN Bus
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://longan-labs.cc" title="Longan Docs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Longan Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/Longan-Labs/docs_mkdocs" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    Longan-Labs/docs_mkdocs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../license/" title="License" class="md-nav__link">
+      License
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Electronic
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Electronic
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1040001/" title="IRduino" class="md-nav__link">
+      IRduino
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1040002/" title="Heelight Core" class="md-nav__link">
+      Heelight Core
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1040003/" title="Heelight Relay" class="md-nav__link">
+      Heelight Relay
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1040004/" title="Keyboard" class="md-nav__link">
+      Keyboard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        GPS/BDS Module
+      </label>
+    
+    <a href="./" title="GPS/BDS Module" class="md-nav__link md-nav__link--active">
+      GPS/BDS Module
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partlist" class="md-nav__link">
+    Partlist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-overview" class="md-nav__link">
+    Hardware Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#at-command" class="md-nav__link">
+    AT Command
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-set-the-baudrate" class="md-nav__link">
+    1. Set the baudrate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-output-freq" class="md-nav__link">
+    2. Output freq
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-others" class="md-nav__link">
+    3. Others
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gps-usage" class="md-nav__link">
+    GPS Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Cards
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Cards
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cards-system-summary/" title="Cards System Summary" class="md-nav__link">
+      Cards System Summary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1016007/" title="AAA Battery Card" class="md-nav__link">
+      AAA Battery Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1013007/" title="Carduino 32U4" class="md-nav__link">
+      Carduino 32U4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1017008/" title="Game Board" class="md-nav__link">
+      Game Board
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1011001/" title="Temperature Card" class="md-nav__link">
+      Temperature Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1012002/" title="Buzzer Card" class="md-nav__link">
+      Buzzer Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1011010/" title="Light Sensor Card" class="md-nav__link">
+      Light Sensor Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1017002/" title="Extension Board" class="md-nav__link">
+      Extension Board
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1017007/" title="Sensor Display Board" class="md-nav__link">
+      Sensor Display Board
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1011008/" title="BME280 Card" class="md-nav__link">
+      BME280 Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1014001/" title="OLED Display Card" class="md-nav__link">
+      OLED Display Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1011007/" title="Rotary Angle Card" class="md-nav__link">
+      Rotary Angle Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1016006/" title="Programmer Card" class="md-nav__link">
+      Programmer Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1013001/" title="Carduino 328" class="md-nav__link">
+      Carduino 328
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1011027/" title="Button Input Card" class="md-nav__link">
+      Button Input Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1011029/" title="IR Receiver Card" class="md-nav__link">
+      IR Receiver Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1011002/" title="Sound Sensor Card" class="md-nav__link">
+      Sound Sensor Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1011003/" title="PIR Sensor Card" class="md-nav__link">
+      PIR Sensor Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1011012/" title="RTC Card" class="md-nav__link">
+      RTC Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1011021/" title="9-Dof Sensor Card" class="md-nav__link">
+      9-Dof Sensor Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1012003/" title="Motor Driver Card" class="md-nav__link">
+      Motor Driver Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1012001/" title="Relay Card" class="md-nav__link">
+      Relay Card
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1011032/" title="Line Finder Card" class="md-nav__link">
+      Line Finder Card
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      CAN Bus
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        CAN Bus
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030003/" title="OBD-II CAN Bus GPS Development Kit" class="md-nav__link">
+      OBD-II CAN Bus GPS Development Kit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030001/" title="Serial CAN Bus Module" class="md-nav__link">
+      Serial CAN Bus Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030011/" title="Serial CAN Lite" class="md-nav__link">
+      Serial CAN Lite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030002/" title="OBD-II CAN-BUS Development Kit" class="md-nav__link">
+      OBD-II CAN-BUS Development Kit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030008/" title="CANBed - Arduino CAN Bus Development Kit" class="md-nav__link">
+      CANBed - Arduino CAN Bus Development Kit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partlist" class="md-nav__link">
+    Partlist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-overview" class="md-nav__link">
+    Hardware Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#at-command" class="md-nav__link">
+    AT Command
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-set-the-baudrate" class="md-nav__link">
+    1. Set the baudrate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-output-freq" class="md-nav__link">
+    2. Output freq
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-others" class="md-nav__link">
+    3. Others
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gps-usage" class="md-nav__link">
+    GPS Usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>GPS/BDS Module</h1>
+                
+                <h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<hr />
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1040005/gps.jpg" /></p>
+<p>This Grove - GPS/BDS module is base on the low cost and high perfermonce TD1030 module. It supports GPS, BDS as well as the GLONAS system.</p>
+<p>The sensitivity of tracking and acquisition both reach up to -163dBm, making it a great choice for personal navigation projects and location services, as well as an outstanding one among products of the same price class.</p>
+<h2 id="partlist"><strong><em>Partlist</em></strong><a class="headerlink" href="#partlist" title="Permanent link">&para;</a></h2>
+<hr />
+<ol>
+<li>GPS/BDS Module</li>
+<li>GSP antenna</li>
+<li>Grove cable</li>
+</ol>
+<h2 id="features"><strong><em>Features</em></strong><a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<hr />
+<ul>
+<li>Supports BDS, GPS as well as GLONAS system.</li>
+<li>Supports A-GNS and D-GNS</li>
+<li>AEC-Q100 Certification</li>
+<li>Output freq up to 10Hz</li>
+<li>Standard 1PPS and programmable TIME_MARK output</li>
+<li>Positioning accuracy: 3m</li>
+<li>Speed accuracy: 0.1m/s</li>
+<li>Cool start time &lt; 28s</li>
+<li>3.3V/5V operating voltage</li>
+<li>Default baudrate: 9600</li>
+<li>Supports NMEA protocols</li>
+<li>LOw power consumption </li>
+</ul>
+<h2 id="hardware-overview"><strong><em>Hardware Overview</em></strong><a class="headerlink" href="#hardware-overview" title="Permanent link">&para;</a></h2>
+<hr />
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1040005/gps_hw.png" /></p>
+<ol>
+<li>4 pin 2.0mm Grove Connector</li>
+<li>Power indicator</li>
+<li>N3303-3 GPS Module</li>
+<li>PPS indicator</li>
+<li>Antenna connector </li>
+</ol>
+<h2 id="at-command"><strong><em>AT Command</em></strong><a class="headerlink" href="#at-command" title="Permanent link">&para;</a></h2>
+<hr />
+<p>You can achieve the complete function of this GPS/BDS module with only a few AT command.</p>
+<h3 id="1-set-the-baudrate">1. Set the baudrate<a class="headerlink" href="#1-set-the-baudrate" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Baru rate</th>
+<th>ASCII cmd</th>
+<th>HEX cmd</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4800</td>
+<td>$CCCAS,1,0*50</td>
+<td>23 3E 03 21 06 00 01 01 00 00 00 01 2D 83</td>
+</tr>
+<tr>
+<td>9600</td>
+<td>$CCCAS,1,1*51</td>
+<td>23 3E 03 21 06 00 01 02 00 00 00 01 2E 88</td>
+</tr>
+<tr>
+<td>19200</td>
+<td>$CCCAS,1,2*52</td>
+<td>23 3E 03 21 06 00 01 03 00 00 00 01 2F 8D</td>
+</tr>
+<tr>
+<td>38400</td>
+<td>$CCCAS,1,3*53</td>
+<td>23 3E 03 21 06 00 01 04 00 00 00 01 30 92</td>
+</tr>
+<tr>
+<td>57600</td>
+<td>$CCCAS,1,4*54</td>
+<td>23 3E 03 21 06 00 01 05 00 00 00 01 31 97</td>
+</tr>
+<tr>
+<td>115200</td>
+<td>$CCCAS,1,5*55</td>
+<td>23 3E 03 21 06 00 01 06 00 00 00 01 32 9C</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-output-freq">2. Output freq<a class="headerlink" href="#2-output-freq" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>ASCII cmd</th>
+<th>HEX cmd</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100ms</td>
+<td>$CCINV,100,*60</td>
+<td>23 3E 03 35 03 00 64 00 01 A0 8F</td>
+</tr>
+<tr>
+<td>200ms</td>
+<td>$CCINV,200*4F</td>
+<td>23 3E 03 35 03 00 C8 00 01 04 BB</td>
+</tr>
+<tr>
+<td>500ms</td>
+<td>$CCINV,500,*64</td>
+<td>23 3E 03 35 03 00 F4 01 01 31 41</td>
+</tr>
+<tr>
+<td>1s</td>
+<td>$CCINV,1000,*50</td>
+<td>23 3E 03 35 03 00 E8 03 01 27 21</td>
+</tr>
+<tr>
+<td>5s</td>
+<td>$CCINV,5000*78</td>
+<td>23 3E 03 35 03 00 88 13 01 D7 21</td>
+</tr>
+<tr>
+<td>10s</td>
+<td>$CCINV,10000,*60</td>
+<td>23 3E 03 35 03 00 10 27 01 73 E1</td>
+</tr>
+<tr>
+<td>60s</td>
+<td>$CCINV,60000,*67</td>
+<td>23 3E 03 35 03 00 60 EA 01 86 57</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-others">3. Others<a class="headerlink" href="#3-others" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sleep: 23 3E 02 04 01 00 01 08 1E</li>
+<li>Check version: 23 3E 05 01 00 00 06 17</li>
+</ul>
+<h2 id="gps-usage"><strong><em>GPS Usage</em></strong><a class="headerlink" href="#gps-usage" title="Permanent link">&para;</a></h2>
+<p>The GPS Module use serial port to output the GPS data, you just need to connect this module to your PC via the USB type C cable, using any serial tool such as putty, you will be able to get the GPS data.</p>
+<p>As shown below:</p>
+<p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/GPS_DATA.jpg" /></p>
+<p>In order to parse the received GPS data, you need to refer to the <a href="http://aprs.gids.nl/nmea/">http://aprs.gids.nl/nmea/</a>.</p>
+<h2 id="reference"><strong><em>Reference</em></strong><a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<hr />
+<ul>
+<li><a href="https://github.com/mikalhart/TinyGPSPlus">Arduino Library - TinyGPSPlus</a></li>
+<li><a href="https://github.com/stephen1874/EAGLE_GPS_BDS_Module/archive/master.zip">Schematics in Eagle File</a></li>
+</ul>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../1040004/" title="Keyboard" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Keyboard
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../cards-system-summary/" title="Cards System Summary" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Cards System Summary
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 Longan Labs
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
