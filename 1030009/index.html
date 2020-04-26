@@ -894,12 +894,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#can-bus-usage" class="md-nav__link">
-    CAN BUS Usage
+  <a href="#usage" class="md-nav__link">
+    Usage
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ide-and-driver" class="md-nav__link">
+    IDE and Driver
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#arduino-code" class="md-nav__link">
@@ -1040,12 +1047,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#can-bus-usage" class="md-nav__link">
-    CAN BUS Usage
+  <a href="#usage" class="md-nav__link">
+    Usage
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ide-and-driver" class="md-nav__link">
+    IDE and Driver
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#arduino-code" class="md-nav__link">
@@ -1093,7 +1107,7 @@
                   <h1>CANBed FD - Arduino CAN-FD Development Kit</h1>
                 
                 <h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p><a href=""><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030008/db9.jpg" /></a></p>
+<p><a href=""><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030009/db9.jpg" /></a></p>
 <p><strong>CAN Bus</strong> is a common industrial bus because of its long travel distance, medium communication speed and high reliability. It is commonly found on modern machine tools, such as an automotive diagnostic bus.</p>
 <p>This CANBed-FD adopts <strong>MCP2517FD</strong> CAN Bus controller with SPI interface and <strong>MCP2542FD</strong> CAN transceiver to achieve the CAN-BUS capability. With an <strong>OBD-II</strong> converter cable added on and the OBD-II library imported, you are ready to build an onboard diagnostic device.</p>
 <p>What's more, the is an Atmega32U4 with <strong>Arduino Leonardo</strong> bootloader on the board, you can use Arduino IDE to program the board easily. </p>
@@ -1156,7 +1170,7 @@
 <li>9x2 2.54 Header x 1</li>
 <li>3x3 2.54 Header x 1</li>
 </ul>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030008/list.jpg" /></p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030009/can_bed_fd_partlist.jpg" /></p>
 <h3 id="pin-out">Pin out<a class="headerlink" href="#pin-out" title="Permanent link">&para;</a></h3>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030008/hw.png" /></p>
 <p><strong>1.9x2 IO Pin OUT:</strong> </p>
@@ -1233,10 +1247,14 @@
 <a href="http://www.ni.com/white-paper/9759/en/">NI CAN Physical Layer and Termination Guide</a></p>
 <p><strong>8.Grove connector for UART</strong></p>
 <p><strong>9.Grove connector for I2C</strong></p>
-<h2 id="can-bus-usage"><strong><em>CAN BUS Usage</em></strong><a class="headerlink" href="#can-bus-usage" title="Permanent link">&para;</a></h2>
+<h2 id="usage"><strong><em>Usage</em></strong><a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<h3 id="ide-and-driver"><strong><em>IDE and Driver</em></strong><a class="headerlink" href="#ide-and-driver" title="Permanent link">&para;</a></h3>
+<p>There's Arduino leonardo bootloader in the board. </p>
+<p>Click to get the <a href="https://www.arduino.cc/en/Main/Software">latest Arduino IDE</a>. </p>
+<p>There's Arduino Leonardo driver in the folder: Arduino/drivers.</p>
 <h3 id="arduino-code"><strong><em>Arduino Code</em></strong><a class="headerlink" href="#arduino-code" title="Permanent link">&para;</a></h3>
 <hr />
-<p>We provide an arduino <a href="https://github.com/Longan-Labs/Longan_Labs_CAN_FD_Shield_Arduino">library for CANBed</a>. </p>
+<p>We provide an <a href="https://github.com/Longan-Labs/Longan_Labs_CAN_FD_Shield_Arduino">Arduino library for CANBed-FD</a>. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Change the CS pin to 17.</p>
@@ -1257,6 +1275,8 @@
 <ul>
 <li><a href="https://github.com/Longan-Labs/Longan_Labs_CAN_FD_Shield_Arduino">Arduino Library</a></li>
 <li><a href="https://github.com/Longan-Labs/CANBed-FD-Eagle-File/archive/master.zip">Schematics in Eagle</a></li>
+<li><a href="https://www.mouser.com/datasheet/2/268/MCP2517FD-External-CAN-FD-Controller-with-SPI-Inte-1519186.pdf">MCP2517FD Datasheet</a></li>
+<li><a href="https://www.mouser.com/datasheet/2/268/20005514a-1102085.pdf">MCP2542FD Datasheet</a></li>
 </ul>
                 
                   
