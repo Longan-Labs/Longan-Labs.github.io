@@ -1290,7 +1290,7 @@
 <p><strong>1.OBD-II Connector:</strong> </p>
 <p>On-board diagnostics (OBD) is an automotive term referring to a vehicle's self-diagnostic and reporting capability. OBD-II is an improvement over OBD-I in both capability and standardization. The OBD-II standard specifies the type of diagnostic connector and its pinout.</p>
 <p><strong>2.Reset Button:</strong></p>
-<p>Reset the on-board Atmega chip</p>
+<p>Reset the on-board Atmega chip, please note that the button had been canceled in the latest version.</p>
 <p><strong>3.78L05:</strong></p>
 <p>Provide a stable 5V to the whole system.</p>
 <p><strong>4.Atmega32U4:</strong></p>
@@ -1380,10 +1380,29 @@ Close the top cover and fix it with screws.</p>
 <p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/1030003-1.jpg" /></p>
 <h2 id="gps-usage">GPS Usage<a class="headerlink" href="#gps-usage" title="Permanent link">&para;</a></h2>
 <p>The GPS Module use serial port to output the GPS data, you just need to connect this module to your PC via the USB type C cable, using any serial tool such as putty, you will be able to get the GPS data.</p>
-<p>As shown below:</p>
+<p>Please upload below code to the board,</p>
+<div class="codehilite"><pre><span></span><code>void setup()
+{
+    pinMode(A2, OUTPUT);
+    digitalWrite(A2, HIGH);         // power on
+
+    Serial.begin(9600);
+    Serial1.begin(9600);
+}
+
+
+void loop()
+{
+    while(Serial1.available())
+    {
+        Serial.write(Serial1.read());
+    }
+}
+</code></pre></div>
+
+
+<p>The open your serial monitor, </p>
 <p><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/GPS_DATA.jpg" /></p>
-<p>In order to parse the received GPS data, you need to refer to the <a href="http://aprs.gids.nl/nmea/">http://aprs.gids.nl/nmea/</a>.</p>
-<p>For more detail about the NEO-6 module, please refer to <a href="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/NEO-6_DataSheet_(GPS.G6-HW-09005).pdf">NEO-6 Datasheet</a></p>
 <h2 id="can-bus-usage">CAN BUS Usage<a class="headerlink" href="#can-bus-usage" title="Permanent link">&para;</a></h2>
 <h3 id="arduino-code"><strong><em>Arduino Code</em></strong><a class="headerlink" href="#arduino-code" title="Permanent link">&para;</a></h3>
 <hr />
