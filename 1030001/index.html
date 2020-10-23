@@ -812,8 +812,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#version-track" class="md-nav__link">
+    Version Track
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#can-bus-products-list-of-longan-labs" class="md-nav__link">
-    CAN BUS PRODUCTS LIST OF LONGAN LABS
+    CAN BUS PRODUCTS LIST OF LONGAN-LABS
   </a>
   
 </li>
@@ -853,8 +860,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#v11-verstion-and-after" class="md-nav__link">
-    V1.1 Verstion (and after)
+  <a href="#v13" class="md-nav__link">
+    V1.3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v11-and-v12-verstion" class="md-nav__link">
+    V1.1 and V1.2 Verstion
   </a>
   
 </li>
@@ -940,9 +954,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#arduino-library" class="md-nav__link">
-    Arduino Library
+  <a href="#work-with-arduino" class="md-nav__link">
+    Work with Arduino
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware-connection" class="md-nav__link">
+    Hardware Connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    Software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-the-board" class="md-nav__link">
+    Test the board
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1082,8 +1123,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#version-track" class="md-nav__link">
+    Version Track
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#can-bus-products-list-of-longan-labs" class="md-nav__link">
-    CAN BUS PRODUCTS LIST OF LONGAN LABS
+    CAN BUS PRODUCTS LIST OF LONGAN-LABS
   </a>
   
 </li>
@@ -1123,8 +1171,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#v11-verstion-and-after" class="md-nav__link">
-    V1.1 Verstion (and after)
+  <a href="#v13" class="md-nav__link">
+    V1.3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v11-and-v12-verstion" class="md-nav__link">
+    V1.1 and V1.2 Verstion
   </a>
   
 </li>
@@ -1210,9 +1265,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#arduino-library" class="md-nav__link">
-    Arduino Library
+  <a href="#work-with-arduino" class="md-nav__link">
+    Work with Arduino
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware-connection" class="md-nav__link">
+    Hardware Connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    Software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-the-board" class="md-nav__link">
+    Test the board
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1264,9 +1346,51 @@ CAN Bus is a common industrial bus because of its long travel distance, medium c
 <p>This Serial CAN Bus module is based on <strong>MCP2551</strong> and <strong>MCP2515</strong>, which can provide speed up to <strong>1Mb/s</strong>. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The default masks and filters is for standard can frame, if you need to receive a ext can frame, please set the mask and filt fist.</p>
+<p>The default masks and filters is for standard can frame, if you need to receive a ext can frame, please set the mask and filt first.</p>
 </div>
-<h3 id="can-bus-products-list-of-longan-labs"><strong><em>CAN BUS PRODUCTS LIST OF LONGAN LABS</em></strong><a class="headerlink" href="#can-bus-products-list-of-longan-labs" title="Permanent link">&para;</a></h3>
+<h3 id="version-track"><strong><em>Version Track</em></strong><a class="headerlink" href="#version-track" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>VCC</th>
+<th>IO Level</th>
+<th>MCU</th>
+<th>Others Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V1.0</td>
+<td>5V</td>
+<td>5V</td>
+<td>Atmega328P</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>V1.1</td>
+<td>5V</td>
+<td>5V/3.3V</td>
+<td>Atmega328P</td>
+<td>Add a pads for the 3.3V IO</td>
+</tr>
+<tr>
+<td>V1.2</td>
+<td>5V</td>
+<td>5V/3.3V</td>
+<td>Atmega168PA</td>
+<td>Change the MCU to Atmega168PA</td>
+</tr>
+<tr>
+<td>V1.3</td>
+<td>5V/3.3V</td>
+<td>5V/3.3V</td>
+<td>Atmega168PA</td>
+<td>Support 3.3V VCC</td>
+</tr>
+</tbody>
+</table>
+<h3 id="can-bus-products-list-of-longan-labs"><strong><em>CAN BUS PRODUCTS LIST OF LONGAN-LABS</em></strong><a class="headerlink" href="#can-bus-products-list-of-longan-labs" title="Permanent link">&para;</a></h3>
 <p><a href="https://www.longan-labs.cc/blog/post/can-bus-product-summary/"><img alt="" src="https://www.longan-labs.cc/media/wysiwyg/CAN_BUS_PRODUCT.png" /></a></p>
 <p>We have made a lot of can bus products, you can get more information through the following list, so as to choose a product suitable for you.</p>
 <table>
@@ -1377,7 +1501,9 @@ CAN Bus is a common industrial bus because of its long travel distance, medium c
 <h2 id="work-at-33v"><strong><em>Work at 3.3V</em></strong><a class="headerlink" href="#work-at-33v" title="Permanent link">&para;</a></h2>
 <hr />
 <p>The module is working at 5V most of time. If you want it to work at 3.3V IO, please try:</p>
-<h3 id="v11-verstion-and-after">V1.1 Verstion (and after)<a class="headerlink" href="#v11-verstion-and-after" title="Permanent link">&para;</a></h3>
+<h3 id="v13">V1.3<a class="headerlink" href="#v13" title="Permanent link">&para;</a></h3>
+<p>V1.3 work well at 3.3V IO and VCC.</p>
+<h3 id="v11-and-v12-verstion">V1.1 and V1.2 Verstion<a class="headerlink" href="#v11-and-v12-verstion" title="Permanent link">&para;</a></h3>
 <p>There's a jumper on the back side, please connect the pads together with a soldering iron. 
 And VCC must connect to 5V. </p>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbus/V1.1_3V.jpg" /></p>
@@ -1689,8 +1815,46 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 <li>ID0~ID3: CAN ID</li>
 <li>DTA0~DTA7: 8 byte of data</li>
 </ul>
-<h2 id="arduino-library"><strong><em>Arduino Library</em></strong><a class="headerlink" href="#arduino-library" title="Permanent link">&para;</a></h2>
+<h2 id="work-with-arduino"><strong><em>Work with Arduino</em></strong><a class="headerlink" href="#work-with-arduino" title="Permanent link">&para;</a></h2>
 <hr />
+<h3 id="hardware-connection">Hardware Connection<a class="headerlink" href="#hardware-connection" title="Permanent link">&para;</a></h3>
+<p>There are 4 pins on the board, they are:</p>
+<table>
+<thead>
+<tr>
+<th>Pin Name</th>
+<th>Function</th>
+<th>Color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TX</td>
+<td>TX of UART</td>
+<td>Yellow</td>
+</tr>
+<tr>
+<td>RX</td>
+<td>RX of UART</td>
+<td>White</td>
+</tr>
+<tr>
+<td>5V</td>
+<td>VCC, connect to 5V (V1.0/V1.1/V1.2) or 3.3V(V1.3)</td>
+<td>Red</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>Ground</td>
+<td>Black</td>
+</tr>
+</tbody>
+</table>
+<p>If you got an <a href="https://www.seeedstudio.com/Base-Shield-V2.html">Base Shield</a> from Seeedstudio, the connection is easy, like below,</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/3.jpg" /></p>
+<p>If there's no Base Shield for you, you need some dupont cable, and connect TX/RX to the IO of your Arduino, here we connect TX/RX to D2/D3:</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/2.jpg" /></p>
+<h3 id="software">Software<a class="headerlink" href="#software" title="Permanent link">&para;</a></h3>
 <p>We provide an library for Aruino Software Serial. </p>
 <p>Please download it at <a href="https://github.com/Longan-Labs/Serial_CAN_Arduino">Github</a></p>
 <p>There're many examples for the library, which is consist of,</p>
@@ -1701,7 +1865,14 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 <li><strong><em>set_can_baudrate</em></strong> - set can bus baudrate</li>
 <li><strong><em>set_mask_filt</em></strong> - set mask and filt of the module</li>
 </ul>
+<h3 id="test-the-board">Test the board<a class="headerlink" href="#test-the-board" title="Permanent link">&para;</a></h3>
+<p>Here we make an example to show you how the board work with CAN Bus. </p>
+<p>The connection like below, here we use Seeeduino + Serial CAN bus module as the receiver, and a USB2Uart module + Serial CAN bus module as sender.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/1.jpg" /></p>
+<p>If you send the command of sending frame to the USB2Uart module, open the Arduino serial monitor, you will get data from CAN Bus. </p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/4.jpg" /></p>
 <h2 id="working-standalone"><strong><em>Working Standalone</em></strong><a class="headerlink" href="#working-standalone" title="Permanent link">&para;</a></h2>
+<hr />
 <p>You can program the board with Arduino IDE in the version after V1.2.</p>
 <p>First, you need a USB to Serial board, something like the <a href="https://www.longan-labs.cc/1016006.html">Programmer Card</a></p>
 <p>Here we will take Programmer Card as an example:</p>
