@@ -860,8 +860,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#v13" class="md-nav__link">
-    V1.3
+  <a href="#v13-version" class="md-nav__link">
+    V1.3 Version
   </a>
   
 </li>
@@ -894,8 +894,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#set-serial-baud-rate" class="md-nav__link">
-    Set Serial Baud Rate
+  <a href="#set-the-baud-rate-of-uart" class="md-nav__link">
+    Set the Baud Rate of UART
   </a>
   
 </li>
@@ -927,8 +927,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#normal-mode" class="md-nav__link">
-    Normal Mode
+  <a href="#working-mode" class="md-nav__link">
+    Working Mode
   </a>
   
     <nav class="md-nav">
@@ -1171,8 +1171,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#v13" class="md-nav__link">
-    V1.3
+  <a href="#v13-version" class="md-nav__link">
+    V1.3 Version
   </a>
   
 </li>
@@ -1205,8 +1205,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#set-serial-baud-rate" class="md-nav__link">
-    Set Serial Baud Rate
+  <a href="#set-the-baud-rate-of-uart" class="md-nav__link">
+    Set the Baud Rate of UART
   </a>
   
 </li>
@@ -1238,8 +1238,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#normal-mode" class="md-nav__link">
-    Normal Mode
+  <a href="#working-mode" class="md-nav__link">
+    Working Mode
   </a>
   
     <nav class="md-nav">
@@ -1477,13 +1477,13 @@ CAN Bus is a common industrial bus because of its long travel distance, medium c
 <h2 id="features"><strong><em>Features</em></strong><a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
-<li>Uart to CAN Bus communication</li>
-<li>Work with Arduino/BeagleBone board/Pi or any MCU that integrated with Uart.</li>
+<li>Uart to CAN Bus</li>
+<li>Work with Arduino/BeagleBone board/Pi or any MCU that integrated with UART.</li>
 <li>AT command</li>
 <li>Up to 115200 Uart baud rate (default 9600)</li>
-<li>Up to 1Mb/s CAN Bus baud rate</li>
+<li>Up to 1Mb/s CAN Bus baud rate (default 500k)</li>
 <li>TX and RX led indicator</li>
-<li>4pin Grove connector</li>
+<li>4pin HY connector</li>
 <li>3.3 / 5V working voltage</li>
 <li>Easy-to-use Arduino library</li>
 <li>Small size: 20x40 mm</li>
@@ -1501,7 +1501,7 @@ CAN Bus is a common industrial bus because of its long travel distance, medium c
 <h2 id="work-at-33v"><strong><em>Work at 3.3V</em></strong><a class="headerlink" href="#work-at-33v" title="Permanent link">&para;</a></h2>
 <hr />
 <p>The module is working at 5V most of time. If you want it to work at 3.3V IO, please try:</p>
-<h3 id="v13">V1.3<a class="headerlink" href="#v13" title="Permanent link">&para;</a></h3>
+<h3 id="v13-version">V1.3 Version<a class="headerlink" href="#v13-version" title="Permanent link">&para;</a></h3>
 <p>V1.3 work well at 3.3V IO and VCC.</p>
 <h3 id="v11-and-v12-verstion">V1.1 and V1.2 Verstion<a class="headerlink" href="#v11-and-v12-verstion" title="Permanent link">&para;</a></h3>
 <p>There's a jumper on the back side, please connect the pads together with a soldering iron. 
@@ -1551,9 +1551,9 @@ And VCC must connect to 5V. </p>
 <p class="admonition-title">Note</p>
 <p>All of the cmd should end with '\n' except +++</p>
 </div>
-<h3 id="set-serial-baud-rate">Set Serial Baud Rate<a class="headerlink" href="#set-serial-baud-rate" title="Permanent link">&para;</a></h3>
+<h3 id="set-the-baud-rate-of-uart">Set the Baud Rate of UART<a class="headerlink" href="#set-the-baud-rate-of-uart" title="Permanent link">&para;</a></h3>
 <hr />
-<p>You can set the serial baud rate of the module with this command. There're 5 rates available, up to 115200 b/s.</p>
+<p>You can set the baud rate of UART of the module with this command. There're 5 rates available, up to 115200 b/s.</p>
 <div class="codehilite"><pre><span></span><code>AT+S=[value]
 </code></pre></div>
 
@@ -1588,6 +1588,10 @@ And VCC must connect to 5V. </p>
 </code></pre></div></p>
 <p><strong>Respose</strong></p>
 <p><em>OK</em> or <em>ERROR</em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are using the SoftwareSerial of Arduino, please don't set the baud rate to 115200. </p>
+</div>
 <h3 id="set-can-bus-baudrate">Set CAN Bus Baudrate<a class="headerlink" href="#set-can-bus-baudrate" title="Permanent link">&para;</a></h3>
 <hr />
 <p>You can use this command to set the rate of CAN Bus, there's 18 rates available. 
@@ -1718,11 +1722,11 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 </code></pre></div></p>
 <p><strong>Respose</strong></p>
 <p>OK or ERROR</p>
-<h2 id="normal-mode"><strong><em>Normal Mode</em></strong><a class="headerlink" href="#normal-mode" title="Permanent link">&para;</a></h2>
+<h2 id="working-mode"><strong><em>Working Mode</em></strong><a class="headerlink" href="#working-mode" title="Permanent link">&para;</a></h2>
 <hr />
-<p>When the module working on Normal mode, you can send and recevie data from CAN Bus. </p>
+<p>When the module working on Working mode (default mode), you can send and recevie data from CAN Bus. </p>
 <h3 id="send">Send<a class="headerlink" href="#send" title="Permanent link">&para;</a></h3>
-<p>You should send 14 byte of data per frame. Define as below,</p>
+<p>You should send 14 byte of data per frame. Defined as below,</p>
 <table>
 <thead>
 <tr>
@@ -1774,7 +1778,7 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mh">0xDC</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
 </code></pre></div></p>
 <h3 id="recv">Recv<a class="headerlink" href="#recv" title="Permanent link">&para;</a></h3>
-<p>You will get 12 byte of data per frame. Define as below,</p>
+<p>You will get 12 byte of data per frame. Defined as below,</p>
 <table>
 <thead>
 <tr>
@@ -1840,7 +1844,7 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 </tr>
 <tr>
 <td>5V</td>
-<td>VCC, connect to 5V (V1.0/V1.1/V1.2) or 3.3V(V1.3)</td>
+<td>VCC, connect to 5V (V1.0/V1.1/V1.2/V1.3) or 3.3V(only V1.3 or after)</td>
 <td>Red</td>
 </tr>
 <tr>
@@ -1850,10 +1854,15 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 </tr>
 </tbody>
 </table>
-<p>If you got an <a href="https://www.seeedstudio.com/Base-Shield-V2.html">Base Shield</a> from Seeedstudio, the connection is easy, like below,</p>
+<p>If you got a <a href="https://www.seeedstudio.com/Base-Shield-V2.html">Base Shield</a> from Seeedstudio, the connection is easy, like below,</p>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/3.jpg" /></p>
 <p>If there's no Base Shield for you, you need some dupont cable, and connect TX/RX to the IO of your Arduino, here we connect TX/RX to D2/D3:</p>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/2.jpg" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not all pins on the Mega and Mega 2560 support change interrupts, so only the following can be used for RX: 
+10, 11, 12, 13, 14, 15, 50, 51, 52, 53, A8 (62), A9 (63), A10 (64), A11 (65), A12 (66), A13 (67), A14 (68), A15 (69).</p>
+</div>
 <h3 id="software">Software<a class="headerlink" href="#software" title="Permanent link">&para;</a></h3>
 <p>We provide an library for Aruino Software Serial. </p>
 <p>Please download it at <a href="https://github.com/Longan-Labs/Serial_CAN_Arduino">Github</a></p>
@@ -1873,7 +1882,7 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/4.jpg" /></p>
 <h2 id="working-standalone"><strong><em>Working Standalone</em></strong><a class="headerlink" href="#working-standalone" title="Permanent link">&para;</a></h2>
 <hr />
-<p>You can program the board with Arduino IDE in the version after V1.2.</p>
+<p>For V1.2 and after, you can program the  on-board MCU (Atmega168PA) with Arduino IDE.</p>
 <p>First, you need a USB to Serial board, something like the <a href="https://www.longan-labs.cc/1016006.html">Programmer Card</a></p>
 <p>Here we will take Programmer Card as an example:</p>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbus/serial_can_program.png" /></p>
