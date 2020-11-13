@@ -849,6 +849,19 @@
     Hardware Overview
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#120-terminal-resistor" class="md-nav__link">
+    120 Terminal resistor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -962,6 +975,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#120-terminal-resistor_1" class="md-nav__link">
+    120Ω Terminal Resistor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#hardware-connection" class="md-nav__link">
     Hardware Connection
   </a>
@@ -991,6 +1011,33 @@
   <a href="#working-standalone" class="md-nav__link">
     Working Standalone
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    FAQ
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-the-rx-and-tx-leds-light-up-instead-of-blinking" class="md-nav__link">
+    1. The RX and TX leds light up instead of blinking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dont-work-with-arduino-mega" class="md-nav__link">
+    2. Don't work with Arduino Mega
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1160,6 +1207,19 @@
     Hardware Overview
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#120-terminal-resistor" class="md-nav__link">
+    120 Terminal resistor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1273,6 +1333,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#120-terminal-resistor_1" class="md-nav__link">
+    120Ω Terminal Resistor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#hardware-connection" class="md-nav__link">
     Hardware Connection
   </a>
@@ -1302,6 +1369,33 @@
   <a href="#working-standalone" class="md-nav__link">
     Working Standalone
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    FAQ
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-the-rx-and-tx-leds-light-up-instead-of-blinking" class="md-nav__link">
+    1. The RX and TX leds light up instead of blinking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dont-work-with-arduino-mega" class="md-nav__link">
+    2. Don't work with Arduino Mega
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1498,6 +1592,10 @@ CAN Bus is a common industrial bus because of its long travel distance, medium c
 <li>3.5mm terminal to connect to CAN Bus (CAN_H &amp; CAN_L)</li>
 <li>120Ω registor. </li>
 </ol>
+<h3 id="120-terminal-resistor">120 Terminal resistor<a class="headerlink" href="#120-terminal-resistor" title="Permanent link">&para;</a></h3>
+<p>If you need the 120Ω terminal resistor, you need a soldering iron, as shown below:</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/solderpads.jpg" /></p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/120ohm.jpg" /></p>
 <h2 id="work-at-33v"><strong><em>Work at 3.3V</em></strong><a class="headerlink" href="#work-at-33v" title="Permanent link">&para;</a></h2>
 <hr />
 <p>The module is working at 5V most of time. If you want it to work at 3.3V IO, please try:</p>
@@ -1821,6 +1919,9 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 </ul>
 <h2 id="work-with-arduino"><strong><em>Work with Arduino</em></strong><a class="headerlink" href="#work-with-arduino" title="Permanent link">&para;</a></h2>
 <hr />
+<h3 id="120-terminal-resistor_1">120Ω Terminal Resistor<a class="headerlink" href="#120-terminal-resistor_1" title="Permanent link">&para;</a></h3>
+<p>As there're only 2 serial can bus device, it need the 120Ω resistor, there's a P1 on the back side, please solder P1 to get the 120Ω resistor, as shown below,</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/120ohm.jpg" /></p>
 <h3 id="hardware-connection">Hardware Connection<a class="headerlink" href="#hardware-connection" title="Permanent link">&para;</a></h3>
 <p>There are 4 pins on the board, they are:</p>
 <table>
@@ -1901,6 +2002,15 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1013001/arduino-ide-setup-8.png" /></p>
 <p>Once installed, close the <strong>Boards Manager</strong> window.</p>
 <p>Then you can find <strong><em>Serial CAN Bus Module</em></strong> in the board list.</p>
+<h2 id="faq"><strong><em>FAQ</em></strong><a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+<h3 id="1-the-rx-and-tx-leds-light-up-instead-of-blinking">1. The RX and TX leds light up instead of blinking<a class="headerlink" href="#1-the-rx-and-tx-leds-light-up-instead-of-blinking" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Please check the baudrate of CAN Bus</li>
+<li>If the serial can bus module is in the end, the 120Ω terminal resistor is needed, please soder P1 on the back side of PCBA</li>
+</ul>
+<h3 id="2-dont-work-with-arduino-mega">2. Don't work with Arduino Mega<a class="headerlink" href="#2-dont-work-with-arduino-mega" title="Permanent link">&para;</a></h3>
+<p>Not all pins on the Mega and Mega 2560 support change interrupts, so only the following can be used for RX: 
+    10, 11, 12, 13, 14, 15, 50, 51, 52, 53, A8 (62), A9 (63), A10 (64), A11 (65), A12 (66), A13 (67), A14 (68), A15 (69).</p>
 <h2 id="schematic-online-viewer"><strong><em>Schematic Online Viewer</em></strong><a class="headerlink" href="#schematic-online-viewer" title="Permanent link">&para;</a></h2>
 <div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/Eagle_File_Serial_CAN_Bus/archive/master.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
