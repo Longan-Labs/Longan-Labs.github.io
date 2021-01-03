@@ -42,7 +42,7 @@
     
     
       
-        <title>CANBed - Arduino CAN Bus Development Kit - Longan Docs</title>
+        <title>CANBed V1 - Longan Docs</title>
       
     
     
@@ -142,7 +142,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                CANBed - Arduino CAN Bus Development Kit
+                CANBed V1
               
             </span>
           
@@ -233,6 +233,19 @@
   
     <li class="md-tabs__item">
       
+        <a href="../1030001/" class="md-tabs__link md-tabs__link--active">
+          CAN Bus
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
         <a href="../1040001/" class="md-tabs__link">
           Electronic
         </a>
@@ -248,19 +261,6 @@
       
         <a href="../cards-system-summary/" class="md-tabs__link">
           Cards
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../1030001/" class="md-tabs__link md-tabs__link--active">
-          CAN Bus
         </a>
       
     </li>
@@ -338,16 +338,348 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
-      Electronic
+      CAN Bus
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
+        CAN Bus
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030001/" title="Serial CAN Bus Module" class="md-nav__link">
+      Serial CAN Bus Module
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        CANBed V1
+      </label>
+    
+    <a href="./" title="CANBed V1" class="md-nav__link md-nav__link--active">
+      CANBed V1
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canbed-family" class="md-nav__link">
+    CANBed Family
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-bus-products-list-of-longan-labs" class="md-nav__link">
+    CAN BUS PRODUCTS LIST OF LONGAN LABS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifications" class="md-nav__link">
+    Specifications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-overview" class="md-nav__link">
+    Hardware Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part-list" class="md-nav__link">
+    Part List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pin-out" class="md-nav__link">
+    Pin out
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ide-and-driver" class="md-nav__link">
+    IDE and Driver
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arduino-code" class="md-nav__link">
+    Arduino Code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apis" class="md-nav__link">
+    APIs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-set-the-baud-rate" class="md-nav__link">
+    1. Set the Baud rate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-set-receive-mask-and-filter" class="md-nav__link">
+    2. Set Receive Mask and Filter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-check-receive" class="md-nav__link">
+    3. Check Receive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-get-can-id" class="md-nav__link">
+    4. Get CAN ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-send-a-frame" class="md-nav__link">
+    5. Send a frame
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-receive-a-frame" class="md-nav__link">
+    6. Receive a frame
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    FAQ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schematic-online-viewer" class="md-nav__link">
+    Schematic Online Viewer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030009/" title="CANBed FD" class="md-nav__link">
+      CANBed FD
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030014/" title="CANBed M0" class="md-nav__link">
+      CANBed M0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030013/" title="CANBed M4" class="md-nav__link">
+      CANBed M4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030002/" title="OBD-II CAN-BUS Dev Kit" class="md-nav__link">
+      OBD-II CAN-BUS Dev Kit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030003/" title="OBD-II CAN Bus GPS Dev Kit" class="md-nav__link">
+      OBD-II CAN Bus GPS Dev Kit
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030011/" title="Serial CAN Lite" class="md-nav__link">
+      Serial CAN Lite
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030012/" title="CAN-FD Shield" class="md-nav__link">
+      CAN-FD Shield
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Electronic
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
         Electronic
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -449,6 +781,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1040009/" title="Squame Ethernet" class="md-nav__link">
+      Squame Ethernet
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -461,13 +805,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-5">
       Cards
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-5">
         Cards
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -754,320 +1098,6 @@
   </li>
 
     
-      
-      
-      
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
-    
-    <label class="md-nav__link" for="nav-5">
-      CAN Bus
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        CAN Bus
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1030001/" title="Serial CAN Bus Module" class="md-nav__link">
-      Serial CAN Bus Module
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1030002/" title="OBD-II CAN-BUS Development Kit" class="md-nav__link">
-      OBD-II CAN-BUS Development Kit
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1030003/" title="OBD-II CAN Bus GPS Development Kit" class="md-nav__link">
-      OBD-II CAN Bus GPS Development Kit
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        CANBed - Arduino CAN Bus Development Kit
-      </label>
-    
-    <a href="./" title="CANBed - Arduino CAN Bus Development Kit" class="md-nav__link md-nav__link--active">
-      CANBed - Arduino CAN Bus Development Kit
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#can-bus-products-list-of-longan-labs" class="md-nav__link">
-    CAN BUS PRODUCTS LIST OF LONGAN LABS
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
-    Features
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#specifications" class="md-nav__link">
-    Specifications
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hardware-overview" class="md-nav__link">
-    Hardware Overview
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#part-list" class="md-nav__link">
-    Part List
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pin-out" class="md-nav__link">
-    Pin out
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ide-and-driver" class="md-nav__link">
-    IDE and Driver
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#arduino-code" class="md-nav__link">
-    Arduino Code
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apis" class="md-nav__link">
-    APIs
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-set-the-baud-rate" class="md-nav__link">
-    1. Set the Baud rate
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-set-receive-mask-and-filter" class="md-nav__link">
-    2. Set Receive Mask and Filter
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-check-receive" class="md-nav__link">
-    3. Check Receive
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-get-can-id" class="md-nav__link">
-    4. Get CAN ID
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-send-data" class="md-nav__link">
-    5. Send Data
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-receive-data" class="md-nav__link">
-    6. Receive Data
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generate-a-new-baudrate" class="md-nav__link">
-    Generate a New BaudRate
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#faq" class="md-nav__link">
-    FAQ
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schematic-online-viewer" class="md-nav__link">
-    Schematic Online Viewer
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
-    Reference
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1030009/" title="CANBed FD - Arduino CAN-FD Development Kit" class="md-nav__link">
-      CANBed FD - Arduino CAN-FD Development Kit
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1030011/" title="Serial CAN Lite" class="md-nav__link">
-      Serial CAN Lite
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1030012/" title="CAN-FD Shield" class="md-nav__link">
-      CAN-FD Shield
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1030013/" title="CANBed M4" class="md-nav__link">
-      CANBed M4
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
   </ul>
 </nav>
                   </div>
@@ -1091,6 +1121,19 @@
     Introduction
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canbed-family" class="md-nav__link">
+    CANBed Family
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1205,28 +1248,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-send-data" class="md-nav__link">
-    5. Send Data
+  <a href="#5-send-a-frame" class="md-nav__link">
+    5. Send a frame
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#6-receive-data" class="md-nav__link">
-    6. Receive Data
+  <a href="#6-receive-a-frame" class="md-nav__link">
+    6. Receive a frame
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generate-a-new-baudrate" class="md-nav__link">
-    Generate a New BaudRate
-  </a>
   
 </li>
       
@@ -1268,18 +1304,93 @@
               
                 
                 
-                  <h1>CANBed - Arduino CAN Bus Development Kit</h1>
+                  <h1>CANBed V1</h1>
                 
-                <h3 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h3>
+                <h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<hr />
 <p><a href=""><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030008/db9.jpg" /></a></p>
 <p><strong>CAN Bus</strong> is a common industrial bus because of its long travel distance, medium communication speed and high reliability. It is commonly found on modern machine tools, such as an automotive diagnostic bus.</p>
 <p>This CANBed adopts <strong>MCP2515</strong> CAN Bus controller with SPI interface and <strong>MCP2551</strong> CAN transceiver to achieve the CAN-BUS capability. With an <strong>OBD-II</strong> converter cable added on and the OBD-II library imported, you are ready to build an onboard diagnostic device.</p>
 <p>What's more, the is an Atmega32U4 with <strong>Arduino Leonardo</strong> bootloader on the board, you can use Arduino IDE to program the board easily. </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Click to get the <a href="https://www.longan-labs.cc/1030009.html">CAN-FD verson</a>, only $17.9.</p>
-</div>
-<h3 id="can-bus-products-list-of-longan-labs"><strong><em>CAN BUS PRODUCTS LIST OF LONGAN LABS</em></strong><a class="headerlink" href="#can-bus-products-list-of-longan-labs" title="Permanent link">&para;</a></h3>
+<h3 id="canbed-family">CANBed Family<a class="headerlink" href="#canbed-family" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>VRESION</strong></th>
+<th>CANBed V1</th>
+<th>CANBed FD</th>
+<th>CANBed M0</th>
+<th>CANBed M4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PICTURES</strong></td>
+<td><a href="https://www.longan-labs.cc/1030008.html"><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbed_series/canbedv1.jpg" /></a></td>
+<td><a href="https://www.longan-labs.cc/1030009.html"><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbed_series/canbed_fd.jpg" /></a></td>
+<td><a href="https://www.longan-labs.cc/1030014.html"><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbed_series/canbed_m0.jpg" /></a></td>
+<td><a href="https://www.longan-labs.cc/1030013.html"><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbed_series/canbed_m4.jpg" /></a></td>
+</tr>
+<tr>
+<td><strong>MCU</strong></td>
+<td>Atmega32U4</td>
+<td>Atmega32U4</td>
+<td>ATSAMD21G18</td>
+<td>ATSAME51G19A</td>
+</tr>
+<tr>
+<td><strong>CORE</strong></td>
+<td>AVR 8 bit</td>
+<td>AVR 8 bit</td>
+<td>ARM Cortex M0+ 32bit</td>
+<td>ARM Cortex M4 32bit</td>
+</tr>
+<tr>
+<td><strong>PROTOCOL</strong></td>
+<td>CAN2.0</td>
+<td>CANFD &amp; CAN2.0</td>
+<td>CAN2.0</td>
+<td>CANFD &amp; CAN2.0</td>
+</tr>
+<tr>
+<td><strong>CLOCK</strong></td>
+<td>16MHz</td>
+<td>16MHz</td>
+<td>48MHz</td>
+<td>120MHz</td>
+</tr>
+<tr>
+<td><strong>FLASH</strong></td>
+<td>32KB</td>
+<td>32KB</td>
+<td>256KB</td>
+<td>512KB</td>
+</tr>
+<tr>
+<td><strong>RAM</strong></td>
+<td>2.5KB</td>
+<td>2.5KB</td>
+<td>32KB</td>
+<td>192KB</td>
+</tr>
+<tr>
+<td><strong>PRICE</strong></td>
+<td>$14.9</td>
+<td>$17.9</td>
+<td>$16.9</td>
+<td>$19.9</td>
+</tr>
+<tr>
+<td><strong>LINK</strong></td>
+<td><a href="https://www.longan-labs.cc/1030008.html">GET ONE NOW</a></td>
+<td><a href="https://www.longan-labs.cc/1030009.html">GET ONE NOW</a></td>
+<td><a href="https://www.longan-labs.cc/1030014.html">GET ONE NOW</a></td>
+<td><a href="https://www.longan-labs.cc/1030013.html">GET ONE NOW</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="can-bus-products-list-of-longan-labs"><strong><em>CAN BUS PRODUCTS LIST OF LONGAN LABS</em></strong><a class="headerlink" href="#can-bus-products-list-of-longan-labs" title="Permanent link">&para;</a></h2>
+<hr />
 <p><a href="https://www.longan-labs.cc/blog/post/can-bus-product-summary/"><img alt="" src="https://www.longan-labs.cc/media/wysiwyg/CAN_BUS_PRODUCT.png" /></a></p>
 <p>We have made a lot of can bus products, you can get more information through the following list, so as to choose a product suitable for you.</p>
 <table>
@@ -1376,7 +1487,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="features"><strong>Features</strong><a class="headerlink" href="#features" title="Permanent link">&para;</a></h3>
+<h2 id="features"><strong><em>Features</em></strong><a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<hr />
 <ul>
 <li>Implements CAN V2.0B at up to 1 Mb/s</li>
 <li>Industrial standard 9 pin sub-D connector or 4PIN Terminal.</li>
@@ -1386,7 +1498,8 @@
 <li>Standard (11 bit) and extended (29 bit) data and remote frames</li>
 <li>Power input from 9-28V</li>
 </ul>
-<h3 id="specifications"><strong>Specifications</strong><a class="headerlink" href="#specifications" title="Permanent link">&para;</a></h3>
+<h2 id="specifications"><strong><em>Specifications</em></strong><a class="headerlink" href="#specifications" title="Permanent link">&para;</a></h2>
+<hr />
 <table>
 <thead>
 <tr>
@@ -1420,13 +1533,17 @@
 <td>9-28V</td>
 </tr>
 <tr>
+<td>* Output Current @ 5V</td>
+<td>1A</td>
+</tr>
+<tr>
 <td>Input Interface</td>
 <td>sub-D</td>
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="hardware-overview"><strong><em>Hardware Overview</em></strong><a class="headerlink" href="#hardware-overview" title="Permanent link">&para;</a></h2>
+<hr />
 <h3 id="part-list">Part List<a class="headerlink" href="#part-list" title="Permanent link">&para;</a></h3>
 <ul>
 <li>CANBed PCBA</li>
@@ -1509,11 +1626,16 @@
 <p><strong>7.Switch for the 120Ω terminal resistor for CAN Bus</strong></p>
 <p style="text-align:center"><img src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/HS_CAN_Termination.gif" /></p>
 
-<p>If you use this slaver on the end of the CAN bus, you need to solder a 120Ω resister between the two pad, if not just leave them alone. For more detail about the CAN bus protocol, please refer to the
+<p>If you use this board on the end of the CAN bus, please put this switch to 120Ω. For more detail about the CAN bus protocol, please refer to the
 <a href="http://www.ni.com/white-paper/9759/en/">NI CAN Physical Layer and Termination Guide</a></p>
 <p><strong>8.Grove connector for UART</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use Serial1 in the code</p>
+</div>
 <p><strong>9.Grove connector for I2C</strong></p>
 <h2 id="usage"><strong><em>Usage</em></strong><a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<hr />
 <h3 id="ide-and-driver"><strong><em>IDE and Driver</em></strong><a class="headerlink" href="#ide-and-driver" title="Permanent link">&para;</a></h3>
 <p>There's Arduino leonardo bootloader in the board. </p>
 <p>Click to get the <a href="https://www.arduino.cc/en/Main/Software">latest Arduino IDE</a>. </p>
@@ -1522,12 +1644,16 @@
 <h3 id="arduino-code"><strong><em>Arduino Code</em></strong><a class="headerlink" href="#arduino-code" title="Permanent link">&para;</a></h3>
 <hr />
 <p>We provide an <a href="https://github.com/Longan-Labs/CANBed">Arduino library for CANBed</a>. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please change the SPI_CS_PIN to 17 for CANBed V1</p>
+</div>
 <p>There're many examples for the library, which is consist of,</p>
 <ul>
-<li><strong><em>send</em></strong> - How to send a frame to CAN Bus</li>
-<li><strong><em>recv</em></strong> - How to recv a frame from CAN Bus</li>
-<li><strong><em>set_can_baudrate</em></strong> - set can bus baudrate</li>
-<li><strong><em>set_mask_filt</em></strong> - set mask and filt of the module</li>
+<li><strong><em>OBDII-PIDs</em></strong> - Get data from OBD-II interface</li>
+<li><strong><em>send</em></strong> - Send a frame to CAN Bus</li>
+<li><strong><em>recv</em></strong> - Receive a frame from CAN Bus</li>
+<li><strong><em>set_mask_filter_recv</em></strong> - Receive a frame from CAN Bus with mask and filter setting</li>
 </ul>
 <h2 id="apis"><strong><em>APIs</em></strong><a class="headerlink" href="#apis" title="Permanent link">&para;</a></h2>
 <hr />
@@ -1587,7 +1713,7 @@
 </code></pre></div>
 
 
-<h3 id="5-send-data">5. Send Data<a class="headerlink" href="#5-send-data" title="Permanent link">&para;</a></h3>
+<h3 id="5-send-a-frame">5. Send a frame<a class="headerlink" href="#5-send-a-frame" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code>CAN.sendMsgBuf(INT8U id, INT8U ext, INT8U len, data_buf);
 </code></pre></div>
 
@@ -1605,7 +1731,7 @@ CAN.sendMsgBuf(0x00, 0, 8, stmp); //send out the message &#39;stmp&#39; to the b
 </code></pre></div>
 
 
-<h3 id="6-receive-data">6. Receive Data<a class="headerlink" href="#6-receive-data" title="Permanent link">&para;</a></h3>
+<h3 id="6-receive-a-frame">6. Receive a frame<a class="headerlink" href="#6-receive-a-frame" title="Permanent link">&para;</a></h3>
 <p>The following function is used to receive data on the 'receive' node:</p>
 <div class="codehilite"><pre><span></span><code>CAN.readMsgBuf(unsigned char len, unsigned char buf);
 </code></pre></div>
@@ -1616,47 +1742,30 @@ CAN.sendMsgBuf(0x00, 0, 8, stmp); //send out the message &#39;stmp&#39; to the b
 <li><strong>len</strong> represents the data length.</li>
 <li><strong>buf</strong> is where you store the data.</li>
 </ul>
-<h2 id="generate-a-new-baudrate">Generate a New BaudRate<a class="headerlink" href="#generate-a-new-baudrate" title="Permanent link">&para;</a></h2>
-<p>We had provided many frequently-used baud rates, as below:</p>
-<div class="codehilite"><pre><span></span><code>#define CAN_5KBPS    1
-#define CAN_10KBPS   2
-#define CAN_20KBPS   3
-#define CAN_25KBPS   4
-#define CAN_31KBPS   5
-#define CAN_33KBPS   6
-#define CAN_40KBPS   7
-#define CAN_50KBPS   8
-#define CAN_80KBPS   9
-#define CAN_83KBPS   10
-#define CAN_95KBPS   11
-#define CAN_100KBPS  12
-#define CAN_125KBPS  13
-#define CAN_200KBPS  14
-#define CAN_250KBPS  15
-#define CAN_500KBPS  16
-#define CAN_666KBPS  17
-#define CAN_1000KBPS 18
-</code></pre></div>
-
-
 <h2 id="faq"><strong><em>FAQ</em></strong><a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+<hr />
 <p><strong>1. I can't upload code to CANBed FD</strong></p>
-<div class="codehilite"><pre><span></span><code>*If your PC recognize the COM port, please try pressing the reset button, then click on the Upload button in Arduino IDE, when the IDE shows compile done, release the reset button immediately.*
-</code></pre></div>
-
-
+<ul>
+<li>If your PC recognize the COM port, please try pressing the reset button, then click on the Upload button in Arduino IDE, when the IDE shows compile done, release the reset button immediately.*</li>
+</ul>
+<p><strong>2.The RX/TX led light up and never turn off</strong></p>
+<ul>
+<li>Check if the baudrate of CAN Bus is setting correct</li>
+<li>Try turning on/off the switch for the terminal resistor</li>
+<li>Cehck if CANH and CANL is connected correct</li>
+</ul>
+<p><em>Please feel free to contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#110;&#101;&#121;&#46;&#115;&#117;&#105;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#106;&#111;&#110;&#101;&#121;&#46;&#115;&#117;&#105;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> if you need more help.</em></p>
 <h2 id="schematic-online-viewer"><strong><em>Schematic Online Viewer</em></strong><a class="headerlink" href="#schematic-online-viewer" title="Permanent link">&para;</a></h2>
-<div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/EagleCANBed/archive/master.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<hr />
+<div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBedV1.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 <h2 id="reference"><strong><em>Reference</em></strong><a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
-<li><a href="https://www.longan-labs.cc/1030009.html">CANBed - FD</a></li>
 <li><a href="https://github.com/Longan-Labs/CANBed">Arduino Library</a></li>
-<li><a href="https://github.com/Longan-Labs/EagleCANBed/archive/master.zip">Schematics in Eagle</a></li>
-<li><a href="https://raw.githubusercontent.com/Longan-Labs/EagleCANBed/master/CANBed.pdf">Schematics in PDF</a></li>
-<li><a href="https://www.longan-labs.cc/1030009.html">CANBed - FD</a></li>
+<li><a href="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBedV1.zip">Schematics in Eagle</a></li>
+<li><a href="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBedV1/CANBed%20V1.pdf">Schematics in PDF</a></li>
 <li><a href="https://www.mouser.com/datasheet/2/268/MCP2515-Stand-Alone-CAN-Controller-with-SPI-200018-708845.pdf">MCP2515 Datasheet</a></li>
 <li><a href="https://www.mouser.com/datasheet/2/268/20001667G-1115479.pdf">MCP2551 Datasheet</a></li>
 </ul>
@@ -1681,7 +1790,7 @@ CAN.sendMsgBuf(0x00, 0, 8, stmp); //send out the message &#39;stmp&#39; to the b
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../1030003/" title="OBD-II CAN Bus GPS Development Kit" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../1030001/" title="Serial CAN Bus Module" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1690,19 +1799,19 @@ CAN.sendMsgBuf(0x00, 0, 8, stmp); //send out the message &#39;stmp&#39; to the b
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                OBD-II CAN Bus GPS Development Kit
+                Serial CAN Bus Module
               </span>
             </div>
           </a>
         
         
-          <a href="../1030009/" title="CANBed FD - Arduino CAN-FD Development Kit" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../1030009/" title="CANBed FD" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                CANBed FD - Arduino CAN-FD Development Kit
+                CANBed FD
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
