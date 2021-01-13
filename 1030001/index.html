@@ -599,26 +599,6 @@
     FAQ
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-the-rx-and-tx-leds-light-up-instead-of-blinking" class="md-nav__link">
-    1. The RX and TX leds light up instead of blinking
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-dont-work-with-arduino-mega" class="md-nav__link">
-    2. Don't work with Arduino Mega
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -738,6 +718,18 @@
   <li class="md-nav__item">
     <a href="../1030012/" title="CAN-FD Shield" class="md-nav__link">
       CAN-FD Shield
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030015/" title="OBD-II RF Dev Kit" class="md-nav__link">
+      OBD-II RF Dev Kit
     </a>
   </li>
 
@@ -868,8 +860,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../1050001/" title="Squame Ethernet" class="md-nav__link">
-      Squame Ethernet
+    <a href="../1050001/" title="Squama Ethernet" class="md-nav__link">
+      Squama Ethernet
     </a>
   </li>
 
@@ -1412,26 +1404,6 @@
   <a href="#faq" class="md-nav__link">
     FAQ
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-the-rx-and-tx-leds-light-up-instead-of-blinking" class="md-nav__link">
-    1. The RX and TX leds light up instead of blinking
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-dont-work-with-arduino-mega" class="md-nav__link">
-    2. Don't work with Arduino Mega
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2055,14 +2027,22 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 <p>Once installed, close the <strong>Boards Manager</strong> window.</p>
 <p>Then you can find <strong><em>Serial CAN Bus Module</em></strong> in the board list.</p>
 <h2 id="faq"><strong><em>FAQ</em></strong><a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
-<h3 id="1-the-rx-and-tx-leds-light-up-instead-of-blinking">1. The RX and TX leds light up instead of blinking<a class="headerlink" href="#1-the-rx-and-tx-leds-light-up-instead-of-blinking" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">The RX and TX leds light up instead of blinking</p>
 <ul>
 <li>Please check the baudrate of CAN Bus</li>
 <li>If the serial can bus module is in the end, the 120Ω terminal resistor is needed, please soder P1 on the back side of PCBA</li>
 </ul>
-<h3 id="2-dont-work-with-arduino-mega">2. Don't work with Arduino Mega<a class="headerlink" href="#2-dont-work-with-arduino-mega" title="Permanent link">&para;</a></h3>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Don't work with Arduino Mega</p>
 <p>Not all pins on the Mega and Mega 2560 support change interrupts, so only the following can be used for RX: 
-    10, 11, 12, 13, 14, 15, 50, 51, 52, 53, A8 (62), A9 (63), A10 (64), A11 (65), A12 (66), A13 (67), A14 (68), A15 (69).</p>
+10, 11, 12, 13, 14, 15, 50, 51, 52, 53, A8 (62), A9 (63), A10 (64), A11 (65), A12 (66), A13 (67), A14 (68), A15 (69).</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">How to find the tech support</p>
+<p>Please feel free to contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#110;&#101;&#121;&#46;&#115;&#117;&#105;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#106;&#111;&#110;&#101;&#121;&#46;&#115;&#117;&#105;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> if you need more help.</p>
+</div>
 <h2 id="schematic-online-viewer"><strong><em>Schematic Online Viewer</em></strong><a class="headerlink" href="#schematic-online-viewer" title="Permanent link">&para;</a></h2>
 <div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/Eagle_File_Serial_CAN_Bus/archive/master.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
