@@ -1362,18 +1362,18 @@
 </div>
 <p><strong>STEP3: Software</strong></p>
 <p>Please follow <a href="http://wiki.seeed.cc/How_to_install_Arduino_Library/">how to install an arduino library</a> procedures to install CAN BUS shield library.</p>
-<p>Click <a href="https://github.com/Longan-Labs/Longan_Labs_CAN_FD_Shield_Arduino/archive/master.zip">CAN-FD Library for Arduino</a> to download the library.</p>
+<p>Click <a href="https://github.com/Longan-Labs/Longan_CANFD">CAN-FD Library for Arduino</a> to download the library.</p>
 <p>Install the library to your Arduino IDE when it is downloaded.</p>
 <p>One of the node (a node means Seeeduino + CAN_BUS Shield) acts as master, the other acts as slaver. The master will send data to slaver constantly.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Each node can act as master before the code being uploaded.</p>
 </div>
-<p>Open the <strong>CAN_FD_Send</strong> example (<strong>File &gt; Examples &gt; Longan_Labs_CAN_FD_Shield_Arduino &gt; CAN_FD_Send</strong>) and upload to the <strong>master</strong>.</p>
-<p>Open the <strong>CAN_FD_Recv</strong> example (<strong>File &gt; Examples &gt; CAN_FD_Recv &gt; receive_check</strong>) and upload to the <strong>slaver</strong>.</p>
+<p>Open the <strong>CANFD_Send</strong> example (<strong>File &gt; Examples &gt; Longan_CANFD &gt; CANFD_Send</strong>) and upload to the <strong>master</strong>.</p>
+<p>Open the <strong>CANFD_RECV_INT</strong> example (<strong>File &gt; Examples &gt; Longan_CANFD &gt; CANFD_RECV_INT</strong>) and upload to the <strong>slaver</strong>.</p>
 <p><strong>STEP4: View Result</strong></p>
 <p>Open the Serial Monitor of Arduino IDE(<strong>slaver</strong>), you will get the data sent from the master.</p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030012/serial_data.png" /></p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030012/serial_data.jpg" /></p>
 <h2 id="schematic-online-viewer">Schematic Online Viewer<a class="headerlink" href="#schematic-online-viewer" title="Permanent link">&para;</a></h2>
 <div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/Longan_Labs_CAN_FD_Eagle/archive/master.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
@@ -1381,7 +1381,7 @@
 <h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
-<li><a href="https://github.com/Longan-Labs/Longan_Labs_CAN_FD_Shield_Arduino">Arduino Library</a></li>
+<li><a href="https://github.com/Longan-Labs/Longan_CANFD">Arduino Library</a></li>
 <li><a href="https://github.com/Longan-Labs/Longan_Labs_CAN_FD_Eagle/archive/master.zip">Eagle File</a></li>
 <li><a href="https://www.mouser.com/datasheet/2/268/MCP2517FD-External-CAN-FD-Controller-with-SPI-Inte-1519186.pdf">MCP2517FD Datasheet</a></li>
 <li><a href="https://www.mouser.com/datasheet/2/268/20005514a-1102085.pdf">MCP2542 Datasheet</a></li>
