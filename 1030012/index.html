@@ -564,6 +564,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1030016/" title="CAN Bus Shield" class="md-nav__link">
+      CAN Bus Shield
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1127,6 +1139,7 @@
                 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030012/canfd_main.jpg" /></p>
 <p><strong>CAN-BUS</strong> is a common industrial bus because of its long travel distance, medium communication speed and high reliability. It is commonly found on modern machine tools, such as an automotive diagnostic bus.</p>
 <p>This CAN-FD Shield adopts <strong>MCP2517</strong> CAN Bus controller with SPI interface and <strong>MCP2542</strong> CAN transceiver to give your Arduino CAN-BUS(CAN-FD) capability. With an <strong>OBD-II</strong> converter cable added on and the OBD-II library imported, you are ready to build an onboard diagnostic device or data logger.</p>
+<p>Due to transportation considerations, users need to weld themselves after receiving the product. If you have difficulty in welding, you can contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#102;&#111;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#105;&#110;&#102;&#111;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> after placing the order, and we will weld it for you before shipping. </p>
 <h3 id="can-bus-products-list-of-longan-labs">CAN BUS PRODUCTS LIST OF LONGAN LABS<a class="headerlink" href="#can-bus-products-list-of-longan-labs" title="Permanent link">&para;</a></h3>
 <p><a href="https://www.longan-labs.cc/blog/post/can-bus-product-summary/"><img alt="" src="https://www.longan-labs.cc/media/wysiwyg/CAN_BUS_PRODUCT.png" /></a></p>
 <p>We have made a lot of can bus products, you can get more information through the following list, so as to choose a product suitable for you.</p>
@@ -1175,6 +1188,22 @@
 <td>CAN2.0</td>
 </tr>
 <tr>
+<td>CAN-FD Shield</td>
+<td><a href="https://www.longan-labs.cc/1030012.html">LINK</a></td>
+<td>$8.9</td>
+<td>NO MCU</td>
+<td>MCP2517FD</td>
+<td>CAN-FD</td>
+</tr>
+<tr>
+<td>CAN Bus Shield</td>
+<td><a href="https://www.longan-labs.cc/1030016.html">LINK</a></td>
+<td>$3.9</td>
+<td>NO MCU</td>
+<td>MCP2515</td>
+<td>CAN2.0</td>
+</tr>
+<tr>
 <td>CANBed</td>
 <td><a href="https://www.longan-labs.cc/1030008.html">LINK</a></td>
 <td>$14.9</td>
@@ -1189,22 +1218,6 @@
 <td>ATMEGA32U4</td>
 <td>MCP2517FD</td>
 <td>CAN-FD</td>
-</tr>
-<tr>
-<td>CAN-FD Shield</td>
-<td><a href="https://www.longan-labs.cc/1030012.html">LINK</a></td>
-<td>$19.9</td>
-<td>NO MCU</td>
-<td>MCP2517FD</td>
-<td>CAN-FD</td>
-</tr>
-<tr>
-<td>Serial CAN Bus Module Lite</td>
-<td><a href="https://www.longan-labs.cc/1030011.html">LINK</a></td>
-<td>$9.9</td>
-<td>STM8S005</td>
-<td>MCP2515</td>
-<td>CAN2.0</td>
 </tr>
 <tr>
 <td>CANBed M0</td>
@@ -1330,12 +1343,12 @@
 </ul>
 </div>
 <p><strong>Dimensions</strong></p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030012/drawing1.png" /></p>
+<p><img alt="" src="https://github.com/Longan-Labs/CAN_BUS_SHIELD_RES/raw/main/images/drawing1.png" /></p>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030012/drawing2.png" /></p>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030012/drawing3.png" /></p>
 <h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
 <hr />
-<p>Here's a simple example to show you how CAN-BUS Shield works. In this example we need 2 pieces of CAN-BUS Shields as well as Arduino or Seeeduino.</p>
+<p>Here's a simple example to show you how CAN-BUS Shield works. In this example we need 2 pieces of CAN-BUS Shields as well as Longan Core 01.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This example is built under <a href="https://www.arduino.cc/en/Main/OldSoftwareReleases#1.5.x">Arduino IDE version 1.8.10</a>.</p>
@@ -1358,15 +1371,15 @@
 <td><a href="https://www.longan-labs.cc/1030012.html">GET ONE NOW</a></td>
 </tr>
 <tr>
-<td>Seeeduino V4.2</td>
+<td>Longan Core 01</td>
 <td>Controller</td>
 <td>2</td>
-<td><a href="https://www.seeedstudio.com/Seeeduino-V4-2-p-2517.html">GET ONE NOW</a></td>
+<td><a href="https://www.longan-labs.cc/1040009.html">GET ONE NOW</a></td>
 </tr>
 </tbody>
 </table>
 <p><strong>STEP2: Hardware Connection</strong></p>
-<p>Insert each CAN-BUS Shield into Seeeduino V4.2, and connect the 2 CAN-BUS Shield together via 2 jumper wires. Shown as below images.</p>
+<p>Insert each CAN-BUS Shield into Longan Core 01, and connect the 2 CAN-BUS Shield together via 2 jumper wires. Shown as below images.</p>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030012/connection.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1376,7 +1389,7 @@
 <p>Please follow <a href="http://wiki.seeed.cc/How_to_install_Arduino_Library/">how to install an arduino library</a> procedures to install CAN BUS shield library.</p>
 <p>Click <a href="https://github.com/Longan-Labs/Longan_CANFD">CAN-FD Library for Arduino</a> to download the library.</p>
 <p>Install the library to your Arduino IDE when it is downloaded.</p>
-<p>One of the node (a node means Seeeduino + CAN_BUS Shield) acts as master, the other acts as slaver. The master will send data to slaver constantly.</p>
+<p>One of the node (a node means Longan Core 01 + CAN_BUS Shield) acts as master, the other acts as slaver. The master will send data to slaver constantly.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Each node can act as master before the code being uploaded.</p>
