@@ -13,7 +13,7 @@
         <meta name="description" content="Docs of Longan Labs">
       
       
-        <link rel="canonical" href="https://longan-labs.cc/1030011/">
+        <link rel="canonical" href="https://longan-labs.cc/1030017/">
       
       
         <meta name="author" content="Loovee">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Serial CAN Lite - Longan Docs</title>
+        <title>I2C CAN Bus Module - Longan Docs</title>
       
     
     
@@ -142,7 +142,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Serial CAN Lite
+                I2C CAN Bus Module
               
             </span>
           
@@ -371,11 +371,216 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../1030017/" title="I2C CAN Bus Module" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        I2C CAN Bus Module
+      </label>
+    
+    <a href="./" title="I2C CAN Bus Module" class="md-nav__link md-nav__link--active">
       I2C CAN Bus Module
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#can-bus-products-list-of-longan-labs" class="md-nav__link">
+    CAN BUS PRODUCTS LIST OF LONGAN-LABS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partlist" class="md-nav__link">
+    Partlist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-overview" class="md-nav__link">
+    Hardware Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#120-terminal-resistor" class="md-nav__link">
+    120 Terminal resistor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i2c-register" class="md-nav__link">
+    I2C Register
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#addr-0x01" class="md-nav__link">
+    ADDR (0x01)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dnum-0x02" class="md-nav__link">
+    DNUM (0x02)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baud-0x01" class="md-nav__link">
+    BAUD (0x01)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-0x30-recv-0x40" class="md-nav__link">
+    SEND (0x30), RECV (0x40)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maskn" class="md-nav__link">
+    MASKn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtn" class="md-nav__link">
+    FILTn
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#work-with-arduino" class="md-nav__link">
+    Work with Arduino
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#120-terminal-resistor_1" class="md-nav__link">
+    120Ω Terminal Resistor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-connection" class="md-nav__link">
+    Hardware Connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    Software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-the-board" class="md-nav__link">
+    Test the board
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-standalone" class="md-nav__link">
+    Working Standalone
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    FAQ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schematic-online-viewer" class="md-nav__link">
+    Schematic Online Viewer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -455,175 +660,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Serial CAN Lite
-      </label>
-    
-    <a href="./" title="Serial CAN Lite" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../1030011/" title="Serial CAN Lite" class="md-nav__link">
       Serial CAN Lite
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#can-bus-products-list-of-longan-labs" class="md-nav__link">
-    CAN BUS PRODUCTS LIST OF LONGAN LABS
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#partlist" class="md-nav__link">
-    Partlist
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
-    Features
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hardware-overview" class="md-nav__link">
-    Hardware Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#work-at-33v" class="md-nav__link">
-    Work at 3.3V
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#at-command" class="md-nav__link">
-    AT Command
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#set-serial-baud-rate" class="md-nav__link">
-    Set Serial Baud Rate
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-can-bus-baudrate" class="md-nav__link">
-    Set CAN Bus Baudrate
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-mask" class="md-nav__link">
-    Set Mask
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-filt" class="md-nav__link">
-    Set Filt
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#normal-mode" class="md-nav__link">
-    Normal Mode
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#send" class="md-nav__link">
-    Send
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#recv" class="md-nav__link">
-    Recv
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#arduino-library" class="md-nav__link">
-    Arduino Library
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schematic-online-viewer" class="md-nav__link">
-    Schematic Online Viewer
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
-    Reference
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1152,7 +1193,7 @@
         
           <li class="md-nav__item">
   <a href="#can-bus-products-list-of-longan-labs" class="md-nav__link">
-    CAN BUS PRODUCTS LIST OF LONGAN LABS
+    CAN BUS PRODUCTS LIST OF LONGAN-LABS
   </a>
   
 </li>
@@ -1181,47 +1222,12 @@
     Hardware Overview
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#work-at-33v" class="md-nav__link">
-    Work at 3.3V
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#at-command" class="md-nav__link">
-    AT Command
-  </a>
-  
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#set-serial-baud-rate" class="md-nav__link">
-    Set Serial Baud Rate
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-can-bus-baudrate" class="md-nav__link">
-    Set CAN Bus Baudrate
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-mask" class="md-nav__link">
-    Set Mask
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-filt" class="md-nav__link">
-    Set Filt
+  <a href="#120-terminal-resistor" class="md-nav__link">
+    120 Terminal resistor
   </a>
   
 </li>
@@ -1232,23 +1238,51 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#normal-mode" class="md-nav__link">
-    Normal Mode
+  <a href="#i2c-register" class="md-nav__link">
+    I2C Register
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#send" class="md-nav__link">
-    Send
+  <a href="#addr-0x01" class="md-nav__link">
+    ADDR (0x01)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#recv" class="md-nav__link">
-    Recv
+  <a href="#dnum-0x02" class="md-nav__link">
+    DNUM (0x02)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baud-0x01" class="md-nav__link">
+    BAUD (0x01)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-0x30-recv-0x40" class="md-nav__link">
+    SEND (0x30), RECV (0x40)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maskn" class="md-nav__link">
+    MASKn
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtn" class="md-nav__link">
+    FILTn
   </a>
   
 </li>
@@ -1259,8 +1293,56 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#arduino-library" class="md-nav__link">
-    Arduino Library
+  <a href="#work-with-arduino" class="md-nav__link">
+    Work with Arduino
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#120-terminal-resistor_1" class="md-nav__link">
+    120Ω Terminal Resistor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-connection" class="md-nav__link">
+    Hardware Connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    Software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-the-board" class="md-nav__link">
+    Test the board
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-standalone" class="md-nav__link">
+    Working Standalone
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    FAQ
   </a>
   
 </li>
@@ -1296,18 +1378,21 @@
               
                 
                 
-                  <h1>Serial CAN Lite</h1>
+                  <h1>I2C CAN Bus Module</h1>
                 
                 <h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <hr />
-<p><a href="https://www.seeedstudio.com/Serial-CAN-BUS-Module-based-on-MCP2551-and-MCP2515-p-2924.html"><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/CAN-4.jpg" /></a></p>
-<p>The Serial CAN Lite Module provide your Arduino or others MCU with the capability to communication to CAN Bus, such as hacking your vehicle. 
-CAN Bus is a common industrial bus because of its long travel distance, medium communication speed and high reliability. </p>
-<p>This Serial CAN Bus module is based on <strong>MCP2551</strong> and <strong>MCP2515</strong>, which can provide speed up to <strong>1Mb/s</strong>. </p>
-<p>This module the is a cheaper version of <a href="https://www.longan-labs.cc/1030001.html">Serial CAN Bus Module</a>, the difference is the MCU on-board. Lite version user a cheaper <strong>STM8S</strong> MCU while there's Atmega168PA in the Serial CAN Bus Module.
-The 2 modules shares the same AT command and usage. </p>
-<p>If you need to program the AVR mcu with Arduino IDE, please take <a href="https://www.longan-labs.cc/1030001.html">Serial CAN Bus module</a>, otherwise, the Lite version is good enough. </p>
-<h3 id="can-bus-products-list-of-longan-labs"><strong><em>CAN BUS PRODUCTS LIST OF LONGAN LABS</em></strong><a class="headerlink" href="#can-bus-products-list-of-longan-labs" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.longan-labs.cc/1030001.html"><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/CAN-4.jpg" /></a></p>
+<p>We launched the <a href="https://www.longan-labs.cc/1030001.html">Serial CAN Bus Module</a> years ago, which is very practial and easy to use. 
+Now we have slightly modified the Serial CAN Bus Module, wrote a special firmware, and launched this I2C CAN Bus Module.</p>
+<p>The I2C CAN Bus Module uses I2C for communication. The board is small and flexible, which make it can be quickly used in any system with an I2C interface.</p>
+<p>The I2C CAN Bus Module is based on the high-performance MCP2515 CAN Bus controller and MCP2551 CAN Bus transceiver, provides a CAN Bus communication rate of up to 1Mb/s.</p>
+<p>In addition, there is an Atmega168PA microcontroller on the board, you can also program it through a USB to Serial board, modify the firmware or write your application directly. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default masks and filters is for standard can frame, if you need to receive a ext can frame, please set the mask and filt first.</p>
+</div>
+<h3 id="can-bus-products-list-of-longan-labs"><strong><em>CAN BUS PRODUCTS LIST OF LONGAN-LABS</em></strong><a class="headerlink" href="#can-bus-products-list-of-longan-labs" title="Permanent link">&para;</a></h3>
 <p><a href="https://www.longan-labs.cc/blog/post/can-bus-product-summary/"><img alt="" src="https://www.longan-labs.cc/media/wysiwyg/CAN_BUS_PRODUCT.png" /></a></p>
 <p>We have made a lot of can bus products, you can get more information through the following list, so as to choose a product suitable for you.</p>
 <table>
@@ -1418,13 +1503,13 @@ The 2 modules shares the same AT command and usage. </p>
 <h2 id="features"><strong><em>Features</em></strong><a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
-<li>Uart to CAN Bus communication</li>
-<li>Work with Arduino/BeagleBone board/Pi or any MCU that integrated with Uart.</li>
-<li>AT command</li>
-<li>Up to 115200 Uart baud rate (default 9600)</li>
-<li>Up to 1Mb/s CAN Bus baud rate</li>
-<li>TX and RX led indicator</li>
-<li>4pin Grove connector</li>
+<li>I2C to CAN Bus Conversion</li>
+<li>Default I2C Address 0x25</li>
+<li>Max I2C Speed: 400k</li>
+<li>Work with Arduino/BeagleBone board/Pi or any MCU that integrated with I2C.</li>
+<li>Up to 1Mb/s CAN Bus baud rate (default 500k)</li>
+<li>TX and RX led indicator for CAN Bus</li>
+<li>4pin HY connector</li>
 <li>3.3 / 5V working voltage</li>
 <li>Easy-to-use Arduino library</li>
 <li>Small size: 20x40 mm</li>
@@ -1433,103 +1518,170 @@ The 2 modules shares the same AT command and usage. </p>
 <hr />
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbus/hw.png" /></p>
 <ol>
-<li>4 pin 2.0mm Grove Connector</li>
-<li>Power and status led indicator</li>
+<li>4 pin 2.0mm Connector (Same as Grove connector from Seeedstudio)</li>
+<li>Power and status led indicator<ul>
+<li>Blink all the time: CAN Bus init fail, Maybe the board was damaged</li>
+<li>When receive data from I2C, blink one time</li>
+</ul>
+</li>
 <li>Send and Recv led indicator</li>
 <li>3.5mm terminal to connect to CAN Bus (CAN_H &amp; CAN_L)</li>
 <li>120Ω registor. </li>
 </ol>
-<h2 id="work-at-33v"><strong><em>Work at 3.3V</em></strong><a class="headerlink" href="#work-at-33v" title="Permanent link">&para;</a></h2>
-<hr />
-<p>The module is working at 5V most of time. If you want it to work at 3.3V IO, please try:</p>
-<p>There's a jumper on the back side, please connect the pads together with a soldering iron. 
-And VCC must connect to 5V. </p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbus/V1.1_3V.jpg" /></p>
-<h2 id="at-command"><strong><em>AT Command</em></strong><a class="headerlink" href="#at-command" title="Permanent link">&para;</a></h2>
-<hr />
-<p>You can achieve the complete function of this Serial CAN Bus module with only a few AT command.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The picture shows the Serial CAN Bus Module, but it is also applicable to the I2C CAN Bus Module</p>
+</div>
+<h3 id="120-terminal-resistor">120 Terminal resistor<a class="headerlink" href="#120-terminal-resistor" title="Permanent link">&para;</a></h3>
+<p>If you need the 120Ω terminal resistor, you need a soldering iron, as shown below:</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/solderpads.jpg" /></p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/120ohm.jpg" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The picture shows the Serial CAN Bus Module, but it is also applicable to the I2C CAN Bus Module</p>
+</div>
+<h2 id="i2c-register"><strong><em>I2C Register</em></strong><a class="headerlink" href="#i2c-register" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>CMD</th>
+<th>Address</th>
+<th>Name</th>
+<th>Length</th>
+<th>Type</th>
+<th>Default Value</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>+++</td>
-<td>Switch from Normal mode to Config mode</td>
+<td>0x01</td>
+<td>ADDR</td>
+<td>1 Byte</td>
+<td>W</td>
+<td>0x25</td>
+<td>I2C Slaver Address</td>
 </tr>
 <tr>
-<td>AT+S=[value]</td>
-<td>Set serial baud rate</td>
+<td>0x02</td>
+<td>DNUM</td>
+<td>1 Byte</td>
+<td>R</td>
+<td>0</td>
+<td>Counter of CAN Frames</td>
 </tr>
 <tr>
-<td>AT+C=[value]</td>
-<td>Set CAN Bus baud rate</td>
+<td>0x03</td>
+<td>BAUD</td>
+<td>1 Byte</td>
+<td>W/R</td>
+<td>16(500kb/s)</td>
+<td>CAN Baud Rate</td>
 </tr>
 <tr>
-<td>AT+M=[N][EXT][value]</td>
-<td>Set mask</td>
+<td>0X30</td>
+<td>SEND</td>
+<td>1 Byte</td>
+<td>W</td>
+<td>-</td>
+<td>Send a frame</td>
 </tr>
 <tr>
-<td>AT+F=[N][EXT][value]</td>
-<td>Set filter</td>
+<td>0x40</td>
+<td>RECV</td>
+<td>1 Byte</td>
+<td>R</td>
+<td>-</td>
+<td>Receive a frame</td>
 </tr>
 <tr>
-<td>AT+Q</td>
-<td>Switch to Normal Mode</td>
+<td>0x60</td>
+<td>MASK0</td>
+<td>5 Byte</td>
+<td>W/R</td>
+<td>0</td>
+<td>Mask 0</td>
+</tr>
+<tr>
+<td>0x65</td>
+<td>MASK1</td>
+<td>5 Byte</td>
+<td>W/R</td>
+<td>0</td>
+<td>Mask 1</td>
+</tr>
+<tr>
+<td>0x70</td>
+<td>FILT0</td>
+<td>5 Byte</td>
+<td>W/R</td>
+<td>0</td>
+<td>Filter 0</td>
+</tr>
+<tr>
+<td>0x80</td>
+<td>FILT1</td>
+<td>5 Byte</td>
+<td>W/R</td>
+<td>0</td>
+<td>Filter 1</td>
+</tr>
+<tr>
+<td>0x90</td>
+<td>FILT2</td>
+<td>5 Byte</td>
+<td>W/R</td>
+<td>0</td>
+<td>Filter 2</td>
+</tr>
+<tr>
+<td>0xA0</td>
+<td>FILT3</td>
+<td>5 Byte</td>
+<td>W/R</td>
+<td>0</td>
+<td>Filter 3</td>
+</tr>
+<tr>
+<td>0xB0</td>
+<td>FILT4</td>
+<td>5 Byte</td>
+<td>W/R</td>
+<td>0</td>
+<td>Filter 4</td>
+</tr>
+<tr>
+<td>0xC0</td>
+<td>FILT5</td>
+<td>5 Byte</td>
+<td>W/R</td>
+<td>0</td>
+<td>Filter 5</td>
+</tr>
+<tr>
+<td>0X30</td>
+<td>SEND</td>
+<td>16 Byte</td>
+<td>W</td>
+<td>-</td>
+<td>Send a frame</td>
+</tr>
+<tr>
+<td>0x40</td>
+<td>RECV</td>
+<td>16 Byte</td>
+<td>R</td>
+<td>-</td>
+<td>Receive a frame</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition tip">
-<p class="admonition-title">Note</p>
-<p>All of the cmd should end with '\n' except +++</p>
-</div>
-<h3 id="set-serial-baud-rate">Set Serial Baud Rate<a class="headerlink" href="#set-serial-baud-rate" title="Permanent link">&para;</a></h3>
-<hr />
-<p>You can set the serial baud rate of the module with this command. There're 5 rates available, up to 115200 b/s.</p>
-<div class="codehilite"><pre><span></span><code>AT+S=[value]
-</code></pre></div>
-
-<table>
-<thead>
-<tr>
-<th>value</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>baud rate(b/s)</td>
-<td><strong>9600</strong></td>
-<td>19200</td>
-<td>38400</td>
-<td>57600</td>
-<td>115200</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition tip">
-<p class="admonition-title">Note</p>
-<p>Default is 9600</p>
-</div>
-<p><strong>Eg:</strong> Set serial baud rate to 57600
-<div class="codehilite"><pre><span></span><code>AT+S=3
-</code></pre></div></p>
-<p><strong>Respose</strong></p>
-<p><em>OK</em> or <em>ERROR</em></p>
-<h3 id="set-can-bus-baudrate">Set CAN Bus Baudrate<a class="headerlink" href="#set-can-bus-baudrate" title="Permanent link">&para;</a></h3>
-<hr />
-<p>You can use this command to set the rate of CAN Bus, there's 18 rates available. 
-Normally, if you want to hack your vehicle, 500k is the right one. </p>
-<div class="codehilite"><pre><span></span><code>AT+C=[value]
-</code></pre></div>
-
+<h3 id="addr-0x01">ADDR (0x01)<a class="headerlink" href="#addr-0x01" title="Permanent link">&para;</a></h3>
+<p>Set the I2C slaver address, default 0x25.</p>
+<h3 id="dnum-0x02">DNUM (0x02)<a class="headerlink" href="#dnum-0x02" title="Permanent link">&para;</a></h3>
+<p>The I2C CAN Bus Module can store up to 16 CAN Frames. The number of CAN Frames currently stored in the device can be read this register.
+If the number of CAN frames stored in the device exceeds 16, the new CAN frame will overwrite the ones that were not read in time. </p>
+<h3 id="baud-0x01">BAUD (0x01)<a class="headerlink" href="#baud-0x01" title="Permanent link">&para;</a></h3>
+<p>Set the baud rate of CAN Bus, which can be set to the following values.</p>
 <table>
 <thead>
 <tr>
@@ -1578,182 +1730,197 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 </tr>
 </tbody>
 </table>
-<div class="admonition tip note">
-<p class="admonition-title">Tip</p>
-<p>Default is 500K</p>
-</div>
-<p><strong>Eg:</strong> Set CAN BUS baud rate to 50K
-<div class="codehilite"><pre><span></span><code>AT+C=08
-</code></pre></div></p>
-<p><strong>Respose</strong></p>
-<p>OK or ERROR</p>
-<h3 id="set-mask">Set Mask<a class="headerlink" href="#set-mask" title="Permanent link">&para;</a></h3>
-<hr />
-<p>There're 2 Mask for the module, Mask0 and Mask1.</p>
-<div class="codehilite"><pre><span></span><code>AT+M=[N][EXT][value]
-</code></pre></div>
-
-<p><strong>N:</strong></p>
-<ul>
-<li>0: Mask0</li>
-<li>1: Mask1</li>
-</ul>
-<p><strong>EXT:</strong></p>
-<ul>
-<li>0: Standard Frame</li>
-<li>1: Extended Frame</li>
-</ul>
-<p><strong>value:</strong></p>
-<p>Neeed 8 bit of character, hexadecimal.</p>
-<p><strong>Eg:</strong> Set Mask1 to 0x3DF, standard frame:
-<div class="codehilite"><pre><span></span><code>AT+M=[1][0][000003DF]
-</code></pre></div></p>
-<p><strong>Respose</strong></p>
-<p>OK or ERROR</p>
-<h3 id="set-filt">Set Filt<a class="headerlink" href="#set-filt" title="Permanent link">&para;</a></h3>
-<hr />
-<p>There're 6 Mask for the module, Filt0 ~ Filt5</p>
-<div class="codehilite"><pre><span></span><code>AT+F=[N][EXT][value]
-</code></pre></div>
-
-<p><strong>N:</strong></p>
+<h3 id="send-0x30-recv-0x40">SEND (0x30), RECV (0x40)<a class="headerlink" href="#send-0x30-recv-0x40" title="Permanent link">&para;</a></h3>
+<p>Send/receive a CAN Frame, the length is 16 bytes, defined as follows: </p>
 <table>
 <thead>
 <tr>
-<th>N</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Filt</td>
-<td>Filt0</td>
-<td>Filt1</td>
-<td>Filt2</td>
-<td>Filt3</td>
-<td>Filt4</td>
-<td>Filt5</td>
-</tr>
-</tbody>
-</table>
-<p><strong>EXT:</strong></p>
-<ul>
-<li>0: Standard Frame</li>
-<li>1: Extended Frame</li>
-</ul>
-<p><strong>value:</strong></p>
-<p>Neeed 8 bit of character, hexadecimal.</p>
-<p><strong>Eg:</strong> Set Filt3 to 0x2C, standard frame:
-<div class="codehilite"><pre><span></span><code>AT+F=[1][0][0000002C]
-</code></pre></div></p>
-<p><strong>Respose</strong></p>
-<p>OK or ERROR</p>
-<h2 id="normal-mode"><strong><em>Normal Mode</em></strong><a class="headerlink" href="#normal-mode" title="Permanent link">&para;</a></h2>
-<hr />
-<p>When the module working on Normal mode, you can send and recevie data from CAN Bus. </p>
-<h3 id="send">Send<a class="headerlink" href="#send" title="Permanent link">&para;</a></h3>
-<p>You should send 14 byte of data per frame. Define as below,</p>
-<table>
-<thead>
-<tr>
-<th>bit</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-<th>9</th>
-<th>10</th>
-<th>11</th>
-<th>12</th>
+<th>Byte</th>
+<th>15</th>
+<th>14</th>
 <th>13</th>
+<th>12</th>
+<th>11</th>
+<th>10</th>
+<th>9</th>
+<th>8</th>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>define</td>
+<td>Define</td>
 <td>ID3</td>
 <td>ID2</td>
 <td>ID1</td>
 <td>ID0</td>
 <td>EXT</td>
 <td>RTR</td>
-<td>DTA0</td>
-<td>DTA1</td>
-<td>DTA2</td>
-<td>DTA3</td>
-<td>DTA4</td>
-<td>DTA5</td>
-<td>DTA6</td>
-<td>DTA7</td>
+<td>DLen</td>
+<td>D7</td>
+<td>D6</td>
+<td>D5</td>
+<td>D4</td>
+<td>D3</td>
+<td>D2</td>
+<td>D1</td>
+<td>D0</td>
+<td>CheckSum</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>ID0~ID3: CAN ID</li>
-<li>EXT: 0 for standard frame, 1 for extended frame</li>
-<li>RTR: 0 for standard frame, 1 for remote frame</li>
-<li>DTA0~DTA7: 8 byte of data</li>
+<li>ID3~ID0: CAN ID, 11/29 bit</li>
+<li>EXT: <ul>
+<li>1: Extended CAN Frame</li>
+<li>0: Standard CAN Frame</li>
 </ul>
-<p><strong>Eg.</strong></p>
-<p>Send {1, 2, 3, 4, 5, 6, 7, 8} to ID:0x3DC, Standard frame:
-<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mh">0xDC</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">}</span>
-</code></pre></div></p>
-<h3 id="recv">Recv<a class="headerlink" href="#recv" title="Permanent link">&para;</a></h3>
-<p>You will get 12 byte of data per frame. Define as below,</p>
+</li>
+<li>RTR:<ul>
+<li>1: Remote CAN Frame</li>
+<li>0: Standard CAN Frame</li>
+</ul>
+</li>
+<li>Dlen: Length of a CAN Frame</li>
+<li>D7~D0: Data of a CAN Frame</li>
+<li>CheckSum: Check sum, get it as below,</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kr">unsigned</span> <span class="kr">char</span> <span class="nf">makeCheckSum</span><span class="p">(</span><span class="kr">unsigned</span> <span class="kr">char</span> <span class="o">*</span><span class="n">dta</span><span class="p">,</span> <span class="kr">int</span> <span class="n">len</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kr">unsigned</span> <span class="kr">long</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kr">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">len</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="n">sum</span> <span class="o">+=</span> <span class="n">dta</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">sum</span> <span class="o">&gt;</span> <span class="mh">0xff</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">sum</span> <span class="o">=</span> <span class="o">~</span><span class="n">sum</span><span class="p">;</span>
+        <span class="n">sum</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">sum</span>  <span class="o">=</span> <span class="n">sum</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="maskn">MASKn<a class="headerlink" href="#maskn" title="Permanent link">&para;</a></h3>
+<p>Set Maskers, the length is 5 bytes, defined as follows: </p>
 <table>
 <thead>
 <tr>
-<th>bit</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
+<th>Byte</th>
 <th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-<th>9</th>
-<th>10</th>
-<th>11</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>define</td>
-<td>ID3</td>
-<td>ID2</td>
-<td>ID1</td>
-<td>ID0</td>
-<td>DTA0</td>
-<td>DTA1</td>
-<td>DTA2</td>
-<td>DTA3</td>
-<td>DTA4</td>
-<td>DTA5</td>
-<td>DTA6</td>
-<td>DTA7</td>
+<td>Define</td>
+<td>EXT</td>
+<td>D3</td>
+<td>D2</td>
+<td>D1</td>
+<td>D0</td>
 </tr>
 </tbody>
 </table>
 <ul>
-<li>ID0~ID3: CAN ID</li>
-<li>DTA0~DTA7: 8 byte of data</li>
+<li>EXT:<ul>
+<li>1: Extended CAN Frame</li>
+<li>0: Standard CAN Frame</li>
 </ul>
-<h2 id="arduino-library"><strong><em>Arduino Library</em></strong><a class="headerlink" href="#arduino-library" title="Permanent link">&para;</a></h2>
+</li>
+<li>D3~D0: Value for masker, 11/29</li>
+</ul>
+<h3 id="filtn">FILTn<a class="headerlink" href="#filtn" title="Permanent link">&para;</a></h3>
+<p>Set Filters, the length is 5 bytes, defined as follows: </p>
+<table>
+<thead>
+<tr>
+<th>Byte</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Define</td>
+<td>EXT</td>
+<td>D3</td>
+<td>D2</td>
+<td>D1</td>
+<td>D0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>EXT:<ul>
+<li>1: Extended CAN Frame</li>
+<li>0: Standard CAN Frame</li>
+</ul>
+</li>
+<li>D3~D0: Value for filter, 11/29</li>
+</ul>
+<h2 id="work-with-arduino"><strong><em>Work with Arduino</em></strong><a class="headerlink" href="#work-with-arduino" title="Permanent link">&para;</a></h2>
 <hr />
-<p>We provide an library for Aruino Software Serial. </p>
-<p>Please download it at <a href="https://github.com/Longan-Labs/Serial_CAN_Arduino">Github</a></p>
+<h3 id="120-terminal-resistor_1">120Ω Terminal Resistor<a class="headerlink" href="#120-terminal-resistor_1" title="Permanent link">&para;</a></h3>
+<p>As there're only 2 serial can bus device, it need the 120Ω resistor, there's a P1 on the back side, please solder P1 to get the 120Ω resistor, as shown below,</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/120ohm.jpg" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The picture shows the Serial CAN Bus Module, but it is also applicable to the I2C CAN Bus Module</p>
+</div>
+<h3 id="hardware-connection">Hardware Connection<a class="headerlink" href="#hardware-connection" title="Permanent link">&para;</a></h3>
+<p>There are 4 pins on the board, they are:</p>
+<table>
+<thead>
+<tr>
+<th>Pin Name</th>
+<th>Function</th>
+<th>Color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SCL</td>
+<td>SCL of I2C</td>
+<td>Yellow</td>
+</tr>
+<tr>
+<td>SDA</td>
+<td>SDA of I2C</td>
+<td>White</td>
+</tr>
+<tr>
+<td>VCC</td>
+<td>3.3 or 5V</td>
+<td>Red</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>Ground</td>
+<td>Black</td>
+</tr>
+</tbody>
+</table>
+<p>If you got a <a href="https://www.seeedstudio.com/Base-Shield-V2.html">Base Shield</a> from Seeedstudio, the connection is easy, like below,</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030017/connection1.jpg" /></p>
+<p>If there's no Base Shield for you, you need some dupont cable, and connect SCL/SDA to the IO of your Arduino, here we connect SCL/SDA to A5/A4:</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030017/connection2.jpg" /></p>
+<h3 id="software">Software<a class="headerlink" href="#software" title="Permanent link">&para;</a></h3>
+<p>We provide an Arduino Library for the board. </p>
+<p>Please download it at <a href="https://github.com/Longan-Labs/I2C_CAN_Arduino">Github</a></p>
 <p>There're many examples for the library, which is consist of,</p>
 <ul>
 <li><strong><em>send</em></strong> - How to send a frame to CAN Bus</li>
@@ -1762,15 +1929,149 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 <li><strong><em>set_can_baudrate</em></strong> - set can bus baudrate</li>
 <li><strong><em>set_mask_filt</em></strong> - set mask and filt of the module</li>
 </ul>
+<h3 id="test-the-board">Test the board<a class="headerlink" href="#test-the-board" title="Permanent link">&para;</a></h3>
+<p>Here we make an example to show you how the board work with CAN Bus. </p>
+<p>The connection like below, here we use <a href="https://www.longan-labs.cc/1040009.html">Longan Core 01</a> + I2C CAN bus module as a receiver, and a <a href="https://www.longan-labs.cc/1030008.html">CANBed V1</a> as CAN Bus sender.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030017/connection3.jpg" /></p>
+<p>Upload the <a href="https://github.com/Longan-Labs/I2C_CAN_Arduino/blob/main/examples/recv/recv.ino">recv example</a> to Longan Core 01</p>
+<div class="codehilite"><pre><span></span><code><span class="cm">/*  receive a frame from can bus</span>
+<span class="cm">    support@longan-labs.cc</span>
+
+<span class="cm">    CAN Baudrate,</span>
+
+<span class="cm">    #define CAN_5KBPS           1</span>
+<span class="cm">    #define CAN_10KBPS          2</span>
+<span class="cm">    #define CAN_20KBPS          3</span>
+<span class="cm">    #define CAN_25KBPS          4 </span>
+<span class="cm">    #define CAN_31K25BPS        5</span>
+<span class="cm">    #define CAN_33KBPS          6</span>
+<span class="cm">    #define CAN_40KBPS          7</span>
+<span class="cm">    #define CAN_50KBPS          8</span>
+<span class="cm">    #define CAN_80KBPS          9</span>
+<span class="cm">    #define CAN_83K3BPS         10</span>
+<span class="cm">    #define CAN_95KBPS          11</span>
+<span class="cm">    #define CAN_100KBPS         12</span>
+<span class="cm">    #define CAN_125KBPS         13</span>
+<span class="cm">    #define CAN_200KBPS         14</span>
+<span class="cm">    #define CAN_250KBPS         15</span>
+<span class="cm">    #define CAN_500KBPS         16</span>
+<span class="cm">    #define CAN_666KBPS         17</span>
+<span class="cm">    #define CAN_1000KBPS        18</span>
+<span class="cm">*/</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;Wire.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#include</span> <span class="cpf">&quot;Longan_I2C_CAN_Arduino.h&quot;</span><span class="cp"></span>
+
+
+<span class="n">I2C_CAN</span> <span class="nf">CAN</span><span class="p">(</span><span class="mh">0x25</span><span class="p">);</span>                                    <span class="c1">// Set I2C Address</span>
+
+<span class="kr">void</span> <span class="nb">setup</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+    <span class="c1">//while(!Serial);</span>
+
+    <span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;begin to init can&quot;</span><span class="p">);</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">CAN_OK</span> <span class="o">!=</span> <span class="n">CAN</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">CAN_500KBPS</span><span class="p">))</span>    <span class="c1">// init can bus : baudrate = 500k</span>
+    <span class="p">{</span>
+        <span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;CAN BUS FAIL!&quot;</span><span class="p">);</span>
+        <span class="nf">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;CAN BUS OK!&quot;</span><span class="p">);</span>
+    <span class="nf">pinMode</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="kr">OUTPUT</span><span class="p">);</span>
+<span class="p">}</span>
+
+
+<span class="kr">void</span> <span class="nb">loop</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kr">unsigned</span> <span class="kr">char</span> <span class="n">len</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kr">unsigned</span> <span class="kr">char</span> <span class="n">buf</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="n">CAN_MSGAVAIL</span> <span class="o">==</span> <span class="n">CAN</span><span class="p">.</span><span class="n">checkReceive</span><span class="p">())</span>            <span class="c1">// check if data coming</span>
+    <span class="p">{</span>
+        <span class="n">CAN</span><span class="p">.</span><span class="n">readMsgBuf</span><span class="p">(</span><span class="o">&amp;</span><span class="n">len</span><span class="p">,</span> <span class="n">buf</span><span class="p">);</span>    <span class="c1">// read data,  len: data length, buf: data buf</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">len</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kr">unsigned</span> <span class="kr">long</span> <span class="n">canId</span> <span class="o">=</span> <span class="n">CAN</span><span class="p">.</span><span class="n">getCanId</span><span class="p">();</span>
+
+            <span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;Get ID: &quot;</span><span class="p">);</span>
+            <span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">canId</span><span class="p">,</span> <span class="n">HEX</span><span class="p">);</span>
+
+            <span class="k">for</span><span class="p">(</span><span class="kr">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">len</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>    <span class="c1">// print the data</span>
+            <span class="p">{</span>
+                <span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">buf</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">HEX</span><span class="p">);</span>
+                <span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nf">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+    <span class="nf">blink</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kr">void</span> <span class="nf">blink</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kr">static</span> <span class="kr">unsigned</span> <span class="kr">long</span> <span class="n">timer_s</span> <span class="o">=</span> <span class="nf">millis</span><span class="p">();</span>
+    <span class="k">if</span><span class="p">(</span><span class="nf">millis</span><span class="p">()</span><span class="o">-</span><span class="n">timer_s</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)</span><span class="k">return</span><span class="p">;</span>
+    <span class="n">timer_s</span> <span class="o">=</span> <span class="nf">millis</span><span class="p">();</span>
+    <span class="nf">digitalWrite</span><span class="p">(</span><span class="mi">13</span><span class="p">,</span> <span class="mi">1</span><span class="o">-</span><span class="nf">digitalRead</span><span class="p">(</span><span class="mi">13</span><span class="p">));</span>
+<span class="p">}</span>
+<span class="c1">// END FILE</span>
+</code></pre></div>
+
+<p>Then, upload <a href="https://github.com/Longan-Labs/Aruino_CAN_BUS_MCP2515/tree/master/examples/send">send example</a> to CANBed. </p>
+<p>Open Serial monitor of Longan Core 01, you will get the can frame from CAN Bus.</p>
+<h2 id="working-standalone"><strong><em>Working Standalone</em></strong><a class="headerlink" href="#working-standalone" title="Permanent link">&para;</a></h2>
+<hr />
+<p>For V1.2 and after, you can program the  on-board MCU (Atmega168PA) with Arduino IDE.</p>
+<p>First, you need a USB to Serial board, something like the <a href="https://www.longan-labs.cc/1016006.html">Programmer Card</a></p>
+<p>Here we will take Programmer Card as an example:</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbus/serial_can_program.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The picture shows the Serial CAN Bus Module, but it is also applicable to the I2C CAN Bus Module</p>
+</div>
+<p>Then, we need to setup your Arduino IDE. </p>
+<p>Start the Arduino IDE.</p>
+<p>Copy and paste the link below into the <strong>Additional Boards</strong> Manager URLs option in the <strong>Arduino IDE preferences</strong> (<strong>File &gt; Preferences</strong>).</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1013001/preferences.png" /></p>
+<p><a href="https://raw.githubusercontent.com/Longan-Labs/Longan-Board/master/package_longan_boards_index.json">https://raw.githubusercontent.com/Longan-Labs/Longan-Board/master/package_longan_boards_index.json</a></p>
+<p>The Longan AVR boards supplied package includes supports for Longan Card, Carduino 328, Carduino 32U4.</p>
+<p>Once done, click <strong>OK</strong> button to save the new preference settings.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1013001/arduino-ide-setup-5.png" /></p>
+<p>Now open the Boards Manager by navigating to the <strong>Tools -&gt; Board</strong> menu.</p>
+<p>Select <strong>All</strong> from the Type drop-down menu. Then type <strong>longan</strong> in the top search bar. While typing, you will see the <strong>Longan AVR package</strong>.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1013001/arduino-ide-setup-7.png" /></p>
+<p>Click on the <strong>Longan AVR by Longan Labs</strong> and then click on <strong>Install</strong> button.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1013001/arduino-ide-setup-8.png" /></p>
+<p>Once installed, close the <strong>Boards Manager</strong> window.</p>
+<p>Then you can find <strong><em>Serial CAN Bus Module</em></strong> in the board list.</p>
+<h2 id="faq"><strong><em>FAQ</em></strong><a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">The RX and TX leds light up instead of blinking</p>
+<ul>
+<li>Please check the baudrate of CAN Bus</li>
+<li>If the serial can bus module is in the end, the 120Ω terminal resistor is needed, please soder P1 on the back side of PCBA</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">How to find the tech support</p>
+<p>Please feel free to contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#110;&#101;&#121;&#46;&#115;&#117;&#105;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#106;&#111;&#110;&#101;&#121;&#46;&#115;&#117;&#105;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> if you need more help.</p>
+</div>
 <h2 id="schematic-online-viewer"><strong><em>Schematic Online Viewer</em></strong><a class="headerlink" href="#schematic-online-viewer" title="Permanent link">&para;</a></h2>
-<div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/Eagle_Serial_CAN_Lite/archive/master.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/I2C_CAN_Schematics/archive/refs/heads/master.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 <h2 id="reference"><strong><em>Reference</em></strong><a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
-<li><a href="https://github.com/Longan-Labs/Serial_CAN_Arduino">Arduino Library</a></li>
-<li><a href="https://github.com/Longan-Labs/Eagle_Serial_CAN_Lite/archive/master.zip">Schematics in Eagle File</a></li>
+<li><a href="https://github.com/Longan-Labs/I2C_CAN_Arduino">Arduino Library</a></li>
+<li><a href="https://github.com/Longan-Labs/I2C_CAN_Firmware">Firmware</a></li>
+<li><a href="https://www.longan-labs.cc/1030017.html">How to get ONE</a></li>
+<li><a href="https://github.com/Longan-Labs/I2C_CAN_Schematics/archive/refs/heads/master.zip">Schematics in Eagle File</a></li>
 </ul>
                 
                   
@@ -1793,7 +2094,7 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../1030003/" title="OBD-II CAN Bus GPS Dev Kit" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../1030001/" title="Serial CAN Bus Module" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1802,19 +2103,19 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                OBD-II CAN Bus GPS Dev Kit
+                Serial CAN Bus Module
               </span>
             </div>
           </a>
         
         
-          <a href="../1030012/" title="CAN-FD Shield" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../1030008/" title="CANBed V1" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                CAN-FD Shield
+                CANBed V1
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
