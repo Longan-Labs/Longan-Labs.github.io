@@ -416,6 +416,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#version-track" class="md-nav__link">
+    Version Track
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#canbed-family" class="md-nav__link">
     CANBed Family
   </a>
@@ -568,6 +575,40 @@
   <a href="#schematic-online-viewer" class="md-nav__link">
     Schematic Online Viewer
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v10" class="md-nav__link">
+    V1.0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v11" class="md-nav__link">
+    V1.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v12" class="md-nav__link">
+    V1.2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v12c" class="md-nav__link">
+    V1.2c
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1185,6 +1226,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#version-track" class="md-nav__link">
+    Version Track
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#canbed-family" class="md-nav__link">
     CANBed Family
   </a>
@@ -1338,6 +1386,40 @@
     Schematic Online Viewer
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v10" class="md-nav__link">
+    V1.0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v11" class="md-nav__link">
+    V1.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v12" class="md-nav__link">
+    V1.2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v12c" class="md-nav__link">
+    V1.2c
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1369,9 +1451,26 @@
                 <h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <hr />
 <p><a href=""><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030008/db9.jpg" /></a></p>
+<p><a href="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANbed.pdf">Docs in PDF</a></p>
 <p><strong>CAN Bus</strong> is a common industrial bus because of its long travel distance, medium communication speed and high reliability. It is commonly found on modern machine tools, such as an automotive diagnostic bus.</p>
 <p>This CANBed adopts <strong>MCP2515</strong> CAN Bus controller with SPI interface and <strong>MCP2551</strong> CAN transceiver to achieve the CAN-BUS capability. With an <strong>OBD-II</strong> converter cable added on and the OBD-II library imported, you are ready to build an onboard diagnostic device.</p>
 <p>What's more, the is an Atmega32U4 with <strong>Arduino Leonardo</strong> bootloader on the board, you can use Arduino IDE to program the board easily. </p>
+<h3 id="version-track">Version Track<a class="headerlink" href="#version-track" title="Permanent link">&para;</a></h3>
+<p>V1.0: Initial version</p>
+<p>V1.1:</p>
+<ul>
+<li>Change package of Atmega32U4 from MU to AU</li>
+<li>Change package of the 16M crystal SMD5032 to DIP</li>
+</ul>
+<p>V1.2:</p>
+<ul>
+<li>Change package of Atmega32U4 from AU to MU</li>
+<li>Change package of the 16M crystal from DIP to SMD3215 </li>
+</ul>
+<p>V1.2c:</p>
+<ul>
+<li>There are two packages on the PCB at the same time, and AU or MU packages can be selectively used during production. You may receive one of the MU or AU packages. The difference between the two is only the package. The functions and performance are exactly the same. Please don't worry.</li>
+</ul>
 <h3 id="canbed-family">CANBed Family<a class="headerlink" href="#canbed-family" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1452,7 +1551,7 @@
 <h2 id="can-bus-products-list-of-longan-labs"><strong><em>CAN BUS PRODUCTS LIST OF LONGAN LABS</em></strong><a class="headerlink" href="#can-bus-products-list-of-longan-labs" title="Permanent link">&para;</a></h2>
 <hr />
 <p><a href="https://www.longan-labs.cc/blog/post/can-bus-product-summary/"><img alt="" src="https://www.longan-labs.cc/media/wysiwyg/CAN_BUS_PRODUCT.png" /></a></p>
-<p>We have made a lot of can bus products, you can get more information through the following list, so as to choose a product suitable for you.</p>
+<p>Logan-Labs have manufactured many different Can-Bus products. You can get more information through the following list, and choose a suitable product.</p>
 <table>
 <thead>
 <tr>
@@ -1557,6 +1656,7 @@
 </table>
 <h2 id="features"><strong><em>Features</em></strong><a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <hr />
+<p><img alt="" src="https://www.longan-labs.cc/media/wysiwyg/CAN-Bus/1030008-D-2.jpg" /></p>
 <ul>
 <li>Implements CAN V2.0B at up to 1 Mb/s</li>
 <li>Industrial standard 9 pin sub-D connector or 4PIN Terminal.</li>
@@ -1613,17 +1713,25 @@
 <h2 id="hardware-overview"><strong><em>Hardware Overview</em></strong><a class="headerlink" href="#hardware-overview" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="part-list">Part List<a class="headerlink" href="#part-list" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In consideration of convenient transportation and cost reduction, there are some materials that you need to solder by hand. If you don't have soldering iron tools, you can also ask our engineers to do it for you. After you place an order, email info@longan-labs.</p>
+</div>
 <ul>
 <li>CANBed PCBA</li>
 <li>sub-D connector</li>
 <li>4PIN Terminal</li>
-<li>4PIN 2.0 Connector x 2</li>
+<li>4PIN HY2.0 Connector x 2</li>
 <li>9x2 2.54 Header x 1</li>
 <li>3x3 2.54 Header x 1</li>
 </ul>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030008/list.jpg" /></p>
+<p><img alt="" src="https://www.longan-labs.cc/media/wysiwyg/CAN-Bus/1030008-D-01.jpg" /></p>
 <h3 id="pin-out">Pin out<a class="headerlink" href="#pin-out" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030008/hw.png" /></p>
+<p><a href="https://www.longan-labs.cc/media/wysiwyg/CAN-Bus/1030008-D-3-01.jpg"><img alt="" src="https://www.longan-labs.cc/media/wysiwyg/CAN-Bus/1030008-D-3-01.jpg" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a href="https://www.longan-labs.cc/media/wysiwyg/CAN-Bus/1030008-D-3-01.jpg">Click</a> to get larger image.</p>
+</div>
 <p><strong>1.9x2 IO Pin OUT:</strong> </p>
 <p>The IO of Atmega32U4 is list out here. </p>
 <p><strong>2.Atmega32U4:</strong></p>
@@ -1631,7 +1739,7 @@
 <p><strong>2.Reset Button:</strong></p>
 <p>Reset the on-board Atmega chip.</p>
 <p><strong>3.Micro USB connector for programming</strong></p>
-<p><strong>4. ICSP Header for uploading bootloader</strong></p>
+<p><strong>4. SPI Header for uploading bootloader</strong></p>
 <p><strong>5.CAN RX/TX Indicator</strong></p>
 <p><strong>6.sub-D connector or Terminal for CAN Bus</strong></p>
 <p><em>D-Sub CANbus PinOut</em></p>
@@ -1706,9 +1814,9 @@
 <hr />
 <h3 id="ide-and-driver"><strong><em>IDE and Driver</em></strong><a class="headerlink" href="#ide-and-driver" title="Permanent link">&para;</a></h3>
 <p>There's Arduino leonardo bootloader in the board. </p>
-<p>Click to get the <a href="https://www.arduino.cc/en/Main/Software">latest Arduino IDE</a>. </p>
+<p>Click this link to get the <a href="https://www.arduino.cc/en/Main/Software">latest Arduino IDE</a>. </p>
 <p>There's Arduino Leonardo driver in the folder: Arduino/drivers.</p>
-<p>After the IDE is installed, please select <strong>Arduino Leonardo</strong> in at Tools &gt; Board</p>
+<p>After the IDE is installed, please select <strong>Arduino Leonardo</strong> at Tools &gt; Board</p>
 <h3 id="arduino-code"><strong><em>Arduino Code</em></strong><a class="headerlink" href="#arduino-code" title="Permanent link">&para;</a></h3>
 <hr />
 <p>We provide an <a href="https://github.com/Longan-Labs/CANBed">Arduino library for CANBed</a>. </p>
@@ -1813,15 +1921,15 @@ CAN.sendMsgBuf(0x00, 0, 8, stmp); //send out the message &#39;stmp&#39; to the b
 <h2 id="faq"><strong><em>FAQ</em></strong><a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
 <hr />
 <div class="admonition tip">
-<p class="admonition-title">I can't upload code to CANBed FD</p>
+<p class="admonition-title">I can't upload code to CANBed</p>
 <p>If your PC recognize the COM port, please try pressing the reset button, then click on the Upload button in Arduino IDE, when the IDE shows compile done, release the reset button immediately.*</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">The RX/TX led light up and never turn off</p>
 <ul>
 <li>Check if the baudrate of CAN Bus is setting correct</li>
-<li>Try turning on/off the switch for the terminal resistor</li>
-<li>Cehck if CANH and CANL is connected correct</li>
+<li>Try turning on/off the switch for the 120Ω terminal resistor</li>
+<li>Cehck if CANH and CANL is well connected</li>
 </ul>
 </div>
 <div class="admonition tip">
@@ -1830,15 +1938,30 @@ CAN.sendMsgBuf(0x00, 0, 8, stmp); //send out the message &#39;stmp&#39; to the b
 </div>
 <h2 id="schematic-online-viewer"><strong><em>Schematic Online Viewer</em></strong><a class="headerlink" href="#schematic-online-viewer" title="Permanent link">&para;</a></h2>
 <hr />
-<div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBedV1.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<h3 id="v10">V1.0<a class="headerlink" href="#v10" title="Permanent link">&para;</a></h3>
+<div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/EagleCANBed/raw/master/CANBed_V1.0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
+<h3 id="v11">V1.1<a class="headerlink" href="#v11" title="Permanent link">&para;</a></h3>
+<div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/EagleCANBed/raw/master/CANBed_V1.1.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+<h3 id="v12">V1.2<a class="headerlink" href="#v12" title="Permanent link">&para;</a></h3>
+<div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/EagleCANBed/raw/master/CANBed_V1.2.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+<h3 id="v12c">V1.2c<a class="headerlink" href="#v12c" title="Permanent link">&para;</a></h3>
+<p><div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/EagleCANBed/raw/master/CANBed_V1.2c.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div></p>
 <h2 id="reference"><strong><em>Reference</em></strong><a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
+<li><a href="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANbed.pdf">Docs in PDF</a></li>
 <li><a href="https://github.com/Longan-Labs/Aruino_CAN_BUS_MCP2515">Arduino Library</a></li>
-<li><a href="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBedV1.zip">Schematics in Eagle</a></li>
-<li><a href="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBedV1/CANBed%20V1.pdf">Schematics in PDF</a></li>
+<li><a href="https://github.com/Longan-Labs/EagleCANBed/raw/master/CANBed_V1.0.zip">V1.0 Eagle File</a></li>
+<li><a href="https://github.com/Longan-Labs/EagleCANBed/raw/master/CANBed_V1.1.zip">V1.1 Eagle File</a></li>
+<li><a href="https://github.com/Longan-Labs/EagleCANBed/raw/master/CANBed_V1.2.zip">V1.2 Eagle File</a></li>
+<li><a href="https://github.com/Longan-Labs/EagleCANBed/raw/master/CANBed_V1.2c.zip">V1.2c Eagle File</a></li>
 <li><a href="https://www.mouser.com/datasheet/2/268/MCP2515-Stand-Alone-CAN-Controller-with-SPI-200018-708845.pdf">MCP2515 Datasheet</a></li>
 <li><a href="https://www.mouser.com/datasheet/2/268/20001667G-1115479.pdf">MCP2551 Datasheet</a></li>
 </ul>
