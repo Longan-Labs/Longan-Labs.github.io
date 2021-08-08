@@ -424,6 +424,13 @@
     Introduction
   </a>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-ideas" class="md-nav__link">
+    Application Ideas
+  </a>
+  
     <nav class="md-nav">
       <ul class="md-nav__list">
         
@@ -488,8 +495,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
   </a>
   
     <nav class="md-nav">
@@ -503,14 +510,28 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#arduino-code" class="md-nav__link">
-    Arduino Code
+  <a href="#download-the-install-the-library" class="md-nav__link">
+    Download the install the library
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-the-code-and-upload-it-to-the-board" class="md-nav__link">
+    Open the code and upload it to the board
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arduino-library" class="md-nav__link">
+    Arduino Library
+  </a>
   
 </li>
       
@@ -525,6 +546,26 @@
   <a href="#schematic-online-viewer" class="md-nav__link">
     Schematic Online Viewer
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v11-version" class="md-nav__link">
+    V1.1 Version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v11c-version" class="md-nav__link">
+    V1.1C Version
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1126,6 +1167,13 @@
     Introduction
   </a>
   
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-ideas" class="md-nav__link">
+    Application Ideas
+  </a>
+  
     <nav class="md-nav">
       <ul class="md-nav__list">
         
@@ -1190,8 +1238,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
   </a>
   
     <nav class="md-nav">
@@ -1205,14 +1253,28 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#arduino-code" class="md-nav__link">
-    Arduino Code
+  <a href="#download-the-install-the-library" class="md-nav__link">
+    Download the install the library
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-the-code-and-upload-it-to-the-board" class="md-nav__link">
+    Open the code and upload it to the board
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arduino-library" class="md-nav__link">
+    Arduino Library
+  </a>
   
 </li>
       
@@ -1227,6 +1289,26 @@
   <a href="#schematic-online-viewer" class="md-nav__link">
     Schematic Online Viewer
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#v11-version" class="md-nav__link">
+    V1.1 Version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v11c-version" class="md-nav__link">
+    V1.1C Version
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1259,10 +1341,24 @@
                 <h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <hr />
 <p><a href=""><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030009/db9.jpg" /></a></p>
-<p><strong>CAN Bus</strong> is a common industrial bus because of its long travel distance, medium communication speed and high reliability. It is commonly found on modern machine tools, such as an automotive diagnostic bus.</p>
-<p>This CANBed-FD adopts <strong>MCP2517FD</strong> CAN Bus controller with SPI interface and <strong>MCP2542FD</strong> CAN transceiver to achieve the CAN-BUS capability. With an <strong>OBD-II</strong> converter cable added on and the OBD-II library imported, you are ready to build an onboard diagnostic device.</p>
-<p>What's more, the is an Atmega32U4 with <strong>Arduino Leonardo</strong> bootloader on the board, you can use Arduino IDE to program the board easily. </p>
+<p>CANBed FD is a CANBed FD dev board. CANBed FD contains an Atmega32U4 microcontroller, which has <strong>32KB</strong> of Flash space and <strong>2.5KB</strong> of RAM space. The operating frequency is <strong>16MHz</strong>, which can meet most embedded applications. There's <strong>Arduino Leonardo bootloader</strong> inside the <strong>Atmega32U4</strong>. If you have used the Arduino IDE, programming will not be a problem for you. You can also use AVR Studio for development, we provide ICSP interface.</p>
+<p>CANBed FD uses <strong>MCP2517FD</strong> as CAN controller and <strong>MCP2542</strong> (<em>MCP2557</em>) as CAN receiver, chich are high-performance CAN Bus chip, can work in both CAN 2.0 and CAN FD protocols at the same time. There is a Micro USB interface on the board, through which you can program the board or supply power to the board.There are one I2C, one UART, one SPI interface, 3 analog input interfaces and 8 digital IO on the board.</p>
+<p>We use a flexible way for CAN interface. You can use 4PIN Terminal or DB9 interface. DB9 interface uses OBD-II mode by default. You can also configure CAN Open mode on the hardware. The voltage input range of the CAN interface is 9-28V, which can provide a stable 5V/1A output.</p>
+<p>If you want to use this board to develop OBD related applications, click to get a <a href="https://www.longan-labs.cc/2020011.html">DB9 to OBD-II cable</a>. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For transportation considerations, the plug-in components of the kit are not soldered by default. After you receive the kit, you need to do some soldering work. If necessary, you can also contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#102;&#111;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#105;&#110;&#102;&#111;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> after purchasing the board, then we can send it to you after the board is soldered well.</p>
+</div>
+<h2 id="application-ideas"><strong><em>Application Ideas</em></strong><a class="headerlink" href="#application-ideas" title="Permanent link">&para;</a></h2>
+<p>With CANBed FD Dev board, you can，</p>
+<ol>
+<li>Used to learn CAN Bus and CAN FD communication</li>
+<li>Used to build product prototypes. After you complete the product prototype, we can help you integrate it into a product and assist you in production</li>
+<li>Used to read the data from the car</li>
+<li>As a part of your product, you don't need to design the MCU and CAN Bus separately, only need to complete other hardware design</li>
+</ol>
 <h3 id="canbed-family">CANBed Family<a class="headerlink" href="#canbed-family" title="Permanent link">&para;</a></h3>
+<p>Currently we have 4 CANBeds, you can choose the right one according to your needs.</p>
 <table>
 <thead>
 <tr>
@@ -1325,10 +1421,10 @@
 </tr>
 <tr>
 <td><strong>PRICE</strong></td>
-<td>$14.9</td>
-<td>$17.9</td>
-<td>$16.9</td>
 <td>$19.9</td>
+<td>$24.9</td>
+<td>$19.9</td>
+<td>$24.9</td>
 </tr>
 <tr>
 <td><strong>LINK</strong></td>
@@ -1448,12 +1544,13 @@
 <h2 id="features"><strong><em>Features</em></strong><a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
+<li>Arduino Leonardo bootloader</li>
 <li>Work at CAN-FD and CAN 2.0</li>
 <li>Industrial standard 9 pin sub-D connector or 4PIN Terminal.</li>
 <li>OBD-II and CAN standard pinout selectable at sub-D connector</li>
-<li>2x4Pin Connector compatable with Grove system from Seeedstudio</li>
+<li>2x4Pin Connector compatable with Grove system from <a href="https://www.seeedstudio.com/">Seeedstudio</a></li>
 <li>SPI Interface up to 10 MHz</li>
-<li>Power input from 7-28V</li>
+<li>Power input from 9-28V</li>
 <li>Output Current @ 5V: 1A</li>
 </ul>
 <h2 id="specifications"><strong><em>Specifications</em></strong><a class="headerlink" href="#specifications" title="Permanent link">&para;</a></h2>
@@ -1492,13 +1589,17 @@
 </tr>
 <tr>
 <td>Input Interface</td>
-<td>sub-D</td>
+<td>sub-D or 4PIN Terminal</td>
 </tr>
 </tbody>
 </table>
 <h2 id="hardware-overview"><strong><em>Hardware Overview</em></strong><a class="headerlink" href="#hardware-overview" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="part-list">Part List<a class="headerlink" href="#part-list" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In consideration of convenient transportation and cost reduction, there are some materials that you need to solder by hand. If you don't have soldering iron tools, you can also ask our engineers to do it for you. After you place an order, email info@longan-labs.</p>
+</div>
 <ul>
 <li>CANBed-FD PCBA</li>
 <li>sub-D connector</li>
@@ -1509,92 +1610,146 @@
 </ul>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030009/can_bed_fd_partlist.jpg" /></p>
 <h3 id="pin-out">Pin out<a class="headerlink" href="#pin-out" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030008/hw.png" /></p>
-<p><strong>1.9x2 IO Pin OUT:</strong> </p>
-<p>The IO of Atmega32U4 is list out here. </p>
-<p><strong>2.Atmega32U4:</strong></p>
-<p>The master of the entire module, mainly used to store data on the TF card or transfer data to the computer through the type C cable. In addition, since it's arduino compatible, you can use it to implement some simple controls, such as triggering a buzzer alarm when the speed exceeds a certain value.</p>
-<p><strong>2.Reset Button:</strong></p>
-<p>Reset the on-board Atmega chip.</p>
-<p><strong>3.Micro USB connector for programming</strong></p>
-<p><strong>4. ICSP Header for uploading bootloader</strong></p>
-<p><strong>5.CAN RX/TX Indicator</strong></p>
-<p><strong>6.sub-D connector or Terminal for CAN Bus</strong></p>
-<p><em>D-Sub CANbus PinOut</em></p>
+<p><img alt="" src="https://www.longan-labs.cc/media/wysiwyg/CAN-Bus/1030008-D-3-01.jpg" /></p>
+<p><strong>1. GPIO - 9x2 I/O Pin OUT:</strong> </p>
+<p>The I/O of Atmega32U4 is list out here, which is consist of,</p>
+<ul>
+<li>1 x UART (Serial1)</li>
+<li>1 x I2C</li>
+<li>4 x Analog Input(can be used us Digital IO)</li>
+<li>8 x Digital I/O</li>
+</ul>
+<p><strong>2. Micro USB connector for programming</strong></p>
+<p>If you use Arduino IDE program the board, you need a micro USB cable to connect the board to PC.</p>
+<p><strong>3. SPI - ICSP connector</strong></p>
+<p>If you use AVR Studio to program the board, you can use this ICSP connector, and it can be used as SPI interface. </p>
+<p><strong>4. CAN RX/TX Indicator</strong></p>
+<p>When CAN Bus is transmitting data, these two leds blink. </p>
+<p><strong>5. DB9 connector or Terminal for CAN Bus</strong></p>
+<p>DB9 interface uses OBD-II mode by default, as shown below,</p>
 <table>
 <thead>
 <tr>
 <th>pin#</th>
-<th>Signal names</th>
-<th>Signal Description</th>
+<th>OBD(default)</th>
+<th>CAN OPEN</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>Reserved</td>
-<td>Upgrade Path</td>
+<td>GND</td>
+<td>N.C</td>
 </tr>
 <tr>
 <td>2</td>
+<td>GND</td>
 <td>CAN_L</td>
-<td>Dominant Low</td>
 </tr>
 <tr>
 <td>3</td>
-<td>CAN_GND</td>
-<td>Ground</td>
+<td>CANH</td>
+<td>GND</td>
 </tr>
 <tr>
 <td>4</td>
-<td>Reserved</td>
-<td>Upgrade Path</td>
+<td>N.C</td>
+<td>N.C</td>
 </tr>
 <tr>
 <td>5</td>
-<td>CAN_SHLD</td>
-<td>Shiled, Optional</td>
+<td>CANL</td>
+<td>GND</td>
 </tr>
 <tr>
 <td>6</td>
-<td>GND</td>
-<td>Ground，Optional</td>
+<td>N.C</td>
+<td>N.C</td>
 </tr>
 <tr>
 <td>7</td>
+<td>N.C</td>
 <td>CAN_H</td>
-<td>Dominant High</td>
 </tr>
 <tr>
 <td>8</td>
-<td>Reserved</td>
-<td>Upgrade Path</td>
+<td>N.C</td>
+<td>N.C</td>
 </tr>
 <tr>
 <td>9</td>
 <td>CAN_V+</td>
-<td>Power, Optional</td>
+<td>CAN_V+</td>
 </tr>
 </tbody>
 </table>
-<p><strong>7.Switch for the 120Ω terminal resistor for CAN Bus</strong></p>
+<p><strong>6. Switch for the 120Ω terminal resistor for CAN Bus</strong></p>
 <p style="text-align:center"><img src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/HS_CAN_Termination.gif" /></p>
 
 <p>If you use this board on the end of the CAN bus, please put this switch to 120Ω. For more detail about the CAN bus protocol, please refer to the
 <a href="http://www.ni.com/white-paper/9759/en/">NI CAN Physical Layer and Termination Guide</a></p>
-<p><strong>8.Grove connector for UART</strong></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p><strong>7. Grove connector for UART</strong></p>
 <p>Use Serial1 in the code</p>
-</div>
-<p><strong>9.Grove connector for I2C</strong></p>
-<h2 id="usage"><strong><em>Usage</em></strong><a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<p><strong>8.Grove connector for I2C</strong></p>
+<p><strong>9. Reset</strong></p>
+<p>Click to reset the board.</p>
+<h2 id="getting-started"><strong><em>Getting Started</em></strong><a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
 <hr />
+<p>Here we use the Arduino IDE as a demonstration, through this chapter you can learn how to get started with this board.
+You need a micro USB cableto connect the CANBed FD Dev board to the computer.</p>
 <h3 id="ide-and-driver"><strong><em>IDE and Driver</em></strong><a class="headerlink" href="#ide-and-driver" title="Permanent link">&para;</a></h3>
 <p>There's Arduino leonardo bootloader in the board. </p>
 <p>Click to get the <a href="https://www.arduino.cc/en/Main/Software">latest Arduino IDE</a>. </p>
 <p>There's Arduino Leonardo driver in the folder: Arduino/drivers.</p>
-<h3 id="arduino-code"><strong><em>Arduino Code</em></strong><a class="headerlink" href="#arduino-code" title="Permanent link">&para;</a></h3>
+<h3 id="download-the-install-the-library"><strong><em>Download the install the library</em></strong><a class="headerlink" href="#download-the-install-the-library" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/Longan-Labs/Longan_CANFD">Click</a> to get the Arduino Library for CANBed FD Dev board. </p>
+<p>In the Arduino IDE, navigate to Sketch &gt; Include Library &gt; Add .ZIP Library to install the Library. </p>
+<h3 id="open-the-code-and-upload-it-to-the-board"><strong><em>Open the code and upload it to the board</em></strong><a class="headerlink" href="#open-the-code-and-upload-it-to-the-board" title="Permanent link">&para;</a></h3>
+<p>Open the Arduino IDE, here we open the CAN20_Send example. This example can continuously send data to the CAN Bus.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// MCP2517/8 send a CAN frame</span>
+<span class="c1">// CAN FD Shield - https://www.longan-labs.cc/1030012.html</span>
+<span class="c1">// CANBed FD - https://www.longan-labs.cc/1030009.html</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;SPI.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;mcp2518fd_can.h&quot;</span><span class="cp"></span>
+
+<span class="c1">// pins for CAN-FD Shield</span>
+<span class="c1">//const int SPI_CS_PIN = 9;</span>
+<span class="c1">//const int CAN_INT_PIN = 2;</span>
+
+<span class="c1">// pins for CANBed FD</span>
+<span class="kr">const</span> <span class="kr">int</span> <span class="n">SPI_CS_PIN</span> <span class="o">=</span> <span class="mi">17</span><span class="p">;</span>
+<span class="kr">const</span> <span class="kr">int</span> <span class="n">CAN_INT_PIN</span> <span class="o">=</span> <span class="mi">7</span><span class="p">;</span>
+
+<span class="n">mcp2518fd</span> <span class="nf">CAN</span><span class="p">(</span><span class="n">SPI_CS_PIN</span><span class="p">);</span> <span class="c1">// Set CS pin</span>
+
+<span class="kr">void</span> <span class="nb">setup</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+    <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="nf">Serial</span><span class="p">){};</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">CAN_OK</span> <span class="o">!=</span> <span class="n">CAN</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">CAN_500KBPS</span><span class="p">))</span> <span class="p">{</span>             <span class="c1">// init can bus : baudrate = 500k</span>
+        <span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;CAN init fail, retry...&quot;</span><span class="p">);</span>
+        <span class="nf">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;CAN init ok!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">unsigned</span> <span class="kr">char</span> <span class="n">stmp</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">};</span>
+
+<span class="kr">void</span> <span class="nb">loop</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="n">CAN</span><span class="p">.</span><span class="n">sendMsgBuf</span><span class="p">(</span><span class="mh">0x01</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">stmp</span><span class="p">);</span>
+    <span class="nf">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+    <span class="n">CAN</span><span class="p">.</span><span class="n">sendMsgBuf</span><span class="p">(</span><span class="mh">0x04</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">stmp</span><span class="p">);</span>
+    <span class="nf">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>                       <span class="c1">// send data per 100ms</span>
+    <span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;CAN BUS sendMsgBuf ok!&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// END FILE</span>
+</code></pre></div>
+
+<p>You need to select <strong><em>Arduino Leonardo</em></strong> on the Arduino IDE boards and select the correct COM port. Then you can burn the program to the CANBed FD Dev board by pressing the Upolading button on Arduino IDE.</p>
+<h2 id="arduino-library"><strong><em>Arduino Library</em></strong><a class="headerlink" href="#arduino-library" title="Permanent link">&para;</a></h2>
 <hr />
 <p>We provide an <a href="https://github.com/Longan-Labs/Longan_CANFD">Arduino library for CANBed-FD</a>. </p>
 <div class="admonition note">
@@ -1603,11 +1758,20 @@
 </div>
 <p>There're many examples for the library, which is consist of,</p>
 <ul>
-<li><strong><em>CAN20_SEND</em></strong> - How to send a frame to CAN Bus at CAN 2.0</li>
-<li><strong><em>CAN20_RECV_INT</em></strong> - How to recv a frame from CAN Bus at CAN 2.0 with interrupt</li>
-<li><strong><em>CANFD_SEND</em></strong> - How to send a CAN-FD frame to CAN Bus</li>
-<li><strong><em>CANFD_RECV_INT</em></strong> - How to recv a CAN-FD frame from CAN Bus</li>
+<li><strong><em>CAN20_RECV_CHECK</em></strong> - Receive a CAN2.0 frame with check mode</li>
+<li><strong><em>CAN20_RECV_INT</em></strong> - Receive a CAN2.0 frame with interrupt mode</li>
+<li><strong><em>CAN20_RECV_MASK_FILT</em></strong> - Receive a CAN2.0 frame with mask/filter setting</li>
+<li><strong><em>CAN20_SEND</em></strong> - Send a frame to CAN Bus at CAN 2.0</li>
+<li><strong><em>CANFD_RECV_CHECK</em></strong> - Receive a CAN FD frame with check mode</li>
+<li><strong><em>CANFD_RECV_INT</em></strong> - Receive a CAN FD frame with interrupt mode</li>
+<li><strong><em>CANFD_RECV_MASK_FILT</em></strong> - Receive a CAN FD framw with mask/filter setting</li>
+<li><strong><em>CANFD_SEND</em></strong> - Send a CAN FD frame</li>
+<li><strong><em>OBDII_PIDs</em></strong> - Get data from a vehicle</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more details about each demo, you can open the demo code, and we have made detailed comments in the code.</p>
+</div>
 <h2 id="faq"><strong><em>FAQ</em></strong><a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
 <hr />
 <p><strong>1. I can't upload code to CANBed FD</strong></p>
@@ -1620,17 +1784,23 @@
 <li>Try turning on/off the switch for the terminal resistor</li>
 <li>Cehck if CANH and CANL is connected correct</li>
 </ul>
-<p><em>Please feel free to contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#110;&#101;&#121;&#46;&#115;&#117;&#105;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#106;&#111;&#110;&#101;&#121;&#46;&#115;&#117;&#105;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> if you need more help.</em></p>
+<p><em>Please feel free to contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> if you need more help.</em></p>
 <h2 id="schematic-online-viewer"><strong><em>Schematic Online Viewer</em></strong><a class="headerlink" href="#schematic-online-viewer" title="Permanent link">&para;</a></h2>
 <hr />
-<div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBed%20FD.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<h3 id="v11-version">V1.1 Version<a class="headerlink" href="#v11-version" title="Permanent link">&para;</a></h3>
+<div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBed%20FD/CANBed_FD_V1.1.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+<h3 id="v11c-version">V1.1C Version<a class="headerlink" href="#v11c-version" title="Permanent link">&para;</a></h3>
+<div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBed%20FD/CANBed_FD_V1.1c.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 
 <h2 id="reference"><strong><em>Reference</em></strong><a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li><a href="https://github.com/Longan-Labs/Longan_CANFD">Arduino Library</a></li>
-<li><a href="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBed%20FD.zip">Schematics in Eagle</a></li>
+<li><a href="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBed%20FD/CANBed_FD_V1.1.zip">Schematics in Eagle V1.1</a></li>
+<li><a href="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBed%20FD/CANBed_FD_V1.1c.zip">Schematics in Eagle V1.1c</a></li>
 <li><a href="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBed%20FD/CANBed_FD.pdf">Schematics in PDF</a></li>
 <li><a href="https://www.mouser.com/datasheet/2/268/MCP2517FD-External-CAN-FD-Controller-with-SPI-Inte-1519186.pdf">MCP2517FD Datasheet</a></li>
 <li><a href="https://www.mouser.com/datasheet/2/268/20005514a-1102085.pdf">MCP2542FD Datasheet</a></li>

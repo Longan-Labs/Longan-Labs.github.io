@@ -422,6 +422,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-ideas" class="md-nav__link">
+    Application Ideas
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#canbed-family" class="md-nav__link">
     CANBed Family
@@ -1232,6 +1245,19 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-ideas" class="md-nav__link">
+    Application Ideas
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#canbed-family" class="md-nav__link">
     CANBed Family
@@ -1455,6 +1481,7 @@
 <p><strong>CAN Bus</strong> is a common industrial bus because of its long travel distance, medium communication speed and high reliability. It is commonly found on modern machine tools, such as an automotive diagnostic bus.</p>
 <p>This CANBed adopts <strong>MCP2515</strong> CAN Bus controller with SPI interface and <strong>MCP2551</strong> CAN transceiver to achieve the CAN-BUS capability. With an <strong>OBD-II</strong> converter cable added on and the OBD-II library imported, you are ready to build an onboard diagnostic device.</p>
 <p>What's more, the is an Atmega32U4 with <strong>Arduino Leonardo</strong> bootloader on the board, you can use Arduino IDE to program the board easily. </p>
+<p>Click to get a <a href="https://www.longan-labs.cc/2020011.html">DB9 to OBD-II cable</a>. </p>
 <h3 id="version-track">Version Track<a class="headerlink" href="#version-track" title="Permanent link">&para;</a></h3>
 <p>V1.0: Initial version</p>
 <p>V1.1:</p>
@@ -1471,6 +1498,14 @@
 <ul>
 <li>There are two packages on the PCB at the same time, and AU or MU packages can be selectively used during production. You may receive one of the MU or AU packages. The difference between the two is only the package. The functions and performance are exactly the same. Please don't worry.</li>
 </ul>
+<h2 id="application-ideas">Application Ideas<a class="headerlink" href="#application-ideas" title="Permanent link">&para;</a></h2>
+<p>With CANBed FD, you can，</p>
+<ol>
+<li>Used to learn CAN Bus and CAN FD communication</li>
+<li>Used to build product prototypes. After you complete the product prototype, we can help you integrate it into a product and assist you in production</li>
+<li>Used to read the data from the car</li>
+<li>As a part of your product, you don't need to design the MCU and CAN Bus separately, only need to complete other hardware design</li>
+</ol>
 <h3 id="canbed-family">CANBed Family<a class="headerlink" href="#canbed-family" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1534,10 +1569,10 @@
 </tr>
 <tr>
 <td><strong>PRICE</strong></td>
-<td>$14.9</td>
-<td>$17.9</td>
-<td>$16.9</td>
 <td>$19.9</td>
+<td>$24.9</td>
+<td>$19.9</td>
+<td>$24.9</td>
 </tr>
 <tr>
 <td><strong>LINK</strong></td>
@@ -1732,84 +1767,88 @@
 <p class="admonition-title">Note</p>
 <p><a href="https://www.longan-labs.cc/media/wysiwyg/CAN-Bus/1030008-D-3-01.jpg">Click</a> to get larger image.</p>
 </div>
-<p><strong>1.9x2 IO Pin OUT:</strong> </p>
-<p>The IO of Atmega32U4 is list out here. </p>
-<p><strong>2.Atmega32U4:</strong></p>
-<p>The master of the entire module, mainly used to store data on the TF card or transfer data to the computer through the type C cable. In addition, since it's arduino compatible, you can use it to implement some simple controls, such as triggering a buzzer alarm when the speed exceeds a certain value.</p>
-<p><strong>2.Reset Button:</strong></p>
-<p>Reset the on-board Atmega chip.</p>
-<p><strong>3.Micro USB connector for programming</strong></p>
-<p><strong>4. SPI Header for uploading bootloader</strong></p>
-<p><strong>5.CAN RX/TX Indicator</strong></p>
-<p><strong>6.sub-D connector or Terminal for CAN Bus</strong></p>
-<p><em>D-Sub CANbus PinOut</em></p>
+<p><strong>1. GPIO - 9x2 I/O Pin OUT:</strong> </p>
+<p>The I/O of Atmega32U4 is list out here, which is consist of,</p>
+<ul>
+<li>1 x UART (Serial1)</li>
+<li>1 x I2C</li>
+<li>4 x Analog Input(can be used us Digital IO)</li>
+<li>8 x Digital I/O</li>
+</ul>
+<p><strong>2. Micro USB connector for programming</strong></p>
+<p>If you use Arduino IDE program the board, you need a micro USB cable to connect the board to PC.</p>
+<p><strong>3. SPI - ICSP connector</strong></p>
+<p>If you use AVR Studio to program the board, you can use this ICSP connector, and it can be used as SPI interface. </p>
+<p><strong>4. CAN RX/TX Indicator</strong></p>
+<p>When CAN Bus is transmitting data, these two leds blink. </p>
+<p><strong>5. DB9 connector or Terminal for CAN Bus</strong></p>
+<p>DB9 interface uses OBD-II mode by default, as shown below,</p>
 <table>
 <thead>
 <tr>
 <th>pin#</th>
-<th>Signal names</th>
-<th>Signal Description</th>
+<th>OBD(default)</th>
+<th>CAN OPEN</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>Reserved</td>
-<td>Upgrade Path</td>
+<td>GND</td>
+<td>N.C</td>
 </tr>
 <tr>
 <td>2</td>
+<td>GND</td>
 <td>CAN_L</td>
-<td>Dominant Low</td>
 </tr>
 <tr>
 <td>3</td>
-<td>CAN_GND</td>
-<td>Ground</td>
+<td>CANH</td>
+<td>GND</td>
 </tr>
 <tr>
 <td>4</td>
-<td>Reserved</td>
-<td>Upgrade Path</td>
+<td>N.C</td>
+<td>N.C</td>
 </tr>
 <tr>
 <td>5</td>
-<td>CAN_SHLD</td>
-<td>Shiled, Optional</td>
+<td>CANL</td>
+<td>GND</td>
 </tr>
 <tr>
 <td>6</td>
-<td>GND</td>
-<td>Ground，Optional</td>
+<td>N.C</td>
+<td>N.C</td>
 </tr>
 <tr>
 <td>7</td>
+<td>N.C</td>
 <td>CAN_H</td>
-<td>Dominant High</td>
 </tr>
 <tr>
 <td>8</td>
-<td>Reserved</td>
-<td>Upgrade Path</td>
+<td>N.C</td>
+<td>N.C</td>
 </tr>
 <tr>
 <td>9</td>
 <td>CAN_V+</td>
-<td>Power, Optional</td>
+<td>CAN_V+</td>
 </tr>
 </tbody>
 </table>
-<p><strong>7.Switch for the 120Ω terminal resistor for CAN Bus</strong></p>
+<p><strong>6. Switch for the 120Ω terminal resistor for CAN Bus</strong></p>
 <p style="text-align:center"><img src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/HS_CAN_Termination.gif" /></p>
 
 <p>If you use this board on the end of the CAN bus, please put this switch to 120Ω. For more detail about the CAN bus protocol, please refer to the
 <a href="http://www.ni.com/white-paper/9759/en/">NI CAN Physical Layer and Termination Guide</a></p>
-<p><strong>8.Grove connector for UART</strong></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p><strong>7. Grove connector for UART</strong></p>
 <p>Use Serial1 in the code</p>
-</div>
-<p><strong>9.Grove connector for I2C</strong></p>
+<p><strong>8.Grove connector for I2C</strong></p>
+<p><strong>9. Reset</strong></p>
+<p>Click to reset the board.</p>
 <h2 id="usage"><strong><em>Usage</em></strong><a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="ide-and-driver"><strong><em>IDE and Driver</em></strong><a class="headerlink" href="#ide-and-driver" title="Permanent link">&para;</a></h3>
