@@ -424,15 +424,15 @@
     Introduction
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#application-ideas" class="md-nav__link">
     Application Ideas
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#canbed-family" class="md-nav__link">
@@ -1174,15 +1174,15 @@
     Introduction
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#application-ideas" class="md-nav__link">
     Application Ideas
   </a>
   
-    <nav class="md-nav">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#canbed-family" class="md-nav__link">
@@ -1355,20 +1355,20 @@
                 <h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <hr />
 <p><a href=""><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030009/db9.jpg" /></a></p>
-<p>CANBed FD is a CANBed FD dev board. CANBed FD contains an Atmega32U4 microcontroller, which has <strong>32KB</strong> of Flash space and <strong>2.5KB</strong> of RAM space. The operating frequency is <strong>16MHz</strong>, which can meet most embedded applications. There's <strong>Arduino Leonardo bootloader</strong> inside the <strong>Atmega32U4</strong>. If you have used the Arduino IDE, programming will not be a problem for you. You can also use AVR Studio for development, we provide ICSP interface.</p>
-<p>CANBed FD uses <strong>MCP2517FD</strong> as CAN controller and <strong>MCP2542</strong> (<em>MCP2557</em>) as CAN receiver, chich are high-performance CAN Bus chip, can work in both CAN 2.0 and CAN FD protocols at the same time. There is a Micro USB interface on the board, through which you can program the board or supply power to the board.There are one I2C, one UART, one SPI interface, 3 analog input interfaces and 8 digital IO on the board.</p>
-<p>We use a flexible way for CAN interface. You can use 4PIN Terminal or DB9 interface. DB9 interface uses OBD-II mode by default. You can also configure CAN Open mode on the hardware. The voltage input range of the CAN interface is 9-28V, which can provide a stable 5V/1A output.</p>
+<p>CANBed FD is a CAN FD dev board with Atmega32U4 microcontroller inside, which has <strong>32KB</strong> of Flash and <strong>2.5KB</strong> of RAM. The operating frequency is <strong>16MHz</strong>, which can meet most embedded applications. There's <strong>Arduino Leonardo bootloader</strong> inside the <strong>Atmega32U4</strong>. If you have used the Arduino IDE, programming will not be a problem for you. You can also use AVR Studio for development, we provide ICSP interface.</p>
+<p>CANBed FD uses <strong>MCP2517FD</strong> as CAN controller and <strong>MCP2542</strong> (<em>MCP2557</em>) as CAN receiver, chich are high-performance CAN Bus chip, can work in both CAN 2.0 and CAN FD protocols at the same time. There is a Micro USB connector on the board, through which you can program the board or supply power to the board.There are one I2C, one UART, one SPI interface, 3 analog input interfaces and 8 digital IO on the board.</p>
+<p>We use a flexible way for CAN interface. You can use 4PIN Terminal or DB9 connector. DB9 connector uses OBD-II mode by default. You can also configure CAN Open mode on the hardware. The voltage input range of the CAN interface is 9-28V, which can provide a stable 5V/1A output.</p>
 <p>If you want to use this board to develop OBD related applications, click to get a <a href="https://www.longan-labs.cc/2020011.html">DB9 to OBD-II cable</a>. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For transportation considerations, the plug-in components of the kit are not soldered by default. After you receive the kit, you need to do some soldering work. If necessary, you can also contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#102;&#111;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#105;&#110;&#102;&#111;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> after purchasing the board, then we can send it to you after the board is soldered well.</p>
 </div>
-<h2 id="application-ideas"><strong><em>Application Ideas</em></strong><a class="headerlink" href="#application-ideas" title="Permanent link">&para;</a></h2>
+<h3 id="application-ideas"><strong><em>Application Ideas</em></strong><a class="headerlink" href="#application-ideas" title="Permanent link">&para;</a></h3>
 <p>With CANBed FD Dev board, you can，</p>
 <ol>
-<li>Used to learn CAN Bus and CAN FD communication</li>
-<li>Used to build product prototypes. After you complete the product prototype, we can help you integrate it into a product and assist you in production</li>
-<li>Used to read the data from the car</li>
+<li>To learn CAN Bus and CAN FD communication</li>
+<li>To build product prototypes. After you complete the product prototype, we can help you integrate it into a product and assist you in production</li>
+<li>To read the data from the car</li>
 <li>As a part of your product, you don't need to design the MCU and CAN Bus separately, only need to complete other hardware design</li>
 </ol>
 <h3 id="canbed-family">CANBed Family<a class="headerlink" href="#canbed-family" title="Permanent link">&para;</a></h3>
@@ -1621,6 +1621,7 @@
 <li>4PIN 2.0 Connector x 2</li>
 <li>9x2 2.54 Header x 1</li>
 <li>3x3 2.54 Header x 1</li>
+<li>Switch for 120Ω terminal resistor</li>
 </ul>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030009/can_bed_fd_partlist.jpg" /></p>
 <h3 id="pin-out">Pin out<a class="headerlink" href="#pin-out" title="Permanent link">&para;</a></h3>
@@ -1640,63 +1641,6 @@
 <p><strong>4. CAN RX/TX Indicator</strong></p>
 <p>When CAN Bus is transmitting data, these two leds blink. </p>
 <p><strong>5. DB9 connector or Terminal for CAN Bus</strong></p>
-<p>DB9 interface uses OBD-II mode by default, as shown below,</p>
-<table>
-<thead>
-<tr>
-<th>pin#</th>
-<th>OBD(default)</th>
-<th>CAN OPEN</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>GND</td>
-<td>N.C</td>
-</tr>
-<tr>
-<td>2</td>
-<td>GND</td>
-<td>CAN_L</td>
-</tr>
-<tr>
-<td>3</td>
-<td>CANH</td>
-<td>GND</td>
-</tr>
-<tr>
-<td>4</td>
-<td>N.C</td>
-<td>N.C</td>
-</tr>
-<tr>
-<td>5</td>
-<td>CANL</td>
-<td>GND</td>
-</tr>
-<tr>
-<td>6</td>
-<td>N.C</td>
-<td>N.C</td>
-</tr>
-<tr>
-<td>7</td>
-<td>N.C</td>
-<td>CAN_H</td>
-</tr>
-<tr>
-<td>8</td>
-<td>N.C</td>
-<td>N.C</td>
-</tr>
-<tr>
-<td>9</td>
-<td>CAN_V+</td>
-<td>CAN_V+</td>
-</tr>
-</tbody>
-</table>
 <p><strong>6. Switch for the 120Ω terminal resistor for CAN Bus</strong></p>
 <p style="text-align:center"><img src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/HS_CAN_Termination.gif" /></p>
 
@@ -1769,12 +1713,13 @@
 <p>If you need to use the CAN Open protocol, first we look at the back side of the PCB board, you can see the Pads below,</p>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030009/CANBED_FD_DB9_SETTING.jpg" /></p>
 <p>These pads are connected to the OBD side by default. We have to prepare a knife to disconnect the OBD side, and then use an electric soldering iron to solder the CAN Open side of the pads.</p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030009/db9_s1.jpg" /></p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030009/db9_s2.jpg" /></p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030009/db9_s1.jpg" />
+<img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030009/db9_s3.jpg" />
+<img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030009/db9_s2.jpg" /></p>
 <h2 id="getting-started"><strong><em>Getting Started</em></strong><a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
 <hr />
-<p>Here we use the Arduino IDE as a demonstration, through this chapter you can learn how to get started with this board.
-You need a micro USB cableto connect the CANBed FD Dev board to the computer.</p>
+<p>Here we use the Arduino IDE as a demonstration, through this chapter you can learn how to get started with CANBed FD.
+You need a micro USB cable to connect the CANBed FD Dev board to the computer.</p>
 <h3 id="ide-and-driver"><strong><em>IDE and Driver</em></strong><a class="headerlink" href="#ide-and-driver" title="Permanent link">&para;</a></h3>
 <p>There's Arduino leonardo bootloader in the board. </p>
 <p>Click to get the <a href="https://www.arduino.cc/en/Main/Software">latest Arduino IDE</a>. </p>
@@ -1826,7 +1771,7 @@ You need a micro USB cableto connect the CANBed FD Dev board to the computer.</p
 <span class="c1">// END FILE</span>
 </code></pre></div>
 
-<p>You need to select <strong><em>Arduino Leonardo</em></strong> on the Arduino IDE boards and select the correct COM port. Then you can burn the program to the CANBed FD Dev board by pressing the Upolading button on Arduino IDE.</p>
+<p>You need to select <strong><em>Arduino Leonardo</em></strong> on the Arduino IDE boards and select the correct COM port. Then you can upload the program to the CANBed FD Dev board by pressing the Upolading button on Arduino IDE.</p>
 <h2 id="arduino-library"><strong><em>Arduino Library</em></strong><a class="headerlink" href="#arduino-library" title="Permanent link">&para;</a></h2>
 <hr />
 <p>We provide an <a href="https://github.com/Longan-Labs/Longan_CANFD">Arduino library for CANBed-FD</a>. </p>
@@ -1852,17 +1797,31 @@ You need a micro USB cableto connect the CANBed FD Dev board to the computer.</p
 </div>
 <h2 id="faq"><strong><em>FAQ</em></strong><a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
 <hr />
-<p><strong>1. I can't upload code to CANBed FD</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">I can't upload code to CANBed FD</p>
 <ul>
+<li>When the board is connected to the computer via the Micro USB cable, a new COM device will appear on the computer. If the new device does not appear on your computer, you can try a different USB cable or try another computer.</li>
 <li>If your PC recognize the COM port, please try pressing the reset button, then click on the Upload button in Arduino IDE, when the IDE shows compile done, release the reset button immediately.*</li>
 </ul>
-<p><strong>2.The RX/TX led light up and never turn off</strong></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">The RX/TX led light up and never turn off</p>
 <ul>
 <li>Check if the baudrate of CAN Bus is setting correct</li>
-<li>Try turning on/off the switch for the terminal resistor</li>
-<li>Cehck if CANH and CANL is connected correct</li>
+<li>Try turning on/off the switch for the 120Ω terminal resistor</li>
+<li>Check if CANH and CANL is well connected</li>
 </ul>
-<p><em>Please feel free to contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> if you need more help.</em></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">How to find the tech support</p>
+<p>Please contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> for technical support. Our technical support engineer will usually reply you within 24 hours on working days. In order to get faster support, we hope that when you send us an email, you need to include at least the following content,</p>
+<ul>
+<li>When and how to buy the product</li>
+<li>Product version information</li>
+<li>Take a high-definition picture of the product you use, including the connection</li>
+<li>Describe in detail the problem you encountered and what kind of help you would like to get</li>
+</ul>
+</div>
 <h2 id="schematic-online-viewer"><strong><em>Schematic Online Viewer</em></strong><a class="headerlink" href="#schematic-online-viewer" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="v11-version">V1.1 Version<a class="headerlink" href="#v11-version" title="Permanent link">&para;</a></h3>

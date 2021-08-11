@@ -1496,6 +1496,10 @@ CAN Bus is a common industrial bus because of its long travel distance, medium c
 <p>This Serial CAN Bus module is based on <strong>MCP2551</strong> and <strong>MCP2515</strong>, which can provide speed up to <strong>1Mb/s</strong>. </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>Because the Arduino library provided by this module uses a soft serial port, it is only suitable for AVR series Arduino, such as Arduino UNO, Arduino Mega, Arduino Leonardo, etc. If you use other non-AVR series Arduino, you may need to modify the library to use it.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>The default masks and filters is for standard can frame, if you need to receive a ext can frame, please set the mask and filt first.</p>
 </div>
 <h3 id="version-track"><strong><em>Version Track</em></strong><a class="headerlink" href="#version-track" title="Permanent link">&para;</a></h3>
@@ -2097,7 +2101,13 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">How to find the tech support</p>
-<p>Please feel free to contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#110;&#101;&#121;&#46;&#115;&#117;&#105;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#106;&#111;&#110;&#101;&#121;&#46;&#115;&#117;&#105;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> if you need more help.</p>
+<p>Please contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> for technical support. Our technical support engineer will usually reply you within 24 hours on working days. In order to get faster support, we hope that when you send us an email, you need to include at least the following content,</p>
+<ul>
+<li>When and how to buy the product</li>
+<li>Product version information</li>
+<li>Take a high-definition picture of the product you use, including the connection</li>
+<li>Describe in detail the problem you encountered and what kind of help you would like to get</li>
+</ul>
 </div>
 <h2 id="schematic-online-viewer"><strong><em>Schematic Online Viewer</em></strong><a class="headerlink" href="#schematic-online-viewer" title="Permanent link">&para;</a></h2>
 <div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/Eagle_File_Serial_CAN_Bus/archive/master.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
