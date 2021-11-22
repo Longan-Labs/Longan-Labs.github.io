@@ -464,6 +464,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#db9-connector" class="md-nav__link">
+    DB9 connector
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -589,6 +596,20 @@
     <li class="md-nav__item">
       <a href="../1030013/" class="md-nav__link">
         CANBED M4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030018/" class="md-nav__link">
+        CANBED 2040
       </a>
     </li>
   
@@ -1315,6 +1336,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#db9-connector" class="md-nav__link">
+    DB9 connector
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1755,6 +1783,69 @@ CANBed M0 is an upgraded version of <a href="https://www.longan-labs.cc/1030008.
 <p><strong>9.Grove connector for I2C</strong></p>
 <p><strong>A.Reset Button</strong></p>
 <p><strong>B.User LED, connected to D13</strong></p>
+<h3 id="db9-connector"><strong><em>DB9 connector</em></strong><a class="headerlink" href="#db9-connector" title="Permanent link">&para;</a></h3>
+<p>The DB9 interface of CAN Bus has two different protocols, OBD and CAN Open. Their definition is as follows,</p>
+<table>
+<thead>
+<tr>
+<th>pin#</th>
+<th>OBD(default)</th>
+<th>CAN OPEN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>GND</td>
+<td>N.C</td>
+</tr>
+<tr>
+<td>2</td>
+<td>GND</td>
+<td>CAN_L</td>
+</tr>
+<tr>
+<td>3</td>
+<td>CANH</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>4</td>
+<td>N.C</td>
+<td>N.C</td>
+</tr>
+<tr>
+<td>5</td>
+<td>CANL</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>6</td>
+<td>N.C</td>
+<td>N.C</td>
+</tr>
+<tr>
+<td>7</td>
+<td>N.C</td>
+<td>CAN_H</td>
+</tr>
+<tr>
+<td>8</td>
+<td>N.C</td>
+<td>N.C</td>
+</tr>
+<tr>
+<td>9</td>
+<td>CAN_V+</td>
+<td>CAN_V+</td>
+</tr>
+</tbody>
+</table>
+<p>If you want to use the OBD protocol, you don't need to make any changes to the hardware.</p>
+<p>If you need to use the CAN Open protocol, first we look at the back side of the PCB board, you can see the Pads below,</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030009/CANBED_FD_DB9_SETTING.jpg" /></p>
+<p>These pads are connected to the OBD side by default. We have to prepare a knife to disconnect the OBD side, and then use an electric soldering iron to solder the CAN Open side of the pads.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030018/db9_setup.png" /></p>
 <h2 id="arduino-ide-setup"><strong><em>ARDUINO IDE SETUP</em></strong><a class="headerlink" href="#arduino-ide-setup" title="Permanent link">&para;</a></h2>
 <hr />
 <p>First download the Arduino IDE from <a href="https://www.arduino.cc/en/Main/Software">https://www.arduino.cc/en/Main/Software</a>. Arduino IDE can be installed and run on Windows, Linux, and Mac OS X operating systems. Download the installer or zip file (Windows only) and install (if you have the zip file, extract it to your Windows computer’s hard drive) it on your operating system.</p>

@@ -13,14 +13,14 @@
         <meta name="author" content="Stephen Lo">
       
       
-        <link rel="canonical" href="https://longan-labs.cc/1030013/">
+        <link rel="canonical" href="https://longan-labs.cc/1030018/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
     
     
       
-        <title>CANBED M4 - Longan Docs</title>
+        <title>CANBED 2040 - Longan Docs</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CANBED M4
+              CANBED 2040
             
           </span>
         </div>
@@ -385,6 +385,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../1030013/" class="md-nav__link">
+        CANBED M4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -395,12 +409,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          CANBED M4
+          CANBED 2040
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        CANBED M4
+        CANBED 2040
       </a>
       
         
@@ -422,6 +436,13 @@
   
     <nav class="md-nav" aria-label="Introduction">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-ideas" class="md-nav__link">
+    Application Ideas
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#canbed-family" class="md-nav__link">
@@ -478,32 +499,46 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#db9-connector" class="md-nav__link">
-    DB9 connector
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#arduino-ide-setup" class="md-nav__link">
-    Arduino IDE Setup
+  <a href="#db9-connector" class="md-nav__link">
+    DB9 connector
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
+  <a href="#getting-started-with-arduino-ide" class="md-nav__link">
+    Getting Started with Arduino IDE
   </a>
   
-    <nav class="md-nav" aria-label="Usage">
+    <nav class="md-nav" aria-label="Getting Started with Arduino IDE">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arduino-ide-steup" class="md-nav__link">
+    Arduino IDE Steup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-the-install-the-library" class="md-nav__link">
+    Download the install the library
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-the-code-and-upload-it-to-the-board" class="md-nav__link">
+    Open the code and upload it to the board
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#arduino-code" class="md-nav__link">
@@ -512,15 +547,90 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#apis" class="md-nav__link">
+    APIs
+  </a>
+  
+    <nav class="md-nav" aria-label="APIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-set-the-baud-rate" class="md-nav__link">
+    1. Set the Baud rate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-set-receive-mask-and-filter" class="md-nav__link">
+    2. Set Receive Mask and Filter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-check-receive" class="md-nav__link">
+    3. Check Receive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-get-can-id" class="md-nav__link">
+    4. Get CAN ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-send-a-frame" class="md-nav__link">
+    5. Send a frame
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-receive-a-frame" class="md-nav__link">
+    6. Receive a frame
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#rescue-the-bricked-board" class="md-nav__link">
-    Rescue the bricked board
+  <a href="#getting-started-with-micropython" class="md-nav__link">
+    Getting Started with MicroPython
   </a>
+  
+    <nav class="md-nav" aria-label="Getting Started with MicroPython">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-micropython" class="md-nav__link">
+    What is MicroPython
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    How to Use
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -549,20 +659,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../1030018/" class="md-nav__link">
-        CANBED 2040
-      </a>
     </li>
   
 
@@ -1234,6 +1330,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#application-ideas" class="md-nav__link">
+    Application Ideas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#canbed-family" class="md-nav__link">
     CANBed Family
   </a>
@@ -1288,32 +1391,46 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#db9-connector" class="md-nav__link">
-    DB9 connector
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#arduino-ide-setup" class="md-nav__link">
-    Arduino IDE Setup
+  <a href="#db9-connector" class="md-nav__link">
+    DB9 connector
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
+  <a href="#getting-started-with-arduino-ide" class="md-nav__link">
+    Getting Started with Arduino IDE
   </a>
   
-    <nav class="md-nav" aria-label="Usage">
+    <nav class="md-nav" aria-label="Getting Started with Arduino IDE">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arduino-ide-steup" class="md-nav__link">
+    Arduino IDE Steup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#download-the-install-the-library" class="md-nav__link">
+    Download the install the library
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-the-code-and-upload-it-to-the-board" class="md-nav__link">
+    Open the code and upload it to the board
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#arduino-code" class="md-nav__link">
@@ -1322,15 +1439,90 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#apis" class="md-nav__link">
+    APIs
+  </a>
+  
+    <nav class="md-nav" aria-label="APIs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-set-the-baud-rate" class="md-nav__link">
+    1. Set the Baud rate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-set-receive-mask-and-filter" class="md-nav__link">
+    2. Set Receive Mask and Filter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-check-receive" class="md-nav__link">
+    3. Check Receive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-get-can-id" class="md-nav__link">
+    4. Get CAN ID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-send-a-frame" class="md-nav__link">
+    5. Send a frame
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-receive-a-frame" class="md-nav__link">
+    6. Receive a frame
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#rescue-the-bricked-board" class="md-nav__link">
-    Rescue the bricked board
+  <a href="#getting-started-with-micropython" class="md-nav__link">
+    Getting Started with MicroPython
   </a>
+  
+    <nav class="md-nav" aria-label="Getting Started with MicroPython">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-micropython" class="md-nav__link">
+    What is MicroPython
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    How to Use
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1368,16 +1560,29 @@
               
                 
                 
-                  <h1>CANBED M4</h1>
+                  <h1>CANBED 2040</h1>
                 
                 <h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <hr />
-<p><a href=""><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030013/main.png" /></a></p>
-<p>CAN Bus is a common industrial bus because of its long travel distance, medium communication speed and high reliability. 
-It is commonly found on modern machine tools, such as an automotive diagnostic bus.
-This CANBed M4 is the latest board of the CANBed family, with the ATSAME51G19A mcu and MCP2542FD CAN transceiver to achieve the CAN-FD capability. </p>
-<p>Click to get a <a href="https://www.longan-labs.cc/2020011.html">DB9 to OBD-II cable</a>. </p>
-<h3 id="canbed-family">CANBed Family<a class="headerlink" href="#canbed-family" title="Permanent link">&para;</a></h3>
+<p><a href=""><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030018/main.png" /></a></p>
+<p>CANBed 2040 is a CAN Bus development board based on RP2040, which has <strong>2MB</strong> of Flash and <strong>264KB</strong> of RAM. The operating frequency is up to <strong>133MHz</strong>, which is suitable for most embedded applications.</p>
+<p>CANBed 2040 uses <strong>MCP2515</strong> as CAN controller and <strong>MCP2551</strong> as CAN receiver, chich are high-performance CAN Bus chip, work at CAN 2.0 protocols. There is a Micro USB connector on the board, through which you can program the board or supply power to the board. There are one I2C, one UART, one SPI interface, 3 analog input interfaces and 8 digital IO on the board.</p>
+<p>We use a flexible way for CAN interface. You can use 4PIN Terminal or DB9 connector. DB9 connector uses OBD-II mode by default. You can also configure CAN Open mode on the hardware. The voltage input range of the CAN interface is 9-28V, which can provide a stable 3.3V/1A output.</p>
+<p>If you want to use this board to develop OBD related applications, click to get a <a href="https://www.longan-labs.cc/2020011.html">DB9 to OBD-II cable</a>. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For transportation considerations, the plug-in components of the kit are not soldered by default. After you receive the kit, you need to do some soldering work. If necessary, you can also contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#102;&#111;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#105;&#110;&#102;&#111;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> after purchasing the board, then we can send it to you after the board is soldered well.</p>
+</div>
+<h3 id="application-ideas"><strong><em>Application Ideas</em></strong><a class="headerlink" href="#application-ideas" title="Permanent link">&para;</a></h3>
+<p>With CANBed 2040, you can，</p>
+<ol>
+<li>To learn CAN Bus communication</li>
+<li>To build product prototypes. After you complete the product prototype, we can help you integrate it into a product and assist you in production</li>
+<li>To read the data from the car</li>
+<li>As a part of your product, you don't need to design the MCU and CAN Bus separately, only need to complete other hardware design</li>
+</ol>
+<h3 id="canbed-family"><strong><em>CANBed Family</em></strong><a class="headerlink" href="#canbed-family" title="Permanent link">&para;</a></h3>
+<p>Currently we have 4 CANBeds, you can choose the right one according to your needs.</p>
 <table>
 <thead>
 <tr>
@@ -1441,9 +1646,9 @@ This CANBed M4 is the latest board of the CANBed family, with the ATSAME51G19A m
 <tr>
 <td><strong>PRICE</strong></td>
 <td>$24.9</td>
-<td>$19.9</td>
 <td>$24.9</td>
-<td>$19.9</td>
+<td>$24.9</td>
+<td>$24.9</td>
 </tr>
 <tr>
 <td><strong>LINK</strong></td>
@@ -1457,7 +1662,7 @@ This CANBed M4 is the latest board of the CANBed family, with the ATSAME51G19A m
 <h2 id="can-bus-products-list-of-longan-labs"><strong><em>CAN BUS PRODUCTS LIST OF LONGAN LABS</em></strong><a class="headerlink" href="#can-bus-products-list-of-longan-labs" title="Permanent link">&para;</a></h2>
 <hr />
 <p><a href="https://www.longan-labs.cc/blog/post/can-bus-product-summary/"><img alt="" src="https://www.longan-labs.cc/media/wysiwyg/CAN_BUS_PRODUCT.png" /></a></p>
-<p>We have made a lot of can bus products, you can get more information through the following list, so as to choose a product suitable for you.</p>
+<p>Logan-Labs have manufactured many different Can-Bus products. You can get more information through the following list, and choose a suitable product.</p>
 <table>
 <thead>
 <tr>
@@ -1571,119 +1776,103 @@ This CANBed M4 is the latest board of the CANBed family, with the ATSAME51G19A m
 <h2 id="features"><strong><em>Features</em></strong><a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
-<li>CAN-FD and CAN2.0</li>
-<li>ATSAME51G19A 32bit Cortex M4 core</li>
-<li>512 KB flash, 192KB RAM</li>
-<li>Industrial standard 9 pin sub-D connector or 4PIN Terminal Connector</li>
+<li>Powerful RP2040 processor</li>
+<li>Implements CAN V2.0B at up to 1 Mb/s</li>
+<li>Industrial standard 9 pin sub-D connector or 4PIN Terminal.</li>
 <li>OBD-II and CAN standard pinout selectable at sub-D connector</li>
-<li>2x4Pin Connector compatable with Grove system</li>
-<li>Size: 56x41mm</li>
+<li>2x4Pin Connector compatable with Grove system from Seeedstudio</li>
+<li>SPI Interface</li>
+<li>Standard (11 bit) and extended (29 bit) data and remote frames</li>
+<li>Power input from 9-28V</li>
 </ul>
 <h2 id="specifications"><strong><em>Specifications</em></strong><a class="headerlink" href="#specifications" title="Permanent link">&para;</a></h2>
 <hr />
-<ul>
-<li>MCU:  ATSAME51 32bit Cortex M4 core</li>
-<li>Clock speed: 120MHz</li>
-<li>Flash memory: 512KB</li>
-<li>RAM: 192KB</li>
-<li>EEPROM: No EEPROM</li>
-<li>Input voltage: 7~28V</li>
-<li>Output Current @ 5V: 1A</li>
-<li>Input interface: Sub-D as well as Terminal</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MCU</td>
+<td>RP2040</td>
+</tr>
+<tr>
+<td>Clock Speed</td>
+<td>flexible clock running up to 133 MHz</td>
+</tr>
+<tr>
+<td>Flash Memory</td>
+<td>2MB</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>264KB</td>
+</tr>
+<tr>
+<td>Operate Voltage</td>
+<td>9-28V</td>
+</tr>
+<tr>
+<td>Output Current @ 3.3V</td>
+<td>1A</td>
+</tr>
+<tr>
+<td>Input Interface</td>
+<td>sub-D</td>
+</tr>
+</tbody>
+</table>
 <h2 id="hardware-overview"><strong><em>Hardware Overview</em></strong><a class="headerlink" href="#hardware-overview" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="part-list">Part List<a class="headerlink" href="#part-list" title="Permanent link">&para;</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In consideration of convenient transportation and cost reduction, there are some materials that you need to solder by hand. If you don't have soldering iron tools, you can also ask our engineers to do it for you. After you place an order, email info@longan-labs.</p>
+<p>For transportation considerations, the plug-in components of the kit are not soldered by default. After you receive the kit, you need to do some soldering work. If necessary, you can also contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#102;&#111;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#105;&#110;&#102;&#111;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> after purchasing the board, then we can send it to you after the board is soldered well.</p>
 </div>
 <ul>
-<li>CANBed M4 PCBA</li>
+<li>CANBed 2040 PCBA</li>
 <li>sub-D connector</li>
 <li>4PIN Terminal</li>
-<li>4PIN 2.0 Connector x 2</li>
+<li>4PIN HY2.0 Connector x 2</li>
 <li>9x2 2.54 Header x 1</li>
 <li>3x3 2.54 Header x 1</li>
+<li>Switch for 120Ω terminal resistor</li>
 </ul>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030013/list.jpg" /></p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030018/partlist.png" /></p>
 <h3 id="pin-out">Pin out<a class="headerlink" href="#pin-out" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030013/hw.png" /></p>
-<p><strong>1.9x2 IO Pin OUT:</strong> </p>
-<p>The IO of Atsame51 is list out here. </p>
-<p><strong>2.ATSAME51G19A:</strong></p>
-<p>Cortex M4 core controller</p>
-<p><strong>2.Reset Button:</strong></p>
-<p>Reset the on-board Atmega chip.</p>
-<p><strong>3.Micro USB connector for programming</strong></p>
-<p><strong>4. SPI Interface</strong></p>
-<p><strong>5.CAN RX/TX Indicator</strong></p>
-<p><strong>6.sub-D connector or Terminal for CAN Bus</strong></p>
-<p><em>D-Sub CANbus PinOut</em></p>
-<table>
-<thead>
-<tr>
-<th>pin#</th>
-<th>Signal names</th>
-<th>Signal Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Reserved</td>
-<td>Upgrade Path</td>
-</tr>
-<tr>
-<td>2</td>
-<td>CAN_L</td>
-<td>Dominant Low</td>
-</tr>
-<tr>
-<td>3</td>
-<td>CAN_GND</td>
-<td>Ground</td>
-</tr>
-<tr>
-<td>4</td>
-<td>Reserved</td>
-<td>Upgrade Path</td>
-</tr>
-<tr>
-<td>5</td>
-<td>CAN_SHLD</td>
-<td>Shiled, Optional</td>
-</tr>
-<tr>
-<td>6</td>
-<td>GND</td>
-<td>Ground，Optional</td>
-</tr>
-<tr>
-<td>7</td>
-<td>CAN_H</td>
-<td>Dominant High</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Reserved</td>
-<td>Upgrade Path</td>
-</tr>
-<tr>
-<td>9</td>
-<td>CAN_V+</td>
-<td>Power, Optional</td>
-</tr>
-</tbody>
-</table>
-<p><strong>7.Switch for the 120Ω terminal resistor for CAN Bus</strong></p>
+<p><a href="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030018/hw.png"><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030018/hw.png" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a href="https://www.longan-labs.cc/media/wysiwyg/CAN-Bus/1030008-D-3-01.jpg">Click</a> to get larger image.</p>
+</div>
+<p><strong>1. GPIO - 9x2 I/O Pin OUT:</strong> </p>
+<p>The I/O of Atmega32U4 is list out here, which is consist of,</p>
+<ul>
+<li>1 x UART</li>
+<li>1 x I2C</li>
+<li>4 x Analog Input(can be used us Digital IO)</li>
+<li>8 x Digital I/O</li>
+</ul>
+<p><strong>2. Micro USB connector for programming</strong></p>
+<p>If you use Arduino IDE program the board, you need a micro USB cable to connect the board to PC.</p>
+<p><strong>3. SPI - ICSP connector</strong></p>
+<p><strong>4. CAN RX/TX Indicator</strong></p>
+<p>When CAN Bus is transmitting data, these two leds blink. </p>
+<p><strong>5. DB9 connector or Terminal for CAN Bus</strong></p>
+<p><strong>6. Switch for the 120Ω terminal resistor for CAN Bus</strong></p>
 <p style="text-align:center"><img src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/HS_CAN_Termination.gif" /></p>
 
 <p>If you use this board on the end of the CAN bus, please put this switch to 120Ω. For more detail about the CAN bus protocol, please refer to the
 <a href="http://www.ni.com/white-paper/9759/en/">NI CAN Physical Layer and Termination Guide</a></p>
-<p><strong>8.Grove connector for UART</strong></p>
-<p><strong>9.Grove connector for I2C</strong></p>
-<h3 id="db9-connector"><strong><em>DB9 connector</em></strong><a class="headerlink" href="#db9-connector" title="Permanent link">&para;</a></h3>
+<p><strong>7. Grove connector for UART</strong></p>
+<p>Use Serial1 in the code</p>
+<p><strong>8.Grove connector for I2C</strong></p>
+<p><strong>9. Reset</strong></p>
+<p>Click to reset the board.</p>
+<h2 id="db9-connector"><strong><em>DB9 connector</em></strong><a class="headerlink" href="#db9-connector" title="Permanent link">&para;</a></h2>
 <p>The DB9 interface of CAN Bus has two different protocols, OBD and CAN Open. Their definition is as follows,</p>
 <table>
 <thead>
@@ -1743,87 +1932,218 @@ This CANBed M4 is the latest board of the CANBed family, with the ATSAME51G19A m
 </table>
 <p>If you want to use the OBD protocol, you don't need to make any changes to the hardware.</p>
 <p>If you need to use the CAN Open protocol, first we look at the back side of the PCB board, you can see the Pads below,</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The picture shows another board, but it doesn't matter, the operation method is the same.</p>
+</div>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030009/CANBED_FD_DB9_SETTING.jpg" /></p>
 <p>These pads are connected to the OBD side by default. We have to prepare a knife to disconnect the OBD side, and then use an electric soldering iron to solder the CAN Open side of the pads.</p>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030018/db9_setup.png" /></p>
-<h2 id="arduino-ide-setup"><strong><em>Arduino IDE Setup</em></strong><a class="headerlink" href="#arduino-ide-setup" title="Permanent link">&para;</a></h2>
+<h2 id="getting-started-with-arduino-ide"><strong><em>Getting Started with Arduino IDE</em></strong><a class="headerlink" href="#getting-started-with-arduino-ide" title="Permanent link">&para;</a></h2>
 <hr />
+<p>Here we use the Arduino IDE as a demonstration, through this chapter you can learn how to get started with CANBed 2040.
+You need a micro USB cable to connect the CANBed FD Dev board to the computer.</p>
+<h3 id="arduino-ide-steup"><strong><em>Arduino IDE Steup</em></strong><a class="headerlink" href="#arduino-ide-steup" title="Permanent link">&para;</a></h3>
 <p>First download the Arduino IDE from <a href="https://www.arduino.cc/en/Main/Software">https://www.arduino.cc/en/Main/Software</a>. Arduino IDE can be installed and run on Windows, Linux, and Mac OS X operating systems. Download the installer or zip file (Windows only) and install (if you have the zip file, extract it to your Windows computer’s hard drive) it on your operating system.</p>
 <p>Once finished, start the Arduino IDE.</p>
 <p>Copy and paste the link below into the Additional Boards Manager URLs option in the Arduino IDE preferences (<strong>File &gt; Preferences</strong>).</p>
-<div class="codehilite"><pre><span></span><code>https://raw.githubusercontent.com/Longan-Labs/LONGAN-SAME-TOOLS/master/package_longan_samd_index.json
+<div class="codehilite"><pre><span></span><code>https://raw.githubusercontent.com/Longan-Labs/Longan-RP2040/main/package_rp2040_index.json
 </code></pre></div>
 
-<p>Enter longan to install the latest Longan SAME board</p>
-<h2 id="usage"><strong><em>Usage</em></strong><a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<hr />
+<p>Once done, click OK button to save the new preference settings.</p>
+<p>Now open the Boards Manager by navigating to the <strong>Tools -&gt; Board</strong> menu.</p>
+<p>Select All from the Type drop-down menu. Then type longan in the top search bar. While typing, you will see the Longan RP2040 Boards package.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030018/arduino-ide-setup-7.png" /></p>
+<p>Click on the Longan RP2040 Boards by Longan Labs and then click on Install button.</p>
+<p>Once installed, close the Boards Manager window.</p>
+<h3 id="download-the-install-the-library"><strong><em>Download the install the library</em></strong><a class="headerlink" href="#download-the-install-the-library" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/Longan-Labs/Aruino_CAN_BUS_MCP2515/archive/refs/heads/master.zip">Click</a> to get the Arduino Library for CANBed 2040 Dev board. </p>
+<p>In the Arduino IDE, navigate to Sketch &gt; Include Library &gt; Add .ZIP Library to install the Library. </p>
+<h3 id="open-the-code-and-upload-it-to-the-board"><strong><em>Open the code and upload it to the board</em></strong><a class="headerlink" href="#open-the-code-and-upload-it-to-the-board" title="Permanent link">&para;</a></h3>
+<p>Open the Arduino IDE, here we open the <strong><em>send</em></strong> example. This example can continuously send data to the CAN Bus.
+Please modify the SPI_CS_PIN to 9 to fit the board. </p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;mcp_can.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SPI.h&gt;</span><span class="cp"></span>
+
+<span class="cm">/* Please modify SPI_CS_PIN to adapt to different baords.</span>
+
+<span class="cm">   CANBed V1        - 17</span>
+<span class="cm">   CANBed M0        - 3</span>
+<span class="cm">   CAN Bus Shield   - 9</span>
+<span class="cm">   CANBed 2040      - 9</span>
+<span class="cm">   CANBed Dual      - 9</span>
+<span class="cm">   OBD-2G Dev Kit   - 9</span>
+<span class="cm">   Hud Dev Kit      - 9</span>
+<span class="cm">*/</span><span class="w"></span>
+
+<span class="n">MCP_CAN</span><span class="w"> </span><span class="nf">CAN</span><span class="p">(</span><span class="n">SPI_CS_PIN</span><span class="p">);</span><span class="w">                                    </span><span class="c1">// Set CS pin</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="nf">Serial</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// below code need for OBD-II GPS Dev Kit</span>
+<span class="w">    </span><span class="c1">// pinMode(A3, OUTPUT);</span>
+<span class="w">    </span><span class="c1">// digitalWrite(A3, HIGH);</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">CAN_OK</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">CAN</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">CAN_500KBPS</span><span class="p">))</span><span class="w">    </span><span class="c1">// init can bus : baudrate = 500k</span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;CAN BUS FAIL!&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;CAN BUS OK!&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kr">unsigned</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="n">stmp</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">};</span><span class="w"></span>
+<span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">CAN</span><span class="p">.</span><span class="n">sendMsgBuf</span><span class="p">(</span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">stmp</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nf">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w">                       </span><span class="c1">// send data per 100ms</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// END FILE</span>
+</code></pre></div>
+<p>You need to select <strong><em>CANBed 2040</em></strong> on the Arduino IDE boards and select the correct COM port. Then you can upload the program to the CANBed 2040 Dev board by pressing the Upolading button on Arduino IDE.</p>
 <h3 id="arduino-code"><strong><em>Arduino Code</em></strong><a class="headerlink" href="#arduino-code" title="Permanent link">&para;</a></h3>
 <hr />
-<p>We provide an <a href="https://github.com/Longan-Labs/CANBed_M4_Arduino_Lib">Arduino library for CANBed M4</a>. </p>
+<p>We provide an <a href="https://github.com/Longan-Labs/CANBed">Arduino library for CANBed 2040</a>. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please change the SPI_CS_PIN to 9 for CANBed 2040</p>
+</div>
 <p>There're many examples for the library, which is consist of,</p>
 <ul>
-<li><strong><em>CAN_20_Send</em></strong> - How to send a frame to CAN Bus 2.0</li>
-<li><strong><em>CAN_20_Recv</em></strong> - How to recv a frame from CAN Bus 2.0</li>
-<li><strong><em>CAN_FD_Send</em></strong> - How to send a frame to CAN FD</li>
-<li><strong><em>CAN_FD_Send</em></strong> - How to recv a frame from CAN FD</li>
+<li><strong><em>OBDII-PIDs</em></strong> - Get data from OBD-II interface</li>
+<li><strong><em>send</em></strong> - Send a frame to CAN Bus</li>
+<li><strong><em>recv</em></strong> - Receive a frame from CAN Bus</li>
+<li><strong><em>set_mask_filter_recv</em></strong> - Receive a frame from CAN Bus with mask and filter setting</li>
 </ul>
-<h2 id="rescue-the-bricked-board"><strong>Rescue the bricked board</strong><a class="headerlink" href="#rescue-the-bricked-board" title="Permanent link">&para;</a></h2>
+<h3 id="apis"><strong><em>APIs</em></strong><a class="headerlink" href="#apis" title="Permanent link">&para;</a></h3>
 <hr />
-<p>Sometimes due to some strange reasons, your board can no longer burn any program, and the USB cannot be recognized. At this time, you can save your board by the following methods</p>
-<p>First of all you need a J-Link tool, if you don't have it, you can get one from Longan Labs. </p>
-<p>Please folow below steps.</p>
-<ol>
-<li>
-<p>Get a <a href="https://www.longan-labs.cc/2090016.html">J-Link tool</a></p>
-</li>
-<li>
-<p>Download the <a href="https://www.segger.com/downloads/jlink/">J-Flash software</a></p>
-</li>
-<li>
-<p>Install the J-Link Software, then you will get a J-Flash tool.</p>
-</li>
-<li>
-<p>Download the <a href="https://github.com/Longan-Labs/LONGAN-SAME-TOOLS/raw/master/Longan-same-1.0.4/bootloaders/canbed_m4/bootloader_canbed_atsame51g19a.bin">bootloader file</a>.</p>
-</li>
-<li>
-<p>Open J-Flash software, Click to select the MCU.</p>
-</li>
-</ol>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/productFiles/master/1030013/1.png" /></p>
-<p>6.Find SAME51G19A</p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/productFiles/master/1030013/2.png" /></p>
-<p>7.Point to the bootloader file</p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/productFiles/master/1030013/3.png" /></p>
-<p>8.Connect SWD interface to the board. </p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/productFiles/master/1030013/4.jpg" /></p>
-<p>9.Click on Program Device, if everything is ok, you saved the board now. </p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/productFiles/master/1030013/5.png" /></p>
+<h4 id="1-set-the-baud-rate">1. Set the Baud rate<a class="headerlink" href="#1-set-the-baud-rate" title="Permanent link">&para;</a></h4>
+<p>This function is used to initialize the baud rate of the CAN Bus system.</p>
+<p>The available baud rates are listed as follows:</p>
+<div class="codehilite"><pre><span></span><code>#define CAN_5KBPS    1
+#define CAN_10KBPS   2
+#define CAN_20KBPS   3
+#define CAN_25KBPS   4
+#define CAN_31K25BPS 5
+#define CAN_33KBPS   6
+#define CAN_40KBPS   7
+#define CAN_50KBPS   8
+#define CAN_80KBPS   9
+#define CAN_83K3BPS  10
+#define CAN_95KBPS   11
+#define CAN_100KBPS  12
+#define CAN_125KBPS  13
+#define CAN_200KBPS  14
+#define CAN_250KBPS  15
+#define CAN_500KBPS  16
+#define CAN_666kbps  17
+#define CAN_1000KBPS 18
+</code></pre></div>
+
+<h4 id="2-set-receive-mask-and-filter">2. Set Receive Mask and Filter<a class="headerlink" href="#2-set-receive-mask-and-filter" title="Permanent link">&para;</a></h4>
+<p>There are <strong>2</strong> receive mask registers and <strong>5</strong> filter registers on the controller chip that guarantee you getting data from the target device. They are useful especially in a large network  consisting of numerous nodes.</p>
+<p>We provide two functions for you to utilize these mask and filter registers. They are:</p>
+<p><strong>Mask:</strong></p>
+<div class="codehilite"><pre><span></span><code>init_Mask(unsigned char num, unsigned char ext, unsigned char ulData);
+</code></pre></div>
+
+<p><strong>Filter:</strong></p>
+<div class="codehilite"><pre><span></span><code>init_Filt(unsigned char num, unsigned char ext, unsigned char ulData);
+</code></pre></div>
+
+<ul>
+<li><strong>num</strong> represents which register to use. You can fill 0 or 1 for mask and 0 to 5 for filter.</li>
+<li><strong>ext</strong> represents the status of the frame. 0 means it's a mask or filter for a standard frame. 1 means it's for a extended frame.</li>
+<li><strong>ulData</strong> represents the content of the mask of filter.</li>
+</ul>
+<h4 id="3-check-receive">3. Check Receive<a class="headerlink" href="#3-check-receive" title="Permanent link">&para;</a></h4>
+<p>The MCP2515 can operate in either a polled mode, where the software checks for a received frame, or using additional pins to signal that a frame has been received or transmit completed.</p>
+<p>Use the following function to poll for received frames.</p>
+<div class="codehilite"><pre><span></span><code>INT8U MCP_CAN::checkReceive(void);
+</code></pre></div>
+
+<p>The function will return 1 if a frame arrives, and 0 if nothing arrives.</p>
+<h4 id="4-get-can-id">4. Get CAN ID<a class="headerlink" href="#4-get-can-id" title="Permanent link">&para;</a></h4>
+<p>When some data arrive, you can use the following function to get the CAN ID of the "send" node.</p>
+<div class="codehilite"><pre><span></span><code>INT32U MCP_CAN::getCanId(void)
+</code></pre></div>
+
+<h4 id="5-send-a-frame">5. Send a frame<a class="headerlink" href="#5-send-a-frame" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>CAN.sendMsgBuf(INT8U id, INT8U ext, INT8U len, data_buf);
+</code></pre></div>
+
+<p>It is a function to send data onto the bus. In which:</p>
+<ul>
+<li><strong>id</strong> ID of can frame.</li>
+<li><strong>ext</strong> represents the status of the frame. '0' means standard frame. '1' means extended frame.</li>
+<li><strong>len</strong> represents the length of this frame.</li>
+<li><strong>data_buf</strong> is the content of this message.</li>
+</ul>
+<p>For example, In the 'send' example, we have:</p>
+<div class="codehilite"><pre><span></span><code>unsigned char stmp[8] = {0, 1, 2, 3, 4, 5, 6, 7};
+CAN.sendMsgBuf(0x00, 0, 8, stmp); //send out the message &#39;stmp&#39; to the bus and tell other devices this is a standard frame from 0x00.
+</code></pre></div>
+
+<h4 id="6-receive-a-frame">6. Receive a frame<a class="headerlink" href="#6-receive-a-frame" title="Permanent link">&para;</a></h4>
+<p>The following function is used to receive data on the 'receive' node:</p>
+<div class="codehilite"><pre><span></span><code>CAN.readMsgBuf(unsigned char len, unsigned char buf);
+</code></pre></div>
+
+<p>In conditions that masks and filters have been set. This function can only get frames that meet the requirements of masks and filters.</p>
+<ul>
+<li><strong>len</strong> represents the data length.</li>
+<li><strong>buf</strong> is where you store the data.</li>
+</ul>
+<h2 id="getting-started-with-micropython"><strong><em>Getting Started with MicroPython</em></strong><a class="headerlink" href="#getting-started-with-micropython" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-micropython">What is MicroPython<a class="headerlink" href="#what-is-micropython" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/micropython/micropython/wiki">MicroPython</a> is a Python interpreter (with partial native code compilation feature). It provides a subset of Python 3.5 features, implemented for embedded processors and constrained systems. Read more about the differences to CPython <a href="https://github.com/micropython/micropython/wiki/Differences">here</a>.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030018/MicroPython-Logo.png" /></p>
+<h3 id="how-to-use">How to Use<a class="headerlink" href="#how-to-use" title="Permanent link">&para;</a></h3>
+<p>As the CANBed 2040 uses the same chip as the Raspberry Pi Pico (RP2040), please to to <a href="https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf">Getting Started with Pico</a> for details.</p>
 <h2 id="faq"><strong><em>FAQ</em></strong><a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
 <hr />
+<div class="admonition tip">
+<p class="admonition-title">I can't upload code to CANBed 2040</p>
+<ul>
+<li>When the board is connected to the computer via the Micro USB cable, a new COM device will appear on the computer. If the new device does not appear on your computer, you can try a different USB cable or try another computer.</li>
+</ul>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">The RX/TX led light up and never turn off</p>
 <ul>
 <li>Check if the baudrate of CAN Bus is setting correct</li>
-<li>Try turning on/off the switch for the terminal resistor</li>
-<li>Cehck if CANH and CANL is connected correct</li>
+<li>Try turning on/off the switch for the 120Ω terminal resistor</li>
+<li>Check if CANH and CANL is well connected, H to H and L to L</li>
 </ul>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">How to find the tech support</p>
-<p>Please feel free to contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#110;&#101;&#121;&#46;&#115;&#117;&#105;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#106;&#111;&#110;&#101;&#121;&#46;&#115;&#117;&#105;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> if you need more help.</p>
+<p>Please contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> for technical support. Our technical support engineer will usually reply you within 24 hours on working days. In order to get faster support, we hope that when you send us an email, you need to include at least the following content,</p>
+<ul>
+<li>When and how to buy the product</li>
+<li>Product version information</li>
+<li>Take a high-definition picture of the product you use, including the connection</li>
+<li>Describe in detail the problem you encountered and what kind of help you would like to get</li>
+</ul>
 </div>
 <h2 id="schematic-online-viewer"><strong><em>Schematic Online Viewer</em></strong><a class="headerlink" href="#schematic-online-viewer" title="Permanent link">&para;</a></h2>
 <hr />
-<div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBed%20M4.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/CANBed2040_Res/archive/refs/heads/main.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 <h2 id="reference"><strong><em>Reference</em></strong><a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
-<li><a href="https://github.com/Longan-Labs/CANBed_M4_Arduino_Lib">Arduino Library</a></li>
-<li><a href="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBed%20M4.zip">Schematics in Eagle</a></li>
-<li><a href="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBed%20M4/CANBed%20M4.pdf">Schematics in PDF</a></li>
-<li><a href="https://www.mouser.cn/datasheet/2/268/60001507E-1660031.pdf">ATSAME51 Datasheet</a></li>
-<li><a href="https://www.mouser.com/datasheet/2/268/20001667G-1115479.pdf">MCP2542 Datasheet</a></li>
+<li><a href="https://github.com/Longan-Labs/Aruino_CAN_BUS_MCP2515">Arduino Library</a></li>
+<li><a href="https://github.com/Longan-Labs/CANBed2040_Res/archive/refs/heads/main.zip">V1Eagle File</a></li>
+<li><a href="https://www.mouser.com/datasheet/2/268/MCP2515-Stand-Alone-CAN-Controller-with-SPI-200018-708845.pdf">MCP2515 Datasheet</a></li>
+<li><a href="https://www.mouser.com/datasheet/2/268/20001667G-1115479.pdf">MCP2551 Datasheet</a></li>
+<li><a href="https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf">Raspberry Pi Pico C/C++ SDK</a></li>
+<li><a href="https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf">Raspberry Pi Pico Python SDK</a></li>
+<li><a href="https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf">Getting Started with Pico</a></li>
 </ul>
                 
                   
@@ -1846,7 +2166,7 @@ This CANBed M4 is the latest board of the CANBed family, with the ATSAME51G19A m
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../1030014/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CANBED M0" rel="prev">
+        <a href="../1030013/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CANBED M4" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1855,20 +2175,20 @@ This CANBed M4 is the latest board of the CANBed family, with the ATSAME51G19A m
               <span class="md-footer__direction">
                 Previous
               </span>
-              CANBED M0
+              CANBED M4
             </div>
           </div>
         </a>
       
       
         
-        <a href="../1030018/" class="md-footer__link md-footer__link--next" aria-label="Next: CANBED 2040" rel="next">
+        <a href="../1030002/" class="md-footer__link md-footer__link--next" aria-label="Next: OBD-II CAN-BUS DEV KIT" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              CANBED 2040
+              OBD-II CAN-BUS DEV KIT
             </div>
           </div>
           <div class="md-footer__button md-icon">
