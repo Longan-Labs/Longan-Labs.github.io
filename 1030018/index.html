@@ -20,7 +20,7 @@
     
     
       
-        <title>CANBED 2040 - Longan Docs</title>
+        <title>CANBED RP2040 - Longan Docs</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CANBED 2040
+              CANBED RP2040
             
           </span>
         </div>
@@ -409,12 +409,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          CANBED 2040
+          CANBED RP2040
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        CANBED 2040
+        CANBED RP2040
       </a>
       
         
@@ -659,6 +659,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030019/" class="md-nav__link">
+        CANBED DUAL
+      </a>
     </li>
   
 
@@ -1560,7 +1574,7 @@
               
                 
                 
-                  <h1>CANBED 2040</h1>
+                  <h1>CANBED RP2040</h1>
                 
                 <h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <hr />
@@ -1582,7 +1596,7 @@
 <li>As a part of your product, you don't need to design the MCU and CAN Bus separately, only need to complete other hardware design</li>
 </ol>
 <h3 id="canbed-family"><strong><em>CANBed Family</em></strong><a class="headerlink" href="#canbed-family" title="Permanent link">&para;</a></h3>
-<p>Currently we have 4 CANBeds, you can choose the right one according to your needs.</p>
+<p>Currently we have 6 CANBeds, you can choose the right one according to your needs.</p>
 <table>
 <thead>
 <tr>
@@ -1591,22 +1605,19 @@
 <th>CANBed FD</th>
 <th>CANBed M0</th>
 <th>CANBed M4</th>
+<th>CANBed RP2040</th>
+<th>CANBed Dual</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><strong>PICTURES</strong></td>
-<td><a href="https://www.longan-labs.cc/1030008.html"><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbed_series/canbedv1.jpg" /></a></td>
-<td><a href="https://www.longan-labs.cc/1030009.html"><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbed_series/canbed_fd.jpg" /></a></td>
-<td><a href="https://www.longan-labs.cc/1030014.html"><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbed_series/canbed_m0.jpg" /></a></td>
-<td><a href="https://www.longan-labs.cc/1030013.html"><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbed_series/canbed_m4.jpg" /></a></td>
-</tr>
 <tr>
 <td><strong>MCU</strong></td>
 <td>Atmega32U4</td>
 <td>Atmega32U4</td>
 <td>ATSAMD21G18</td>
 <td>ATSAME51G19A</td>
+<td>RP2040</td>
+<td>RP2040</td>
 </tr>
 <tr>
 <td><strong>CORE</strong></td>
@@ -1614,9 +1625,13 @@
 <td>AVR 8 bit</td>
 <td>ARM Cortex M0+ 32bit</td>
 <td>ARM Cortex M4 32bit</td>
+<td>Dual ARM Cortex-M0+</td>
+<td>Dual ARM Cortex-M0+</td>
 </tr>
 <tr>
 <td><strong>PROTOCOL</strong></td>
+<td>CAN2.0</td>
+<td>CANFD &amp; CAN2.0</td>
 <td>CAN2.0</td>
 <td>CANFD &amp; CAN2.0</td>
 <td>CAN2.0</td>
@@ -1627,14 +1642,18 @@
 <td>16MHz</td>
 <td>16MHz</td>
 <td>48MHz</td>
-<td>120MHz</td>
+<td>133MHz</td>
+<td>133MHz</td>
+<td>133MHz</td>
 </tr>
 <tr>
 <td><strong>FLASH</strong></td>
 <td>32KB</td>
 <td>32KB</td>
 <td>256KB</td>
-<td>512KB</td>
+<td>2MKB</td>
+<td>2MKB</td>
+<td>2MKB</td>
 </tr>
 <tr>
 <td><strong>RAM</strong></td>
@@ -1642,6 +1661,8 @@
 <td>2.5KB</td>
 <td>32KB</td>
 <td>192KB</td>
+<td>264KB</td>
+<td>264KB</td>
 </tr>
 <tr>
 <td><strong>PRICE</strong></td>
@@ -1649,13 +1670,17 @@
 <td>$24.9</td>
 <td>$24.9</td>
 <td>$24.9</td>
+<td>$15.9</td>
+<td>$24.9</td>
 </tr>
 <tr>
 <td><strong>LINK</strong></td>
-<td><a href="https://www.longan-labs.cc/1030008.html">GET ONE NOW</a></td>
-<td><a href="https://www.longan-labs.cc/1030009.html">GET ONE NOW</a></td>
-<td><a href="https://www.longan-labs.cc/1030014.html">GET ONE NOW</a></td>
-<td><a href="https://www.longan-labs.cc/1030013.html">GET ONE NOW</a></td>
+<td><a href="https://www.longan-labs.cc/1030008.html">GET ONE</a></td>
+<td><a href="https://www.longan-labs.cc/1030009.html">GET ONE</a></td>
+<td><a href="https://www.longan-labs.cc/1030014.html">GET ONE</a></td>
+<td><a href="https://www.longan-labs.cc/1030013.html">GET ONE</a></td>
+<td><a href="(https://www.longan-labs.cc/1030018.html)">GET ONE</a></td>
+<td><a href="(https://www.longan-labs.cc/1030019.html)">GET ONE</a></td>
 </tr>
 </tbody>
 </table>
@@ -1777,7 +1802,7 @@
 <hr />
 <ul>
 <li>Powerful RP2040 processor</li>
-<li>Implements CAN V2.0B at up to 1 Mb/s</li>
+<li>CAN V2.0B at up to 1 Mb/s</li>
 <li>Industrial standard 9 pin sub-D connector or 4PIN Terminal.</li>
 <li>OBD-II and CAN standard pinout selectable at sub-D connector</li>
 <li>2x4Pin Connector compatable with Grove system from Seeedstudio</li>
@@ -1833,7 +1858,7 @@
 <p>For transportation considerations, the plug-in components of the kit are not soldered by default. After you receive the kit, you need to do some soldering work. If necessary, you can also contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#102;&#111;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#105;&#110;&#102;&#111;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> after purchasing the board, then we can send it to you after the board is soldered well.</p>
 </div>
 <ul>
-<li>CANBed 2040 PCBA</li>
+<li>CANBed RP2040 PCBA</li>
 <li>sub-D connector</li>
 <li>4PIN Terminal</li>
 <li>4PIN HY2.0 Connector x 2</li>
@@ -1849,7 +1874,7 @@
 <p><a href="https://www.longan-labs.cc/media/wysiwyg/CAN-Bus/1030008-D-3-01.jpg">Click</a> to get larger image.</p>
 </div>
 <p><strong>1. GPIO - 9x2 I/O Pin OUT:</strong> </p>
-<p>The I/O of Atmega32U4 is list out here, which is consist of,</p>
+<p>The I/Os of RP2040 list out here, which is consist of,</p>
 <ul>
 <li>1 x UART</li>
 <li>1 x I2C</li>
@@ -1857,8 +1882,7 @@
 <li>8 x Digital I/O</li>
 </ul>
 <p><strong>2. Micro USB connector for programming</strong></p>
-<p>If you use Arduino IDE program the board, you need a micro USB cable to connect the board to PC.</p>
-<p><strong>3. SPI - ICSP connector</strong></p>
+<p><strong>3. SPI Interface</strong></p>
 <p><strong>4. CAN RX/TX Indicator</strong></p>
 <p>When CAN Bus is transmitting data, these two leds blink. </p>
 <p><strong>5. DB9 connector or Terminal for CAN Bus</strong></p>
@@ -1942,7 +1966,7 @@
 <h2 id="getting-started-with-arduino-ide"><strong><em>Getting Started with Arduino IDE</em></strong><a class="headerlink" href="#getting-started-with-arduino-ide" title="Permanent link">&para;</a></h2>
 <hr />
 <p>Here we use the Arduino IDE as a demonstration, through this chapter you can learn how to get started with CANBed 2040.
-You need a micro USB cable to connect the CANBed FD Dev board to the computer.</p>
+You need a micro USB cable to connect the CANBed RP2040 to the computer.</p>
 <h3 id="arduino-ide-steup"><strong><em>Arduino IDE Steup</em></strong><a class="headerlink" href="#arduino-ide-steup" title="Permanent link">&para;</a></h3>
 <p>First download the Arduino IDE from <a href="https://www.arduino.cc/en/Main/Software">https://www.arduino.cc/en/Main/Software</a>. Arduino IDE can be installed and run on Windows, Linux, and Mac OS X operating systems. Download the installer or zip file (Windows only) and install (if you have the zip file, extract it to your Windows computer’s hard drive) it on your operating system.</p>
 <p>Once finished, start the Arduino IDE.</p>
@@ -2138,7 +2162,7 @@ CAN.sendMsgBuf(0x00, 0, 8, stmp); //send out the message &#39;stmp&#39; to the b
 <hr />
 <ul>
 <li><a href="https://github.com/Longan-Labs/Aruino_CAN_BUS_MCP2515">Arduino Library</a></li>
-<li><a href="https://github.com/Longan-Labs/CANBed2040_Res/archive/refs/heads/main.zip">V1Eagle File</a></li>
+<li><a href="https://github.com/Longan-Labs/CANBed2040_Res/archive/refs/heads/main.zip">Eagle File</a></li>
 <li><a href="https://www.mouser.com/datasheet/2/268/MCP2515-Stand-Alone-CAN-Controller-with-SPI-200018-708845.pdf">MCP2515 Datasheet</a></li>
 <li><a href="https://www.mouser.com/datasheet/2/268/20001667G-1115479.pdf">MCP2551 Datasheet</a></li>
 <li><a href="https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf">Raspberry Pi Pico C/C++ SDK</a></li>
@@ -2182,13 +2206,13 @@ CAN.sendMsgBuf(0x00, 0, 8, stmp); //send out the message &#39;stmp&#39; to the b
       
       
         
-        <a href="../1030002/" class="md-footer__link md-footer__link--next" aria-label="Next: OBD-II CAN-BUS DEV KIT" rel="next">
+        <a href="../1030019/" class="md-footer__link md-footer__link--next" aria-label="Next: CANBED DUAL" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              OBD-II CAN-BUS DEV KIT
+              CANBED DUAL
             </div>
           </div>
           <div class="md-footer__button md-icon">
