@@ -2191,9 +2191,41 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 </tr>
 </tbody>
 </table>
-<p>You can also use our <a href="https://www.longan-labs.cc/can-bus/accessory.html">OBD Connector</a>, which is very convenient to connect to OBD.</p>
-<p>Upload the following code to the development board, then open the serial monitor, you get the speed from the car now.</p>
-<p><div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Serial_CAN_Module.h&gt;</span><span class="cp"></span>
+<p>The default baud rate of the board is 9600, we need to set the baud rate higher, we set it to 38400.
+Please upload below code to your Arduino board to modify the baudrate to 38400.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Serial_CAN_Module.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SoftwareSerial.h&gt;</span><span class="cp"></span>
+
+<span class="n">Serial_CAN</span><span class="w"> </span><span class="n">can</span><span class="p">;</span><span class="w"></span>
+
+<span class="cp">#define can_tx  2       </span><span class="c1">// tx of serial can module, the yellow cable</span>
+<span class="cp">#define can_rx  3       </span><span class="c1">// rx of serial can module, the white cable</span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="nf">Serial</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;START to set the serial baud rate...&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">can</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">can_tx</span><span class="p">,</span><span class="w"> </span><span class="n">can_rx</span><span class="p">,</span><span class="w"> </span><span class="mi">9600</span><span class="p">);</span><span class="w">      </span><span class="c1">// set this baudrate to the current baudrate</span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">can</span><span class="p">.</span><span class="n">baudRate</span><span class="p">(</span><span class="n">SERIAL_RATE_38400</span><span class="p">))</span><span class="w">     </span><span class="c1">// SERIAL_RATE_9600, SERIAL_RATE_19200, SERIAL_RATE_38400</span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;set baud rate ok&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;set baud rate fail&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Then we have to set the mask and filter, please upload below code to your Arduino,</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Serial_CAN_Module.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SoftwareSerial.h&gt;</span><span class="cp"></span>
 
 <span class="cp">#define STANDARD_CAN_11BIT      1       </span><span class="c1">// That depands on your car. some 1 some 0. </span>
@@ -2248,33 +2280,44 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 <span class="p">};</span><span class="w"></span>
 <span class="cp">#endif</span>
 
-<span class="kr">void</span><span class="w"> </span><span class="nf">set_mask_filt</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="cm">/*</span>
-<span class="cm">     * set mask, set both the mask to 0x3ff</span>
-<span class="cm">     */</span><span class="w"></span>
 
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">can</span><span class="p">.</span><span class="n">setMask</span><span class="p">(</span><span class="n">mask</span><span class="p">))</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;set mask ok&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">else</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;set mask fail&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="cm">/*</span>
-<span class="cm">     * set filter, we can receive id from 0x04 ~ 0x09</span>
-<span class="cm">     */</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">can</span><span class="p">.</span><span class="n">setFilt</span><span class="p">(</span><span class="n">filt</span><span class="p">))</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;set filt ok&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;set filt fail&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="nf">Serial</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">can</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">can_tx</span><span class="p">,</span><span class="w"> </span><span class="n">can_rx</span><span class="p">,</span><span class="w"> </span><span class="mi">38400</span><span class="p">);</span><span class="w">      </span><span class="c1">// tx, rx</span>
+
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">can</span><span class="p">.</span><span class="n">canRate</span><span class="p">(</span><span class="n">CAN_RATE_500</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;set can rate ok&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">&quot;set can rate fail&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">can</span><span class="p">.</span><span class="n">setMask</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;set mask ok&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">&quot;set mask fail&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">can</span><span class="p">.</span><span class="n">setFilt</span><span class="p">(</span><span class="n">filt</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;set filt ok&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s">&quot;set filt fail&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Upload the following code to the development board, then open the serial monitor, you get the speed from the car now.</p>
+<p><div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Serial_CAN_Module.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SoftwareSerial.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#define STANDARD_CAN_11BIT      1       </span><span class="c1">// That depands on your car. some 1 some 0. </span>
+
+<span class="n">Serial_CAN</span><span class="w"> </span><span class="n">can</span><span class="p">;</span><span class="w"></span>
+
+<span class="cp">#define can_tx  2           </span><span class="c1">// tx of serial can module connect to D2</span>
+<span class="cp">#define can_rx  3           </span><span class="c1">// rx of serial can module connect to D3</span>
+
+<span class="cp">#define PID_ENGIN_PRM       0x0C</span>
+<span class="cp">#define PID_VEHICLE_SPEED   0x0D</span>
+<span class="cp">#define PID_COOLANT_TEMP    0x05</span>
+
+<span class="cp">#if STANDARD_CAN_11BIT</span>
+<span class="cp">#define CAN_ID_PID          0x7DF</span>
+<span class="cp">#else</span>
+<span class="cp">#define CAN_ID_PID          0x18db33f1</span>
+<span class="cp">#endif</span>
+
 
 <span class="kr">void</span><span class="w"> </span><span class="nf">sendPid</span><span class="p">(</span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="n">__pid</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="n">tmp</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0x02</span><span class="p">,</span><span class="w"> </span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="n">__pid</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
@@ -2311,22 +2354,8 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 
 <span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="nf">Serial</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="n">can</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">can_tx</span><span class="p">,</span><span class="w"> </span><span class="n">can_rx</span><span class="p">,</span><span class="w"> </span><span class="mi">9600</span><span class="p">);</span><span class="w">      </span><span class="c1">// tx, rx</span>
-
-<span class="w">    </span><span class="c1">// set baudrate of CAN Bus to 500Kb/s</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">can</span><span class="p">.</span><span class="n">canRate</span><span class="p">(</span><span class="n">CAN_RATE_500</span><span class="p">))</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;set can rate ok&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">else</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;set can rate fail&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="n">set_mask_filt</span><span class="p">();</span><span class="w"></span>
-
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="nf">Serial</span><span class="p">);</span><span class="w">   </span>
+<span class="w">    </span><span class="n">can</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">can_tx</span><span class="p">,</span><span class="w"> </span><span class="n">can_rx</span><span class="p">,</span><span class="w"> </span><span class="mi">38400</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;</span><span class="nf">begin</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 
@@ -2342,8 +2371,6 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="nf">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
-
-<span class="c1">// END FILE</span>
 </code></pre></div>
 If you want to get other data by PIDs, you can refer to the above example, and refer to <a href="https://en.wikipedia.org/wiki/OBD-II_PIDs">this link</a></p>
 <h2 id="working-standalone"><strong><em>Working Standalone</em></strong><a class="headerlink" href="#working-standalone" title="Permanent link">&para;</a></h2>
