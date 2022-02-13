@@ -452,6 +452,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#can-baudrate-support" class="md-nav__link">
+    CAN Baudrate Support
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#hardware-overview" class="md-nav__link">
     Hardware Overview
   </a>
@@ -486,23 +493,23 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#getting-started-with-arduino-ide" class="md-nav__link">
+    Getting Started with Arduino IDE
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started with Arduino IDE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#arduino-ide-setup" class="md-nav__link">
     Arduino IDE Setup
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-    <nav class="md-nav" aria-label="Usage">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#arduino-code" class="md-nav__link">
-    Arduino Code
+  <a href="#example-code" class="md-nav__link">
+    Example code
   </a>
   
 </li>
@@ -1263,6 +1270,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#can-baudrate-support" class="md-nav__link">
+    CAN Baudrate Support
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#hardware-overview" class="md-nav__link">
     Hardware Overview
   </a>
@@ -1297,23 +1311,23 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#getting-started-with-arduino-ide" class="md-nav__link">
+    Getting Started with Arduino IDE
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started with Arduino IDE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#arduino-ide-setup" class="md-nav__link">
     Arduino IDE Setup
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-    <nav class="md-nav" aria-label="Usage">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#arduino-code" class="md-nav__link">
-    Arduino Code
+  <a href="#example-code" class="md-nav__link">
+    Example code
   </a>
   
 </li>
@@ -1600,6 +1614,37 @@ This CANBed M4 is the latest board of the CANBed family, with the ATSAME51G19A m
 <li>Output Current @ 5V: 1A</li>
 <li>Input interface: Sub-D as well as Terminal</li>
 </ul>
+<h2 id="can-baudrate-support"><strong><em>CAN Baudrate Support</em></strong><a class="headerlink" href="#can-baudrate-support" title="Permanent link">&para;</a></h2>
+<hr />
+<p>For CAN-FD frame, below baudrate are supported,</p>
+<ul>
+<li>CAN_250K_500K</li>
+<li>CAN_250K_1M</li>
+<li>CAN_250K_1M5</li>
+<li>CAN_250K_2M</li>
+<li>CAN_500K_1M </li>
+<li>CAN_500K_2M</li>
+<li>CAN_500K_4M</li>
+<li>CAN_1000K_4M </li>
+</ul>
+<p>For CAN standard frame, below baudrates are supported. </p>
+<ul>
+<li>CAN_4K096BPS </li>
+<li>CAN_5KBPS    </li>
+<li>CAN_10KBPS   </li>
+<li>CAN_20KBPS   </li>
+<li>CAN_31K25BPS </li>
+<li>CAN_33K3BPS  </li>
+<li>CAN_40KBPS   </li>
+<li>CAN_50KBPS   </li>
+<li>CAN_80KBPS   </li>
+<li>CAN_100KBPS  </li>
+<li>CAN_125KBPS  </li>
+<li>CAN_200KBPS  </li>
+<li>CAN_250KBPS  </li>
+<li>CAN_500KBPS  </li>
+<li>CAN_1000KBPS </li>
+</ul>
 <h2 id="hardware-overview"><strong><em>Hardware Overview</em></strong><a class="headerlink" href="#hardware-overview" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="part-list">Part List<a class="headerlink" href="#part-list" title="Permanent link">&para;</a></h3>
@@ -1755,7 +1800,9 @@ This CANBed M4 is the latest board of the CANBed family, with the ATSAME51G19A m
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030009/CANBED_FD_DB9_SETTING.jpg" /></p>
 <p>These pads are connected to the OBD side by default. We have to prepare a knife to disconnect the OBD side, and then use an electric soldering iron to solder the CAN Open side of the pads.</p>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030018/db9_setup.png" /></p>
-<h2 id="arduino-ide-setup"><strong><em>Arduino IDE Setup</em></strong><a class="headerlink" href="#arduino-ide-setup" title="Permanent link">&para;</a></h2>
+<h2 id="getting-started-with-arduino-ide"><strong><em>Getting Started with Arduino IDE</em></strong><a class="headerlink" href="#getting-started-with-arduino-ide" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="arduino-ide-setup"><strong><em>Arduino IDE Setup</em></strong><a class="headerlink" href="#arduino-ide-setup" title="Permanent link">&para;</a></h3>
 <hr />
 <p>First download the Arduino IDE from <a href="https://www.arduino.cc/en/Main/Software">https://www.arduino.cc/en/Main/Software</a>. Arduino IDE can be installed and run on Windows, Linux, and Mac OS X operating systems. Download the installer or zip file (Windows only) and install (if you have the zip file, extract it to your Windows computer’s hard drive) it on your operating system.</p>
 <p>Once finished, start the Arduino IDE.</p>
@@ -1764,17 +1811,15 @@ This CANBed M4 is the latest board of the CANBed family, with the ATSAME51G19A m
 </code></pre></div>
 
 <p>Enter longan to install the latest Longan SAME board</p>
-<h2 id="usage"><strong><em>Usage</em></strong><a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<h3 id="example-code"><strong><em>Example code</em></strong><a class="headerlink" href="#example-code" title="Permanent link">&para;</a></h3>
 <hr />
-<h3 id="arduino-code"><strong><em>Arduino Code</em></strong><a class="headerlink" href="#arduino-code" title="Permanent link">&para;</a></h3>
-<hr />
-<p>We provide an <a href="https://github.com/Longan-Labs/CANBed_M4_Arduino_Lib">Arduino library for CANBed M4</a>. </p>
+<p>Open Arduino IDE, Click File &gt; Examples &gt; SAME51 CAN Library, you will get many examples for CANBed M4. </p>
 <p>There're many examples for the library, which is consist of,</p>
 <ul>
 <li><strong><em>CAN_20_Send</em></strong> - How to send a frame to CAN Bus 2.0</li>
 <li><strong><em>CAN_20_Recv</em></strong> - How to recv a frame from CAN Bus 2.0</li>
 <li><strong><em>CAN_FD_Send</em></strong> - How to send a frame to CAN FD</li>
-<li><strong><em>CAN_FD_Send</em></strong> - How to recv a frame from CAN FD</li>
+<li><strong><em>CAN_FD_Recv</em></strong> - How to recv a frame from CAN FD</li>
 </ul>
 <h2 id="rescue-the-bricked-board"><strong>Rescue the bricked board</strong><a class="headerlink" href="#rescue-the-bricked-board" title="Permanent link">&para;</a></h2>
 <hr />
@@ -1834,7 +1879,6 @@ This CANBed M4 is the latest board of the CANBed family, with the ATSAME51G19A m
 <h2 id="reference"><strong><em>Reference</em></strong><a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
-<li><a href="https://github.com/Longan-Labs/CANBed_M4_Arduino_Lib">Arduino Library</a></li>
 <li><a href="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBed%20M4.zip">Schematics in Eagle</a></li>
 <li><a href="https://github.com/Longan-Labs/CANBed_3D_Model/archive/refs/heads/main.zip">3D Model</a></li>
 <li><a href="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBed%20M4/CANBed%20M4.pdf">Schematics in PDF</a></li>
