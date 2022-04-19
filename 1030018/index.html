@@ -1874,7 +1874,7 @@
 <p>The I/Os of RP2040 list out here, which is consist of,</p>
 <ul>
 <li>1 x UART</li>
-<li>1 x I2C</li>
+<li>1 x I2C (Wire1)</li>
 <li>4 x Analog Input(can be used us Digital IO)</li>
 <li>8 x Digital I/O</li>
 </ul>
@@ -1890,7 +1890,7 @@
 <a href="http://www.ni.com/white-paper/9759/en/">NI CAN Physical Layer and Termination Guide</a></p>
 <p><strong>7. Grove connector for UART</strong></p>
 <p>Use Serial1 in the code</p>
-<p><strong>8.Grove connector for I2C</strong></p>
+<p><strong>8.Grove connector for I2C (Wire1)</strong></p>
 <p><strong>9. Reset</strong></p>
 <p>Click to reset the board.</p>
 <h2 id="db9-connector"><strong><em>DB9 connector</em></strong><a class="headerlink" href="#db9-connector" title="Permanent link">&para;</a></h2>
@@ -2276,6 +2276,13 @@ If you want to get other data by PIDs, you can refer to the above example, and r
 <li>Check if the baudrate of CAN Bus is setting correct</li>
 <li>Try turning on/off the switch for the 120Ω terminal resistor</li>
 <li>Check if CANH and CANL is well connected, H to H and L to L</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">I2C is not working</p>
+<ul>
+<li>There are 2 I2C for RP2040, for this CANBed 2040, we use Wire1, that is, please change Wire to Wire1</li>
+<li>And before Wire1.begin(), plese add Wire1.setSDA(6) and Wire1.setSCL(7) to select the pin. </li>
 </ul>
 </div>
 <div class="admonition tip">
