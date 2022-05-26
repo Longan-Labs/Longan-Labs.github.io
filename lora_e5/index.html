@@ -1,0 +1,2050 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Docs of Longan Labs">
+      
+      
+        <meta name="author" content="Stephen Lo">
+      
+      
+        <link rel="canonical" href="https://longan-labs.cc/lora_e5/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.4">
+    
+    
+      
+        <title>LoRa E5 - Longan Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bb3983ee.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffc105">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-101995557-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="amber" data-md-color-accent="amber">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#features" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Longan Docs" class="md-header__button md-logo" aria-label="Longan Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Longan Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              LoRa E5
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Longan-Labs/docs_mkdocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Longan-Labs/docs_mkdocs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Longan Docs" class="md-nav__button md-logo" aria-label="Longan Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Longan Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Longan-Labs/docs_mkdocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Longan-Labs/docs_mkdocs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          ABOUT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ABOUT" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          ABOUT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        ABOUT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        LICENSE
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          CAN-BUS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CAN-BUS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          CAN-BUS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030001/" class="md-nav__link">
+        SERIAL CAN BUS MODULE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030017/" class="md-nav__link">
+        I2C CAN BUS MODULE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030008/" class="md-nav__link">
+        CANBED V1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030009/" class="md-nav__link">
+        CANBED FD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030014/" class="md-nav__link">
+        CANBED M0
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030013/" class="md-nav__link">
+        CANBED M4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030018/" class="md-nav__link">
+        CANBED RP2040
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030019/" class="md-nav__link">
+        CANBED DUAL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030002/" class="md-nav__link">
+        OBD-II CAN-BUS DEV KIT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030003/" class="md-nav__link">
+        OBD-II CAN BUS GPS DEV KIT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030012/" class="md-nav__link">
+        CAN-FD SHIELD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030015/" class="md-nav__link">
+        OBD-II RF DEV KIT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030016/" class="md-nav__link">
+        CAN BUS SHIELD
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          ELECTRONIC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ELECTRONIC" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          ELECTRONIC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          LoRa E5
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        LoRa E5
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#harware-overview" class="md-nav__link">
+    Harware Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specification" class="md-nav__link">
+    Specification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application" class="md-nav__link">
+    Application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-notes" class="md-nav__link">
+    Application Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-quick-start-of-at-commands" class="md-nav__link">
+    1. Quick start of AT Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Quick start of AT Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-preparation" class="md-nav__link">
+    1.1 Preparation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-basic-at-commands" class="md-nav__link">
+    1.2 Basic AT Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-connect-and-send-data-to-ttn" class="md-nav__link">
+    1.3 Connect and send Data to TTN
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-develop-with-stm32cube-mcu-package" class="md-nav__link">
+    2. Develop with STM32Cube MCU Package
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Develop with STM32Cube MCU Package">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-preparations" class="md-nav__link">
+    2.1 Preparations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-gpio-configuration-overview" class="md-nav__link">
+    2.2 GPIO Configuration Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-build-the-lorawan-end-node-example" class="md-nav__link">
+    2.3 Build the LoRaWAN End Node Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-modify-your-device-eui-application-eui-application-key-and-your-lorawan-region" class="md-nav__link">
+    2.4 Modify your Device EUI, Application EUI, Application KEY and your LoRawan Region
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-connect-to-ttn" class="md-nav__link">
+    2.5 Connect to TTN
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-notes_1" class="md-nav__link">
+    Application Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tech-support" class="md-nav__link">
+    Tech Support
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1040001/" class="md-nav__link">
+        IRduino
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1040002/" class="md-nav__link">
+        Heelight Core
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1040003/" class="md-nav__link">
+        Heelight Relay
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1040004/" class="md-nav__link">
+        Keyboard
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1040006/" class="md-nav__link">
+        AHT20 Temp&Humi Sensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1040005/" class="md-nav__link">
+        GPS/BDS Module
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1040007/" class="md-nav__link">
+        AAA Battery Shield
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1040009/" class="md-nav__link">
+        Longan Core 01
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1050001/" class="md-nav__link">
+        Squama Ethernet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1050003/" class="md-nav__link">
+        Squama Ethernet with CAN FD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1040010/" class="md-nav__link">
+        Serial RF Module
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          CARDS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CARDS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          CARDS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cards-system-summary/" class="md-nav__link">
+        Cards System Summary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1016007/" class="md-nav__link">
+        AAA Battery Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1013007/" class="md-nav__link">
+        Carduino 32U4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1017008/" class="md-nav__link">
+        Game Board
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011001/" class="md-nav__link">
+        Temperature Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1012002/" class="md-nav__link">
+        Buzzer Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011010/" class="md-nav__link">
+        Light Sensor Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1017002/" class="md-nav__link">
+        Extension Board
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1017007/" class="md-nav__link">
+        Sensor Display Board
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011008/" class="md-nav__link">
+        BME280 Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1014001/" class="md-nav__link">
+        OLED Display Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011007/" class="md-nav__link">
+        Rotary Angle Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1016006/" class="md-nav__link">
+        Programmer Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1013001/" class="md-nav__link">
+        Carduino 328
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011027/" class="md-nav__link">
+        Button Input Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011029/" class="md-nav__link">
+        IR Receiver Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011002/" class="md-nav__link">
+        Sound Sensor Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011003/" class="md-nav__link">
+        PIR Sensor Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011012/" class="md-nav__link">
+        RTC Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011021/" class="md-nav__link">
+        9-Dof Sensor Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1012003/" class="md-nav__link">
+        Motor Driver Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1012001/" class="md-nav__link">
+        Relay Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011032/" class="md-nav__link">
+        Line Finder Card
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#harware-overview" class="md-nav__link">
+    Harware Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specification" class="md-nav__link">
+    Specification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application" class="md-nav__link">
+    Application
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-notes" class="md-nav__link">
+    Application Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-quick-start-of-at-commands" class="md-nav__link">
+    1. Quick start of AT Commands
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Quick start of AT Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-preparation" class="md-nav__link">
+    1.1 Preparation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-basic-at-commands" class="md-nav__link">
+    1.2 Basic AT Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-connect-and-send-data-to-ttn" class="md-nav__link">
+    1.3 Connect and send Data to TTN
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-develop-with-stm32cube-mcu-package" class="md-nav__link">
+    2. Develop with STM32Cube MCU Package
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Develop with STM32Cube MCU Package">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-preparations" class="md-nav__link">
+    2.1 Preparations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-gpio-configuration-overview" class="md-nav__link">
+    2.2 GPIO Configuration Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-build-the-lorawan-end-node-example" class="md-nav__link">
+    2.3 Build the LoRaWAN End Node Example
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-modify-your-device-eui-application-eui-application-key-and-your-lorawan-region" class="md-nav__link">
+    2.4 Modify your Device EUI, Application EUI, Application KEY and your LoRawan Region
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-connect-to-ttn" class="md-nav__link">
+    2.5 Connect to TTN
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-notes_1" class="md-nav__link">
+    Application Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tech-support" class="md-nav__link">
+    Tech Support
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+  <h1>LoRa E5</h1>
+
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/lora_e5_can_res/main/images/CANBed_LoRa_3.jpg" /></p>
+<p>LoRa-E5 CAN FD Development Kit is a compact development toolset for you to unlock the powerful performance of the <a href="https://www.seeedstudio.com/LoRa-E5-Wireless-Module-p-4745.html">LoRa-E5 STM32WLE5JC</a> as well as CAN FD and RS485 communication. We also provide a simple waterproof case and solar charging interface, you can easily make a sensor node placed outdoors.</p>
+<p>LoRa-E5 Dev Board embedded with LoRa-E5 STM32WLE5JC Module that supports LoRaWAN protocol on global frequency band. It leads out full GPIOs of LoRa-E5 supporting various data protocols and interfaces including RS-485, Grove, male/female headers, etc. It would be a perfect choice for fast testing and rapid prototyping of your LoRa IoT projects.</p>
+<p>LoRa-E5 Dev Board embedded with LoRa-E5 STM32WLE5JC Module, which is the world-first combo of LoRa RF and MCU chip into one single tiny chip and is FCC and CE certified. It is powered by ARM Cortex-M4 core and Semtech SX126X LoRa chip, supports both LoRaWAN and LoRa protocol on the worldwide frequency and (G)FSK, BPSK, (G)MSK, and LoRa modulations.</p>
+<p>Learn more about <a href="https://wiki.seeedstudio.com/LoRa-E5_STM32WLE5JC_Module/">LoRa-E5</a> here.</p>
+<p>LoRa-E5 Dev Board has a long-distance transmission range of LoRa-E5 up to 10km in an open area. The sleep current of LoRa-E5 modules on board is as low as 2.1 uA(WOR mode). It is designed with industrial standards with a wide working temperature at -40 ℃ ~ 85℃, high sensitivity between -116.5 dBm ~ -136 dBm, and power output up to +20.8dBm at 3.3V.</p>
+<p>LoRa-E5 Dev Board also has rich interfaces. Developed to unlock the full functionality of the LoRa-E5 module, LoRa-E5 Dev Board has led out full 28 pins of LoRa-E5 and provides with rich interfaces including Grove connectors, RS-485 terminal, male/female pin headers for you to connect sensors and modules with different connectors and data protocols, saving your time on wire soldering. You could also easily power the board by connecting the battery holder with 2 AA batteries, enabling temporary use when lacking an external power source. It is a user-friendly board for easy testing and rapid prototyping.</p>
+<p>Since LoRa-E5 is a LoRaWAN chip with an MCU, there are three main ways to utilize the LoRa-E5 Dev Board:</p>
+<p>1: Connect LoRa-E5 Dev Board to PC via USB and control by AT commands</p>
+<p>There is a built-in USB to UART function on board, you could just simply connect the LoRa-E5 Dev Board to your PC with a USB type C cable, and use serial communication software to send AT commands and read data from the board</p>
+<p>2: Connect LoRa-E5 Dev Board to another mainboard via UART and control by AT commands</p>
+<p>For example, connect LoRa-E5 Dev Board to Seeeduino XIAO and the Expansion Board via UART, and send AT commands and read data from Seeeduino XIAO through Arduino IDE serial monitor.</p>
+<p>3: Develop user application by using SDK</p>
+<p>Develop your own LoRa development board with MCU function by using STM32Cube Programmer, which is the SDK officially provided by STMicroelectronics. To download this SDK resource, please find the resources in learning and document down below.</p>
+<p>With all the outstanding features listed above, the LoRa-E5 Dev Board will be a superior choice for IoT device development, testing, prototyping, and applications in long-distance, ultra-low power consumption IoT scenarios like smart agriculture, smart office, and smart industry.</p>
+<p>If you are unfamiliar with LoRa and LoRaWAN technology, please check out this blog <a href="https://www.seeedstudio.com/blog/2020/08/03/lorapedia-an-introduction-of-lora-and-lorawan-technology/">LoRapedia</a> in detail.</p>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Ultra-low power consumption and high performance</li>
+<li>Easy testing and rapid prototyping</li>
+<li>CAN FD communication</li>
+<li>RS485 Interface</li>
+<li>Global LoRaWAN and loRa frequency plan supported</li>
+<li>Long-distance transmission range to 10km(ideal value in open area)</li>
+</ul>
+<h2 id="harware-overview">Harware Overview<a class="headerlink" href="#harware-overview" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/lora_e5_can_res/main/images/HW.png" /></p>
+<p>1.Reset button</p>
+<p>2.2x9 Header</p>
+<p>3.Type-C USB</p>
+<p>4.User LED</p>
+<p>5.User Button</p>
+<p>6.485 Interface</p>
+<p>7.CAN Interface</p>
+<p>8.Power Input (5-28V)</p>
+<p>9.Boot button</p>
+<p>A. CAN send/recv indicators</p>
+<p>B. Solar input</p>
+<p>C. Lipo battery input</p>
+<p>D/E. Antenna</p>
+<p>F. LoRa E5 Module</p>
+<p>G/H. Grove connector</p>
+<h2 id="specification">Specification<a class="headerlink" href="#specification" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Specifications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Voltage supply</td>
+<td>5V/USB, 3.7V Lipo Battery, 4.5~28V DC input</td>
+</tr>
+<tr>
+<td>Voltage output</td>
+<td>3.3V</td>
+</tr>
+<tr>
+<td>Power output</td>
+<td>Up to 20.8dBm at 3.3V</td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td>EU868 / US915 / AU915 / AS923 / KR920 / IN865</td>
+</tr>
+<tr>
+<td>Protocol</td>
+<td>LoRaWAN</td>
+</tr>
+<tr>
+<td>Sensitivity</td>
+<td>116.5dBm ~ -136dBm</td>
+</tr>
+<tr>
+<td>Modulation</td>
+<td>LoRa, (G)FSK, (G)MSK, BPSK</td>
+</tr>
+<tr>
+<td>CAN 2.0 speed</td>
+<td>Up to 1Mb/s</td>
+</tr>
+<tr>
+<td>CAN FD speed</td>
+<td>Up to 5Mb/s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="application">Application<a class="headerlink" href="#application" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A common Lora usage scenario, that is, building a Lora sensor network. A large number of sensors in the industry are transmitted through CAN Bus. With the Lora-E5 CAN Bus Dev board you can use the on-board CAN Bus function to read the sensors, and send the data through Lora.</li>
+<li>Since the circuit board can receive 5-28V input, the user can connect the circuit board to the OBD interface, get the data of the car and send it out through Lora</li>
+</ul>
+<h2 id="application-notes">Application Notes<a class="headerlink" href="#application-notes" title="Permanent link">&para;</a></h2>
+<p><strong>1. Factroy AT Firmare</strong></p>
+<p>LoRa-E5 series has a built-in AT command firmware, which supports LoRaWAN Class A/B/C protocol and a wide frequency plan: EU868/US915/AU915/AS923/KR920/IN865. With this AT command firmware, developers can easily and quickly build their prototype or application.</p>
+<p>The AT command firmware contains a bootloader for DFU and the AT application. The "PB13/SPI_SCK/BOOT" pin is used to control LoRa-E5 to stay in the bootloader or jump to the AT application. When PB13 is HIGH, the module will jump to AT application after reset, with a default baud rate of 9600. When PB13 is LOW (press the "Boot" button on LoRa-E5 Dev Board or LoRa-E5 mini), the module will stay in the bootloader, and keep transmitting "C" character every 1S at baud rate 115200.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention<ul>
+<li>Factory AT Firmware is programmed with RDP(Read Protection) Level 1, developers need to remove RDP first with STM32Cube Programmer. Note that regression RDP to level 0 will cause a flash memory mass to erase and the Factory AT Firmware can't be restored again.</li>
+<li>The "PB13/SPI_SCK/BOOT" pin on the LoRa-E5 module is just a normal GPIO, not the "BOOT0" pin of the MCU. This "PB13/SPI_SCK/BOOT" pin is used in the bootloader of the Factory AT firmware, to decide to jump to APP or stay in bootloader(for DFU). The real "BOOT0" pin doesn't pinout to the module, so users need to be careful when developing the low-power applications.</li>
+</ul>
+</p>
+</div>
+<p><strong>2. Clock Configuration</strong></p>
+<p>2.1 HSE </p>
+<ul>
+<li>
+<p>32MHz TCXO</p>
+</li>
+<li>
+<p>TCXO power supply: PB0-VDD_TCXO</p>
+</li>
+</ul>
+<p>2.2 LSE</p>
+<ul>
+<li>32.768KHz crystal oscillator</li>
+</ul>
+<p><strong>3. RF Switch</strong></p>
+<p><strong>LoRa-E5 module ONLY transmits through RFO_HP:</strong></p>
+<ul>
+<li>
+<p>Receive: PA4=1, PA5=0</p>
+</li>
+<li>
+<p>Transmit(high output power, SMPS mode): PA4=0, PA5=1</p>
+</li>
+</ul>
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<h3 id="1-quick-start-of-at-commands">1. Quick start of AT Commands<a class="headerlink" href="#1-quick-start-of-at-commands" title="Permanent link">&para;</a></h3>
+<h4 id="11-preparation">1.1 Preparation<a class="headerlink" href="#11-preparation" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Step 1.</strong> Connect LoRa-E5 Development Board to PC via a Type-C cable</p>
+</li>
+<li>
+<p><strong>Step 2.</strong> Open a serial tool(eg. Arudino Serial Monitor), select the right COM port, set baudrate to 9600 and select Both NL &amp; CR</p>
+</li>
+<li>
+<p><strong>Step 3.</strong> Try to send "AT" and you will see the response.</p>
+</li>
+</ul>
+<p><img alt="" src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/4.png" /></p>
+<h4 id="12-basic-at-commands">1.2 Basic AT Commands<a class="headerlink" href="#12-basic-at-commands" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>AT+ID // Read all, DevAddr(ABP), DevEui(OTAA), AppEui(OTAA)</p>
+</li>
+<li>
+<p>AT+ID=DevAddr // Read DevAddr</p>
+</li>
+<li>
+<p>AT+ID=DevEui // Read DevEui</p>
+</li>
+<li>
+<p>AT+ID=AppEui // Read AppEui</p>
+</li>
+<li>
+<p>AT+ID=DevAddr,"devaddr" // Set new DevAddr</p>
+</li>
+<li>
+<p>AT+ID=DevEui,"deveui" // Set new DevEui</p>
+</li>
+<li>
+<p>AT+ID=AppEui,"appeui" // Set new AppEui</p>
+</li>
+<li>
+<p>AT+KEY=APPKEY,"16 bytes length key" // Change application session key</p>
+</li>
+<li>
+<p>AT+DR=band // Change the Band Plans</p>
+</li>
+<li>
+<p>AT+DR=SCHEME // Check current band</p>
+</li>
+<li>
+<p>AT+CH=NUM, 0-7 // Enable channel 0~7</p>
+</li>
+<li>
+<p>AT+MODE="mode" // Select work mode: LWOTAA, LWABP or TEST</p>
+</li>
+<li>
+<p>AT+JOIN // Send JOIN request</p>
+</li>
+<li>
+<p>AT+MSG="Data to send" // Use to send string format frame which is no need to be confirmed by the server</p>
+</li>
+<li>
+<p>AT+CMSG="Data to send" // Use to send string format frame which must be confirmed by the server</p>
+</li>
+<li>
+<p>AT+MSGHEX="xx xx xx xx" // Use to send hex format frame which is no need to be confirmed by the server</p>
+</li>
+<li>
+<p>AT+CMSGHEX="xx xx xx xx" // Use to send hex format frame which must be confirmed by the server</p>
+</li>
+</ul>
+<h4 id="13-connect-and-send-data-to-ttn">1.3 Connect and send Data to TTN<a class="headerlink" href="#13-connect-and-send-data-to-ttn" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Step 1: Load into TTN website: <a href="https://www.thethingsnetwork.org">https://www.thethingsnetwork.org</a> and create your account, then access "Console" and first click on "APPLICATIONS"</li>
+</ul>
+<p><img alt="" src="https://files.seeedstudio.com/products/113990896/wiki/s2.1.png" /></p>
+<ul>
+<li>Step 2: Add an Application</li>
+</ul>
+<p><img alt="" src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/2.png" /></p>
+<ul>
+<li>Step3: Copy the <code>APPLICATION EUIS</code> and click "register device" button to add your device to TTN</li>
+</ul>
+<p><img alt="" src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/1.png" /></p>
+<ul>
+<li>
+<p>Step4: Send AT command <code>AT+ID=DevEu</code>i to get your Device EUI, send AT command <code>AT+KEY=APPKEY,"11223344556677889900112233445566"</code> to set the App Key, and send AT command <code>AT+ID=AppEui,"APPLICATION EUIS you copy just now"</code> to set the App EUI, finally fill all these EUIs and Key to the page to register your device
+<div class="highlight"><pre><span></span><code>Tx: AT+ID=DevEui
+Rx: +ID: DevEui, 2C:F7:F1:20:24:90:16:1D
+Tx: AT+KEY=APPKEY,&quot;11223344556677889900112233445566&quot;
+Rx: +KEY: APPKEY 11223344556677889900112233445566
+Tx: AT+ID=AppEui,&quot;70B3D57ED003F06A&quot;
+Rx: +ID: AppEui, 70:B3:D5:7E:D0:03:F0:6A
+</code></pre></div>
+<img alt="" src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/3.png" /></p>
+</li>
+<li>
+<p>Step 5: Register your LoRaWAN Gateway on TTN Console,
+please refer to the instruction shown in <a href="https://wiki.seeedstudio.com/The-Things-Indoor-Gateway/#step-2-gateway-registration-on-ttn-console">The Things Indoor Gateway wiki page: The Things Indoor Gateway Get Started with SenseCAP</a></p>
+</li>
+<li>
+<p>Step 6: Type the following AT Commmand to connect to TTN</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>Tx: AT+ID
+Rx: +ID: DevAddr, 24:90:16:1D
++ID: DevEui, 2C:F7:F1:20:24:90:16:1D
++ID: AppEui, 70:B3:D5:7E:D0:03:F0:6A
+
+Tx: AT+DR=EU868
+Rx: +DR: EU868
+
+Tx: AT+CH=NUM,0-2
+Rx: +CH: NUM, 0-2
+
+// If you are using US915 FSB2
+// Tx: AT+DR=US915
+// Rx: +DR: US915
+// Tx: AT+CH=NUM,8-15
+// Rx: +CH: NUM, 8-15
+
+Tx: AT+MODE=LWOTAA
+Rx: +MODE: LWOTAA
+
+Tx: AT+JOIN
+Rx: +JOIN: Start
++JOIN: NORMAL
++JOIN: Network joined
++JOIN: NetID 000013 DevAddr 26:01:5F:66
++JOIN: Done
+</code></pre></div>
+<p>If you see <code>+JOIN: Network joined</code> in your serial console, congratulations, your device have already connect to TTN! You can also check your device status at the "overview" page.</p>
+<p><img alt="" src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/5.jpg" /></p>
+<ul>
+<li>Step 7: Type the following AT Command to send data to TTN</li>
+</ul>
+<div class="highlight"><pre><span></span><code>// send string &quot;HELLO&quot; to TTN 
+Tx: AT+MSG=HELLO
+Rx: +MSG: Start
++MSG: FPENDING
++MSG: RXWIN2, RSSI -112, SNR -1.0
++MSG: Done
+// send hex &quot;00 11 22 33 44&quot; 
+Tx: AT+MSGHEX=&quot;00 11 22 33 44&quot;
+Rx: +MSGHEX: Start
++MSGHEX: Done
+</code></pre></div>
+<p><img alt="" src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/6.jpg" /></p>
+<ul>
+<li>Step 8: For more information about AT Commands, please refer to <a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf">LoRa-E5 AT Command Specification</a></li>
+</ul>
+<h3 id="2-develop-with-stm32cube-mcu-package">2. Develop with STM32Cube MCU Package<a class="headerlink" href="#2-develop-with-stm32cube-mcu-package" title="Permanent link">&para;</a></h3>
+<p>This section is for LoRa-E5 Mini or LoRa-E5 Dev Board, aiming at creating a LoRaWAN End Node with STM32Cube MCU Package for STM32WL series(SDK), to join and send data to LoRaWAN Network.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Please read <a href="https://wiki.seeedstudio.com/LoRa_E5_mini/#21-erase-factory-at-firmware">Erase Factory AT Firmware</a> section first, as if we need to erase the Factory AT Firmware before we program with SDK. After erasing the Factory AT Firmware it CANNOT be recovered.</p>
+</div>
+<h4 id="21-preparations">2.1 Preparations<a class="headerlink" href="#21-preparations" title="Permanent link">&para;</a></h4>
+<p>Softwares:</p>
+<ul>
+<li>
+<p>Install <a href="https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-ides/stm32cubeide.html">STM32CubeIDE(to compilation and debug)</a> </p>
+</li>
+<li>
+<p>Install <a href="https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-programmers/stm32cubeprog.license=1614563305396.product=STM32CubePrg-W64.version=2.6.0.html">STM32CubeProgrammer(to program STM32 devices)</a></p>
+</li>
+<li>
+<p>Download and extract <a href="https://my.st.com/content/my_st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32cube-mcu-mpu-packages/stm32cubewl.license=1608693595598.product=STM32CubeWL.version=1.0.0.html#overview">STM32Cube MCU Package for STM32WL series(SDK)</a></p>
+</li>
+</ul>
+<p>Hardwares:</p>
+<ul>
+<li>
+<p>LoRaWAN Gateway connected to LoRaWAN Network Server(e.g. TTN)</p>
+</li>
+<li>
+<p>Prepare an USB TypeC cable and a ST-LINK. Connect the TypeC cable to the TypeC port for power and serial communication, connect the ST-LINK to the SWD pins like this:</p>
+</li>
+</ul>
+<p><img alt="connection" src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/connection.png" /></p>
+<h4 id="22-gpio-configuration-overview">2.2 GPIO Configuration Overview<a class="headerlink" href="#22-gpio-configuration-overview" title="Permanent link">&para;</a></h4>
+<ul>
+<li>As the hardware design of LoRa-E5 series is a bit different with NUCLEO-WL55JC, the official STM32WL55JC development board from ST, developers need to reconfigure some gpios, to adapt the SDK example to LoRa-E5 series. We have already reconfigured gpios in this example, but we think it is nessary to point out the difference.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>SDK Example Label</th>
+<th>GPIO of NUCLEO-WL55JC</th>
+<th>GPIO of LoRa-E5 Mini and LoRa-E5 Dev Board</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RF_CTRL1</td>
+<td>PC4</td>
+<td>PA4</td>
+</tr>
+<tr>
+<td>RF_CTRL2</td>
+<td>PC5</td>
+<td>PA5</td>
+</tr>
+<tr>
+<td>RF_CTRL3</td>
+<td>PC3</td>
+<td>None</td>
+</tr>
+<tr>
+<td>BUT1</td>
+<td>PA0</td>
+<td>PB13 (Boot Button)</td>
+</tr>
+<tr>
+<td>BUT2</td>
+<td>PA1</td>
+<td>None</td>
+</tr>
+<tr>
+<td>BUT3</td>
+<td>PC6</td>
+<td>None</td>
+</tr>
+<tr>
+<td>LED1</td>
+<td>PB15</td>
+<td>None</td>
+</tr>
+<tr>
+<td>LED2</td>
+<td>PB9</td>
+<td>PB5</td>
+</tr>
+<tr>
+<td>LED3</td>
+<td>PB11</td>
+<td>None</td>
+</tr>
+<tr>
+<td>DBG1</td>
+<td>PB12</td>
+<td>PA0 (D0 Button)</td>
+</tr>
+<tr>
+<td>DBG2</td>
+<td>PB13</td>
+<td>PB10</td>
+</tr>
+<tr>
+<td>DBG3</td>
+<td>PB14</td>
+<td>PB3</td>
+</tr>
+<tr>
+<td>DBG4</td>
+<td>PB10</td>
+<td>PB4</td>
+</tr>
+<tr>
+<td>Usart</td>
+<td>Usart2(PA2/PA3)</td>
+<td>Usart1(PB6/PB7)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="23-build-the-lorawan-end-node-example">2.3 Build the LoRaWAN End Node Example<a class="headerlink" href="#23-build-the-lorawan-end-node-example" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Download and copy <a href="https://github.com/seeed-lora/LoRa-E5-LoRaWAN-End-Node.git">this repo</a> to your SDK folder <code>en.stm32cubewl\STM32Cube_FW_WL_V1.0.0\Projects\NUCLEO-WL55JC\Applications\LoRaWAN</code> and replace the origin <code>en.stm32cubewl\STM32Cube_FW_WL_V1.0.0\Projects\NUCLEO-WL55JC\Applications\LoRaWAN\LoRaWAN_End_Node</code> folder</p>
+</li>
+<li>
+<p>Open the <code>LoRaWAN_End_Node</code> example with <code>STM32CubeIDE</code>, by double click file <code>LoRaWAN_End_Node\STM32CubeIDE\.project</code></p>
+</li>
+<li>
+<p>Click <code>Build Debug</code> for this example, it should work without any errors</p>
+</li>
+</ul>
+<p><img alt="build" src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/build.png" /></p>
+<h4 id="24-modify-your-device-eui-application-eui-application-key-and-your-lorawan-region">2.4 Modify your Device EUI, Application EUI, Application KEY and your LoRawan Region<a class="headerlink" href="#24-modify-your-device-eui-application-eui-application-key-and-your-lorawan-region" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Please follow the <a href="https://wiki.seeedstudio.com/LoRa_E5_mini/#13-connect-and-send-data-to-ttn">guide</a> here to setup your TTN application, get your Application EUI and copy it to the macro definition <code>LORAWAN_JOIN_EUI</code> in <code>LoRaWAN/App/se-identity.h</code> , for example, my Application EUI is <code>70 B3 D5 7E D0 03 F0 6A</code> :</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// LoRaWAN/App/se-identity.h</span>
+
+<span class="cm">/*!</span>
+<span class="cm"> * App/Join server IEEE EUI (big endian)</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="cp">#define LORAWAN_JOIN_EUI                                   { 0x70, 0xB3, 0xD5, 0x7E, 0xD0, 0x03, 0xF0, 0x6A }</span>
+</code></pre></div>
+<ul>
+<li>Also, you can modify your Device EUI and Application Key, by setting the macro definition <code>LORAWAN_DEVICE_EUI</code> and <code>LORAWAN_NWK_KEY</code> in <code>LoRaWAN/App/se-identity.h</code> , don't forget to ensure <code>LORAWAN_DEVICE_EUI</code> and <code>LORAWAN_NWK_KEY</code> are the same as the <code>Device EUI</code> and <code>App Key</code> in TTN console.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// LoRaWAN/App/se-identity.h</span>
+
+<span class="cm">/*!</span>
+<span class="cm"> * end-device IEEE EUI (big endian)</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="cp">#define LORAWAN_DEVICE_EUI                                 { 0x00, 0x80, 0xE1, 0x15, 0x00, 0x07, 0x4C, 0xD5 }</span>
+
+<span class="cm">/*!</span>
+<span class="cm"> * Network root key</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="cp">#define LORAWAN_NWK_KEY                                    2B,7E,15,16,28,AE,D2,A6,AB,F7,15,88,09,CF,4F,3C</span>
+</code></pre></div>
+<p><img alt="" src="https://github.com/seeed-lora/LoRa-E5-LoRaWAN-End-Node/blob/master/Doc/key.png?raw=true" /></p>
+<ul>
+<li>The default LoRaWAN Region is <code>EU868</code>, you can modify it, by setting the macro definition <code>ACTIVE_REGION</code> in <code>LoRaWAN/App/lora_app.h</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// LoRaWAN/App/lora_app.h</span>
+
+<span class="cm">/* LoraWAN application configuration (Mw is configured by lorawan_conf.h) */</span><span class="w"></span>
+<span class="cm">/* Available: LORAMAC_REGION_AS923, LORAMAC_REGION_AU915, LORAMAC_REGION_EU868, LORAMAC_REGION_KR920, LORAMAC_REGION_IN865, LORAMAC_REGION_US915, LORAMAC_REGION_RU864 */</span><span class="w"></span>
+<span class="cp">#define ACTIVE_REGION                               LORAMAC_REGION_EU868</span>
+</code></pre></div>
+<p><img alt="" src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/region.png" /></p>
+<ul>
+<li>After modification, please <strong>rebuild the example</strong> and program to your LoRa-E5. Open <code>STM32CubeProgrammer</code>, connect ST-LINK to your PC, hold <code>RESET Button</code> of your Device, then click <code>Connect</code> and release <code>RESET Button</code>:</li>
+</ul>
+<p><img alt="" src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program1.png" /></p>
+<ul>
+<li>Make sure the Read Out Protection is <code>AA</code>, if it is shown as <code>BB</code>, select <code>AA</code> and click <code>Apply</code>:</li>
+</ul>
+<p><img alt="" src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program2.png" /></p>
+<ul>
+<li>Now, go to the <code>Erasing &amp; Programming</code> page, select your hex file path(my path is <code>E:\en.stm32cubewl\STM32Cube_FW_WL_V1.0.0\Projects\NUCLEO-WL55JC\Applications\LoRaWAN\LoRaWAN_End_Node\STM32CubeIDE\LoRaWAN_End_Node_Debug.hex</code> ), select the programming options as the following picture, then click <code>Start Programming</code>! Once the prgramming is finished, </li>
+</ul>
+<p><img alt="" src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/program3.png" /></p>
+<h4 id="25-connect-to-ttn">2.5 Connect to TTN<a class="headerlink" href="#25-connect-to-ttn" title="Permanent link">&para;</a></h4>
+<ul>
+<li>If your LoRaWAN Gateway and TTN are setup, LoRa-E5 will join successfully after reset! A comfirm LoRaWAN package will be sent to TTN every 30 seconds. The following log will come out from the serial port if the join is successful:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>APP_VERSION:        V1.0.0
+MW_LORAWAN_VERSION: V2.2.1
+MW_RADIO_VERSION:   V0.6.1
+###### OTAA ######
+###### AppKey:  2B 7E 15 16 28 AE D2 A6 AB F7 15 88 09 CF 4F 3C
+###### NwkKey:  2B 7E 15 16 28 AE D2 A6 AB F7 15 88 09 CF 4F 3C
+###### ABP  ######
+###### AppSKey: 2B 7E 15 16 28 AE D2 A6 AB F7 15 88 09 CF 4F 3C
+###### NwkSKey: 2B 7E 15 16 28 AE D2 A6 AB F7 15 88 09 CF 4F 3C
+###### DevEui:  00-80-E1-15-00-07-4C-D5
+###### AppEui:  70-B3-D5-7E-D0-03-F0-6A
+0s045:TX on freq 868100000 Hz at DR 0
+1s550:MAC txDone
+6s572:RX_1 on freq 868100000 Hz at DR 0
+6s779:MAC rxTimeOut
+7s572:RX_2 on freq 869525000 Hz at DR 0
+7s709:PRE OK
+8s246:HDR OK
+9s393:MAC rxDone
+
+###### = JOINED = OTAA =====================
+30s068:temp= 25
+30s068:VDDA= 254
+30s069:TX on freq 868500000 Hz at DR 0
+30s082:SEND REQUEST
+31s728:MAC txDone
+32s750:RX_1 on freq 868500000 Hz at DR 0
+32s957:MAC rxTimeOut
+33s706:RX_2 on freq 869525000 Hz at DR 3
+33s744:PRE OK
+33s815:HDR OK
+33s897:MAC rxDone
+
+###### ========== MCPS-Confirm =============
+</code></pre></div>
+<p><img alt="" src="https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/serial.png" /></p>
+<ul>
+<li>Cheers! You have already connected LoRa-E5 to LoRaWAN Network! Can't wait to see you develop some wonderful LoRaWAN End Node applications!</li>
+</ul>
+<h2 id="application-notes_1">Application Notes<a class="headerlink" href="#application-notes_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>LoRa-E5 only supports high power output mode, so you can't use these macro defnitions in <code>radio_board_if.h</code> :</li>
+</ul>
+<div class="highlight"><pre><span></span><code>#define RBI_CONF_RFO     RBI_CONF_RFO_LP_HP
+// or
+#define RBI_CONF_RFO     RBI_CONF_RFO_LP
+</code></pre></div>
+<p>More demos coming soon...</p>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<p>LoRa-E5 CAN FD Development Board Datasheet:</p>
+<ul>
+<li><a href="">Schematics in PDF Format</a></li>
+<li><a href="">Schematics in Eagle Format</a></li>
+<li><a href="">CAN FD library</a></li>
+<li><a href="">MCP2517FD datasheet</a></li>
+</ul>
+<p>LoRa-E5 Datasheet: </p>
+<ul>
+<li>
+<p><p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20module%20datasheet_V1.0.pdf">LoRa-E5 datasheet and specifications</a></p></p>
+</li>
+<li>
+<p><p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf">LoRa-E5 AT Command Specification</a></p></p>
+</li>
+<li>
+<p><p><a href="https://files.seeedstudio.com/products/317990687/res/STM32WLE5JC%20Datasheet.pdf">STM32WLE5JC Datasheet</a></p></p>
+</li>
+</ul>
+<p>LoRa-E5 Certifications:</p>
+<ul>
+<li>
+<p><p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20Certification%20CE-VOC-RED.pdf">LoRa-E5-HF Certification CE-VOC-RED</a></p></p>
+</li>
+<li>
+<p><p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20FCC%20Certification%20-DSS.pdf">LoRa-E5-HF FCC Certification -DSS</a></p></p>
+</li>
+<li>
+<p><p><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5-HF%20FCC%20Certification%20-DTS.pdf">LoRa-E5-HF FCC Certification -DTS</a></p></p>
+</li>
+</ul>
+<p>Relevant SDK: </p>
+<ul>
+<li><p><a href="https://my.st.com/content/my_st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32cube-mcu-mpu-packages/stm32cubewl.license=1608693595598.product=STM32CubeWL.version=1.0.0.html#overview" target="_blank">STM32Cube MCU Package for STM32WL series</a></p></li>
+</ul>
+<h2 id="tech-support">Tech Support<a class="headerlink" href="#tech-support" title="Permanent link">&para;</a></h2>
+<p>Please submit any technical issue into our <a href="http://forum.seeedstudio.com/">forum</a>. </p>
+<p><br /><p style="text-align:center"><a href="https://www.seeedstudio.com/act-4.html?utm_source=wiki&utm_medium=wikibanner&utm_campaign=newproducts" target="_blank"><img src="https://files.seeedstudio.com/wiki/Wiki_Banner/new_product.jpg" /></a></p></p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../1030016/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CAN BUS SHIELD" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              CAN BUS SHIELD
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../1040001/" class="md-footer__link md-footer__link--next" aria-label="Next: IRduino" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              IRduino
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2017 Longan Labs
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.361d90f1.min.js"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.289a2a4b.min.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
