@@ -471,6 +471,19 @@
     Introduction
   </a>
   
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-track" class="md-nav__link">
+    Version Track:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -518,6 +531,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arduino-ide-setup-for-v2-rp2040-version" class="md-nav__link">
+    Arduino IDE Setup for V2 (RP2040 version)
+  </a>
   
 </li>
       
@@ -1220,6 +1240,19 @@
     Introduction
   </a>
   
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-track" class="md-nav__link">
+    Version Track:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1267,6 +1300,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arduino-ide-setup-for-v2-rp2040-version" class="md-nav__link">
+    Arduino IDE Setup for V2 (RP2040 version)
+  </a>
   
 </li>
       
@@ -1343,9 +1383,14 @@
 <h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <hr />
 <p><a href=""><img alt="" src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/1030003-4.jpg" /></a></p>
-<p>The OBD Ⅱ Slaver allows you to hack your vehicle with the integrated OBD port and output all the data via serial interface. It supports the CAN bus protocol, integrates micro SD card slot. On top of that, with the help of a build-in Atmega32U4, it's compatible with arduino. Which means you can code it like a ardunio, then just plug it into your car's OBD port, you will get the output data via the Type C USB port or you can store all the data into your micro-SD card (TF card), easy-peasy.</p>
+<p>The OBD Ⅱ Slaver allows you to hack your vehicle with the integrated OBD port and output all the data via serial interface. It supports the CAN bus protocol, integrates micro SD card slot. On top of that, with the help of a build-in Atmega32U4 (RP2040 for V2), it's compatible with arduino. Which means you can code it like a ardunio, then just plug it into your car's OBD port, you will get the output data via the Type C USB port or you can store all the data into your micro-SD card (TF card), easy-peasy.</p>
 <p>This Serial CAN Bus module is based on <strong>MCP2551</strong> and <strong>MCP2515</strong>, which can provide can baud rate from <strong>5kb/s</strong> to <strong>1Mb/s</strong>. </p>
 <p>One more thing, we integrate the GPS module, you can even track your car with this fantastic little module. It is obviously that you will love it, happy hacking！</p>
+<h3 id="version-track">Version Track:<a class="headerlink" href="#version-track" title="Permanent link">&para;</a></h3>
+<ul>
+<li>V1.0 - Original version, Atmega32U4 MCU.</li>
+<li>V2.0 - Change MCU to RP2040</li>
+</ul>
 <h2 id="can-bus-products-list-of-longan-labs"><strong><em>CAN BUS PRODUCTS LIST OF LONGAN LABS</em></strong><a class="headerlink" href="#can-bus-products-list-of-longan-labs" title="Permanent link">&para;</a></h2>
 <hr />
 <p><a href="https://www.longan-labs.cc/blog/post/can-bus-product-summary/"><img alt="" src="https://www.longan-labs.cc/media/wysiwyg/CAN_BUS_PRODUCT.png" /></a></p>
@@ -1390,7 +1435,7 @@
 <td>OBD-II CAN Bus GPS Dev Kit</td>
 <td><a href="https://www.longan-labs.cc/1030003.html">LINK</a></td>
 <td>$29.9</td>
-<td>ATMEGA32U4</td>
+<td>ATMEGA32U4(RP2040 for V2)</td>
 <td>MCP2515</td>
 <td>CAN2.0</td>
 </tr>
@@ -1398,7 +1443,7 @@
 <td>OBD-II CAN Bus Basic Dev Kit</td>
 <td><a href="https://www.longan-labs.cc/1030007.html">LINK</a></td>
 <td>$24.9</td>
-<td>ATMEGA32U4</td>
+<td>ATMEGA32U4(RP2040 for V2)</td>
 <td>MCP2515</td>
 <td>CAN2.0</td>
 </tr>
@@ -1461,7 +1506,7 @@
 <ul>
 <li>ODB Ⅱ port</li>
 <li>Uart to CAN Bus communication</li>
-<li>Build-in Atmega32U4</li>
+<li>Build-in Atmega32U4 (RP2040 for V2)</li>
 <li>Integraded GPS module</li>
 <li>Integraded Micro-SD(TF) card</li>
 <li>AT command support</li>
@@ -1482,7 +1527,7 @@
 <tbody>
 <tr>
 <td>MCU</td>
-<td>Atmega32U4<br>(with Arduino Leonardo bootloader)</td>
+<td>Atmega32U4<br>(with Arduino Leonardo bootloader) / RP2040 for V2</td>
 </tr>
 <tr>
 <td>Clock Speed</td>
@@ -1533,7 +1578,7 @@
 <p>Reset the on-board Atmega chip, please note that the button had been canceled in the latest version.</p>
 <p><strong>3.78L05:</strong></p>
 <p>Provide a stable 5V to the whole system.</p>
-<p><strong>4.Atmega32U4:</strong></p>
+<p><strong>4.Atmega32U4:(RP2040 for V2)</strong></p>
 <p>The master of the entire module, mainly used to store data on the TF card or transfer data to the computer through the type C cable. In addition, since it's arduino compatible, you can use it to implement some simple controls, such as triggering a buzzer alarm when the speed exceeds a certain value.</p>
 <p><strong>5.MCP2515:</strong></p>
 <p>Microchip Technology’s MCP2515 is a stand-alone Controller Area Network (CAN) controller that implements the CAN specification, version 2.0B. It is capable of transmitting and receiving both standard and
@@ -1598,6 +1643,20 @@ interfaces with microcontrollers (MCUs) via an industry standard Serial Peripher
 </tr>
 </tbody>
 </table>
+<h2 id="arduino-ide-setup-for-v2-rp2040-version"><strong><em>Arduino IDE Setup for V2 (RP2040 version)</em></strong><a class="headerlink" href="#arduino-ide-setup-for-v2-rp2040-version" title="Permanent link">&para;</a></h2>
+<p>If you are using the V1 (Atmega32U4 version), please skip this chapter. </p>
+<p>First download the Arduino IDE from <a href="https://www.arduino.cc/en/Main/Software">https://www.arduino.cc/en/Main/Software</a>. Arduino IDE can be installed and run on Windows, Linux, and Mac OS X operating systems. Download the installer or zip file (Windows only) and install (if you have the zip file, extract it to your Windows computer’s hard drive) it on your operating system.</p>
+<p>Once finished, start the Arduino IDE.</p>
+<p>Copy and paste the link below into the Additional Boards Manager URLs option in the Arduino IDE preferences (<strong>File &gt; Preferences</strong>).</p>
+<div class="codehilite"><pre><span></span><code>https://raw.githubusercontent.com/Longan-Labs/Longan-RP2040/main/package_rp2040_index.json
+</code></pre></div>
+
+<p>Once done, click OK button to save the new preference settings.</p>
+<p>Now open the Boards Manager by navigating to the <strong>Tools -&gt; Board</strong> menu.</p>
+<p>Select All from the Type drop-down menu. Then type longan in the top search bar. While typing, you will see the Longan RP2040 Boards package.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030018/arduino-ide-setup-7.png" /></p>
+<p>Click on the Longan RP2040 Boards by Longan Labs and then click on Install button.</p>
+<p>Once installed, close the Boards Manager window.</p>
 <h2 id="assembly-and-hardware-connection"><strong><em>Assembly and Hardware Connection</em></strong><a class="headerlink" href="#assembly-and-hardware-connection" title="Permanent link">&para;</a></h2>
 <hr />
 <p><strong>Assembly</strong></p>

@@ -564,6 +564,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#part-list" class="md-nav__link">
+    Part List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#harware-overview" class="md-nav__link">
     Harware Overview
   </a>
@@ -678,6 +685,61 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-management" class="md-nav__link">
+    POWER MANAGEMENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-fd-usage" class="md-nav__link">
+    CAN FD Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="CAN FD Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features_1" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-address" class="md-nav__link">
+    Register Address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-can-fd" class="md-nav__link">
+    Configuring CAN FD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-a-can-frame" class="md-nav__link">
+    Send a CAN Frame
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-a-can-frame" class="md-nav__link">
+    Read a CAN Frame
+  </a>
   
 </li>
         
@@ -1264,6 +1326,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#part-list" class="md-nav__link">
+    Part List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#harware-overview" class="md-nav__link">
     Harware Overview
   </a>
@@ -1387,6 +1456,61 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#power-management" class="md-nav__link">
+    POWER MANAGEMENT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-fd-usage" class="md-nav__link">
+    CAN FD Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="CAN FD Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features_1" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-address" class="md-nav__link">
+    Register Address
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-can-fd" class="md-nav__link">
+    Configuring CAN FD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-a-can-frame" class="md-nav__link">
+    Send a CAN Frame
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-a-can-frame" class="md-nav__link">
+    Read a CAN Frame
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#application-notes_1" class="md-nav__link">
     Application Notes
   </a>
@@ -1446,6 +1570,12 @@
 <li>RS485 Interface</li>
 <li>Global LoRaWAN and loRa frequency plan supported</li>
 <li>Long-distance transmission range to 10km(ideal value in open area)</li>
+</ul>
+<h2 id="part-list">Part List<a class="headerlink" href="#part-list" title="Permanent link">&para;</a></h2>
+<ul>
+<li>LoRa-E5 CAN FD Development board</li>
+<li>Antenna (EU868/US915)</li>
+<li>Waterproof case</li>
 </ul>
 <h2 id="harware-overview">Harware Overview<a class="headerlink" href="#harware-overview" title="Permanent link">&para;</a></h2>
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/lora_e5_can_res/main/images/HW.png" /></p>
@@ -1919,6 +2049,225 @@ MW_RADIO_VERSION:   V0.6.1
 <ul>
 <li>Cheers! You have already connected LoRa-E5 to LoRaWAN Network! Can't wait to see you develop some wonderful LoRaWAN End Node applications!</li>
 </ul>
+<h2 id="power-management">POWER MANAGEMENT<a class="headerlink" href="#power-management" title="Permanent link">&para;</a></h2>
+<p>The system can be powered in 3 ways. </p>
+<ul>
+<li>Type C USB</li>
+<li>3.7V lipo battery</li>
+<li>4.5~28VDC via the Terminal</li>
+</ul>
+<p>To save power, the system has two 3.3V branches, controlled by MOSFETs. </p>
+<ul>
+<li>3.3V power supply for CAN and 485</li>
+<li>Grove 3.3V output</li>
+</ul>
+<h2 id="can-fd-usage">CAN FD Usage<a class="headerlink" href="#can-fd-usage" title="Permanent link">&para;</a></h2>
+<p>LoRa E5 CAN FD dev board supports CAN FD and CAN 2.0 communication protocols. We use a microcontroller GD32C103 with CAN FD function as CAN controller, we have written a firmware for GD32C103, through this firmware, CAN FD bus can be read and written through I2C. The rate of the I2C bus is 100kb/s.</p>
+<h3 id="features_1">Features<a class="headerlink" href="#features_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>I2C Address: 0x41</li>
+<li>Rate of I2C: 100kb/s</li>
+<li>Max baudrate of CAN FD: 5Mb/s</li>
+</ul>
+<h3 id="register-address">Register Address<a class="headerlink" href="#register-address" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>ADDRESS</th>
+<th>DESCRIBE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x09</td>
+<td>CAN Setting</td>
+</tr>
+<tr>
+<td>0x05</td>
+<td>Send a Frame</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>Check if CAN Bus receive a frame</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>Read the basic info of a can frame</td>
+</tr>
+<tr>
+<td>0x07</td>
+<td>Read first 32 bytes of a can frame</td>
+</tr>
+<tr>
+<td>0x08</td>
+<td>Read nex 32 bytes of a can frame (if have)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="configuring-can-fd">Configuring CAN FD<a class="headerlink" href="#configuring-can-fd" title="Permanent link">&para;</a></h3>
+<p>Before we can start using CAN FD, we need to send 49 data passes to the CAN FD controller.</p>
+<p>These data are defined as follows</p>
+<table>
+<thead>
+<tr>
+<th>BYTE</th>
+<th>DESCRIBE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Register address, 0x09</td>
+</tr>
+<tr>
+<td>1-4</td>
+<td>CAN2.0 baud rate, 4 bytes, preceded by high-order 8 bits</td>
+</tr>
+<tr>
+<td>5-8</td>
+<td>CANFD baud rate, 4 bytes, preceded by high-order 8 bits</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Mask&amp;Filt0 flag, 0: No set, 1: Set</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Extended frame flag for Mask&amp;Filt0, 1 for extended frame, 0 for standard frame</td>
+</tr>
+<tr>
+<td>11-14</td>
+<td>Mask0, 4 bytes</td>
+</tr>
+<tr>
+<td>15-18</td>
+<td>Filt0, 4 bytes</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Mask&amp;Filt0 flag, 0: No set, 1: Set</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Extended frame flag for Mask&amp;Filt0, 1 for extended frame, 0 for standard frame</td>
+</tr>
+<tr>
+<td>21-24</td>
+<td>Mask0, 4 bytes</td>
+</tr>
+<tr>
+<td>25-28</td>
+<td>Filt0, 4 bytes</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Mask&amp;Filt0 flag, 0: No set, 1: Set</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Extended frame flag for Mask&amp;Filt0, 1 for extended frame, 0 for standard frame</td>
+</tr>
+<tr>
+<td>31-34</td>
+<td>Mask0, 4 bytes</td>
+</tr>
+<tr>
+<td>35-38</td>
+<td>Filt0, 4 bytes</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Mask&amp;Filt0 flag, 0: No set, 1: Set</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Extended frame flag for Mask&amp;Filt0, 1 for extended frame, 0 for standard frame</td>
+</tr>
+<tr>
+<td>41-44</td>
+<td>Mask0, 4 bytes</td>
+</tr>
+<tr>
+<td>45-48</td>
+<td>Filt0, 4 bytes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="send-a-can-frame">Send a CAN Frame<a class="headerlink" href="#send-a-can-frame" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>BYTE</th>
+<th>DESCRIBE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Register address, 0x05</td>
+</tr>
+<tr>
+<td>1-4</td>
+<td>ID for CAN frame</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Remote frame flag, 1 for remote frame, 0 for data frame</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Ext or standard frame, 1 for ext frame, 0 for std frame</td>
+</tr>
+<tr>
+<td>7</td>
+<td>CAN FD flag, 1 for CAN FD frame, 0 for std frame</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Length of data frame</td>
+</tr>
+<tr>
+<td>9-n</td>
+<td>Data</td>
+</tr>
+</tbody>
+</table>
+<h3 id="read-a-can-frame">Read a CAN Frame<a class="headerlink" href="#read-a-can-frame" title="Permanent link">&para;</a></h3>
+<p>Before reading CAN Bus data, we need to see if CAN Bus has received data.</p>
+<p>We can read register 0x04 to check the number of data received by CAN Bus. If the returned number is not 0, it means that CAN Bus has received data.</p>
+<p>First, we need to read 8 Bytes of data from register 0x06, which is the basic content of a CAN Frame. The definitions of these 8 data are as follows.</p>
+<table>
+<thead>
+<tr>
+<th>BYTE</th>
+<th>DESCRIBE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0-3</td>
+<td>ID for CAN frame</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Ext or standard frame, 1 for ext frame, 0 for std frame</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Remote frame flag, 1 for remote frame, 0 for data frame</td>
+</tr>
+<tr>
+<td>6</td>
+<td>CAN FD flag, 1 for CAN FD frame, 0 for std frame</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Length of data frame</td>
+</tr>
+</tbody>
+</table>
+<p>If the length of the data is less than 32, such as N, then we need to request N data from register 0x07, and this part of the data is the data of the CAN Frame.</p>
+<p>If the length of the data is greater than 32, such as N, then we first need to request 32 data from register 0x07, and then N-32 data from register 0x08.</p>
 <h2 id="application-notes_1">Application Notes<a class="headerlink" href="#application-notes_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>LoRa-E5 only supports high power output mode, so you can't use these macro defnitions in <code>radio_board_if.h</code> :</li>
@@ -1933,8 +2282,6 @@ MW_RADIO_VERSION:   V0.6.1
 <ul>
 <li><a href="">Schematics in PDF Format</a></li>
 <li><a href="">Schematics in Eagle Format</a></li>
-<li><a href="">CAN FD library</a></li>
-<li><a href="">MCP2517FD datasheet</a></li>
 </ul>
 <p>LoRa-E5 Datasheet: </p>
 <ul>

@@ -41,6 +41,12 @@ If you are unfamiliar with LoRa and LoRaWAN technology, please check out this bl
 * Global LoRaWAN and loRa frequency plan supported
 * Long-distance transmission range to 10km(ideal value in open area)
 
+## Part List
+
+* LoRa-E5 CAN FD Development board
+* Antenna (EU868/US915)
+* Waterproof case
+
 ## Harware Overview 
 
 ![](https://raw.githubusercontent.com/Longan-Labs/lora_e5_can_res/main/images/HW.png)
@@ -420,6 +426,101 @@ MW_RADIO_VERSION:   V0.6.1
 
 - Cheers! You have already connected LoRa-E5 to LoRaWAN Network! Can't wait to see you develop some wonderful LoRaWAN End Node applications!
 
+## POWER MANAGEMENT
+
+The system can be powered in 3 ways. 
+
+* Type C USB
+* 3.7V lipo battery
+* 4.5~28VDC via the Terminal
+
+To save power, the system has two 3.3V branches, controlled by MOSFETs. 
+
+* 3.3V power supply for CAN and 485
+* Grove 3.3V output
+
+## CAN FD Usage
+
+LoRa E5 CAN FD dev board supports CAN FD and CAN 2.0 communication protocols. We use a microcontroller GD32C103 with CAN FD function as CAN controller, we have written a firmware for GD32C103, through this firmware, CAN FD bus can be read and written through I2C. The rate of the I2C bus is 100kb/s.
+
+### Features
+
+* I2C Address: 0x41
+* Rate of I2C: 100kb/s
+* Max baudrate of CAN FD: 5Mb/s
+
+### Register Address
+
+|ADDRESS|DESCRIBE|
+|-------|--------|
+|0x09|CAN Setting|
+|0x05|Send a Frame|
+|0x04|Check if CAN Bus receive a frame|
+|0x06|Read the basic info of a can frame|
+|0x07|Read first 32 bytes of a can frame|
+|0x08|Read nex 32 bytes of a can frame (if have)|
+
+### Configuring CAN FD
+
+Before we can start using CAN FD, we need to send 49 data passes to the CAN FD controller.
+
+These data are defined as follows
+
+|BYTE|DESCRIBE|
+|---|---------|
+|0|Register address, 0x09|
+|1-4|CAN2.0 baud rate, 4 bytes, preceded by high-order 8 bits|
+|5-8|CANFD baud rate, 4 bytes, preceded by high-order 8 bits|
+|9|Mask&Filt0 flag, 0: No set, 1: Set|
+|10|Extended frame flag for Mask&Filt0, 1 for extended frame, 0 for standard frame|
+|11-14|Mask0, 4 bytes|
+|15-18|Filt0, 4 bytes|
+|19|Mask&Filt0 flag, 0: No set, 1: Set|
+|20|Extended frame flag for Mask&Filt0, 1 for extended frame, 0 for standard frame|
+|21-24|Mask0, 4 bytes|
+|25-28|Filt0, 4 bytes|
+|29|Mask&Filt0 flag, 0: No set, 1: Set|
+|30|Extended frame flag for Mask&Filt0, 1 for extended frame, 0 for standard frame|
+|31-34|Mask0, 4 bytes|
+|35-38|Filt0, 4 bytes|
+|39|Mask&Filt0 flag, 0: No set, 1: Set|
+|40|Extended frame flag for Mask&Filt0, 1 for extended frame, 0 for standard frame|
+|41-44|Mask0, 4 bytes|
+|45-48|Filt0, 4 bytes|
+
+### Send a CAN Frame 
+
+|BYTE|DESCRIBE|
+|----|--------|
+|0|Register address, 0x05|
+|1-4| ID for CAN frame|
+|5|Remote frame flag, 1 for remote frame, 0 for data frame|
+|6|Ext or standard frame, 1 for ext frame, 0 for std frame|
+|7|CAN FD flag, 1 for CAN FD frame, 0 for std frame|
+|8|Length of data frame|
+|9-n|Data|
+
+### Read a CAN Frame
+
+Before reading CAN Bus data, we need to see if CAN Bus has received data.
+
+We can read register 0x04 to check the number of data received by CAN Bus. If the returned number is not 0, it means that CAN Bus has received data.
+
+First, we need to read 8 Bytes of data from register 0x06, which is the basic content of a CAN Frame. The definitions of these 8 data are as follows.
+
+|BYTE|DESCRIBE|
+|----|--------|
+|0-3|ID for CAN frame|
+|4|Ext or standard frame, 1 for ext frame, 0 for std frame|
+|5|Remote frame flag, 1 for remote frame, 0 for data frame|
+|6|CAN FD flag, 1 for CAN FD frame, 0 for std frame|
+|7|Length of data frame|
+
+If the length of the data is less than 32, such as N, then we need to request N data from register 0x07, and this part of the data is the data of the CAN Frame.
+
+If the length of the data is greater than 32, such as N, then we first need to request 32 data from register 0x07, and then N-32 data from register 0x08.
+
+
 ## Application Notes
 
 - LoRa-E5 only supports high power output mode, so you can't use these macro defnitions in `radio_board_if.h` :
@@ -434,13 +535,10 @@ More demos coming soon...
 
 ## Resources
 
-LoRa-E5 Development Board Datasheet:
+LoRa-E5 CAN FD Development Board Datasheet:
 
-- <p><a href="http://files.seeedstudio.com/products/113990934/LoRa-E5%20Dev%20Board%20v1.0.brd">LoRa-E5 Development Board v1.0.brd</a></p>
-
-- <p><a href="https://files.seeedstudio.com/products/113990934/LoRa-E5%20Dev%20Board%20v1.0.pdf">LoRa-E5 Development Board v1.0.pdf</a></p>
-
-- <p><a href="http://files.seeedstudio.com/products/113990934/LoRa-E5%20Dev%20Board%20v1.0.sch">LoRa-E5 Development Board v1.0.sch</a></p>
+* [Schematics in PDF Format]()
+* [Schematics in Eagle Format]()
 
 LoRa-E5 Datasheet: 
 
