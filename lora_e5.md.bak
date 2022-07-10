@@ -1,5 +1,5 @@
 
-![](https://raw.githubusercontent.com/Longan-Labs/lora_e5_can_res/main/images/CANBed_LoRa_3.jpg)
+![](https://raw.githubusercontent.com/Longan-Labs/lora_e5_can_res/main/images/102991697_Feature-02.png)
 
 LoRa-E5 CAN FD Development Kit is a compact development toolset for you to unlock the powerful performance of the [LoRa-E5 STM32WLE5JC](https://www.seeedstudio.com/LoRa-E5-Wireless-Module-p-4745.html) as well as CAN FD and RS485 communication. We also provide a simple waterproof case and solar charging interface, you can easily make a sensor node placed outdoors.
 
@@ -32,7 +32,8 @@ With all the outstanding features listed above, the LoRa-E5 Dev Board will be a 
 If you are unfamiliar with LoRa and LoRaWAN technology, please check out this blog [LoRapedia](https://www.seeedstudio.com/blog/2020/08/03/lorapedia-an-introduction-of-lora-and-lorawan-technology/) in detail.
 
 
-## Features
+## **FEATURES**
+-----------
 
 * Ultra-low power consumption and high performance
 * Easy testing and rapid prototyping
@@ -41,47 +42,48 @@ If you are unfamiliar with LoRa and LoRaWAN technology, please check out this bl
 * Global LoRaWAN and loRa frequency plan supported
 * Long-distance transmission range to 10km(ideal value in open area)
 
-## Part List
+## **PART LIST**
+--------------------
 
 * LoRa-E5 CAN FD Development board
 * Antenna (EU868/US915)
 * Waterproof case
 
-## Harware Overview 
+## **HARWARE OVERVIEW**
+----------------------
 
-![](https://raw.githubusercontent.com/Longan-Labs/lora_e5_can_res/main/images/HW.png)
+![](https://raw.githubusercontent.com/Longan-Labs/lora_e5_can_res/main/images/HW1.png)
 
-1.Reset button
+1 - 2x9 Header
 
-2.2x9 Header
+2 - SWD Interface
 
-3.Type-C USB
+3 - Type-C USB connnector
 
-4.User LED
+4 - User button - Connected to PB3
 
-5.User Button
+5 - CAN&485&Power Input connector
 
-6.485 Interface
+6 - 120Ω Switch for CAN Bus
 
-7.CAN Interface
+7 - Power switch
 
-8.Power Input (5-28V)
+8 - 3.7V Lipo battery 
 
-9.Boot button
+9 - Solar Input, 4.5~6V
 
-A. CAN send/recv indicators
+A - Antenna
 
-B. Solar input
+B - Reset button
 
-C. Lipo battery input
+C/D - Grove connector for UART and I2C
 
-D/E. Antenna
+E - Boot button
 
-F. LoRa E5 Module
+F - Led indicators for CAN Bus
 
-G/H. Grove connector
-
-## Specification
+## **SPECIFICATION**
+------------
 
 |Item|Specifications|
 |----|--------------|
@@ -96,12 +98,13 @@ G/H. Grove connector
 |CAN FD speed|Up to 5Mb/s|
 
 
-## Application
+## **APPLICATION**
+---------------
 
 * A common Lora usage scenario, that is, building a Lora sensor network. A large number of sensors in the industry are transmitted through CAN Bus. With the Lora-E5 CAN Bus Dev board you can use the on-board CAN Bus function to read the sensors, and send the data through Lora.
 * Since the circuit board can receive 5-28V input, the user can connect the circuit board to the OBD interface, get the data of the car and send it out through Lora
 
-## Application Notes
+### ***Application Notes***
 
 **1. Factroy AT Firmare**
 
@@ -134,11 +137,14 @@ The AT command firmware contains a bootloader for DFU and the AT application. Th
 
 - Transmit(high output power, SMPS mode): PA4=0, PA5=1
 
-## Getting Started
+## **GETTING STARTED**
+----------------
 
-### 1. Quick start of AT Commands
+### ***1. Quick start of AT Commands***
 
 #### 1.1 Preparation
+
+- **Step 0.** Install [the driver for CH340G](https://sparks.gogo.co.nz/ch340.html)
 
 - **Step 1.** Connect LoRa-E5 Development Board to PC via a Type-C cable
 
@@ -148,7 +154,7 @@ The AT command firmware contains a bootloader for DFU and the AT application. Th
 
 ![](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/4.png)
 
-#### 1.2 Basic AT Commands
+#### ***1.2 Basic AT Commands***
 
 - AT+ID // Read all, DevAddr(ABP), DevEui(OTAA), AppEui(OTAA)
 
@@ -266,7 +272,7 @@ Rx: +MSGHEX: Start
 
 - Step 8: For more information about AT Commands, please refer to [LoRa-E5 AT Command Specification](https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf)
 
-### 2. Develop with STM32Cube MCU Package
+### ***2. Develop with STM32Cube MCU Package***
 
 This section is for LoRa-E5 Mini or LoRa-E5 Dev Board, aiming at creating a LoRaWAN End Node with STM32Cube MCU Package for STM32WL series(SDK), to join and send data to LoRaWAN Network.
 
@@ -287,16 +293,14 @@ Hardwares:
 
 - LoRaWAN Gateway connected to LoRaWAN Network Server(e.g. TTN)
 
-- Prepare an USB TypeC cable and a ST-LINK. Connect the TypeC cable to the TypeC port for power and serial communication, connect the ST-LINK to the SWD pins like this:
-
-![connection](https://files.seeedstudio.com/wiki/LoRa-E5_Development_Kit/wiki%20images/connection.png)
+- ST-Link connect to the SWD interface.
 
 
 #### 2.2 GPIO Configuration Overview
 
 - As the hardware design of LoRa-E5 series is a bit different with NUCLEO-WL55JC, the official STM32WL55JC development board from ST, developers need to reconfigure some gpios, to adapt the SDK example to LoRa-E5 series. We have already reconfigured gpios in this example, but we think it is nessary to point out the difference.
 
-|SDK Example Label|GPIO of NUCLEO-WL55JC|GPIO of LoRa-E5 Mini and LoRa-E5 Dev Board|
+|SDK Example Label|GPIO of NUCLEO-WL55JC|GPIO of LoRa-E5|
 |---------|---------------------|------------------------------------------|
 |RF_CTRL1|PC4|PA4|
 |RF_CTRL2|PC5|PA5|
@@ -426,7 +430,8 @@ MW_RADIO_VERSION:   V0.6.1
 
 - Cheers! You have already connected LoRa-E5 to LoRaWAN Network! Can't wait to see you develop some wonderful LoRaWAN End Node applications!
 
-## POWER MANAGEMENT
+## **POWER MANAGEMENT**
+--------------
 
 The system can be powered in 3 ways. 
 
@@ -439,17 +444,24 @@ To save power, the system has two 3.3V branches, controlled by MOSFETs.
 * 3.3V power supply for CAN and 485
 * Grove 3.3V output
 
-## CAN FD Usage
+The schematics shown as below,
+
+![](https://raw.githubusercontent.com/Longan-Labs/lora_e5_can_res/main/images/MOS.jpg)
+
+
+
+## **CAN FD Usage**
+---------------
 
 LoRa E5 CAN FD dev board supports CAN FD and CAN 2.0 communication protocols. We use a microcontroller GD32C103 with CAN FD function as CAN controller, we have written a firmware for GD32C103, through this firmware, CAN FD bus can be read and written through I2C. The rate of the I2C bus is 100kb/s.
 
-### Features
+### ***Features of CAN Bus***
 
 * I2C Address: 0x41
 * Rate of I2C: 100kb/s
 * Max baudrate of CAN FD: 5Mb/s
 
-### Register Address
+### ***Register Address***
 
 |ADDRESS|DESCRIBE|
 |-------|--------|
@@ -460,7 +472,7 @@ LoRa E5 CAN FD dev board supports CAN FD and CAN 2.0 communication protocols. We
 |0x07|Read first 32 bytes of a can frame|
 |0x08|Read nex 32 bytes of a can frame (if have)|
 
-### Configuring CAN FD
+### ***Configuring CAN FD***
 
 Before we can start using CAN FD, we need to send 49 data passes to the CAN FD controller.
 
@@ -488,7 +500,7 @@ These data are defined as follows
 |41-44|Mask0, 4 bytes|
 |45-48|Filt0, 4 bytes|
 
-### Send a CAN Frame 
+### ***Send a CAN Frame***
 
 |BYTE|DESCRIBE|
 |----|--------|
@@ -500,7 +512,7 @@ These data are defined as follows
 |8|Length of data frame|
 |9-n|Data|
 
-### Read a CAN Frame
+### ***Read a CAN Frame***
 
 Before reading CAN Bus data, we need to see if CAN Bus has received data.
 
@@ -521,7 +533,8 @@ If the length of the data is less than 32, such as N, then we need to request N 
 If the length of the data is greater than 32, such as N, then we first need to request 32 data from register 0x07, and then N-32 data from register 0x08.
 
 
-## Application Notes
+## **APPLICATION NOTES**
+------------
 
 - LoRa-E5 only supports high power output mode, so you can't use these macro defnitions in `radio_board_if.h` :
 
@@ -533,12 +546,19 @@ If the length of the data is greater than 32, such as N, then we first need to r
 
 More demos coming soon...
 
-## Resources
+
+## ***SCHEMATIC ONLINE VIEWER***
+--------------------------
+
+<div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/lora_e5_can_res/raw/main/CANBED-LORA.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+
+## **RESOURCES**
+--------------------
 
 LoRa-E5 CAN FD Development Board Datasheet:
 
-* [Schematics in PDF Format]()
-* [Schematics in Eagle Format]()
+* [Schematics in Eagle Format](https://github.com/Longan-Labs/lora_e5_can_res/raw/main/CANBED-LORA.zip)
 
 LoRa-E5 Datasheet: 
 
@@ -561,8 +581,8 @@ Relevant SDK:
 - <p><a href="https://my.st.com/content/my_st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32cube-mcu-mpu-packages/stm32cubewl.license=1608693595598.product=STM32CubeWL.version=1.0.0.html#overview" target="_blank">STM32Cube MCU Package for STM32WL series</a></p>
 
 
-
-## Tech Support
+## ***TECH SUPPORT***
+-----------
 
 Please submit any technical issue into our [forum](http://forum.seeedstudio.com/). 
 
