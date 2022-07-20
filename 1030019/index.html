@@ -556,26 +556,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started-with-micropython" class="md-nav__link">
-    Getting Started with MicroPython
-  </a>
-  
-    <nav class="md-nav" aria-label="Getting Started with MicroPython">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-is-micropython" class="md-nav__link">
-    What is MicroPython
-  </a>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#how-to-use" class="md-nav__link">
     How to Use
@@ -1394,26 +1374,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started-with-micropython" class="md-nav__link">
-    Getting Started with MicroPython
-  </a>
-  
-    <nav class="md-nav" aria-label="Getting Started with MicroPython">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-is-micropython" class="md-nav__link">
-    What is MicroPython
-  </a>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#how-to-use" class="md-nav__link">
     How to Use
@@ -1464,10 +1424,10 @@
 
 <h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <hr />
-<p><a href="https://www.longan-labs.cc/1030019.html"><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030019/main.png" /></a></p>
-<p>CANBed Dual is a CAN Bus development board with 2 independent CAN Bus interface based on RP2040, there are two independent CAN interfaces on the circuit board, one is CAN2.0 and the other is CAN FD. RP2040 has <strong>2MB</strong> of Flash and <strong>264KB</strong> of RAM. The operating frequency is up to <strong>133MHz</strong>, which is suitable for most embedded applications.</p>
-<p>CANBed Dual uses <strong>MCP2515</strong> as CAN 2.0 controller and <strong>MCP2517FD</strong> as CAN FD controller, chich are high-performance CAN Bus chip. There is a Micro USB connector on the board, through which you can program the board or supply power to the board. There are one I2C, one UART, one SPI interface, 3 analog input interfaces and 8 digital IO on the board.</p>
-<p>There's a 6PIN Terminal for connecting CAN Bus interface. The voltage input range of the CAN interface is 9-28V, which can provide a stable 5V/1A output.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030019/main.png" /></p>
+<p>CANBed Dual is a CAN Bus development board with 2 independent CAN FD interface based on RP2040. RP2040 has <strong>2MB</strong> of Flash and <strong>264KB</strong> of RAM. The operating frequency is up to <strong>133MHz</strong>, which is suitable for most embedded applications.</p>
+<p>CANBed Dual uses the GD32E103CBT6 as the CAN controller. There is a Micro USB connector on the board, through which you can program the board or supply power to the board. There are one I2C, one UART, one SPI interface, 3 analog input interfaces and 8 digital IO on the board.</p>
+<p>There's a 6PIN Terminal for connecting CAN Bus interface. The voltage input range of the CAN interface is 4.5-28V, which can provide a stable 5V/1A output.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For transportation considerations, the plug-in components of the kit are not soldered by default. After you receive the kit, you need to do some soldering work. If necessary, you can also contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#102;&#111;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#105;&#110;&#102;&#111;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> after purchasing the board, then we can send it to you after the board is soldered well.</p>
@@ -1685,15 +1645,14 @@
 </div>
 <h2 id="features"><strong><em>Features</em></strong><a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <hr />
-<p><img alt="" src="https://www.longan-labs.cc/media/wysiwyg/CAN-Bus/CANBed/Details_of_CANBed-15.jpg" /></p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030019/Details_of_CANBed-21.jpg" /></p>
 <ul>
 <li>Powerful RP2040 processor</li>
-<li>2 Independent CAN Interface, CAN2.0 and CAN FD</li>
+<li>2 Independent CAN FD interface</li>
+<li>Up to 5Mb/s CAN FD baudrate</li>
 <li>2x3 Pin SPI Interface</li>
 <li>2x9 Pin IOs pinout</li>
-<li>CAN2.0 with MCP2515 CAN controller</li>
-<li>CANFD with MCP2517FD CAN controller</li>
-<li>Power input from 9-28V</li>
+<li>Power input from 4.5-28V</li>
 </ul>
 <h2 id="specifications"><strong><em>Specifications</em></strong><a class="headerlink" href="#specifications" title="Permanent link">&para;</a></h2>
 <hr />
@@ -1723,7 +1682,7 @@
 </tr>
 <tr>
 <td>Operate Voltage</td>
-<td>9-28V</td>
+<td>4.5-28V</td>
 </tr>
 <tr>
 <td>Output Current @ 3.3V</td>
@@ -1742,7 +1701,7 @@
 <p class="admonition-title">Note</p>
 <p>For transportation considerations, the plug-in components of the kit are not soldered by default. After you receive the kit, you need to do some soldering work. If necessary, you can also contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#102;&#111;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#105;&#110;&#102;&#111;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> after purchasing the board, then we can send it to you after the board is soldered well.</p>
 </div>
-<p><img alt="" src="https://www.longan-labs.cc/media/wysiwyg/CAN-Bus/CANBed/Details_of_CANBed-10.jpg" /></p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030019/Details_of_CANBed-20.jpg" /></p>
 <ol>
 <li>CANBed Dual PCBA x 1</li>
 <li>6 Pin Terminal connector x 1</li>
@@ -1751,10 +1710,10 @@
 <li>3x2 2.54 Header x 1</li>
 </ol>
 <h3 id="pin-out">Pin out<a class="headerlink" href="#pin-out" title="Permanent link">&para;</a></h3>
-<p><a href="https://www.longan-labs.cc/media/wysiwyg/CAN-Bus/CANBed/Details_of_CANBed-05.png"><img alt="" src="https://www.longan-labs.cc/media/wysiwyg/CAN-Bus/CANBed/Details_of_CANBed-05.png" /></a></p>
+<p><a href="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030019/hw.png"><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030019/hw.png" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><a href="https://www.longan-labs.cc/media/wysiwyg/CAN-Bus/CANBed/Details_of_CANBed-05.png">Click</a> to get larger image.</p>
+<p><a href="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030019/hw.png">Click</a> to get larger image.</p>
 </div>
 <p><strong>1. GPIO - 9x2 I/O Pin OUT:</strong> </p>
 <p>The I/Os of RP2040 list out here, which is consist of,</p>
@@ -1762,13 +1721,13 @@
 <li>1 x UART</li>
 <li>1 x I2C</li>
 <li>4 x Analog Input(can be used us Digital IO)</li>
-<li>8 x Digital I/O</li>
+<li>7 x Digital I/O</li>
 </ul>
 <p><strong>2. Micro USB connector for programming</strong></p>
 <p><strong>3. SPI Interface</strong></p>
-<p><strong>4. CAN20 (CANFD) Indicator</strong></p>
+<p><strong>4. CAN1 RX/TX Indicator</strong></p>
 <p>LED blinks when there's data communication.</p>
-<p><strong>5. CAN20 (CANFD) 120Ω Switch</strong></p>
+<p><strong>5. CAN1 120Ω Switch</strong></p>
 <p style="text-align:center"><img src="https://github.com/Longan-Labs/OBD-II_Slaver_GPS_kit/raw/master/HS_CAN_Termination.gif" /></p>
 
 <p>If you use this board on the end of the CAN bus, please put this switch to 120Ω. For more detail about the CAN bus protocol, please refer to the
@@ -1796,109 +1755,93 @@ You need a micro USB cable to connect the CANBed Dual to the computer.</p>
 <p>Click on the Longan RP2040 Boards by Longan Labs and then click on Install button.</p>
 <p>Once installed, close the Boards Manager window.</p>
 <h3 id="download-the-install-the-library"><strong><em>Download the install the library</em></strong><a class="headerlink" href="#download-the-install-the-library" title="Permanent link">&para;</a></h3>
-<p>As there's CAN2.0 as well as CAN FD in the board, we need 2 library here. </p>
-<ul>
-<li><a href="https://github.com/Longan-Labs/Aruino_CAN_BUS_MCP2515/archive/refs/heads/master.zip">Arduino Library for CAN 2.0</a></li>
-<li><a href="https://github.com/Longan-Labs/Longan_CANFD/archive/refs/heads/master.zip">Arduino Library for CAN FD</a></li>
-</ul>
-<p>In the Arduino IDE, navigate to Sketch &gt; Include Library &gt; Add .ZIP Library to install the Library. </p>
+<p>Get the <a href="https://github.com/Longan-Labs/CANBedDual_Arduino_Lib">Arduino library for CANBed Dual</a></p>
+<p>Open the Arduino IDE, navigate to Sketch &gt; Include Library &gt; Add .ZIP Library to install the Library. </p>
 <h3 id="hardware-connection"><strong><em>Hardware Connection</em></strong><a class="headerlink" href="#hardware-connection" title="Permanent link">&para;</a></h3>
-<p>Please conect CANFD-H to CAN20-H, CANFD-L to CAN20-L. </p>
+<p>Please conect CAN0H to CAN1H, CAN0L to CAN1L.</p>
 <h3 id="open-the-code-and-upload-it-to-the-board"><strong><em>Open the code and upload it to the board</em></strong><a class="headerlink" href="#open-the-code-and-upload-it-to-the-board" title="Permanent link">&para;</a></h3>
-<p>Open the Arduino IDE, here we open the <strong><em>send</em></strong> example. This example can continuously send data to the CAN Bus.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Demo for CANBed Dual</span>
+<p>Open the Arduino IDE, here we open the <strong><em>CAN20_SendRecv</em></strong> example. This example can continuously send data to the CAN Bus.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// CANBED DUAL TEST EXAMPLE</span>
+<span class="c1">// CAN 0 Send, CAN 1 Recv</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SPI.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mcp2518fd_can.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;mcp_can.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Wire.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;canbed_dual.h&quot;</span><span class="cp"></span>
 
-<span class="c1">// pins for CANBed FD</span>
-<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">CS_CANFD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12</span><span class="p">;</span><span class="w"></span>
-<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">CAN_INT_PIN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">13</span><span class="p">;</span><span class="w"></span>
+<span class="n">CANBedDual</span><span class="w"> </span><span class="nf">CAN0</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="n">CANBedDual</span><span class="w"> </span><span class="nf">CAN1</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
 
-<span class="n">mcp2518fd</span><span class="w"> </span><span class="nf">CANFD</span><span class="p">(</span><span class="n">CS_CANFD</span><span class="p">);</span><span class="w"> </span><span class="c1">// Set CS pin</span>
 
-<span class="kr">const</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">CS_CAN20</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9</span><span class="p">;</span><span class="w">  </span>
-
-<span class="n">MCP_CAN</span><span class="w"> </span><span class="nf">CAN20</span><span class="p">(</span><span class="n">CS_CAN20</span><span class="p">);</span><span class="w">                                    </span><span class="c1">// Set CS pin</span>
-
-<span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="nf">Serial</span><span class="p">){};</span><span class="w"></span>
+<span class="w">    </span><span class="nf">pinMode</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="kr">OUTPUT</span><span class="p">);</span><span class="w"></span>
 
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">CAN_OK</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">CANFD</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">CANFD_500KBPS</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">             </span><span class="c1">// init can bus : baudrate = 500k</span>
-<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;CAN FD init fail, retry...&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="nf">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;CAN FD init ok!&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">Wire1</span><span class="p">.</span><span class="n">setSDA</span><span class="p">(</span><span class="mi">6</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">Wire1</span><span class="p">.</span><span class="n">setSCL</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">Wire1</span><span class="p">.</span><span class="nf">begin</span><span class="p">();</span><span class="w"></span>
 
-<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">CAN_OK</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">CAN20</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">CAN_500KBPS</span><span class="p">))</span><span class="w">    </span><span class="c1">// init can bus : baudrate = 500k</span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;CAN 2.0 init fail, retry...&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="nf">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;CAN 2.0 init ok!&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">CAN0</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="mi">500000</span><span class="p">);</span><span class="w">          </span><span class="c1">// CAN0 baudrate: 500kb/s</span>
+<span class="w">    </span><span class="n">CAN1</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="mi">500000</span><span class="p">);</span><span class="w">          </span><span class="c1">// CAN1 baudrate: 500kb/s</span>
 <span class="p">}</span><span class="w"></span>
 
-<span class="kr">unsigned</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="n">stmp</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">};</span><span class="w"></span>
-<span class="kr">unsigned</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="kr">unsigned</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="n">buf</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span><span class="w"></span>
+<span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">sendData</span><span class="p">();</span><span class="w"></span>
 
-<span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">long</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kr">int</span><span class="w"> </span><span class="n">ext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kr">int</span><span class="w"> </span><span class="n">rtr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kr">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kr">int</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">    </span><span class="n">CANFD</span><span class="p">.</span><span class="n">sendMsgBuf</span><span class="p">(</span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">stmp</span><span class="p">);</span><span class="w">                 </span><span class="c1">// can fd send a frame</span>
+<span class="w">    </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="n">dtaGet</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span><span class="w"></span>
 
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">CAN_MSGAVAIL</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">CAN20</span><span class="p">.</span><span class="n">checkReceive</span><span class="p">())</span><span class="w">            </span><span class="c1">// check if data coming from can 2.0</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">CAN1</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="o">&amp;</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ext</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rtr</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">len</span><span class="p">,</span><span class="w"> </span><span class="n">dtaGet</span><span class="p">))</span><span class="w"></span>
 <span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">CAN20</span><span class="p">.</span><span class="n">readMsgBuf</span><span class="p">(</span><span class="o">&amp;</span><span class="n">len</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">);</span><span class="w">    </span><span class="c1">// read data,  len: data length, buf: data buf</span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;CAN1 GET DATA&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;id = &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">id</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;ext = &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">ext</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;rtr = &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">rtr</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;fd = &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;len = &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">len</span><span class="p">);</span><span class="w"></span>
 
-<span class="w">        </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">long</span><span class="w"> </span><span class="n">canId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CAN20</span><span class="p">.</span><span class="n">getCanId</span><span class="p">();</span><span class="w"></span>
-
-<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;-----------------------------&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;Get data from ID: &quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">canId</span><span class="p">,</span><span class="w"> </span><span class="n">HEX</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kr">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">len</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w">    </span><span class="c1">// print the data</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kr">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">len</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
 <span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">buf</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">HEX</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">dtaGet</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span><span class="w"></span>
 <span class="w">            </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="w">        </span><span class="p">}</span><span class="w"></span>
 <span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">();</span><span class="w"></span>
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="nf">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 
-<span class="c1">// END FILE</span>
+<span class="kr">void</span><span class="w"> </span><span class="nf">sendData</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kr">static</span><span class="w"> </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">cnt</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">cnt</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">99</span><span class="p">)</span><span class="n">cnt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="n">str</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kr">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cnt</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">CAN0</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">str</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// ENDIF</span>
 </code></pre></div>
 <p>You need to select <strong><em>CANBed Dual</em></strong> on the Arduino IDE boards and select the correct COM port. Then you can upload the program to the CANBed Dual Dev board by pressing the Upolading button on Arduino IDE.</p>
 <p>After the uploading is done, open the Serial monitor, you will see data printed to the monitor.</p>
 <h3 id="arduino-code"><strong><em>Arduino Code</em></strong><a class="headerlink" href="#arduino-code" title="Permanent link">&para;</a></h3>
 <hr />
-<p>We provide Arduino libraries for CANBed Dual, one for CAN 2.0 and the other for CAN FD.</p>
-<p>For CAN2.0, there're many examples for the library, which is consist of,</p>
+<p>We provide an Arduino libraries for CANBed Dual</p>
 <ul>
-<li><strong><em>OBDII-PIDs</em></strong> - Get data from OBD-II interface</li>
-<li><strong><em>send</em></strong> - Send a frame to CAN Bus</li>
-<li><strong><em>recv</em></strong> - Receive a frame from CAN Bus</li>
-<li><strong><em>set_mask_filter_recv</em></strong> - Receive a frame from CAN Bus with mask and filter setting</li>
+<li><strong><em>CAN20_SendRecv</em></strong> - Send and Recv a frame under CAN2.0</li>
+<li><strong><em>CANFD_SendRecv</em></strong> - Send and Recv a frame under CANFD</li>
+<li><strong><em>MaskandFilt</em></strong> - Receive a frame from CAN Bus with mask and filter setting</li>
 </ul>
-<p>For CANFD, below examples are available,</p>
-<ul>
-<li><strong><em>CAN20_RECV_CHECK</em></strong> - Receive a CAN2.0 frame with check mode</li>
-<li><strong><em>CAN20_RECV_INT</em></strong> - Receive a CAN2.0 frame with interrupt mode</li>
-<li><strong><em>CAN20_RECV_MASK_FILT</em></strong> - Receive a CAN2.0 frame with mask/filter setting</li>
-<li><strong><em>CAN20_SEND</em></strong> - Send a frame to CAN Bus at CAN 2.0</li>
-<li><strong><em>CANFD_RECV_CHECK</em></strong> - Receive a CAN FD frame with check mode</li>
-<li><strong><em>CANFD_RECV_INT</em></strong> - Receive a CAN FD frame with interrupt mode</li>
-<li><strong><em>CANFD_RECV_MASK_FILT</em></strong> - Receive a CAN FD framw with mask/filter setting</li>
-<li><strong><em>CANFD_SEND</em></strong> - Send a CAN FD frame</li>
-<li><strong><em>OBDII_PIDs</em></strong> - Get data from a vehicle</li>
-</ul>
-<h2 id="getting-started-with-micropython"><strong><em>Getting Started with MicroPython</em></strong><a class="headerlink" href="#getting-started-with-micropython" title="Permanent link">&para;</a></h2>
-<h3 id="what-is-micropython">What is MicroPython<a class="headerlink" href="#what-is-micropython" title="Permanent link">&para;</a></h3>
-<p><a href="https://github.com/micropython/micropython/wiki">MicroPython</a> is a Python interpreter (with partial native code compilation feature). It provides a subset of Python 3.5 features, implemented for embedded processors and constrained systems. Read more about the differences to CPython <a href="https://github.com/micropython/micropython/wiki/Differences">here</a>.</p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030018/MicroPython-Logo.png" /></p>
 <h3 id="how-to-use">How to Use<a class="headerlink" href="#how-to-use" title="Permanent link">&para;</a></h3>
 <p>As the CANBed Dual uses the same chip as the Raspberry Pi Pico (RP2040), please to to <a href="https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf">Getting Started with Pico</a> for details.</p>
 <h2 id="faq"><strong><em>FAQ</em></strong><a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
@@ -1929,17 +1872,13 @@ You need a micro USB cable to connect the CANBed Dual to the computer.</p>
 </div>
 <h2 id="schematic-online-viewer"><strong><em>Schematic Online Viewer</em></strong><a class="headerlink" href="#schematic-online-viewer" title="Permanent link">&para;</a></h2>
 <hr />
-<div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/CANBed-Dual-Res/archive/refs/heads/main.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+<div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/EAGLE_CANBED_DUAL/archive/refs/heads/main.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
 <h2 id="reference"><strong><em>Reference</em></strong><a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
-<li><a href="https://github.com/Longan-Labs/Aruino_CAN_BUS_MCP2515">Arduino Library for CAN2.0</a></li>
-<li><a href="https://github.com/Longan-Labs/Longan_CANFD/archive/refs/heads/master.zip">Arduino Library for CANFD</a></li>
-<li><a href="https://github.com/Longan-Labs/CANBed-Dual-Res/archive/refs/heads/main.zip">Eagle File</a></li>
-<li><a href="https://github.com/Longan-Labs/CANBed_3D_Model/archive/refs/heads/main.zip">3D Model</a></li>
-<li><a href="https://www.mouser.com/datasheet/2/268/MCP2515-Stand-Alone-CAN-Controller-with-SPI-200018-708845.pdf">MCP2515 Datasheet</a></li>
-<li><a href="https://www.mouser.cn/datasheet/2/268/MCP2517FD-External-CAN-FD-Controller-with-SPI-Inte-1519186.pdf">MCP2517FD Datasheet</a></li>
+<li><a href="https://github.com/Longan-Labs/CANBedDual_Arduino_Lib">Arduino Library for CANBed Dual</a></li>
+<li><a href="https://github.com/Longan-Labs/EAGLE_CANBED_DUAL/archive/refs/heads/main.zip">Eagle File</a></li>
 <li><a href="https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-c-sdk.pdf">Raspberry Pi Pico C/C++ SDK</a></li>
 <li><a href="https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf">Raspberry Pi Pico Python SDK</a></li>
 <li><a href="https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf">Getting Started with Pico</a></li>
