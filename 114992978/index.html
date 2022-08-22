@@ -1,0 +1,1972 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Docs of Longan Labs">
+      
+      
+        <meta name="author" content="Stephen Lo">
+      
+      
+        <link rel="canonical" href="https://longan-labs.cc/114992978/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>SERIAL CAN FD MODULE - Longan Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffc105">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-101995557-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="amber" data-md-color-accent="amber">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Longan Docs" class="md-header__button md-logo" aria-label="Longan Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Longan Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SERIAL CAN FD MODULE
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Longan-Labs/docs_mkdocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Longan-Labs/docs_mkdocs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Longan Docs" class="md-nav__button md-logo" aria-label="Longan Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Longan Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Longan-Labs/docs_mkdocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Longan-Labs/docs_mkdocs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          ABOUT
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ABOUT" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          ABOUT
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        ABOUT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license/" class="md-nav__link">
+        LICENSE
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          CAN-BUS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CAN-BUS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          CAN-BUS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030001/" class="md-nav__link">
+        SERIAL CAN BUS MODULE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          SERIAL CAN FD MODULE
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        SERIAL CAN FD MODULE
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#can-bus-products-list-of-longan-labs" class="md-nav__link">
+    CAN BUS PRODUCTS LIST OF LONGAN-LABS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partlist" class="md-nav__link">
+    Partlist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-overview" class="md-nav__link">
+    Hardware Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#120-terminal-resistor" class="md-nav__link">
+    120 Terminal resistor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#at-command" class="md-nav__link">
+    AT Command
+  </a>
+  
+    <nav class="md-nav" aria-label="AT Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#send-and-recv-a-can-frame" class="md-nav__link">
+    Send and Recv A CAN FRAME
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-the-baudaret-for-can-bus" class="md-nav__link">
+    SET THE BAUDARET FOR CAN BUS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-mask-and-filter" class="md-nav__link">
+    SET MASK AND FILTER
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-the-uart-baudrate" class="md-nav__link">
+    SET THE UART BAUDRATE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#about-the-crc" class="md-nav__link">
+    About the CRC
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#work-with-arduino" class="md-nav__link">
+    Work with Arduino
+  </a>
+  
+    <nav class="md-nav" aria-label="Work with Arduino">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#120-terminal-resistor_1" class="md-nav__link">
+    120Ω Terminal Resistor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-connection" class="md-nav__link">
+    Hardware Connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    Software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-the-board" class="md-nav__link">
+    Test the board
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    FAQ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schematic-online-viewer" class="md-nav__link">
+    Schematic Online Viewer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030017/" class="md-nav__link">
+        I2C CAN BUS MODULE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030008/" class="md-nav__link">
+        CANBED V1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030009/" class="md-nav__link">
+        CANBED FD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030014/" class="md-nav__link">
+        CANBED M0
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030013/" class="md-nav__link">
+        CANBED M4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030018/" class="md-nav__link">
+        CANBED RP2040
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030019/" class="md-nav__link">
+        CANBED DUAL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030002/" class="md-nav__link">
+        OBD-II CAN-BUS DEV KIT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030003/" class="md-nav__link">
+        OBD-II CAN BUS GPS DEV KIT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030012/" class="md-nav__link">
+        CAN-FD SHIELD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030015/" class="md-nav__link">
+        OBD-II RF DEV KIT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1030016/" class="md-nav__link">
+        CAN BUS SHIELD
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          ELECTRONIC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ELECTRONIC" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          ELECTRONIC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lora_e5/" class="md-nav__link">
+        LoRa E5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1040001/" class="md-nav__link">
+        IRduino
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1040002/" class="md-nav__link">
+        Heelight Core
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1040003/" class="md-nav__link">
+        Heelight Relay
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1040004/" class="md-nav__link">
+        Keyboard
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1040006/" class="md-nav__link">
+        AHT20 Temp&Humi Sensor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1040005/" class="md-nav__link">
+        GPS/BDS Module
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1040007/" class="md-nav__link">
+        AAA Battery Shield
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1040009/" class="md-nav__link">
+        Longan Core 01
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1050001/" class="md-nav__link">
+        Squama Ethernet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1050003/" class="md-nav__link">
+        Squama Ethernet with CAN FD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1040010/" class="md-nav__link">
+        Serial RF Module
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          CARDS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CARDS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          CARDS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cards-system-summary/" class="md-nav__link">
+        Cards System Summary
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1016007/" class="md-nav__link">
+        AAA Battery Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1013007/" class="md-nav__link">
+        Carduino 32U4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1017008/" class="md-nav__link">
+        Game Board
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011001/" class="md-nav__link">
+        Temperature Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1012002/" class="md-nav__link">
+        Buzzer Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011010/" class="md-nav__link">
+        Light Sensor Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1017002/" class="md-nav__link">
+        Extension Board
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1017007/" class="md-nav__link">
+        Sensor Display Board
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011008/" class="md-nav__link">
+        BME280 Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1014001/" class="md-nav__link">
+        OLED Display Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011007/" class="md-nav__link">
+        Rotary Angle Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1016006/" class="md-nav__link">
+        Programmer Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1013001/" class="md-nav__link">
+        Carduino 328
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011027/" class="md-nav__link">
+        Button Input Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011029/" class="md-nav__link">
+        IR Receiver Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011002/" class="md-nav__link">
+        Sound Sensor Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011003/" class="md-nav__link">
+        PIR Sensor Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011012/" class="md-nav__link">
+        RTC Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011021/" class="md-nav__link">
+        9-Dof Sensor Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1012003/" class="md-nav__link">
+        Motor Driver Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1012001/" class="md-nav__link">
+        Relay Card
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1011032/" class="md-nav__link">
+        Line Finder Card
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#can-bus-products-list-of-longan-labs" class="md-nav__link">
+    CAN BUS PRODUCTS LIST OF LONGAN-LABS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partlist" class="md-nav__link">
+    Partlist
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-overview" class="md-nav__link">
+    Hardware Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#120-terminal-resistor" class="md-nav__link">
+    120 Terminal resistor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#at-command" class="md-nav__link">
+    AT Command
+  </a>
+  
+    <nav class="md-nav" aria-label="AT Command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#send-and-recv-a-can-frame" class="md-nav__link">
+    Send and Recv A CAN FRAME
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-the-baudaret-for-can-bus" class="md-nav__link">
+    SET THE BAUDARET FOR CAN BUS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-mask-and-filter" class="md-nav__link">
+    SET MASK AND FILTER
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-the-uart-baudrate" class="md-nav__link">
+    SET THE UART BAUDRATE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#about-the-crc" class="md-nav__link">
+    About the CRC
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#work-with-arduino" class="md-nav__link">
+    Work with Arduino
+  </a>
+  
+    <nav class="md-nav" aria-label="Work with Arduino">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#120-terminal-resistor_1" class="md-nav__link">
+    120Ω Terminal Resistor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-connection" class="md-nav__link">
+    Hardware Connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    Software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-the-board" class="md-nav__link">
+    Test the board
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq" class="md-nav__link">
+    FAQ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schematic-online-viewer" class="md-nav__link">
+    Schematic Online Viewer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>SERIAL CAN FD MODULE</h1>
+
+<h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<hr />
+<p><a href="https://www.seeedstudio.com/Grove-CAN-BUS-Module-based-on-GD32E103-p-5456.html"><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/114992978/114992978_front-05.jpg" /></a></p>
+<p>This Grove - CAN BUS Module based on GD32E103 adopts a brand-new design, uses the cost-effective and high-performance GD32E103 microcontroller as the main control and cooperates with a firmware we wrote to complete the function of the serial port to CAN FD.</p>
+<h3 id="can-bus-products-list-of-longan-labs"><strong><em>CAN BUS PRODUCTS LIST OF LONGAN-LABS</em></strong><a class="headerlink" href="#can-bus-products-list-of-longan-labs" title="Permanent link">&para;</a></h3>
+<p><a href="https://www.longan-labs.cc/blog/post/can-bus-product-summary/"><img alt="" src="https://www.longan-labs.cc/media/wysiwyg/CAN_BUS_PRODUCT.png" /></a></p>
+<p>We have made a lot of can bus products, you can get more information through the following list, so as to choose a product suitable for you.</p>
+<table>
+<thead>
+<tr>
+<th>PRODUCT NAME</th>
+<th>LINK</th>
+<th>PRICE</th>
+<th>MCU</th>
+<th>CHIP</th>
+<th>PROTOCOL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Serial CAN Bus Module</td>
+<td><a href="https://www.longan-labs.cc/1030001.html">LINK</a></td>
+<td>$19.9</td>
+<td>ATMEGA168PA</td>
+<td>MCP2515</td>
+<td>CAN2.0</td>
+</tr>
+<tr>
+<td>I2C CAN Bus Module</td>
+<td><a href="https://www.longan-labs.cc/1030017.html">LINK</a></td>
+<td>$19.9</td>
+<td>ATMEGA168PA</td>
+<td>MCP2515</td>
+<td>CAN2.0</td>
+</tr>
+<tr>
+<td>OBD-II Serial CAN Bus Dev Kit</td>
+<td><a href="https://www.longan-labs.cc/1030002.html">LINK</a></td>
+<td>$20.9</td>
+<td>ATMEGA168PA</td>
+<td>MCP2515</td>
+<td>CAN2.0</td>
+</tr>
+<tr>
+<td>OBD-II CAN Bus GPS Dev Kit</td>
+<td><a href="https://www.longan-labs.cc/1030003.html">LINK</a></td>
+<td>$29.9</td>
+<td>ATMEGA32U4</td>
+<td>MCP2515</td>
+<td>CAN2.0</td>
+</tr>
+<tr>
+<td>OBD-II CAN Bus Basic Dev Kit</td>
+<td><a href="https://www.longan-labs.cc/1030007.html">LINK</a></td>
+<td>$24.9</td>
+<td>ATMEGA32U4</td>
+<td>MCP2515</td>
+<td>CAN2.0</td>
+</tr>
+<tr>
+<td>CAN-FD Shield</td>
+<td><a href="https://www.longan-labs.cc/1030012.html">LINK</a></td>
+<td>$19.9</td>
+<td>NO MCU</td>
+<td>MCP2517FD</td>
+<td>CAN-FD</td>
+</tr>
+<tr>
+<td>CAN Bus Shield</td>
+<td><a href="https://www.longan-labs.cc/1030016.html">LINK</a></td>
+<td>$9.9</td>
+<td>NO MCU</td>
+<td>MCP2515</td>
+<td>CAN2.0</td>
+</tr>
+<tr>
+<td>CANBed</td>
+<td><a href="https://www.longan-labs.cc/1030008.html">LINK</a></td>
+<td>$24.9</td>
+<td>ATMEGA32U4</td>
+<td>MCP2515</td>
+<td>CAN2.0</td>
+</tr>
+<tr>
+<td>CANBed-FD</td>
+<td><a href="https://www.longan-labs.cc/1030009.html">LINK</a></td>
+<td>$29.9</td>
+<td>ATMEGA32U4</td>
+<td>MCP2517FD</td>
+<td>CAN-FD</td>
+</tr>
+<tr>
+<td>CANBed M4</td>
+<td><a href="https://www.longan-labs.cc/1030013.html">LINK</a></td>
+<td>$49.9</td>
+<td>ATSAME51</td>
+<td>-</td>
+<td>CAN-FD</td>
+</tr>
+<tr>
+<td>OBD-II RF Dev Kit</td>
+<td><a href="https://www.longan-labs.cc/1030015.html">LINK</a></td>
+<td>$19.9</td>
+<td>ATmega168PA</td>
+<td>MCP2515</td>
+<td>CAN2.0</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The above price may not be the latest price, please refer to the price on the product page.</p>
+</div>
+<h2 id="partlist"><strong><em>Partlist</em></strong><a class="headerlink" href="#partlist" title="Permanent link">&para;</a></h2>
+<hr />
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/114992978/114992978_preview-07.jpg" /></p>
+<h2 id="features"><strong><em>Features</em></strong><a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<hr />
+<ul>
+<li>Uart to CAN FD and CAN 2.0</li>
+<li>Work with Arduino/BeagleBone board/Pi or any MCU that integrated with UART.</li>
+<li>AT command</li>
+<li>Up to 115200 Uart baud rate (default 9600)</li>
+<li>Up to 5Mb/s CAN FD baud rate (default 500k)</li>
+<li>TX and RX led indicator</li>
+<li>4pin HY connector</li>
+<li>5V working voltage</li>
+<li>Easy-to-use Arduino library</li>
+<li>Small size: 20x40 mm</li>
+</ul>
+<h2 id="hardware-overview"><strong><em>Hardware Overview</em></strong><a class="headerlink" href="#hardware-overview" title="Permanent link">&para;</a></h2>
+<hr />
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/canbus/hw.png" /></p>
+<ol>
+<li>4 pin 2.0mm Grove Connector</li>
+<li>Power and status led indicator</li>
+<li>Send and Recv led indicator</li>
+<li>3.5mm terminal to connect to CAN Bus (CAN_H &amp; CAN_L)</li>
+<li>120Ω registor. </li>
+</ol>
+<h3 id="120-terminal-resistor">120 Terminal resistor<a class="headerlink" href="#120-terminal-resistor" title="Permanent link">&para;</a></h3>
+<p>If you need the 120Ω terminal resistor, you need a soldering iron, as shown below:</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/solderpads.jpg" /></p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/120ohm.jpg" /></p>
+<h2 id="at-command"><strong><em>AT Command</em></strong><a class="headerlink" href="#at-command" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="send-and-recv-a-can-frame">Send and Recv A CAN FRAME<a class="headerlink" href="#send-and-recv-a-can-frame" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Start</th>
+<th>Length</th>
+<th>Command</th>
+<th>ID</th>
+<th>EXT</th>
+<th>RTR</th>
+<th>FDF</th>
+<th>Data Length</th>
+<th>Data</th>
+<th>CRC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0xAA</td>
+<td>/</td>
+<td>0x01</td>
+<td>/</td>
+<td>/</td>
+<td>/</td>
+<td>/</td>
+<td>/</td>
+<td>/</td>
+<td>/</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Start - 0x0A</li>
+<li>Length - Length for Command to Data</li>
+<li>Command - 0x01</li>
+<li>ID - 4 Byte</li>
+<li>EXT - 1 Byte, 1 for extend frame, 0 for standard frame</li>
+<li>RTR - 1 Byte, 1 for remote frame, 0 for standard frame</li>
+<li>FDF - 1 Byte, 1 for FD frame, 0 for CAN2.0 frame</li>
+<li>Data Length - Length for data</li>
+<li>Data - 1 to 64 byte</li>
+<li>CRC - 2 Byte, CRC</li>
+</ul>
+<h3 id="set-the-baudaret-for-can-bus">SET THE BAUDARET FOR CAN BUS<a class="headerlink" href="#set-the-baudaret-for-can-bus" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Start</th>
+<th>Length</th>
+<th>Command</th>
+<th>CAN20 Baudrate</th>
+<th>CAN-FD Baudrate</th>
+<th>CRC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0xAA</td>
+<td>0x09</td>
+<td>0x02</td>
+<td>/</td>
+<td>/</td>
+<td>CRC</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Start - 0x0A</li>
+<li>Length - 0x09</li>
+<li>Command - 0x02</li>
+<li>CAN20 Baudrate - 4 Byte, Baudrate for CAN2.0</li>
+<li>CAN-FD Baudrate - 4 Byte, Baudrate for CAN-FD</li>
+<li>CRC - 2 Byte, CRC</li>
+</ul>
+<h3 id="set-mask-and-filter">SET MASK AND FILTER<a class="headerlink" href="#set-mask-and-filter" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Start</th>
+<th>Length</th>
+<th>Command</th>
+<th>SET</th>
+<th>EXT</th>
+<th>MASK</th>
+<th>FILTER</th>
+<th>CRC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0xAA</td>
+<td>0x0B</td>
+<td>cmd</td>
+<td>0X01</td>
+<td>EXT</td>
+<td>---</td>
+<td>------</td>
+<td>CRC</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Start - 0x0A</li>
+<li>Length  - 0x0B</li>
+<li>Command - 0x03 for Mask/Filt0, 0x04 for Mask/Filt1, 0x05 for Mask/Filt2, 0x06 for Mask/Filt3</li>
+<li>SET - 0X01</li>
+<li>EXT - 1 for extended frame, 0 for standard frame</li>
+<li>MASK - 4 Byte</li>
+<li>FILTER - 4 Byte</li>
+<li>CRC - 2 Byte, CRC</li>
+</ul>
+<h3 id="set-the-uart-baudrate">SET THE UART BAUDRATE<a class="headerlink" href="#set-the-uart-baudrate" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Start</th>
+<th>Length</th>
+<th>Command</th>
+<th>Uart baudrate</th>
+<th>CRC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0xAA</td>
+<td>0x05</td>
+<td>0x07</td>
+<td>default 9600</td>
+<td>CRC</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Start - 0x0A</li>
+<li>Length  - 0x05</li>
+<li>Command - 0x07</li>
+<li>Uart baudrate - 4 Byte, default 9600kb/s</li>
+<li>CRC - 2 Byte, CRC</li>
+</ul>
+<h3 id="about-the-crc">About the CRC<a class="headerlink" href="#about-the-crc" title="Permanent link">&para;</a></h3>
+<p>The Crc includes the Command and before the CRC data.</p>
+<p>The Crc is a simple Crc16. Whenever a frame is parsed by the Master/Slave, it should check that the Crc of the data received matches the frame Crc to establish data integrity.</p>
+<p>The Crc field is two bytes, containing a 16-bit binary value. The Crc value is calculated by the transmitting device, which appends the Crc to the message. The receiving device recalculates a Crc during receipt of the message, and compares the calculated value to the actual value it received in the Crc field. If the two values are not equal, an error results.</p>
+<p>The Crc is started by first preloading a 16-bit register to all 1's. Then a process begins of applying successive eight-bit bytes of the message to the current contents of the register. Only the eight bits of data in each character are used for generating the Crc. Start and stop bits, and the parity bit, do not apply to the Crc.</p>
+<p>During generation of the Crc, each eight-bit character is exclusive ORed with the register contents. Then the result is shifted in the direction of the least significant bit (LSB), with a zero filled into the most significant bit (MSB) position. The LSB is extracted and examined. If the LSB was a 1, the register is then exclusive ORed with a preset, fixed value. If the LSB was a 0, no exclusive OR takes place.</p>
+<p>This process is repeated until eight shifts have been performed. After the last (eighth) shift, the next byte is exclusive ORed with the register's current value, and the process repeats for eight more shifts as described above. The final contents of the register, after all the bytes of the message have been applied, is the Crc value.</p>
+<p>When the Crc is appended to the message, the low-order byte is appended first, followed by the high-order byte.</p>
+<p>Example in C:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// for standard CRC16</span>
+<span class="c1">// (remainder of division)</span>
+<span class="c1">// to start a new CRC, set CRC16 = SEED</span>
+<span class="c1">// then for each byte call CrcCalculate(Byte, CRC16);</span>
+<span class="c1">// The return of the function will contain the result</span>
+<span class="c1">// (if you calculate all of the incoming data</span>
+<span class="c1">// INCLUDING the CRC, the result should be 0x0000</span>
+<span class="c1">// and if you are sending the CRC be sure to</span>
+<span class="c1">// send the bytes in the correct order)</span>
+<span class="c1">// Initialization for CRC16</span>
+<span class="cp">#define SEED 0xFFFF</span>
+<span class="c1">// Generating polynomial</span>
+<span class="cp">#define GP 0xA001</span>
+<span class="n">UINT16</span><span class="w"> </span><span class="n">Crc16</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SEED</span><span class="p">;</span><span class="w"></span>
+<span class="n">UINT16</span><span class="w"> </span><span class="nf">CrcCalculate</span><span class="p">(</span><span class="n">UINT8</span><span class="w"> </span><span class="n">Byte</span><span class="p">,</span><span class="w"> </span><span class="n">UINT16</span><span class="w"> </span><span class="n">CRC</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">UINT8</span><span class="w"> </span><span class="n">Carry</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kr">int</span><span class="w"> </span><span class="n">Bit_Index</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">CRC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CRC</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="p">(</span><span class="n">Byte</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0xFF</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Bit_Index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">Bit_Index</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="n">Bit_Index</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">Carry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CRC</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mh">0x0001</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">CRC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CRC</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Carry</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">CRC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CRC</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">GP</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CRC</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="work-with-arduino"><strong><em>Work with Arduino</em></strong><a class="headerlink" href="#work-with-arduino" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="120-terminal-resistor_1">120Ω Terminal Resistor<a class="headerlink" href="#120-terminal-resistor_1" title="Permanent link">&para;</a></h3>
+<p>As there're only 2 serial can bus device, it need the 120Ω resistor, there's a P1 on the back side, please solder P1 to get the 120Ω resistor, as shown below,</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/120ohm.jpg" /></p>
+<h3 id="hardware-connection">Hardware Connection<a class="headerlink" href="#hardware-connection" title="Permanent link">&para;</a></h3>
+<p>There are 4 pins on the board, they are:</p>
+<table>
+<thead>
+<tr>
+<th>Pin Name</th>
+<th>Function</th>
+<th>Color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TX</td>
+<td>TX of UART</td>
+<td>Yellow</td>
+</tr>
+<tr>
+<td>RX</td>
+<td>RX of UART</td>
+<td>White</td>
+</tr>
+<tr>
+<td>5V</td>
+<td>VCC, connect to 5V, 3.3V is not work for this module</td>
+<td>Red</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>Ground</td>
+<td>Black</td>
+</tr>
+</tbody>
+</table>
+<p>If you got a <a href="https://www.seeedstudio.com/Base-Shield-V2.html">Base Shield</a> from Seeedstudio, the connection is easy, like below,</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/3.jpg" /></p>
+<p>If there's no Base Shield for you, you need some dupont cable, and connect TX/RX to the IO of your Arduino, here we connect TX/RX to D2/D3:</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/2.jpg" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not all pins on the Mega and Mega 2560 support change interrupts, so only the following can be used for RX: 
+10, 11, 12, 13, 14, 15, 50, 51, 52, 53, A8 (62), A9 (63), A10 (64), A11 (65), A12 (66), A13 (67), A14 (68), A15 (69).</p>
+</div>
+<h3 id="software">Software<a class="headerlink" href="#software" title="Permanent link">&para;</a></h3>
+<p>We provide an library for Aruino Software Serial. </p>
+<p>Please download it at <a href="https://github.com/Longan-Labs/Serial_CAN_FD_Module">Github</a></p>
+<p>There're many examples for the library, which is consist of,</p>
+<ul>
+<li><strong><em>can_speed_fd</em></strong> - Send the can bus baudrate for CAN-FD</li>
+<li><strong><em>can_speed_20</em></strong> - Send the can bus baudrate for CAN2.0</li>
+<li><strong><em>can_send</em></strong> - Send a CAN frame to the bus</li>
+<li><strong><em>read_can</em></strong> - Read a CAN frame from the bus</li>
+<li><strong><em>set_mask_filt</em></strong> - Set the mask and filt for recving</li>
+<li><strong><em>set_baudrate</em></strong> - Set the Uart baudrate, default 9600kb/s</li>
+</ul>
+<h3 id="test-the-board">Test the board<a class="headerlink" href="#test-the-board" title="Permanent link">&para;</a></h3>
+<p>Here we make an example to show you how the board work with CAN Bus. </p>
+<p>The connection like below, here we use Seeeduino + Serial CAN bus module as the receiver, and a USB2Uart module + Serial CAN bus module as sender.</p>
+<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/Longan_Site_Images/master/SerialCAN/1.jpg" /></p>
+<p>If you send the command of sending frame to the USB2Uart module, open the Arduino serial monitor, you will get data from CAN Bus. </p>
+<h2 id="faq"><strong><em>FAQ</em></strong><a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title">The RX and TX leds light up instead of blinking</p>
+<ul>
+<li>Please check the baudrate of CAN Bus</li>
+<li>If the serial can bus module is in the end, the 120Ω terminal resistor is needed, please soder P1 on the back side of PCBA</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Don't work with Arduino Mega</p>
+<p>Not all pins on the Mega and Mega 2560 support change interrupts, so only the following can be used for RX: 
+10, 11, 12, 13, 14, 15, 50, 51, 52, 53, A8 (62), A9 (63), A10 (64), A11 (65), A12 (66), A13 (67), A14 (68), A15 (69).</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">How to find the tech support</p>
+<p>Please contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> for technical support. Our technical support engineer will usually reply you within 24 hours on working days. In order to get faster support, we hope that when you send us an email, you need to include at least the following content,</p>
+<ul>
+<li>When and how to buy the product</li>
+<li>Product version information</li>
+<li>Take a high-definition picture of the product you use, including the connection</li>
+<li>Describe in detail the problem you encountered and what kind of help you would like to get</li>
+</ul>
+</div>
+<h2 id="schematic-online-viewer"><strong><em>Schematic Online Viewer</em></strong><a class="headerlink" href="#schematic-online-viewer" title="Permanent link">&para;</a></h2>
+<div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/EAGLE_FILE_SERIAL_CAN_FD_MODULE/archive/refs/heads/main.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
+</div>
+<h2 id="reference"><strong><em>Reference</em></strong><a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<hr />
+<ul>
+<li><a href="https://github.com/Longan-Labs/Serial_CAN_FD_Module">Arduino Library</a></li>
+<li><a href="https://github.com/Longan-Labs/Serial_CAN_Bus">Firmware</a></li>
+<li><a href="https://www.seeedstudio.com/Grove-CAN-BUS-Module-based-on-GD32E103-p-5456.html">How to get ONE</a></li>
+<li><a href="https://github.com/Longan-Labs/EAGLE_FILE_SERIAL_CAN_FD_MODULE/archive/refs/heads/main.zip">Schematics in Eagle File</a></li>
+</ul>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../1030001/" class="md-footer__link md-footer__link--prev" aria-label="Previous: SERIAL CAN BUS MODULE" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              SERIAL CAN BUS MODULE
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../1030017/" class="md-footer__link md-footer__link--next" aria-label="Next: I2C CAN BUS MODULE" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              I2C CAN BUS MODULE
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2017 Longan Labs
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
