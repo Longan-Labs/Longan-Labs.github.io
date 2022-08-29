@@ -12,14 +12,14 @@
         <meta name="author" content="Stephen Lo">
       
       
-        <link rel="canonical" href="https://longan-labs.cc/1030015/">
+        <link rel="canonical" href="https://longan-labs.cc/can_esp32/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
-        <title>OBD-II RF DEV KIT - Longan Docs</title>
+        <title>CAN ESP32 DEV Kit - Longan Docs</title>
       
     
     
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OBD-II RF DEV KIT
+              CAN ESP32 DEV Kit
             
           </span>
         </div>
@@ -283,14 +283,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -479,218 +477,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          OBD-II RF DEV KIT
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../1030015/" class="md-nav__link">
         OBD-II RF DEV KIT
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    INTRODUCTION
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#can-bus-products-list-of-longan-labs" class="md-nav__link">
-    CAN BUS PRODUCTS LIST OF LONGAN LABS
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
-    FEATURES
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#specifications" class="md-nav__link">
-    SPECIFICATIONS
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hardware-overview" class="md-nav__link">
-    HARDWARE OVERVIEW
-  </a>
-  
-    <nav class="md-nav" aria-label="HARDWARE OVERVIEW">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#part-list" class="md-nav__link">
-    PART LIST
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    USAGE
-  </a>
-  
-    <nav class="md-nav" aria-label="USAGE">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#arduino-code" class="md-nav__link">
-    ARDUINO CODE
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-get-data-from-vehicle" class="md-nav__link">
-    HOW TO GET DATA FROM VEHICLE
-  </a>
-  
-    <nav class="md-nav" aria-label="HOW TO GET DATA FROM VEHICLE">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#hardware-connection" class="md-nav__link">
-    Hardware Connection
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#upload-the-code" class="md-nav__link">
-    Upload the code
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#at-command" class="md-nav__link">
-    AT Command
-  </a>
-  
-    <nav class="md-nav" aria-label="AT Command">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#set-can-bus-baudrate" class="md-nav__link">
-    Set CAN Bus Baudrate
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-mask" class="md-nav__link">
-    Set Mask
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-filt" class="md-nav__link">
-    Set Filt
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#working-mode" class="md-nav__link">
-    Working Mode
-  </a>
-  
-    <nav class="md-nav" aria-label="Working Mode">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#send" class="md-nav__link">
-    Send
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#recv" class="md-nav__link">
-    Recv
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#faq" class="md-nav__link">
-    FAQ
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schematic-online-viewer" class="md-nav__link">
-    SCHEMATIC ONLINE VIEWER
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference" class="md-nav__link">
-    REFERENCE
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -722,12 +513,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -762,11 +555,124 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../can_esp32/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CAN ESP32 DEV Kit
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         CAN ESP32 DEV Kit
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specification" class="md-nav__link">
+    Specification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arduino-ide-setup" class="md-nav__link">
+    Arduino IDE Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-for-lora" class="md-nav__link">
+    Usage for LoRa
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-for-can-fd" class="md-nav__link">
+    Usage for CAN FD
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage for CAN FD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-the-install-the-library" class="md-nav__link">
+    Download the install the library
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-connection" class="md-nav__link">
+    Hardware Connection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-the-code-and-upload-it-to-the-board" class="md-nav__link">
+    Open the code and upload it to the board
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schematic-online-viewer" class="md-nav__link">
+    Schematic Online Viewer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1314,79 +1220,53 @@
       
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
-    INTRODUCTION
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#can-bus-products-list-of-longan-labs" class="md-nav__link">
-    CAN BUS PRODUCTS LIST OF LONGAN LABS
+    Introduction
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#features" class="md-nav__link">
-    FEATURES
+    Features
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#specifications" class="md-nav__link">
-    SPECIFICATIONS
+  <a href="#specification" class="md-nav__link">
+    Specification
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hardware-overview" class="md-nav__link">
-    HARDWARE OVERVIEW
+  <a href="#arduino-ide-setup" class="md-nav__link">
+    Arduino IDE Setup
   </a>
   
-    <nav class="md-nav" aria-label="HARDWARE OVERVIEW">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-for-lora" class="md-nav__link">
+    Usage for LoRa
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-for-can-fd" class="md-nav__link">
+    Usage for CAN FD
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage for CAN FD">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#part-list" class="md-nav__link">
-    PART LIST
+  <a href="#download-the-install-the-library" class="md-nav__link">
+    Download the install the library
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    USAGE
-  </a>
-  
-    <nav class="md-nav" aria-label="USAGE">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#arduino-code" class="md-nav__link">
-    ARDUINO CODE
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-get-data-from-vehicle" class="md-nav__link">
-    HOW TO GET DATA FROM VEHICLE
-  </a>
-  
-    <nav class="md-nav" aria-label="HOW TO GET DATA FROM VEHICLE">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#hardware-connection" class="md-nav__link">
@@ -1396,95 +1276,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#upload-the-code" class="md-nav__link">
-    Upload the code
+  <a href="#open-the-code-and-upload-it-to-the-board" class="md-nav__link">
+    Open the code and upload it to the board
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#at-command" class="md-nav__link">
-    AT Command
-  </a>
-  
-    <nav class="md-nav" aria-label="AT Command">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#set-can-bus-baudrate" class="md-nav__link">
-    Set CAN Bus Baudrate
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-mask" class="md-nav__link">
-    Set Mask
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#set-filt" class="md-nav__link">
-    Set Filt
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#working-mode" class="md-nav__link">
-    Working Mode
-  </a>
-  
-    <nav class="md-nav" aria-label="Working Mode">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#send" class="md-nav__link">
-    Send
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#recv" class="md-nav__link">
-    Recv
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#faq" class="md-nav__link">
-    FAQ
-  </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#schematic-online-viewer" class="md-nav__link">
-    SCHEMATIC ONLINE VIEWER
+    Schematic Online Viewer
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
-    REFERENCE
+    Reference
   </a>
   
 </li>
@@ -1503,466 +1315,136 @@
                 
 
 
-  <h1>OBD-II RF DEV KIT</h1>
+  <h1>CAN ESP32 DEV Kit</h1>
 
-<h2 id="introduction"><strong><em>INTRODUCTION</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <hr />
-<p><a href=""><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030015/main.jpg" /></a></p>
-<p>Usually there is an OBD-II interface on the vehicla, allowing the user to read some data through the CAN-Bus interface, such as vehicle speed, engin speed, oil temperature, etc. We have also made some OBD-II related products, such as OBD-II CAN-Bus GPS Dev Kit, which is able to store the data read through OBD-II to SD card.</p>
-<p>During the use of OBD, an OBD-II cable is usually required to connect to the vehicle. Wiring is easy, but hiding the cable is hard. For this reason we designed this OBD-II RF Dev Kit. </p>
-<p>This kit contains two parts, which we call the transmitter and receiver. The transmitter is inserted into the OBD-II interface of the vehicle, and the transmitter is integrated with CAN-Bus interface and RF communication, which can transmit the data read by CAN-Bus to the remote end through RF. The receiver is a Serial RF Module, which can send the data from the receiving end to the microcontroller through the serial port.</p>
-<p>If you want to use OBD-II for some interesting projects, you can try this kit, you will not be disappointed.</p>
-<h2 id="can-bus-products-list-of-longan-labs"><strong><em>CAN BUS PRODUCTS LIST OF LONGAN LABS</em></strong><a class="headerlink" href="#can-bus-products-list-of-longan-labs" title="Permanent link">&para;</a></h2>
-<hr />
-<p><a href="https://www.longan-labs.cc/blog/post/can-bus-product-summary/"><img alt="" src="https://www.longan-labs.cc/media/wysiwyg/CAN_BUS_PRODUCT.png" /></a></p>
-<p>We have made a lot of can bus products, you can get more information through the following list, so as to choose a product suitable for you.</p>
-<table>
-<thead>
-<tr>
-<th>PRODUCT NAME</th>
-<th>LINK</th>
-<th>PRICE</th>
-<th>MCU</th>
-<th>CHIP</th>
-<th>PROTOCOL</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Serial CAN Bus Module</td>
-<td><a href="https://www.longan-labs.cc/1030001.html">LINK</a></td>
-<td>$19.9</td>
-<td>ATMEGA168PA</td>
-<td>MCP2515</td>
-<td>CAN2.0</td>
-</tr>
-<tr>
-<td>I2C CAN Bus Module</td>
-<td><a href="https://www.longan-labs.cc/1030017.html">LINK</a></td>
-<td>$19.9</td>
-<td>ATMEGA168PA</td>
-<td>MCP2515</td>
-<td>CAN2.0</td>
-</tr>
-<tr>
-<td>OBD-II Serial CAN Bus Dev Kit</td>
-<td><a href="https://www.longan-labs.cc/1030002.html">LINK</a></td>
-<td>$20.9</td>
-<td>ATMEGA168PA</td>
-<td>MCP2515</td>
-<td>CAN2.0</td>
-</tr>
-<tr>
-<td>OBD-II CAN Bus GPS Dev Kit</td>
-<td><a href="https://www.longan-labs.cc/1030003.html">LINK</a></td>
-<td>$29.9</td>
-<td>ATMEGA32U4</td>
-<td>MCP2515</td>
-<td>CAN2.0</td>
-</tr>
-<tr>
-<td>OBD-II CAN Bus Basic Dev Kit</td>
-<td><a href="https://www.longan-labs.cc/1030007.html">LINK</a></td>
-<td>$24.9</td>
-<td>ATMEGA32U4</td>
-<td>MCP2515</td>
-<td>CAN2.0</td>
-</tr>
-<tr>
-<td>CAN-FD Shield</td>
-<td><a href="https://www.longan-labs.cc/1030012.html">LINK</a></td>
-<td>$19.9</td>
-<td>NO MCU</td>
-<td>MCP2517FD</td>
-<td>CAN-FD</td>
-</tr>
-<tr>
-<td>CAN Bus Shield</td>
-<td><a href="https://www.longan-labs.cc/1030016.html">LINK</a></td>
-<td>$9.9</td>
-<td>NO MCU</td>
-<td>MCP2515</td>
-<td>CAN2.0</td>
-</tr>
-<tr>
-<td>CANBed</td>
-<td><a href="https://www.longan-labs.cc/1030008.html">LINK</a></td>
-<td>$24.9</td>
-<td>ATMEGA32U4</td>
-<td>MCP2515</td>
-<td>CAN2.0</td>
-</tr>
-<tr>
-<td>CANBed-FD</td>
-<td><a href="https://www.longan-labs.cc/1030009.html">LINK</a></td>
-<td>$29.9</td>
-<td>ATMEGA32U4</td>
-<td>MCP2517FD</td>
-<td>CAN-FD</td>
-</tr>
-<tr>
-<td>CANBed M4</td>
-<td><a href="https://www.longan-labs.cc/1030013.html">LINK</a></td>
-<td>$49.9</td>
-<td>ATSAME51</td>
-<td>-</td>
-<td>CAN-FD</td>
-</tr>
-<tr>
-<td>OBD-II RF Dev Kit</td>
-<td><a href="https://www.longan-labs.cc/1030015.html">LINK</a></td>
-<td>$19.9</td>
-<td>ATmega168PA</td>
-<td>MCP2515</td>
-<td>CAN2.0</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The above price may not be the latest price, please refer to the price on the product page.</p>
-</div>
-<h2 id="features"><strong><em>FEATURES</em></strong><a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<p><img alt="" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/b5e839932a12c6938f4f9ff16fa3726a/1/0/102991697_front-05.jpg" /></p>
+<p>Wio Dual CAN FD Dev kit Wio-E5 CAN Development Kit is based on the ESP32C3 and Wio-E5 STM32WLE5JC Module, and supports CAN FD, CAN2.0 communication. It supports industrial standards, provides a waterproof case and solar charging interface, and comes with high extensibility and compatibility. It's ideal for car hacking and Long Range sensor network management.</p>
+<h2 id="features"><strong><em>Features</em></strong><a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
-<li>CAN2.0</li>
-<li>2.4G RF module</li>
-<li>standard OBD-II connector</li>
-<li>Easy to use Arduino library</li>
-<li>120 meters communication distance in the wild</li>
+<li>Outstanding RF performance:  Powerful ESP32-C3 SoC</li>
+<li>2 Independent CAN FD Interface</li>
+<li>Global Long Range frequency plan with long-distance transmission range to 10km(ideal value in open area)</li>
+<li>Support industrial standards: a wide working temperature at -40 ℃ ~ 85℃, high sensitivity between -116.5 dBm ~ -136 dBm, and power output up to +20.8dBm at 3.3V</li>
+<li>Water-proof case</li>
+<li>Type-C USB for programming and Power input</li>
 </ul>
-<h2 id="specifications"><strong><em>SPECIFICATIONS</em></strong><a class="headerlink" href="#specifications" title="Permanent link">&para;</a></h2>
+<h2 id="specification"><strong><em>Specification</em></strong><a class="headerlink" href="#specification" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
-<li>MCU: Atmega168PA</li>
-<li>Barurate: 9600</li>
-<li>Communication distance: 120m</li>
-<li>Power input: 12V for the transmitter and 3.&#8535;V for the receiver</li>
+<li>Power supply - 7-28V DC Input</li>
+<li>Maxim CAN FD baudrate - 5Mb/s</li>
+<li>LoRa communication distance: 10km in the wild</li>
 </ul>
-<h2 id="hardware-overview"><strong><em>HARDWARE OVERVIEW</em></strong><a class="headerlink" href="#hardware-overview" title="Permanent link">&para;</a></h2>
+<h2 id="arduino-ide-setup"><strong><em>Arduino IDE Setup</em></strong><a class="headerlink" href="#arduino-ide-setup" title="Permanent link">&para;</a></h2>
 <hr />
-<h3 id="part-list">PART LIST<a class="headerlink" href="#part-list" title="Permanent link">&para;</a></h3>
-<ul>
-<li>The transmitter with a case</li>
-<li>The receiver module</li>
-<li>Grove Cable</li>
-</ul>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030015/main.jpg" /></p>
-<h2 id="usage"><strong><em>USAGE</em></strong><a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<hr />
-<h3 id="arduino-code">ARDUINO CODE<a class="headerlink" href="#arduino-code" title="Permanent link">&para;</a></h3>
-<p>We provide an <a href="https://github.com/Longan-Labs/OBD_II_RF_Dev_Kit_Library">Arduino library for OBD-II RF Dev Kit</a>. </p>
-<p>There're many examples for the library, which is consist of,</p>
-<ul>
-<li><strong><em>OBDII-PIDs</em></strong> - Get data from OBD-II interface</li>
-<li><strong><em>send</em></strong> - Send a frame to CAN Bus</li>
-<li><strong><em>recv</em></strong> - Receive a frame from CAN Bus</li>
-<li><strong><em>set_mask_filter_recv</em></strong> - Receive a frame from CAN Bus with mask and filter setting</li>
-</ul>
-<h2 id="how-to-get-data-from-vehicle"><strong><em>HOW TO GET DATA FROM VEHICLE</em></strong><a class="headerlink" href="#how-to-get-data-from-vehicle" title="Permanent link">&para;</a></h2>
-<hr />
-<p>Here we provide an example of reading data from a vihicle. In order to simplify the process, we only read the speed and engin speed of the vehicle.</p>
-<p>In addition to OBD-II RF Dev Kit, we also need some other modules to complete this application, we need to use the following modules:</p>
-<ul>
-<li><a href="https://www.longan-labs.cc/1040009.html">Longan Core 01</a>: An Arduino UNO compatible board, priced at only $5.9</li>
-<li><a href="https://www.longan-labs.cc/1040007.html">AAA Battery Shield</a>: This shiel use two AAA batteries to provide a stable 5V for Arduino</li>
-<li><a href="https://www.longan-labs.cc/1040011.html">I2C_LCD</a>: A simple and easy-to-use display that communicates via I2C</li>
-</ul>
-<h3 id="hardware-connection">Hardware Connection<a class="headerlink" href="#hardware-connection" title="Permanent link">&para;</a></h3>
-<p>First, we insert the AAA Battery Shield to Longan Core 01, then insert the I2C_LCD into the I2C port on the AAA Battery Shield, and insert the Serial RF module in the OBD-II RF Dev Kit into the A0 port.</p>
-<p>As shown below:</p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030015/connect1.jpg" /></p>
-<p>As for the transmitter, plug it into the OBD-II interface of your vehicle, as shown below:</p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030015/connect2car.jpg" /></p>
-<h3 id="upload-the-code">Upload the code<a class="headerlink" href="#upload-the-code" title="Permanent link">&para;</a></h3>
-<p>We procide an <a href="https://github.com/Longan-Labs/OBD_II_RF_Dev_Kit_Library">Arduino library for OBD-II RF Dev kit</a>, you have to install the library first. 
-You have to install the <a href="https://github.com/SparkingStudio/I2C_LCD/raw/master/resources/I2C_LCD_Library.zip">Library for I2C_LCD</a> as well.
-Then, download the <a href="https://github.com/Longan-Labs/OBD_II_RF_Dev_Kit_Library/blob/main/examples/obd_demo2/obd_demo2.ino">code for the demo</a>, and upload it to Longan Core 01.</p>
-<p>If nothing unexpected happens, there's should be values of speed and engin speed displaied on the LCD, as shown below:</p>
-<p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/1030015/result1.jpg" /></p>
-<p>If you want to read other parameters, you can refer to <a href="https://en.wikipedia.org/wiki/OBD-II_PIDs">OBD-II_PIDs</a></p>
-<h2 id="at-command"><strong><em>AT Command</em></strong><a class="headerlink" href="#at-command" title="Permanent link">&para;</a></h2>
-<hr />
-<p>We can use AT commands to set up and control the transmitter. When using AT commands, we need to connect the transmitter to power, otherwise the command will not be received.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The AT Command here is the same as the AT command of the Serial CAN Bus Module. If you have used the Serial CAN Bus Module, you will be familiar with these commands.</p>
-</div>
-<table>
-<thead>
-<tr>
-<th>CMD</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>+++</td>
-<td>Switch from Normal mode to Config mode</td>
-</tr>
-<tr>
-<td>AT+C=[value]</td>
-<td>Set CAN Bus baud rate</td>
-</tr>
-<tr>
-<td>AT+M=[N][EXT][value]</td>
-<td>Set mask</td>
-</tr>
-<tr>
-<td>AT+F=[N][EXT][value]</td>
-<td>Set filter</td>
-</tr>
-<tr>
-<td>AT+Q</td>
-<td>Switch to Normal Mode</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition tip">
-<p class="admonition-title">Tips</p>
-<p>All of the cmd should end with '\n' except +++</p>
-</div>
-<h3 id="set-can-bus-baudrate">Set CAN Bus Baudrate<a class="headerlink" href="#set-can-bus-baudrate" title="Permanent link">&para;</a></h3>
-<hr />
-<p>You can use this command to set the rate of CAN Bus, there's 18 rates available. 
-Normally, if you want to hack your vehicle, 500k is the right one. </p>
-<div class="highlight"><pre><span></span><code>AT+C=[value]
+<p>The board support Arduino IDE, please folow below steps to use Arduino IDE to program the board. </p>
+<p>Please download the latest <a href="https://www.arduino.cc/en/software">Arduino IDE</a>.</p>
+<p>Launch the Arduino IDE and navigate to <strong>File &gt; Preferences</strong> and fill <strong>Additional Boards Manager URLs</strong> with below,</p>
+<div class="codehilite"><pre><span></span><code>https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_dev_index.json
 </code></pre></div>
-<table>
-<thead>
-<tr>
-<th>value</th>
-<th>01</th>
-<th>02</th>
-<th>03</th>
-<th>04</th>
-<th>05</th>
-<th>06</th>
-<th>07</th>
-<th>08</th>
-<th>09</th>
-<th>10</th>
-<th>11</th>
-<th>12</th>
-<th>13</th>
-<th>14</th>
-<th>15</th>
-<th>16</th>
-<th>17</th>
-<th>18</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>rate(kb/s)</td>
-<td>5</td>
-<td>10</td>
-<td>20</td>
-<td>25</td>
-<td>31.2</td>
-<td>33</td>
-<td>40</td>
-<td>50</td>
-<td>80</td>
-<td>83.3</td>
-<td>95</td>
-<td>100</td>
-<td>125</td>
-<td>200</td>
-<td>250</td>
-<td><strong>500</strong></td>
-<td>666</td>
-<td>1000</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>For most vehicles, the baud rate of CANBus is 500kb/s, and a few cars are 1Mb/s</p>
-</div>
-<p><strong>Eg:</strong> Set CAN BUS baud rate to 50K
-<div class="highlight"><pre><span></span><code>AT+C=08
-</code></pre></div></p>
-<p><strong>Respose</strong></p>
-<p>OK or ERROR</p>
-<h3 id="set-mask">Set Mask<a class="headerlink" href="#set-mask" title="Permanent link">&para;</a></h3>
+
+<p><img alt="" src="https://files.seeedstudio.com/wiki/XIAO_WiFi/add_board.png" /></p>
+<p>Navigate to <strong>Tools &gt; Board &gt; Boards Manager</strong>, type the keyword <strong>"esp32"</strong> in the search box, select the latest version of <strong>esp32</strong>, and install it.</p>
+<p><img alt="" src="https://files.seeedstudio.com/wiki/XIAO_WiFi/add_esp32c3.png" /></p>
+<p>After the boars intalled well, please select XIAO_ESP32C2 when compile your code. </p>
+<h2 id="usage-for-lora"><strong><em>Usage for LoRa</em></strong><a class="headerlink" href="#usage-for-lora" title="Permanent link">&para;</a></h2>
 <hr />
-<p>There're 2 Mask for the module, Mask0 and Mask1.</p>
-<div class="highlight"><pre><span></span><code>AT+M=[N][EXT][value]
+<p><img alt="" src="https://media-cdn.seeedstudio.com/media/catalog/product/cache/bb49d3ec4ee05b6f018e93f896b8a25d/l/o/lora-e5_size-08_1.png" /></p>
+<p>The kit use <a href="https://www.seeedstudio.com/LoRa-E5-Wireless-Module-Tape-Reel-p-5302.html?queryID=2cbb30b1280192454046b598f1688680&amp;objectID=5302&amp;indexName=bazaar_retailer_products">Wio-E5 Wireless Module</a> as the LoRa controller, we already have a detailed tutorial for it.</p>
+<p>Please refer to <a href="https://wiki.seeedstudio.com/LoRa-E5_STM32WLE5JC_Module/">Wiki for Wio-E5 Wireless Module</a>.</p>
+<h2 id="usage-for-can-fd"><strong><em>Usage for CAN FD</em></strong><a class="headerlink" href="#usage-for-can-fd" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="download-the-install-the-library"><strong><em>Download the install the library</em></strong><a class="headerlink" href="#download-the-install-the-library" title="Permanent link">&para;</a></h3>
+<p>Get the <a href="https://github.com/Longan-Labs/CANBedDual_Arduino_Lib">Arduino library</a></p>
+<p>Open the Arduino IDE, navigate to Sketch &gt; Include Library &gt; Add .ZIP Library to install the Library. </p>
+<h3 id="hardware-connection"><strong><em>Hardware Connection</em></strong><a class="headerlink" href="#hardware-connection" title="Permanent link">&para;</a></h3>
+<p>Please conect CAN0H to CAN1H, CAN0L to CAN1L.</p>
+<h3 id="open-the-code-and-upload-it-to-the-board"><strong><em>Open the code and upload it to the board</em></strong><a class="headerlink" href="#open-the-code-and-upload-it-to-the-board" title="Permanent link">&para;</a></h3>
+<p>Open the Arduino IDE, here we open the <strong><em>CAN20_SendRecv</em></strong> example. This example can continuously send data to the CAN Bus.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// CANBED DUAL TEST EXAMPLE</span>
+<span class="c1">// CAN 0 Send, CAN 1 Recv</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Wire.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;canbed_dual.h&quot;</span><span class="cp"></span>
+
+<span class="n">CANBedDual</span><span class="w"> </span><span class="nf">CAN0</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="n">CANBedDual</span><span class="w"> </span><span class="nf">CAN1</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nf">pinMode</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="kr">OUTPUT</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">CAN0</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="mi">500000</span><span class="p">);</span><span class="w">          </span><span class="c1">// CAN0 baudrate: 500kb/s</span>
+<span class="w">    </span><span class="n">CAN1</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="mi">500000</span><span class="p">);</span><span class="w">          </span><span class="c1">// CAN1 baudrate: 500kb/s</span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nb">loop</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">sendData</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">long</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kr">int</span><span class="w"> </span><span class="n">ext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kr">int</span><span class="w"> </span><span class="n">rtr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kr">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kr">int</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="n">dtaGet</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">CAN1</span><span class="p">.</span><span class="nf">read</span><span class="p">(</span><span class="o">&amp;</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ext</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">rtr</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">len</span><span class="p">,</span><span class="w"> </span><span class="n">dtaGet</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&quot;CAN1 GET DATA&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;id = &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">id</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;ext = &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">ext</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;rtr = &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">rtr</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;fd = &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;len = &quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">len</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kr">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">len</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">dtaGet</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span><span class="w"></span>
+<span class="w">            </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kr">void</span><span class="w"> </span><span class="nf">sendData</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kr">static</span><span class="w"> </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">cnt</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">cnt</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">99</span><span class="p">)</span><span class="n">cnt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="n">str</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kr">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">8</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cnt</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">CAN0</span><span class="p">.</span><span class="n">send</span><span class="p">(</span><span class="mh">0x01</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">str</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="c1">// ENDIF</span>
 </code></pre></div>
-<p><strong>N:</strong></p>
-<ul>
-<li>0: Mask0</li>
-<li>1: Mask1</li>
-</ul>
-<p><strong>EXT:</strong></p>
-<ul>
-<li>0: Standard Frame</li>
-<li>1: Extended Frame</li>
-</ul>
-<p><strong>value:</strong></p>
-<p>Neeed 8 bit of character, hexadecimal.</p>
-<p><strong>Eg:</strong> Set Mask1 to 0x3DF, standard frame:
-<div class="highlight"><pre><span></span><code>AT+M=[1][0][000003DF]
-</code></pre></div></p>
-<p><strong>Respose</strong></p>
-<p>OK or ERROR</p>
-<h3 id="set-filt">Set Filt<a class="headerlink" href="#set-filt" title="Permanent link">&para;</a></h3>
+<p>After the uploading is done, open the Serial monitor, you will see data printed to the monitor.</p>
+<h2 id="schematic-online-viewer"><strong><em>Schematic Online Viewer</em></strong><a class="headerlink" href="#schematic-online-viewer" title="Permanent link">&para;</a></h2>
 <hr />
-<p>There're 6 Mask for the module, Filt0 ~ Filt5</p>
-<div class="highlight"><pre><span></span><code>AT+F=[N][EXT][value]
-</code></pre></div>
-<p><strong>N:</strong></p>
-<table>
-<thead>
-<tr>
-<th>N</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Filt</td>
-<td>Filt0</td>
-<td>Filt1</td>
-<td>Filt2</td>
-<td>Filt3</td>
-<td>Filt4</td>
-<td>Filt5</td>
-</tr>
-</tbody>
-</table>
-<p><strong>EXT:</strong></p>
-<ul>
-<li>0: Standard Frame</li>
-<li>1: Extended Frame</li>
-</ul>
-<p><strong>value:</strong></p>
-<p>Neeed 8 bit of character, hexadecimal.</p>
-<p><strong>Eg:</strong> Set Filt3 to 0x2C, standard frame:
-<div class="highlight"><pre><span></span><code>AT+F=[1][0][0000002C]
-</code></pre></div></p>
-<p><strong>Respose</strong></p>
-<p>OK or ERROR</p>
-<h2 id="working-mode"><strong><em>Working Mode</em></strong><a class="headerlink" href="#working-mode" title="Permanent link">&para;</a></h2>
-<hr />
-<p>When the module working on Working mode (default mode), you can send and recevie data from CAN Bus. </p>
-<h3 id="send">Send<a class="headerlink" href="#send" title="Permanent link">&para;</a></h3>
-<p>You should send 14 byte of data per frame. Defined as below,</p>
-<table>
-<thead>
-<tr>
-<th>bit</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-<th>9</th>
-<th>10</th>
-<th>11</th>
-<th>12</th>
-<th>13</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>define</td>
-<td>ID3</td>
-<td>ID2</td>
-<td>ID1</td>
-<td>ID0</td>
-<td>EXT</td>
-<td>RTR</td>
-<td>DTA0</td>
-<td>DTA1</td>
-<td>DTA2</td>
-<td>DTA3</td>
-<td>DTA4</td>
-<td>DTA5</td>
-<td>DTA6</td>
-<td>DTA7</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>ID0~ID3: CAN ID</li>
-<li>EXT: 0 for standard frame, 1 for extended frame</li>
-<li>RTR: 0 for standard frame, 1 for remote frame</li>
-<li>DTA0~DTA7: 8 byte of data</li>
-</ul>
-<p><strong>Eg.</strong></p>
-<p>Send {1, 2, 3, 4, 5, 6, 7, 8} to ID:0x3DC, Standard frame:
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mh">0xDC</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">}</span><span class="w"></span>
-</code></pre></div></p>
-<h3 id="recv">Recv<a class="headerlink" href="#recv" title="Permanent link">&para;</a></h3>
-<p>You will get 12 byte of data per frame. Defined as below,</p>
-<table>
-<thead>
-<tr>
-<th>bit</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-<th>9</th>
-<th>10</th>
-<th>11</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>define</td>
-<td>ID3</td>
-<td>ID2</td>
-<td>ID1</td>
-<td>ID0</td>
-<td>DTA0</td>
-<td>DTA1</td>
-<td>DTA2</td>
-<td>DTA3</td>
-<td>DTA4</td>
-<td>DTA5</td>
-<td>DTA6</td>
-<td>DTA7</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>ID0~ID3: CAN ID</li>
-<li>DTA0~DTA7: 8 byte of data</li>
-</ul>
-<h2 id="faq"><strong><em>FAQ</em></strong><a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
-<div class="admonition tip">
-<p class="admonition-title">How to find the tech support</p>
-<p>Please feel free to contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#111;&#110;&#101;&#121;&#46;&#115;&#117;&#105;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;">&#106;&#111;&#110;&#101;&#121;&#46;&#115;&#117;&#105;&#64;&#108;&#111;&#110;&#103;&#97;&#110;&#45;&#108;&#97;&#98;&#115;&#46;&#99;&#99;</a> if you need more help.</p>
+<div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/Eagle-for-Wio-Dual-CAN-FD-dev-kit/archive/refs/heads/main.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
 </div>
-<h2 id="schematic-online-viewer"><strong><em>SCHEMATIC ONLINE VIEWER</em></strong><a class="headerlink" href="#schematic-online-viewer" title="Permanent link">&para;</a></h2>
-<hr />
-<div class="altium-ecad-viewer" data-project-src="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBed%20M0.zip" style="border-radius: 0px 0px 4px 4px; height: 500px; border-style: solid; border-width: 1px; border-color: rgb(241, 241, 241); overflow: hidden; max-width: 1280px; max-height: 700px; box-sizing: border-box;" />
-</div>
-<h2 id="reference"><strong><em>REFERENCE</em></strong><a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<h2 id="reference"><strong><em>Reference</em></strong><a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
-<li><a href="https://github.com/Longan-Labs/OBD_II_RF_Dev_Kit_Library">Arduino Library</a></li>
-<li><a href="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBed%20M0.zip">Schematics in Eagle</a></li>
-<li><a href="https://github.com/Longan-Labs/Hardware_CANBed_Series/raw/master/CANBed%20M0/CANBed_M0.pdf">Schematics in PDF</a></li>
-<li><a href="https://www.mouser.com/datasheet/2/268/MCP2515-Stand-Alone-CAN-Controller-with-SPI-200018-708845.pdf">MCP2515 Datasheet</a></li>
-<li><a href="https://www.mouser.com/datasheet/2/268/20001667G-1115479.pdf">MCP2551 Datasheet</a></li>
+<li><a href="https://github.com/Longan-Labs/CANBedDual_Arduino_Lib">Arduino Library for CAN FD</a></li>
+<li><a href="https://github.com/Longan-Labs/Eagle-for-Wio-Dual-CAN-FD-dev-kit/archive/refs/heads/main.zip">Eagle File</a></li>
+<li><a href="https://wiki.seeedstudio.com/XIAO_ESP32C3_WiFi_Usage/">WiFi Usage for ESP32C3</a></li>
+<li><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20module%20datasheet_V1.0.pdf">Wio-E5 datasheet and specifications</a></li>
+<li><a href="https://files.seeedstudio.com/products/317990687/res/LoRa-E5%20AT%20Command%20Specification_V1.0%20.pdf">Wio-E5 AT Command Specification</a></li>
+<li><a href="https://files.seeedstudio.com/products/317990687/res/STM32WLE5JC%20Datasheet.pdf">STM32WLE5JC Datasheet</a></li>
 </ul>
 
               
@@ -1979,7 +1461,7 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../1030012/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CAN-FD SHIELD" rel="prev">
+        <a href="../lora_e5/" class="md-footer__link md-footer__link--prev" aria-label="Previous: LoRa E5" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1988,20 +1470,20 @@ Normally, if you want to hack your vehicle, 500k is the right one. </p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              CAN-FD SHIELD
+              LoRa E5
             </div>
           </div>
         </a>
       
       
         
-        <a href="../1030016/" class="md-footer__link md-footer__link--next" aria-label="Next: CAN BUS SHIELD" rel="next">
+        <a href="../1040001/" class="md-footer__link md-footer__link--next" aria-label="Next: IRduino" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              CAN BUS SHIELD
+              IRduino
             </div>
           </div>
           <div class="md-footer__button md-icon">
