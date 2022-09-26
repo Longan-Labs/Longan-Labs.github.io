@@ -1334,7 +1334,7 @@
 <h2 id="introduction"><strong><em>Introduction</em></strong><a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <hr />
 <p><img alt="" src="https://raw.githubusercontent.com/Longan-Labs/docs_mkdocs/master/docs/images/esp32_can/1.png" /></p>
-<p>Wio Dual CAN FD Dev kit Wio-E5 CAN Development Kit is based on the ESP32C3 and Wio-E5 STM32WLE5JC Module, and supports CAN FD, CAN2.0 communication. It supports industrial standards, provides a waterproof case and comes with high extensibility and compatibility. It's ideal for car hacking and Long Range sensor network management.</p>
+<p>Wio ESP32 CAN Dev Kit is based on the ESP32C3 and Wio-E5 STM32WLE5JC Module, and supports CAN FD, CAN2.0 communication. It supports industrial standards, provides a waterproof case and comes with high extensibility and compatibility. It's ideal for car hacking and Long Range sensor network management.</p>
 <h2 id="features"><strong><em>Features</em></strong><a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
@@ -1381,7 +1381,7 @@
 <h2 id="usage-for-can-fd"><strong><em>Usage for CAN FD</em></strong><a class="headerlink" href="#usage-for-can-fd" title="Permanent link">&para;</a></h2>
 <hr />
 <h3 id="download-the-install-the-library"><strong><em>Download the install the library</em></strong><a class="headerlink" href="#download-the-install-the-library" title="Permanent link">&para;</a></h3>
-<p>Get the <a href="https://github.com/Longan-Labs/CANBedDual_Arduino_Lib">Arduino library</a></p>
+<p>Get the <a href="https://github.com/Longan-Labs/Wio_Dual_CAN_Arduino-Lib">Arduino library</a></p>
 <p>Open the Arduino IDE, navigate to Sketch &gt; Include Library &gt; Add .ZIP Library to install the Library. </p>
 <h3 id="hardware-connection"><strong><em>Hardware Connection</em></strong><a class="headerlink" href="#hardware-connection" title="Permanent link">&para;</a></h3>
 <p>Please conect CAN0H to CAN1H, CAN0L to CAN1L.</p>
@@ -1397,12 +1397,10 @@
 <span class="n">CANBedDual</span><span class="w"> </span><span class="nf">CAN0</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
 <span class="n">CANBedDual</span><span class="w"> </span><span class="nf">CAN1</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
 
-
 <span class="kr">void</span><span class="w"> </span><span class="nb">setup</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nf">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="nf">pinMode</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="kr">OUTPUT</span><span class="p">);</span><span class="w"></span>
-
+<span class="w">    </span><span class="nf">Wire</span><span class="p">.</span><span class="nf">begin</span><span class="p">();</span><span class="w"></span>
 <span class="w">    </span><span class="n">CAN0</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="mi">500000</span><span class="p">);</span><span class="w">          </span><span class="c1">// CAN0 baudrate: 500kb/s</span>
 <span class="w">    </span><span class="n">CAN1</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="mi">500000</span><span class="p">);</span><span class="w">          </span><span class="c1">// CAN1 baudrate: 500kb/s</span>
 <span class="p">}</span><span class="w"></span>
@@ -1414,7 +1412,7 @@
 <span class="w">    </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">long</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="kr">int</span><span class="w"> </span><span class="n">ext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="kr">int</span><span class="w"> </span><span class="n">rtr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kr">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kr">int</span><span class="w"> </span><span class="n">fd</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="kr">int</span><span class="w"> </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 
 <span class="w">    </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">char</span><span class="w"> </span><span class="n">dtaGet</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span><span class="w"></span>
@@ -1444,6 +1442,10 @@
 
 <span class="kr">void</span><span class="w"> </span><span class="nf">sendData</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kr">static</span><span class="w"> </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">long</span><span class="w"> </span><span class="n">timer_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">millis</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="nf">millis</span><span class="p">()</span><span class="o">-</span><span class="n">timer_s</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">)</span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">timer_s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">millis</span><span class="p">();</span><span class="w"></span>
+
 <span class="w">    </span><span class="kr">static</span><span class="w"> </span><span class="kr">unsigned</span><span class="w"> </span><span class="kr">int</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">cnt</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">cnt</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">99</span><span class="p">)</span><span class="n">cnt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
